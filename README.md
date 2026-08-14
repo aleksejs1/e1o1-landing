@@ -47,6 +47,12 @@ Multi-stage: `node:26-alpine` builds the static output, then a minimal `caddy:2-
 
 CSP is stricter than the main app's own (`script-src 'self'` with no `'wasm-unsafe-eval'`) since this site has no WebAssembly/crypto at all — confirmed via a real grep of the built bundle, not assumed.
 
+```sh
+npm run verify:docker
+```
+
+Builds the real image, runs it, and checks real HTTP status codes for a fixed table of paths — both with and without a trailing slash (`/ru`, `/ru/`, `/ru/terms`, `/ru/terms/`, ...) and a genuine 404 case. Exists because a real bug shipped that nothing else here would have caught: the Caddy layer 404'd on any trailing-slash URL, because `/ru/` is itself an existing _directory_ on disk (it holds `ru/terms.html`/`ru/privacy.html`), so a naive `try_files {path} {path}.html` matched the directory on its first candidate and never got to try `.html`. Paraglide's `localizeHref()` always appends a trailing slash when localizing the _root_ path, so `/ru/`, `/lv/`, `/es/` are exactly what the language switcher's home-page links generate — not an edge case. `npm run test:e2e` (against the dev server) can't catch this class of bug at all, since the dev server doesn't go through `docker/prod/Caddyfile`. Needs a working `docker` on `PATH`; not wired into any CI (none exists yet for this repo).
+
 ## Known gaps, not yet done
 
 - **ToS and Privacy Policy are structured first drafts, not final legal text** — flagged as such on the pages themselves (`noindex`, an on-page disclaimer banner). Both need real legal review before this site goes live for real, per `private/landing-page.md`'s own caveat in the main repo.
