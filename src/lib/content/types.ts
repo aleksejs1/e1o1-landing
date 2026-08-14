@@ -117,7 +117,16 @@ export interface LandingContent {
 		languageHeading: string;
 		smallPrint: string;
 	};
+}
 
+/**
+ * Terms of Service and Privacy Policy — deliberately NOT part of
+ * LandingContent/per-locale: this is real legal text (English only for
+ * now, see legal.ts), not marketing copy, and every locale falls back to
+ * the same English version rather than showing a translation of a stale
+ * draft. See src/lib/content/index.ts.
+ */
+export interface LegalContent {
 	terms: LegalPage;
 	privacyPolicy: LegalPage;
 }

@@ -16,3 +16,6 @@ export const DEPLOYMENT_DOCS_URL =
  * repo for why Cal.com specifically).
  */
 export const CAL_COM_URL = 'https://cal.com/aleksejs1/demo';
+
+/** Real contact address for legal/privacy questions — see the Privacy Policy's Contact section. */
+export const CONTACT_EMAIL = 'aleksejs0@gmail.com';

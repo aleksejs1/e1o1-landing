@@ -43,7 +43,17 @@ test('clicking a language link in the header updates the page immediately, no re
 	await expect(page.locator('h1')).toHaveText('Приватные встречи 1:1. Доказуемо приватные.');
 });
 
-test('switching locale from a non-home page lands on the localized version of that same page', async ({
+/**
+ * Terms of Service and Privacy Policy are deliberately English-only for now
+ * (src/lib/content/legal.ts / getLegalContent()) — every locale falls back
+ * to the same English text rather than showing a translation of stale
+ * placeholder content. This test both confirms that fallback (h1 stays
+ * "Terms of Service" in every locale) and that switching locale from a
+ * non-home page still correctly navigates to the localized *URL* — the
+ * chrome/routing layer and the legal-content fallback are independent, and
+ * this is the one page where a naive fix could plausibly conflate them.
+ */
+test('switching locale from a non-home page updates the URL and lang, but Terms of Service stays English by design', async ({
 	page
 }) => {
 	await page.goto('/terms', { waitUntil: 'networkidle' });
@@ -53,5 +63,5 @@ test('switching locale from a non-home page lands on the localized version of th
 
 	await expect(page).toHaveURL(/\/lv\/terms\/?$/);
 	await expect(page.locator('html')).toHaveAttribute('lang', 'lv');
-	await expect(page.locator('h1')).toHaveText('Lietošanas noteikumi');
+	await expect(page.locator('h1')).toHaveText('Terms of Service');
 });
