@@ -19,8 +19,8 @@
 
 		<div class="footer-col">
 			<h6>{content.footer.legalHeading}</h6>
-			<a href={localizeHref('/terms')}>{content.footer.termsLabel}</a>
-			<a href={localizeHref('/privacy')}>{content.footer.privacyLabel}</a>
+			<a href={localizeHref('/terms/')}>{content.footer.termsLabel}</a>
+			<a href={localizeHref('/privacy/')}>{content.footer.privacyLabel}</a>
 		</div>
 
 		<div class="footer-col">

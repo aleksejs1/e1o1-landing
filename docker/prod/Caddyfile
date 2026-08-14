@@ -36,37 +36,20 @@
 		Strict-Transport-Security "max-age=31536000; includeSubDomains"
 	}
 
-	# SvelteKit's default trailingSlash="never" writes each route as a flat
-	# routename.html file (e.g. /ru -> ru.html, /ru/terms -> ru/terms.html),
-	# not routename/index.html — file_server alone only serves exact
-	# filename matches, so a bare /ru 404s without either block below.
-	#
-	# A request ending in "/" (beyond the bare root) needs its own path,
-	# not just try_files {path}.html: /ru/ IS an existing directory on disk
-	# (build/ru/ holds ru/terms.html, ru/privacy.html), so a plain
-	# try_files {path} {path}.html would match the directory itself on the
-	# first candidate and hand off to file_server, which then 404s looking
-	# for a nonexistent ru/index.html inside it, never reaching the second
-	# candidate. This isn't hypothetical: Paraglide's own localizeHref()
-	# always appends a trailing slash when localizing the *root* path (e.g.
-	# /ru/, /lv/, /es/), which is exactly what the language switcher's
-	# home-page links use — confirmed as a real production 404 on exactly
-	# this URL shape. Strip the trailing slash and append .html directly,
-	# bypassing the directory-match problem entirely. The regexp requires
-	# at least one character before the final "/", so the bare root "/" is
-	# untouched and still falls through to file_server's own index.html
-	# handling below.
-	@trailingSlash path_regexp tslash ^(.+)/$
-	handle @trailingSlash {
-		rewrite * {re.tslash.1}.html
-		file_server
-	}
-
-	# No catch-all /index.html fallback (that pattern is for SPA-style
-	# routing): every real route is genuinely prerendered (adapter-static,
-	# strict mode), so anything else should stay a real 404.
-	handle {
-		try_files {path} {path}.html
-		file_server
-	}
+	# Every route is routename/index.html (src/routes/+layout.ts sets
+	# trailingSlash = 'always' for exactly this reason — see its own
+	# comment for the real bug this fixes), so plain file_server's own
+	# standard directory -> index.html resolution is enough: no rewrite
+	# hack needed, and it's what already correctly served the bare "/"
+	# from day one. A request missing the trailing slash (e.g. /ru) is
+	# canonicalized by file_server itself (a 308 redirect to /ru/) rather
+	# than served in place — necessary, not just tidy: each page's relative
+	# asset paths (../_app/...) are computed assuming the page is actually
+	# served at a URL ending in "/", so silently serving that same content
+	# at a mismatched URL would 404 every asset on the page (confirmed as
+	# a real production bug before this fix). No catch-all /index.html
+	# fallback for anything else (that pattern is for SPA-style routing):
+	# every real route is genuinely prerendered (adapter-static, strict
+	# mode), so anything not matched here stays a real 404.
+	file_server
 }

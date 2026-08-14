@@ -1,19 +1,30 @@
 #!/usr/bin/env node
 /**
  * Builds the real prod image and hits it with real HTTP requests, checking
- * status codes for a fixed table of paths. Exists specifically because a
- * real bug shipped that no other check here would have caught: the Caddy
- * layer 404'd on any trailing-slash URL (e.g. /ru/), which Playwright's
- * dev-server e2e suite (npm run test:e2e) never exercises — the dev server
- * is SvelteKit's own routing, not the built static files served through
- * docker/prod/Caddyfile. Paraglide's localizeHref() always appends a
- * trailing slash when localizing the *root* path, so /ru/, /lv/, /es/ are
- * exactly what the language switcher's home-page links generate — this
- * isn't an edge case, it's the common case for that one link.
+ * status codes (and redirect targets) for a fixed table of paths. Exists
+ * because two real bugs shipped here that nothing else in this repo would
+ * have caught — Playwright's e2e suite (npm run test:e2e) runs against the
+ * dev server, which never goes through docker/prod/Caddyfile at all:
+ *
+ * 1. The Caddy layer 404'd on any trailing-slash URL (e.g. /ru/), because
+ *    /ru/ is itself an existing *directory* on disk. Paraglide's own
+ *    localizeHref() always appends a trailing slash when localizing the
+ *    *root* path, so /ru/, /lv/, /es/ are exactly what the language
+ *    switcher's home-page links generate — not an edge case.
+ * 2. Fixing #1 by rewriting trailing-slash requests in place (serving
+ *    ru.html's content while the browser's address bar stayed at /ru/)
+ *    broke every relative asset path on the page (./_app/... resolves
+ *    against the *served* URL, not the file the content came from) — the
+ *    page loaded with no CSS/JS at all. The real fix was at the source:
+ *    src/routes/+layout.ts now sets trailingSlash = 'always', so every
+ *    route is genuinely routename/index.html with correctly-relative
+ *    asset paths, and a non-trailing-slash request (e.g. /ru) is expected
+ *    to get a real 308 redirect to the canonical /ru/ — Caddy's own
+ *    file_server does this natively, no custom rewrite needed.
  *
  * Not wired into any CI pipeline (none exists yet for this repo) — run by
- * hand before a deploy, or after touching docker/prod/*. Needs a working
- * `docker` on PATH.
+ * hand before a deploy, or after touching docker/prod/* or trailingSlash
+ * config. Needs a working `docker` on PATH.
  */
 import { execSync, spawnSync } from 'node:child_process';
 
@@ -22,20 +33,20 @@ const CONTAINER = 'e1o1-landing-verify-docker';
 const PORT = 18099;
 
 const EXPECTED = {
-	'/': 200,
-	'/ru': 200,
-	'/ru/': 200,
-	'/lv/': 200,
-	'/es/': 200,
-	'/terms': 200,
-	'/terms/': 200,
-	'/ru/terms': 200,
-	'/ru/terms/': 200,
-	'/es/privacy': 200,
-	'/es/privacy/': 200,
-	'/favicon.svg': 200,
-	'/does-not-exist': 404,
-	'/does-not-exist/': 404
+	'/': { status: 200 },
+	'/ru': { status: 308, location: '/ru/' },
+	'/ru/': { status: 200 },
+	'/lv/': { status: 200 },
+	'/es/': { status: 200 },
+	'/terms': { status: 308, location: '/terms/' },
+	'/terms/': { status: 200 },
+	'/ru/terms': { status: 308, location: '/ru/terms/' },
+	'/ru/terms/': { status: 200 },
+	'/es/privacy': { status: 308, location: '/es/privacy/' },
+	'/es/privacy/': { status: 200 },
+	'/favicon.svg': { status: 200 },
+	'/does-not-exist': { status: 404 },
+	'/does-not-exist/': { status: 404 }
 };
 
 function sh(cmd, opts = {}) {
@@ -63,9 +74,9 @@ async function waitForHealthy(timeoutMs = 30000) {
 	throw new Error('Container never became healthy within ' + timeoutMs + 'ms');
 }
 
-async function fetchStatus(path) {
+async function check(path) {
 	const res = await fetch(`http://localhost:${PORT}${path}`, { redirect: 'manual' });
-	return res.status;
+	return { status: res.status, location: res.headers.get('location') };
 }
 
 console.log('Building', IMAGE, '...');
@@ -80,9 +91,14 @@ try {
 	await waitForHealthy();
 
 	for (const [path, expected] of Object.entries(EXPECTED)) {
-		const actual = await fetchStatus(path);
-		const ok = actual === expected;
-		console.log(`${ok ? 'PASS' : 'FAIL'}  ${path.padEnd(20)} expected ${expected}, got ${actual}`);
+		const actual = await check(path);
+		const statusOk = actual.status === expected.status;
+		const locationOk = expected.location ? actual.location === expected.location : true;
+		const ok = statusOk && locationOk;
+		const detail = expected.location
+			? `expected ${expected.status} -> ${expected.location}, got ${actual.status} -> ${actual.location}`
+			: `expected ${expected.status}, got ${actual.status}`;
+		console.log(`${ok ? 'PASS' : 'FAIL'}  ${path.padEnd(20)} ${detail}`);
 		if (!ok) failures.push(path);
 	}
 } finally {
@@ -93,4 +109,4 @@ if (failures.length > 0) {
 	console.error(`\n${failures.length} path(s) failed: ${failures.join(', ')}`);
 	process.exit(1);
 }
-console.log('\nAll paths returned the expected status.');
+console.log('\nAll paths returned the expected status/redirect.');
