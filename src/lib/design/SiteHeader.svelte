@@ -2,8 +2,8 @@
 	import Logo from './Logo.svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
 	import LanguageSwitcher from '$lib/i18n/LanguageSwitcher.svelte';
-	import { localizeHref } from '$lib/paraglide/runtime';
-	import { APP_URL } from '$lib/links';
+	import { getLocale, localizeHref } from '$lib/paraglide/runtime';
+	import { appDemoUrl } from '$lib/links';
 	import * as m from '$lib/paraglide/messages';
 </script>
 
@@ -16,7 +16,7 @@
 	<div class="site-header-controls">
 		<a
 			class="btn btn-primary header-demo-btn"
-			href={APP_URL}
+			href={appDemoUrl(getLocale())}
 			target="_blank"
 			rel="noopener noreferrer"
 		>

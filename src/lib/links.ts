@@ -28,5 +28,20 @@ export const CAL_COM_URL = 'https://cal.com/aleksejs1/demo';
  */
 export const APP_URL = 'https://e1o1.4m.lv/';
 
+/**
+ * APP_URL with `?lang=` appended so a demo link from this site's RU/LV/ES
+ * pages lands a visitor directly on the matching-language demo account
+ * (the app reads `?lang=` on load — see the main repo's
+ * frontend/src/i18n/index.ts — and both persists it as the displayed UI
+ * language and picks the demo login credentials to match, see
+ * frontend/src/demo.ts). Safe to call unconditionally: this site's own
+ * locale set (project.inlang/settings.json) is exactly the app's 4
+ * supported locales (en/ru/lv/es), so every possible `locale` value here
+ * is already one the app understands.
+ */
+export function appDemoUrl(locale: string): string {
+	return `${APP_URL}?lang=${locale}`;
+}
+
 /** Real contact address for legal/privacy questions — see the Privacy Policy's Contact section. */
 export const CONTACT_EMAIL = 'aleksejs0@gmail.com';
