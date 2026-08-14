@@ -21,7 +21,31 @@ export const en: LandingContent = {
 			'Self-Hosted',
 			'End-to-End Encrypted',
 			'No Vendor Lock-in'
-		]
+		],
+		highlights: [
+			{
+				icon: '🔒',
+				title: 'Zero-knowledge encryption',
+				body: 'Content is encrypted in your browser. Not even an admin with full server access can read it.'
+			},
+			{
+				icon: '🎯',
+				title: 'Goals that carry forward',
+				body: 'Set once, tracked automatically across every future cycle — nothing gets lost between meetings.'
+			},
+			{
+				icon: '📊',
+				title: 'Review-ready in one click',
+				body: 'A performance-review report over any date range, generated client-side from months of 1:1s.'
+			},
+			{
+				icon: '🚀',
+				title: 'Self-hosted, free forever',
+				body: 'One Docker container. No per-seat pricing, no vendor lock-in, running in minutes.'
+			}
+		],
+		screenshotAlt:
+			'A real encrypted1on1 anketa: mood and feelings answered, one comment thread open, and a padlock icon marking this side as end-to-end encrypted.'
 	},
 
 	origin: {

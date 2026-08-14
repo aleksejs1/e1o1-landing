@@ -20,6 +20,12 @@ export interface ComparisonPoint {
 	body: string;
 }
 
+export interface Highlight {
+	icon: string;
+	title: string;
+	body: string;
+}
+
 export interface PricingTable {
 	columns: string[];
 	rows: { label: string; values: string[] }[];
@@ -51,6 +57,8 @@ export interface LandingContent {
 		ctaGithub: string;
 		ctaDocs: string;
 		trustBadges: string[];
+		highlights: Highlight[];
+		screenshotAlt: string;
 	};
 
 	origin: {

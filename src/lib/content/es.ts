@@ -21,7 +21,31 @@ export const es: LandingContent = {
 			'Autoalojado',
 			'Cifrado de extremo a extremo',
 			'Sin dependencia de proveedor'
-		]
+		],
+		highlights: [
+			{
+				icon: '🔒',
+				title: 'Cifrado de conocimiento cero',
+				body: 'El contenido se cifra directamente en tu navegador. Ni siquiera un administrador con acceso total al servidor puede leerlo.'
+			},
+			{
+				icon: '🎯',
+				title: 'Objetivos que se trasladan entre ciclos',
+				body: 'Se fijan una vez y se siguen automáticamente en cada ciclo siguiente: nada se pierde entre reuniones.'
+			},
+			{
+				icon: '📊',
+				title: 'Informe de evaluación en un clic',
+				body: 'Un informe para cualquier rango de fechas, generado del lado del cliente a partir de meses de reuniones 1 a 1.'
+			},
+			{
+				icon: '🚀',
+				title: 'Autoalojado, gratis para siempre',
+				body: 'Un solo contenedor Docker. Sin coste por usuario, sin dependencia de proveedor, en marcha en minutos.'
+			}
+		],
+		screenshotAlt:
+			'Una reunión 1 a 1 real de encrypted1on1: estado de ánimo y sensaciones respondidos, un hilo de comentarios abierto, y un icono de candado que marca este lado como cifrado de extremo a extremo.'
 	},
 
 	origin: {

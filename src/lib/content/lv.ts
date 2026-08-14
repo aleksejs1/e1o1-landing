@@ -21,7 +21,31 @@ export const lv: LandingContent = {
 			'Pašu uzturēta',
 			'Šifrēta no gala līdz galam',
 			'Bez piesaistes piegādātājam'
-		]
+		],
+		highlights: [
+			{
+				icon: '🔒',
+				title: 'Nulles zināšanas šifrējums',
+				body: 'Saturs tiek šifrēts tieši jūsu pārlūkprogrammā. Pat administrators ar pilnu piekļuvi serverim to nevar izlasīt.'
+			},
+			{
+				icon: '🎯',
+				title: 'Mērķi, kas pāriet uz nākamo ciklu',
+				body: 'Izvirzīti vienreiz un automātiski izsekoti katrā nākamajā ciklā — nekas nepazūd starp tikšanām.'
+			},
+			{
+				icon: '📊',
+				title: 'Izvērtēšanas atskaite vienā klikšķī',
+				body: 'Atskaite par jebkuru laika periodu, izveidota klienta pusē no vairāku mēnešu 1:1 tikšanu datiem.'
+			},
+			{
+				icon: '🚀',
+				title: 'Pašu uzturēta, mūžīgi bez maksas',
+				body: 'Viens Docker konteiners. Bez maksas par lietotāju, bez piesaistes piegādātājam, darbojas dažu minūšu laikā.'
+			}
+		],
+		screenshotAlt:
+			'Reāla encrypted1on1 anketa: atbildēts uz noskaņojuma un sajūtu jautājumiem, atvērts viens komentāru pavediens, un piekaramās atslēgas ikona atzīmē šo pusi kā šifrētu no gala līdz galam.'
 	},
 
 	origin: {
