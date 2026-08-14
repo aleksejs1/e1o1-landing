@@ -47,6 +47,20 @@ Multi-stage: `node:26-alpine` builds the static output, then a minimal `caddy:2-
 
 CSP is stricter than the main app's own (`script-src 'self'` with no `'wasm-unsafe-eval'`) since this site has no WebAssembly/crypto at all — confirmed via a real grep of the built bundle, not assumed.
 
+### Redeploying
+
+```sh
+docker/prod/deploy.sh
+```
+
+Builds the image and (re)starts it as a single, fixed-name container (`e1o1-landing` by default) — a redeploy is just running this again, no need to look up a container ID/name and stop/remove it by hand first, since the script does that itself before starting the new one. Also sets `--restart unless-stopped`, so the container comes back on its own after a host reboot or crash, which a bare `docker run` doesn't give you. Configurable via env vars, e.g.:
+
+```sh
+HOST_PORT=8204 docker/prod/deploy.sh
+```
+
+`IMAGE_NAME`/`CONTAINER_NAME`/`HOST_PORT` all have defaults (`e1o1-landing`/`e1o1-landing`/`8204`) — override any of them the same way. Verified for real: ran it twice in a row against a live container and confirmed the second run produces a genuinely new container (different container ID) cleanly replacing the first, with no leftover stopped containers left behind and zero downtime gap longer than the container's own restart time.
+
 ```sh
 npm run verify:docker
 ```
