@@ -24,6 +24,7 @@
 			href={localizeHref(currentHref, { locale: code })}
 			aria-current={code === currentLocale ? 'true' : undefined}
 			onclick={() => rememberLocale(code)}
+			data-sveltekit-reload
 		>
 			{LOCALE_NAMES[code]}
 		</a>

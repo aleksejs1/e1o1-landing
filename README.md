@@ -21,10 +21,13 @@ npm run dev
 ## Checking
 
 ```sh
-npm run check   # svelte-check
-npm run lint     # prettier --check
-npm run format   # prettier --write
+npm run check     # svelte-check
+npm run lint       # prettier --check
+npm run format     # prettier --write
+npm run test:e2e   # Playwright, against the dev server
 ```
+
+`e2e/language-switch.spec.ts` is a real regression test for a bug that shipped in the initial version: clicking a language link updated the URL but not the rendered page. SvelteKit's client-side router intercepts `<a>` clicks by default, and since Paraglide de-localizes the URL *before* SvelteKit's own router sees it, `/` and `/ru` looked like the same route to it — nothing remounted, so the locale-derived content (read once via `getLocale()`, not through a reactive store) never re-ran. A manual refresh always worked, which is what made it non-obvious. Fixed with `data-sveltekit-reload` on the language switcher's links, forcing a real browser navigation — free on a fully static site, since every locale is already a separate built HTML file. Confirmed the test genuinely fails without the fix before keeping it.
 
 ## Building
 
