@@ -27,7 +27,7 @@ npm run format     # prettier --write
 npm run test:e2e   # Playwright, against the dev server
 ```
 
-`e2e/language-switch.spec.ts` is a real regression test for a bug that shipped in the initial version: clicking a language link updated the URL but not the rendered page. SvelteKit's client-side router intercepts `<a>` clicks by default, and since Paraglide de-localizes the URL *before* SvelteKit's own router sees it, `/` and `/ru` looked like the same route to it — nothing remounted, so the locale-derived content (read once via `getLocale()`, not through a reactive store) never re-ran. A manual refresh always worked, which is what made it non-obvious. Fixed with `data-sveltekit-reload` on the language switcher's links, forcing a real browser navigation — free on a fully static site, since every locale is already a separate built HTML file. Confirmed the test genuinely fails without the fix before keeping it.
+`e2e/language-switch.spec.ts` is a real regression test for a bug that shipped in the initial version: clicking a language link updated the URL but not the rendered page. SvelteKit's client-side router intercepts `<a>` clicks by default, and since Paraglide de-localizes the URL _before_ SvelteKit's own router sees it, `/` and `/ru` looked like the same route to it — nothing remounted, so the locale-derived content (read once via `getLocale()`, not through a reactive store) never re-ran. A manual refresh always worked, which is what made it non-obvious. Fixed with `data-sveltekit-reload` on the language switcher's links, forcing a real browser navigation — free on a fully static site, since every locale is already a separate built HTML file. Confirmed the test genuinely fails without the fix before keeping it.
 
 ## Building
 
@@ -49,7 +49,6 @@ CSP is stricter than the main app's own (`script-src 'self'` with no `'wasm-unsa
 
 ## Known gaps, not yet done
 
-- **No real Cal.com link yet.** `src/lib/links.ts`'s `CAL_COM_URL` is a placeholder — every "Book a demo"/"Contact us"/"Contact sales" CTA on the site points at it. Replace that one constant once a real Cal.com account/username exists.
 - **ToS and Privacy Policy are structured first drafts, not final legal text** — flagged as such on the pages themselves (`noindex`, an on-page disclaimer banner). Both need real legal review before this site goes live for real, per `private/landing-page.md`'s own caveat in the main repo.
 - **Translations (ru/lv/es) were written by Claude, not reviewed by native speakers yet.** Structurally complete and parallel to the English source (same keys, same sections), but worth a native-speaker pass before this is genuinely public-facing, especially for the legal pages.
 - No analytics/tracking of any kind is wired in, deliberately — see the Privacy Policy's own "Marketing site data" section for the reasoning. If that ever changes, it should be a privacy-respecting, self-hostable tool, stated plainly on that page, not silently added.
