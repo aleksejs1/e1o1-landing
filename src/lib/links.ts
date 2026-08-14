@@ -13,9 +13,20 @@ export const DEPLOYMENT_DOCS_URL =
 /**
  * Every "Book a demo"/"Contact us"/"Contact sales" CTA on the site points
  * here (see private/landing-page.md's "Lead capture" section in the source
- * repo for why Cal.com specifically).
+ * repo for why Cal.com specifically). This is a scheduling link for a live
+ * call, distinct from APP_URL below (the self-serve product demo).
  */
 export const CAL_COM_URL = 'https://cal.com/aleksejs1/demo';
+
+/**
+ * The real running product — every "Try the demo"/"Try the live demo" CTA
+ * points here, straight to the login page, which shows its own "Try the
+ * live demo" one-click login button when the deployed instance has
+ * DEMO_MODE enabled (see the main repo's frontend/src/demo.ts). No booking,
+ * no signup — distinct from CAL_COM_URL above (a scheduling link for a
+ * live call).
+ */
+export const APP_URL = 'https://e1o1.4m.lv/';
 
 /** Real contact address for legal/privacy questions — see the Privacy Policy's Contact section. */
 export const CONTACT_EMAIL = 'aleksejs0@gmail.com';

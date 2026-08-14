@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getContent } from '$lib/content';
-	import { CAL_COM_URL, GITHUB_URL, DOCS_URL } from '$lib/links';
+	import { APP_URL, CAL_COM_URL, GITHUB_URL, DOCS_URL } from '$lib/links';
 
 	const content = $derived(getContent());
 </script>
@@ -17,7 +17,10 @@
 			<p class="hero-subhead">{content.hero.subhead}</p>
 
 			<div class="hero-ctas">
-				<a class="btn btn-primary" href={CAL_COM_URL} target="_blank" rel="noopener noreferrer">
+				<a class="btn btn-primary" href={APP_URL} target="_blank" rel="noopener noreferrer">
+					{content.hero.ctaTryDemo}
+				</a>
+				<a class="btn btn-secondary" href={CAL_COM_URL} target="_blank" rel="noopener noreferrer">
 					{content.hero.ctaBookDemo}
 				</a>
 				<a class="btn btn-secondary" href={GITHUB_URL} target="_blank" rel="noopener noreferrer">

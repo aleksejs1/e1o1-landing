@@ -3,6 +3,8 @@
 	import ThemeToggle from './ThemeToggle.svelte';
 	import LanguageSwitcher from '$lib/i18n/LanguageSwitcher.svelte';
 	import { localizeHref } from '$lib/paraglide/runtime';
+	import { APP_URL } from '$lib/links';
+	import * as m from '$lib/paraglide/messages';
 </script>
 
 <header class="site-header">
@@ -12,6 +14,14 @@
 	</a>
 
 	<div class="site-header-controls">
+		<a
+			class="btn btn-primary header-demo-btn"
+			href={APP_URL}
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			{m.header_try_demo()}
+		</a>
 		<LanguageSwitcher />
 		<ThemeToggle />
 	</div>
@@ -46,5 +56,16 @@
 		display: flex;
 		align-items: center;
 		gap: var(--space-2);
+	}
+
+	/* The header already has no room to spare on narrow phones (the wordmark
+	   + 4 language links + theme toggle alone are already tight) — the demo
+	   CTA repeats seconds later as the hero's own primary button, so it's
+	   dropped here rather than crowding out the language switcher/theme
+	   toggle. */
+	@media (max-width: 480px) {
+		.header-demo-btn {
+			display: none;
+		}
 	}
 </style>

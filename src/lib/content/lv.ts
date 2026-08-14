@@ -13,6 +13,7 @@ export const lv: LandingContent = {
 		headline: 'Privātas 1:1 tikšanās. Pierādāmi privātas.',
 		subhead:
 			'encrypted1on1 ir atvērtā koda, pašu uzturēta platforma strukturētām vadītāja un darbinieka 1:1 tikšanām — šifrēta no gala līdz galam, tāpēc pat tie, kas uztur serveri, nevar izlasīt uzrakstīto. Tas nav solījums privātuma politikā. Tas ir matemātisks fakts.',
+		ctaTryDemo: 'Izmēģināt tiešraides demo',
 		ctaBookDemo: 'Rezervēt demonstrāciju',
 		ctaGithub: 'Skatīt GitHub',
 		ctaDocs: 'Lasīt dokumentāciju',
@@ -192,6 +193,7 @@ export const lv: LandingContent = {
 
 	footer: {
 		productHeading: 'Produkts',
+		demoLabel: 'Tiešraides demo',
 		pricingLabel: 'Cenas',
 		docsLabel: 'Dokumentācija',
 		githubLabel: 'GitHub',

@@ -13,6 +13,7 @@ export const en: LandingContent = {
 		headline: 'Private 1:1s. Provably private.',
 		subhead:
 			'encrypted1on1 is an open-source, self-hosted platform for structured manager–employee 1:1 meetings — end-to-end encrypted, so not even the people running the server can read what’s written. Not a policy promise. A mathematical one.',
+		ctaTryDemo: 'Try the live demo',
 		ctaBookDemo: 'Book a demo',
 		ctaGithub: 'View on GitHub',
 		ctaDocs: 'Read the docs',
@@ -191,6 +192,7 @@ export const en: LandingContent = {
 
 	footer: {
 		productHeading: 'Product',
+		demoLabel: 'Live demo',
 		pricingLabel: 'Pricing',
 		docsLabel: 'Docs',
 		githubLabel: 'GitHub',

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import LanguageSwitcher from '$lib/i18n/LanguageSwitcher.svelte';
 	import { localizeHref } from '$lib/paraglide/runtime';
-	import { GITHUB_URL, DOCS_URL } from '$lib/links';
+	import { APP_URL, GITHUB_URL, DOCS_URL } from '$lib/links';
 	import type { LandingContent } from '$lib/content/types';
 
 	const { content }: { content: LandingContent } = $props();
@@ -11,6 +11,7 @@
 	<div class="site-footer-columns">
 		<div class="footer-col">
 			<h6>{content.footer.productHeading}</h6>
+			<a href={APP_URL} target="_blank" rel="noopener noreferrer">{content.footer.demoLabel}</a>
 			<a href="{localizeHref('/')}#pricing">{content.footer.pricingLabel}</a>
 			<a href={DOCS_URL} target="_blank" rel="noopener noreferrer">{content.footer.docsLabel}</a>
 			<a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">{content.footer.githubLabel}</a

@@ -53,6 +53,7 @@ export interface LandingContent {
 	hero: {
 		headline: string;
 		subhead: string;
+		ctaTryDemo: string;
 		ctaBookDemo: string;
 		ctaGithub: string;
 		ctaDocs: string;
@@ -115,6 +116,7 @@ export interface LandingContent {
 
 	footer: {
 		productHeading: string;
+		demoLabel: string;
 		pricingLabel: string;
 		docsLabel: string;
 		githubLabel: string;

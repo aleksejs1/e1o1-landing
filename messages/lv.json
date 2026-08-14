@@ -2,5 +2,6 @@
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"theme_switch_to_light": "Pārslēgt uz gaišo tēmu",
 	"theme_switch_to_dark": "Pārslēgt uz tumšo tēmu",
-	"language_switcher_label": "Valoda"
+	"language_switcher_label": "Valoda",
+	"header_try_demo": "Izmēģināt demo"
 }
