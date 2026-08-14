@@ -14,8 +14,6 @@
 
 	<p class="scope-note">{@html legal.scopeNoteHtml}</p>
 
-	<div class="banner-error disclaimer">{@html legal.disclaimerHtml}</div>
-
 	{#each legal.sections as section (section.heading)}
 		<section>
 			<h2>{section.heading}</h2>
@@ -33,10 +31,7 @@
 
 	.scope-note {
 		opacity: 0.85;
-	}
-
-	.disclaimer {
-		margin: var(--space-4) 0 var(--space-8);
+		margin-bottom: var(--space-8);
 	}
 
 	section {

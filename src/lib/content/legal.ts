@@ -4,7 +4,7 @@ import { ENCRYPTION_DOCS_URL, DEPLOYMENT_DOCS_URL, CONTACT_EMAIL } from '../link
 /**
  * Real, specific legal text — not a structural skeleton. Still not a
  * substitute for a lawyer's review before this is treated as a binding
- * agreement (see each page's disclaimer banner, LegalPage.svelte).
+ * agreement.
  *
  * Facts baked in here, decided by the operator rather than guessed:
  * - Governing law / jurisdiction: Latvia.
@@ -25,8 +25,6 @@ export const legal: LegalContent = {
 		title: 'Terms of Service',
 		scopeNoteHtml:
 			'These Terms of Service ("Terms") cover two different things: (a) this marketing/documentation website, and (b) the managed encrypted1on1 Cloud offering, once it launches — the only case where the Operator actually operates infrastructure and a real contractual relationship exists. They do <strong>not</strong> cover self-hosted deployments: an organization self-hosting encrypted1on1 is running its own copy of open-source software under the AGPLv3 license, and is itself solely responsible for whatever terms it sets with its own employees. Throughout these Terms, "the Operator", "we", and "us" refer to the individual or entity operating the encrypted1on1 Cloud service and this website — no separate company has been incorporated as of this writing, and these Terms remain in effect regardless.',
-		disclaimerHtml:
-			'This document has been drafted to be complete and specific, not a placeholder — but it has not been reviewed by a lawyer, and shouldn’t be treated as a fully vetted, binding legal agreement until it has been.',
 		sections: [
 			{
 				heading: '1. Acceptance of terms',
@@ -87,8 +85,6 @@ export const legal: LegalContent = {
 			'This Privacy Policy covers the marketing site and the encrypted1on1 Cloud service. Self-hosted deployments are covered by the deploying organization’s own privacy policy — the product itself has a configurable footer link for exactly this purpose (see <a href="' +
 			DEPLOYMENT_DOCS_URL +
 			'" target="_blank" rel="noopener noreferrer">the deployment docs</a>). Throughout this policy, "the Operator", "we", and "us" refer to the individual or entity operating the encrypted1on1 Cloud service and this website.',
-		disclaimerHtml:
-			'This document has been drafted to be complete and specific, not a placeholder — but it has not been reviewed by a lawyer, and shouldn’t be treated as a fully vetted, binding statement of our practices until it has been.',
 		sections: [
 			{
 				heading: '1. What this policy covers',

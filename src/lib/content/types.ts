@@ -33,7 +33,6 @@ export interface LegalSection {
 export interface LegalPage {
 	title: string;
 	scopeNoteHtml: string;
-	disclaimerHtml: string;
 	sections: LegalSection[];
 }
 
