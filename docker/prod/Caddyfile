@@ -1,0 +1,48 @@
+# Prod Caddyfile — fully static site, no backend, no TLS termination here.
+# Reuses the main app's own battle-tested CSP/HSTS header block
+# (encrypted1on1/docker/prod/Caddyfile) with the app-specific parts
+# stripped: no 'wasm-unsafe-eval' (no WebAssembly/crypto on this site at
+# all — confirmed via a real grep of the built bundle, see the repo's
+# CLAUDE.md), no /api or /health routing (nothing to route to — there's no
+# backend process in this image).
+{
+	skip_install_trust
+	# No TLS/auto_https, ever — this container always sits behind something
+	# that terminates TLS (a reverse proxy, a PaaS's own edge), same
+	# reasoning the main app's Caddyfile.reverse-proxy already established.
+	auto_https off
+}
+
+# PORT is a real env var the container itself reads, not a Compose-level
+# indirection — works identically under plain `docker run`, Compose,
+# Kubernetes, or a PaaS that injects its own PORT. Falls back to 8080 if
+# unset.
+:{$PORT:8080} {
+	root * /srv
+	# Stock caddy:2-alpine ships gzip/zstd only, not brotli (confirmed via
+	# `caddy list-modules` — no http.encoders.br) unlike the main app's
+	# FrankenPHP-based image, which bundles brotli support.
+	encode zstd gzip
+
+	header {
+		Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; frame-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+		X-Frame-Options "DENY"
+		# Set unconditionally even though this Caddy never terminates TLS
+		# itself — whatever fronts it relays response headers through to the
+		# browser unmodified, and per RFC 6797 browsers ignore this header
+		# entirely when received over plain HTTP, so there's no downside to
+		# always sending it. Same reasoning as the main app's
+		# Caddyfile.reverse-proxy.
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+	}
+
+	# SvelteKit's default trailingSlash="never" writes each route as a flat
+	# routename.html file (e.g. /ru -> ru.html, /ru/terms -> ru/terms.html),
+	# not routename/index.html — file_server alone only serves exact
+	# filename matches, so a bare /ru 404s without this. No catch-all
+	# /index.html fallback (that pattern is for SPA-style routing): every
+	# real route is genuinely prerendered (adapter-static, strict mode), so
+	# anything else should stay a real 404.
+	try_files {path} {path}.html
+	file_server
+}

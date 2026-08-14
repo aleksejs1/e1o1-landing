@@ -1,0 +1,317 @@
+<script lang="ts">
+	import { getContent } from '$lib/content';
+	import { CAL_COM_URL, GITHUB_URL, DOCS_URL } from '$lib/links';
+
+	const content = $derived(getContent());
+</script>
+
+<svelte:head>
+	<title>{content.meta.title}</title>
+	<meta name="description" content={content.meta.description} />
+</svelte:head>
+
+<section class="hero">
+	<h1>{content.hero.headline}</h1>
+	<p class="hero-subhead">{content.hero.subhead}</p>
+
+	<div class="hero-ctas">
+		<a class="btn btn-primary" href={CAL_COM_URL} target="_blank" rel="noopener noreferrer">
+			{content.hero.ctaBookDemo}
+		</a>
+		<a class="btn btn-secondary" href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+			{content.hero.ctaGithub}
+		</a>
+	</div>
+
+	<a class="hero-docs-link" href={DOCS_URL} target="_blank" rel="noopener noreferrer">
+		{content.hero.ctaDocs}
+	</a>
+
+	<ul class="trust-badges">
+		{#each content.hero.trustBadges as badge (badge)}
+			<li class="tag tag-outline">{badge}</li>
+		{/each}
+	</ul>
+</section>
+
+<section class="section" id="origin">
+	<div class="section-inner">
+		<h2>{content.origin.heading}</h2>
+		{#each content.origin.paragraphsHtml as html, i (i)}
+			<p>{@html html}</p>
+		{/each}
+	</div>
+</section>
+
+<section class="section section-alt">
+	<div class="section-inner">
+		<h2>{content.methodology.heading}</h2>
+		<p>{content.methodology.intro}</p>
+
+		<ul class="research-list">
+			{#each content.methodology.points as point, i (i)}
+				<li>{@html point.html}</li>
+			{/each}
+		</ul>
+
+		<p>{@html content.methodology.closingHtml}</p>
+	</div>
+</section>
+
+<section class="section">
+	<div class="section-inner">
+		<h2>{content.comparison.heading}</h2>
+		<p>{content.comparison.intro}</p>
+
+		<div class="point-grid">
+			{#each content.comparison.points as point, i (i)}
+				<div class="card elev-sm">
+					<h3 class="card-title">{point.title}</h3>
+					<p class="card-body">{point.body}</p>
+				</div>
+			{/each}
+		</div>
+
+		<p>{@html content.comparison.closingHtml}</p>
+	</div>
+</section>
+
+<section class="section section-alt" id="privacy">
+	<div class="section-inner">
+		<h2>{content.privacy.heading}</h2>
+		<p>{content.privacy.intro}</p>
+
+		<div class="point-grid point-grid-narrow">
+			{#each content.privacy.points as point, i (i)}
+				<div class="card elev-sm">
+					<h3 class="card-title">{point.title}</h3>
+					<p class="card-body">{point.body}</p>
+				</div>
+			{/each}
+		</div>
+
+		<p>{@html content.privacy.resolutionHtml}</p>
+
+		<div class="card faq-card elev-sm">
+			<h4>{content.privacy.faq.question}</h4>
+			<p>{@html content.privacy.faq.answer1Html}</p>
+			<p>{@html content.privacy.faq.answer2Html}</p>
+		</div>
+	</div>
+</section>
+
+<section class="section" id="pricing">
+	<div class="section-inner">
+		<h2>{content.pricing.heading}</h2>
+
+		<div class="why-affordable">
+			<h3>{content.pricing.whyAffordableHeading}</h3>
+			{@html content.pricing.whyAffordableBodyHtml}
+		</div>
+
+		<blockquote class="pricing-quote">{@html content.pricing.quoteHtml}</blockquote>
+
+		<div class="pricing-tables">
+			<div>
+				<h3>{content.pricing.selfHosted.heading}</h3>
+				<div class="table-scroll">
+					<table class="table">
+						<thead>
+							<tr>
+								<th></th>
+								{#each content.pricing.selfHosted.table.columns as col (col)}
+									<th>{col}</th>
+								{/each}
+							</tr>
+						</thead>
+						<tbody>
+							{#each content.pricing.selfHosted.table.rows as row, rowIndex (row.label)}
+								<tr>
+									<td>{row.label}</td>
+									{#each row.values as value, i (i)}
+										<td>
+											{#if rowIndex === 0 && value === content.pricing.contactUs}
+												<a href={CAL_COM_URL} target="_blank" rel="noopener noreferrer">{value}</a>
+											{:else}
+												{value}
+											{/if}
+										</td>
+									{/each}
+								</tr>
+							{/each}
+						</tbody>
+					</table>
+				</div>
+				<p class="pricing-note text-muted">{content.pricing.selfHosted.note}</p>
+			</div>
+
+			<div>
+				<h3>{content.pricing.cloud.heading}</h3>
+				<p>{content.pricing.cloud.intro}</p>
+				<div class="table-scroll">
+					<table class="table">
+						<thead>
+							<tr>
+								<th></th>
+								{#each content.pricing.cloud.table.columns as col (col)}
+									<th>{col}</th>
+								{/each}
+							</tr>
+						</thead>
+						<tbody>
+							{#each content.pricing.cloud.table.rows as row, rowIndex (row.label)}
+								<tr>
+									<td>{row.label}</td>
+									{#each row.values as value, i (i)}
+										<td>
+											{#if rowIndex === 0 && value === content.pricing.contactSales}
+												<a href={CAL_COM_URL} target="_blank" rel="noopener noreferrer">{value}</a>
+											{:else}
+												{value}
+											{/if}
+										</td>
+									{/each}
+								</tr>
+							{/each}
+						</tbody>
+					</table>
+				</div>
+				<p class="pricing-note text-muted">{content.pricing.cloud.note}</p>
+			</div>
+		</div>
+
+		<p class="pricing-footnote text-muted">{@html content.pricing.footnoteHtml}</p>
+	</div>
+</section>
+
+<style>
+	.hero {
+		max-width: 820px;
+		margin: 0 auto;
+		padding: var(--space-8) var(--space-4) var(--space-6);
+		text-align: center;
+	}
+
+	.hero h1 {
+		font-size: 48px;
+	}
+
+	.hero-subhead {
+		font-size: 17px;
+		max-width: 640px;
+		margin: 0 auto var(--space-6);
+		opacity: 0.85;
+	}
+
+	.hero-ctas {
+		display: flex;
+		justify-content: center;
+		gap: var(--space-3);
+		flex-wrap: wrap;
+		margin-bottom: var(--space-3);
+	}
+
+	.hero-ctas .btn {
+		padding: var(--space-3) var(--space-6);
+		font-size: 15px;
+	}
+
+	.hero-docs-link {
+		display: inline-block;
+		font-size: 14px;
+		color: var(--color-accent-ink);
+		margin-bottom: var(--space-6);
+	}
+
+	.trust-badges {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: var(--space-2);
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.section {
+		padding: var(--space-8) var(--space-4);
+	}
+
+	.section-alt {
+		background: var(--color-surface);
+	}
+
+	.section-inner {
+		max-width: 820px;
+		margin: 0 auto;
+	}
+
+	.research-list {
+		list-style: none;
+		margin: 0 0 var(--space-4);
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-4);
+	}
+
+	.research-list li {
+		padding-left: var(--space-4);
+		border-left: 3px solid var(--color-accent);
+	}
+
+	.point-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: var(--space-3);
+		margin: var(--space-4) 0;
+	}
+
+	.point-grid-narrow {
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	}
+
+	.faq-card {
+		margin-top: var(--space-6);
+	}
+
+	.faq-card h4 {
+		font-size: 16px;
+		text-transform: none;
+		letter-spacing: 0;
+		color: var(--color-text);
+	}
+
+	.why-affordable {
+		margin-bottom: var(--space-4);
+	}
+
+	.pricing-quote {
+		margin: 0 0 var(--space-6);
+		padding: var(--space-4) var(--space-6);
+		border-left: 3px solid var(--color-accent);
+		font-family: var(--font-heading);
+		font-weight: var(--font-heading-weight);
+		font-size: 18px;
+		line-height: 1.4;
+	}
+
+	.pricing-tables {
+		display: grid;
+		gap: var(--space-8);
+		margin-bottom: var(--space-6);
+	}
+
+	.table-scroll {
+		overflow-x: auto;
+	}
+
+	.pricing-note {
+		font-size: 13px;
+		margin-top: var(--space-2);
+	}
+
+	.pricing-footnote {
+		font-size: 12px;
+	}
+</style>

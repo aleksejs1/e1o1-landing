@@ -1,0 +1,16 @@
+/*
+ * Landing-page-specific global CSS, kept separate from the ported
+ * src/lib/design/tokens.css and components.css so those two stay a clean,
+ * unmodified copy of the source of truth (see CLAUDE.md's own note about
+ * keeping the two from silently diverging).
+ */
+
+/* SvelteKit's own app.html wraps %sveltekit.body% in a div that needs
+   `display: contents` so it doesn't interfere with the .app-shell flex
+   column below it. Was a literal `style="display: contents"` attribute in
+   app.html — moved into a real stylesheet rule instead, since a strict CSP
+   (style-src 'self', no 'unsafe-inline') blocks inline style attributes the
+   same way it blocks inline <style> blocks. */
+.contents {
+	display: contents;
+}
