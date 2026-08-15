@@ -26,7 +26,7 @@ export const CAL_COM_URL = 'https://cal.com/aleksejs1/demo';
  * no signup — distinct from CAL_COM_URL above (a scheduling link for a
  * live call).
  */
-export const APP_URL = 'https://e1o1.4m.lv/';
+export const APP_URL = 'https://demo.private1on1.eu/';
 
 /**
  * APP_URL with `?lang=` appended so a demo link from this site's RU/LV/ES
@@ -44,4 +44,4 @@ export function appDemoUrl(locale: string): string {
 }
 
 /** Real contact address for legal/privacy questions — see the Privacy Policy's Contact section. */
-export const CONTACT_EMAIL = 'aleksejs0@gmail.com';
+export const CONTACT_EMAIL = 'aleksejs@private1on1.eu';
