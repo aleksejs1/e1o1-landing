@@ -25,7 +25,37 @@
 	encode zstd gzip
 
 	header {
-		Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; frame-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+		# script-src needs 'unsafe-inline', unlike the main app's own copy of
+		# this policy this was cloned from — confirmed for real (a live
+		# CSP-violation console error, not assumed) that SvelteKit's static
+		# adapter always emits a small inline <script> at the end of <body>
+		# to bootstrap hydration (imports the real JS chunks, calls
+		# kit.start()), on every prerendered page, with no adapter-static
+		# option to move it to an external file. It's also not practically
+		# hash-pinnable here the way the main app's CSP work considered:
+		# that script embeds a per-build app ID and this build's own chunk
+		# filenames, so its hash changes on every rebuild, and this
+		# Caddyfile has no build step of its own to keep a hash in sync.
+		#
+		# style-src needs 'unsafe-inline' too, for the same "framework
+		# internal, no escape hatch" reason — confirmed for real (another
+		# live CSP-violation console error): SvelteKit's own client runtime
+		# (not our code — grepped the built bundle to confirm) creates a
+		# visually-hidden `aria-live` region for screen-reader navigation
+		# announcements via a literal `style="position: absolute; ..."`
+		# attribute, unconditionally, on every client-routed SvelteKit app.
+		# That string happens to be a fixed constant today (no per-build
+		# content, unlike the script above), so a hash pin was considered,
+		# but rejected: it would silently break on a future @sveltejs/kit
+		# version bump with nothing in this repo's CI to catch it, for a
+		# narrower win than the reasoning below already covers.
+		#
+		# Both relaxations are accepted for the same reason: this site is
+		# genuinely different from the main app — no backend, no user
+		# accounts, no user-generated content anywhere for an attacker to
+		# inject through in the first place — unlike the crypto-handling
+		# main app, where neither relaxation was correctly ever made.
+		Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; frame-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
 		X-Frame-Options "DENY"
 		# Set unconditionally even though this Caddy never terminates TLS
 		# itself — whatever fronts it relays response headers through to the
