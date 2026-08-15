@@ -48,14 +48,14 @@
 		<div class="hero-visual">
 			<img
 				class="hero-screenshot hero-screenshot-light"
-				src="/screenshots/anketa-preview-light.png"
+				src="/screenshots/anketa-preview-{getLocale()}-light.png"
 				alt={content.hero.screenshotAlt}
 				width="688"
 				height="560"
 			/>
 			<img
 				class="hero-screenshot hero-screenshot-dark"
-				src="/screenshots/anketa-preview-dark.png"
+				src="/screenshots/anketa-preview-{getLocale()}-dark.png"
 				alt=""
 				aria-hidden="true"
 				width="688"
@@ -288,10 +288,14 @@
 		padding: 0;
 	}
 
-	/* Real product screenshot — see hero.screenshotAlt / static/screenshots/.
-	   Two <img>s, one per theme, toggled the same way tokens.css itself
-	   decides light vs dark: an explicit [data-theme] override wins, else
-	   prefers-color-scheme, else light. */
+	/* Real product screenshot — see hero.screenshotAlt / static/screenshots/,
+	   one pair of light/dark images per supported locale (anketa-preview-
+	   {locale}-{light,dark}.png — the src itself picks the right locale via
+	   getLocale(), no CSS needed there, since each locale is its own fully
+	   prerendered static page, not a runtime toggle). Two <img>s per locale,
+	   one per theme, toggled the same way tokens.css itself decides light vs
+	   dark: an explicit [data-theme] override wins, else prefers-color-scheme,
+	   else light. */
 	.hero-visual {
 		display: flex;
 		justify-content: center;
