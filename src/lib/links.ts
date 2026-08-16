@@ -19,6 +19,17 @@ export const DEPLOYMENT_DOCS_URL =
 export const CAL_COM_URL = 'https://cal.com/aleksejs1/demo';
 
 /**
+ * The hero's primary self-service signup CTA — creates a new company on the real
+ * multi-tenant cloud instance (see the main repo's docs/deployment.md "Cloud
+ * deployment" section and CLAUDE.md's Phase B entry: POST /api/companies, no
+ * password needed up front, real activation-link flow). Distinct from APP_URL below
+ * (the read-only shared demo account) and from CAL_COM_URL above (a scheduling link
+ * for a sales/support call, still used by the pricing table's "Contact us"/"Contact
+ * sales" links, unaffected by this constant).
+ */
+export const CLOUD_SIGNUP_URL = 'https://app.private1on1.eu/create-company';
+
+/**
  * The real running product — every "Try the demo"/"Try the live demo" CTA
  * points here, straight to the login page, which shows its own "Try the
  * live demo" one-click login button when the deployed instance has

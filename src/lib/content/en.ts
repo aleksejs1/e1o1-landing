@@ -14,7 +14,7 @@ export const en: LandingContent = {
 		subhead:
 			'encrypted1on1 is an open-source, self-hosted platform for structured manager–employee 1:1 meetings — end-to-end encrypted, so not even the people running the server can read what’s written. Not a policy promise. A mathematical one.',
 		ctaTryDemo: 'Try the live demo',
-		ctaBookDemo: 'Book a demo',
+		ctaGetStarted: 'Get started',
 		ctaGithub: 'View on GitHub',
 		ctaDocs: 'Read the docs',
 		trustBadges: [

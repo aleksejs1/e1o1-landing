@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getContent } from '$lib/content';
-	import { appDemoUrl, CAL_COM_URL, GITHUB_URL, DOCS_URL } from '$lib/links';
+	import { appDemoUrl, CAL_COM_URL, CLOUD_SIGNUP_URL, GITHUB_URL, DOCS_URL } from '$lib/links';
 	import { getLocale } from '$lib/paraglide/runtime';
 
 	const content = $derived(getContent());
@@ -26,8 +26,13 @@
 				>
 					{content.hero.ctaTryDemo}
 				</a>
-				<a class="btn btn-secondary" href={CAL_COM_URL} target="_blank" rel="noopener noreferrer">
-					{content.hero.ctaBookDemo}
+				<a
+					class="btn btn-secondary"
+					href={CLOUD_SIGNUP_URL}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					{content.hero.ctaGetStarted}
 				</a>
 				<a class="btn btn-secondary" href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
 					{content.hero.ctaGithub}

@@ -54,7 +54,7 @@ export interface LandingContent {
 		headline: string;
 		subhead: string;
 		ctaTryDemo: string;
-		ctaBookDemo: string;
+		ctaGetStarted: string;
 		ctaGithub: string;
 		ctaDocs: string;
 		trustBadges: string[];

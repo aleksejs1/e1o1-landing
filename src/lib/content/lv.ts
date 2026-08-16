@@ -14,7 +14,7 @@ export const lv: LandingContent = {
 		subhead:
 			'encrypted1on1 ir atvērtā koda, pašu uzturēta platforma strukturētām vadītāja un darbinieka 1:1 tikšanām — šifrēta no gala līdz galam, tāpēc pat tie, kas uztur serveri, nevar izlasīt uzrakstīto. Tas nav solījums privātuma politikā. Tas ir matemātisks fakts.',
 		ctaTryDemo: 'Izmēģināt tiešraides demo',
-		ctaBookDemo: 'Rezervēt demonstrāciju',
+		ctaGetStarted: 'Sākt',
 		ctaGithub: 'Skatīt GitHub',
 		ctaDocs: 'Lasīt dokumentāciju',
 		trustBadges: [

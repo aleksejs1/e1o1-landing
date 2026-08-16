@@ -14,7 +14,7 @@ export const es: LandingContent = {
 		subhead:
 			'encrypted1on1 es una plataforma de código abierto y autoalojada para reuniones estructuradas 1 a 1 entre responsable y empleado, cifrada de extremo a extremo, de modo que ni siquiera quienes administran el servidor pueden leer lo que se escribe. No es una promesa de política de privacidad. Es un hecho matemático.',
 		ctaTryDemo: 'Probar la demo en vivo',
-		ctaBookDemo: 'Reservar una demo',
+		ctaGetStarted: 'Comenzar',
 		ctaGithub: 'Ver en GitHub',
 		ctaDocs: 'Leer la documentación',
 		trustBadges: [
