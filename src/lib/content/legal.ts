@@ -106,17 +106,17 @@ export const legal: LegalContent = {
 			{
 				heading: '4. Cloud service data',
 				bodyHtml:
-					'Account data (email, hashed authentication material — never the actual password or master key, which never leave your browser), billing data for paid tiers once Cloud billing launches (via a third-party payment processor, to be named here once one is chosen), and server logs with their retention period.'
+					'Account data (email, hashed authentication material — never the actual password or master key, which never leave your browser), billing data for paid tiers once Cloud billing launches (via a third-party payment processor, to be named here once one is chosen), server logs, and backend error reports (via Sentry — see Sections 5 and 6), each with their own retention period.'
 			},
 			{
 				heading: '5. Data location',
 				bodyHtml:
-					'Cloud infrastructure is physically hosted in Lithuania, within the EU/EEA — relevant for GDPR-conscious customers specifically, since it means Cloud customer data doesn’t leave the EU/EEA by default.'
+					'Cloud infrastructure is physically hosted in Lithuania, within the EU/EEA — relevant for GDPR-conscious customers specifically, since it means Cloud customer data doesn’t leave the EU/EEA by default. One deliberate exception: backend error reports (Section 6) are processed by Sentry, a US-based sub-processor, on its standard infrastructure without a pinned EU data region — that data may be stored outside the EU/EEA. Error reports never contain anketa content (the backend never has that in plaintext to begin with, end-to-end encryption being the whole point), but can incidentally include account/request metadata — an email address or user ID, for instance — if it happens to appear in an error’s context.'
 			},
 			{
 				heading: '6. Sub-processors',
 				bodyHtml:
-					'One is already decided and real: <strong>Cal.com</strong>, used for the “Book a demo” lead-capture flow — it handles the name, email, and company of anyone who books a call. The Cloud infrastructure/hosting provider is located in Lithuania (see Section 5); the specific provider, along with the payment processor and email delivery provider, will be named here once those vendors are chosen ahead of Cloud launch.'
+					'Two are already decided and real. <strong>Cal.com</strong>, used for the “Book a demo” lead-capture flow, handles the name, email, and company of anyone who books a call. <strong>Sentry</strong> receives backend error reports (stack traces and failing-request metadata) for the Cloud service, on Sentry’s standard, non-EU-pinned infrastructure — see Section 5’s data-location note for what that means. Backend error tracking is opt-in per deployment and is off by default; the Cloud service is the only deployment where the Operator turns it on. Frontend errors aren’t sent to Sentry, or anywhere else, today. The Cloud infrastructure/hosting provider is located in Lithuania (see Section 5); the specific provider, along with the payment processor and email delivery provider, will be named here once those vendors are chosen ahead of Cloud launch.'
 			},
 			{
 				heading: '7. Data subject rights',
