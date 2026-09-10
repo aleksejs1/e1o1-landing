@@ -8,7 +8,9 @@
 		en: 'EN',
 		ru: 'RU',
 		lv: 'LV',
-		es: 'ES'
+		es: 'ES',
+		de: 'DE',
+		fr: 'FR'
 	};
 
 	const currentLocale = $derived(getLocale());

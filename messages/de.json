@@ -1,0 +1,7 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"theme_switch_to_light": "Zum hellen Design wechseln",
+	"theme_switch_to_dark": "Zum dunklen Design wechseln",
+	"language_switcher_label": "Sprache",
+	"header_try_demo": "Demo ausprobieren"
+}

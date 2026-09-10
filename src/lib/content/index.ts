@@ -4,9 +4,11 @@ import { en } from './en';
 import { ru } from './ru';
 import { lv } from './lv';
 import { es } from './es';
+import { de } from './de';
+import { fr } from './fr';
 import { legal } from './legal';
 
-const byLocale: Record<Locale, LandingContent> = { en, ru, lv, es };
+const byLocale: Record<Locale, LandingContent> = { en, ru, lv, es, de, fr };
 
 export function getContent(): LandingContent {
 	return byLocale[getLocale()];
