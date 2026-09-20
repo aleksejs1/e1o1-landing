@@ -3,5 +3,8 @@
 	"theme_switch_to_light": "Переключить на светлую тему",
 	"theme_switch_to_dark": "Переключить на тёмную тему",
 	"language_switcher_label": "Язык",
-	"header_try_demo": "Попробовать демо"
+	"header_try_demo": "Попробовать демо",
+	"nav_playbook": "Плейбук",
+	"header_login": "Войти",
+	"hero_already_have_account": "Уже есть аккаунт?"
 }

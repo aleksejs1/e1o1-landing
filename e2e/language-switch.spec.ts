@@ -65,3 +65,91 @@ test('switching locale from a non-home page updates the URL and lang, but Terms 
 	await expect(page.locator('html')).toHaveAttribute('lang', 'lv');
 	await expect(page.locator('h1')).toHaveText('Terms of Service');
 });
+
+test('mobile viewport renders compact dropdown and switches language properly', async ({
+	page
+}) => {
+	await page.setViewportSize({ width: 375, height: 667 });
+	await page.goto('/', { waitUntil: 'networkidle' });
+	await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+
+	// Dropdown summary trigger is visible
+	const langTrigger = page.locator('.lang-dropdown summary');
+	await expect(langTrigger).toBeVisible();
+	await langTrigger.click();
+
+	// Select Russian
+	const ruOption = page.locator('.lang-menu .lang-menu-item', { hasText: 'Русский' });
+	await expect(ruOption).toBeVisible();
+	await ruOption.click();
+
+	await expect(page).toHaveURL(/\/ru\/?$/);
+	await expect(page.locator('html')).toHaveAttribute('lang', 'ru');
+});
+
+test('header controls (language dropdown and theme toggle) fit within mobile viewports without overflowing', async ({
+	page
+}) => {
+	for (const width of [375, 360, 320]) {
+		await page.setViewportSize({ width, height: 667 });
+		await page.goto('/ru', { waitUntil: 'networkidle' });
+
+		const themeToggle = page.locator('.site-header .btn-icon');
+		await expect(themeToggle).toBeVisible();
+
+		const themeBox = await themeToggle.boundingBox();
+		expect(themeBox).not.toBeNull();
+		if (themeBox) {
+			// Button should be fully within screen boundaries
+			expect(themeBox.x + themeBox.width).toBeLessThanOrEqual(width);
+		}
+
+		// Ensure horizontal scrollbar does not appear on document
+		const scrollWidth = await page.evaluate(() => document.documentElement.scrollWidth);
+		const clientWidth = await page.evaluate(() => document.documentElement.clientWidth);
+		expect(scrollWidth).toBeLessThanOrEqual(clientWidth);
+	}
+});
+
+test('bookshelf page loads and displays all 5 original book covers without broken images', async ({
+	page
+}) => {
+	await page.goto('/playbook/books', { waitUntil: 'networkidle' });
+	const bookCards = page.locator('.book-card');
+	await expect(bookCards).toHaveCount(5);
+
+	const covers = page.locator('.book-cover-img');
+	await expect(covers).toHaveCount(5);
+
+	for (let i = 0; i < 5; i++) {
+		const img = covers.nth(i);
+		await img.scrollIntoViewIfNeeded();
+		await expect(img).toBeVisible();
+		await expect(async () => {
+			const isLoaded = await img.evaluate(
+				(el: HTMLImageElement) => el.complete && el.naturalWidth > 0
+			);
+			expect(isLoaded).toBe(true);
+		}).toPass({ timeout: 5000 });
+	}
+});
+
+test('login links are present in hero, header, and footer pointing to cloud app with current language', async ({
+	page
+}) => {
+	await page.goto('/ru', { waitUntil: 'networkidle' });
+
+	// Hero login link
+	const heroLogin = page.locator('.hero-login-link');
+	await expect(heroLogin).toBeVisible();
+	await expect(heroLogin).toHaveAttribute('href', 'https://app.private1on1.eu/?lang=ru');
+
+	// Header login button (desktop viewport)
+	const headerLogin = page.locator('.header-login-btn');
+	await expect(headerLogin).toBeVisible();
+	await expect(headerLogin).toHaveAttribute('href', 'https://app.private1on1.eu/?lang=ru');
+
+	// Footer login link
+	const footerLogin = page.locator('.site-footer a', { hasText: 'Войти' });
+	await expect(footerLogin).toHaveAttribute('href', 'https://app.private1on1.eu/?lang=ru');
+});

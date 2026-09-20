@@ -1,8 +1,9 @@
 <script lang="ts">
 	import LanguageSwitcher from '$lib/i18n/LanguageSwitcher.svelte';
 	import { getLocale, localizeHref } from '$lib/paraglide/runtime';
-	import { appDemoUrl, GITHUB_URL, DOCS_URL } from '$lib/links';
+	import { appDemoUrl, appLoginUrl, CLOUD_SIGNUP_URL, GITHUB_URL, DOCS_URL } from '$lib/links';
 	import type { LandingContent } from '$lib/content/types';
+	import * as m from '$lib/paraglide/messages';
 
 	const { content }: { content: LandingContent } = $props();
 </script>
@@ -11,6 +12,12 @@
 	<div class="site-footer-columns">
 		<div class="footer-col">
 			<h6>{content.footer.productHeading}</h6>
+			<a href={appLoginUrl(getLocale())} target="_blank" rel="noopener noreferrer"
+				>{m.header_login()}</a
+			>
+			<a href={CLOUD_SIGNUP_URL} target="_blank" rel="noopener noreferrer"
+				>{content.hero.ctaGetStarted}</a
+			>
 			<a href={appDemoUrl(getLocale())} target="_blank" rel="noopener noreferrer"
 				>{content.footer.demoLabel}</a
 			>
@@ -21,6 +28,19 @@
 		</div>
 
 		<div class="footer-col">
+			<h6>Playbook</h6>
+			<a href={localizeHref('/playbook/')}>1:1 Playbook</a>
+			<a href={localizeHref('/playbook/questions/')}>Question Bank</a>
+			<a href={localizeHref('/playbook/books/')}>Bookshelf</a>
+			<a href={localizeHref('/playbook/high-leverage-1-on-1/')}>1:1 Manifesto</a>
+			<a href={localizeHref('/playbook/first-1-on-1/')}>First 1:1</a>
+			<a href={localizeHref('/playbook/bi-weekly-pulse/')}>Bi-Weekly Pulse</a>
+			<a href={localizeHref('/playbook/career-growth/')}>Career Growth</a>
+			<a href={localizeHref('/playbook/burnout-detection/')}>Burnout Triage</a>
+			<a href={localizeHref('/playbook/skip-level/')}>Skip-Level</a>
+		</div>
+
+		<div class="footer-col">
 			<h6>{content.footer.legalHeading}</h6>
 			<a href={localizeHref('/terms/')}>{content.footer.termsLabel}</a>
 			<a href={localizeHref('/privacy/')}>{content.footer.privacyLabel}</a>
@@ -28,7 +48,7 @@
 
 		<div class="footer-col">
 			<h6>{content.footer.languageHeading}</h6>
-			<LanguageSwitcher />
+			<LanguageSwitcher variant="footer" />
 		</div>
 	</div>
 

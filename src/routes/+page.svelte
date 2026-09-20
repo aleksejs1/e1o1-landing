@@ -1,7 +1,15 @@
 <script lang="ts">
 	import { getContent } from '$lib/content';
-	import { appDemoUrl, CAL_COM_URL, CLOUD_SIGNUP_URL, GITHUB_URL, DOCS_URL } from '$lib/links';
+	import {
+		appDemoUrl,
+		appLoginUrl,
+		CAL_COM_URL,
+		CLOUD_SIGNUP_URL,
+		GITHUB_URL,
+		DOCS_URL
+	} from '$lib/links';
 	import { getLocale } from '$lib/paraglide/runtime';
+	import * as m from '$lib/paraglide/messages';
 
 	const content = $derived(getContent());
 </script>
@@ -9,6 +17,26 @@
 <svelte:head>
 	<title>{content.meta.title}</title>
 	<meta name="description" content={content.meta.description} />
+	<meta property="og:title" content={content.meta.title} />
+	<meta property="og:description" content={content.meta.description} />
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'SoftwareApplication',
+		name: 'encrypted1on1',
+		applicationCategory: 'BusinessApplication',
+		operatingSystem: 'Web',
+		description: content.meta.description,
+		offers: {
+			'@type': 'Offer',
+			price: '0',
+			priceCurrency: 'USD'
+		},
+		author: {
+			'@type': 'Organization',
+			name: 'encrypted1on1',
+			url: 'https://private1on1.eu'
+		}
+	})}</script>`}
 </svelte:head>
 
 <section class="hero">
@@ -39,9 +67,20 @@
 				</a>
 			</div>
 
-			<a class="hero-docs-link" href={DOCS_URL} target="_blank" rel="noopener noreferrer">
-				{content.hero.ctaDocs}
-			</a>
+			<div class="hero-sublinks">
+				<a
+					class="hero-login-link"
+					href={appLoginUrl(getLocale())}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					{m.hero_already_have_account()} <strong>{m.header_login()} →</strong>
+				</a>
+				<span class="hero-sublinks-sep" aria-hidden="true">•</span>
+				<a class="hero-docs-link" href={DOCS_URL} target="_blank" rel="noopener noreferrer">
+					{content.hero.ctaDocs}
+				</a>
+			</div>
 
 			<ul class="trust-badges">
 				{#each content.hero.trustBadges as badge (badge)}
@@ -241,6 +280,12 @@
 		padding: var(--space-8) var(--space-4) var(--space-6);
 	}
 
+	@media (max-width: 480px) {
+		.hero {
+			padding: var(--space-6) var(--space-3) var(--space-4);
+		}
+	}
+
 	.hero-grid {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -253,7 +298,10 @@
 	}
 
 	.hero h1 {
-		font-size: 48px;
+		font-size: clamp(30px, 6vw, 48px);
+		line-height: 1.15;
+		overflow-wrap: break-word;
+		word-break: break-word;
 	}
 
 	.hero-subhead {
@@ -261,6 +309,7 @@
 		max-width: 640px;
 		margin: 0 auto var(--space-6);
 		opacity: 0.85;
+		overflow-wrap: break-word;
 	}
 
 	.hero-ctas {
@@ -276,11 +325,47 @@
 		font-size: 15px;
 	}
 
+	.hero-sublinks {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: var(--space-3);
+		flex-wrap: wrap;
+		font-size: 14px;
+		margin-bottom: var(--space-6);
+	}
+
+	.hero-login-link {
+		color: var(--color-text);
+		text-decoration: none;
+		opacity: 0.85;
+		transition: opacity 0.15s ease;
+	}
+
+	.hero-login-link strong {
+		color: var(--color-accent-ink);
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+
+	.hero-login-link:hover {
+		opacity: 1;
+	}
+
+	.hero-sublinks-sep {
+		opacity: 0.35;
+	}
+
 	.hero-docs-link {
 		display: inline-block;
 		font-size: 14px;
+		color: color-mix(in srgb, var(--color-text) 75%, transparent);
+		text-decoration: none;
+		transition: color 0.15s ease;
+	}
+
+	.hero-docs-link:hover {
 		color: var(--color-accent-ink);
-		margin-bottom: var(--space-6);
 	}
 
 	.trust-badges {
@@ -352,6 +437,10 @@
 			justify-content: flex-start;
 		}
 
+		.hero-sublinks {
+			justify-content: flex-start;
+		}
+
 		.trust-badges {
 			justify-content: flex-start;
 		}
@@ -379,6 +468,12 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: var(--space-3);
+	}
+
+	@media (max-width: 480px) {
+		.highlight-grid {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	@media (min-width: 720px) {
@@ -466,8 +561,15 @@
 		margin-bottom: var(--space-6);
 	}
 
+	.pricing-tables > div {
+		min-width: 0;
+		max-width: 100%;
+	}
+
 	.table-scroll {
 		overflow-x: auto;
+		max-width: 100%;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	.pricing-note {

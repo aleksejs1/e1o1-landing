@@ -3,17 +3,32 @@
 	import ThemeToggle from './ThemeToggle.svelte';
 	import LanguageSwitcher from '$lib/i18n/LanguageSwitcher.svelte';
 	import { getLocale, localizeHref } from '$lib/paraglide/runtime';
-	import { appDemoUrl } from '$lib/links';
+	import { appDemoUrl, appLoginUrl } from '$lib/links';
 	import * as m from '$lib/paraglide/messages';
 </script>
 
 <header class="site-header">
-	<a class="brand" href={localizeHref('/')}>
-		<Logo />
-		<span class="wordmark">encrypted1on1</span>
-	</a>
+	<div class="brand-group">
+		<a class="brand" href={localizeHref('/')}>
+			<Logo />
+			<span class="wordmark">encrypted1on1</span>
+		</a>
+		<nav class="site-nav">
+			<a class="nav-link" href={localizeHref('/playbook/')}>
+				{m.nav_playbook()}
+			</a>
+		</nav>
+	</div>
 
 	<div class="site-header-controls">
+		<a
+			class="btn btn-secondary header-login-btn"
+			href={appLoginUrl(getLocale())}
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			{m.header_login()}
+		</a>
 		<a
 			class="btn btn-primary header-demo-btn"
 			href={appDemoUrl(getLocale())}
@@ -38,6 +53,12 @@
 		padding: var(--space-4) var(--space-4);
 	}
 
+	.brand-group {
+		display: flex;
+		align-items: center;
+		gap: var(--space-4);
+	}
+
 	.brand {
 		display: flex;
 		align-items: center;
@@ -52,20 +73,128 @@
 		font-size: 18px;
 	}
 
+	.site-nav {
+		display: flex;
+		align-items: center;
+	}
+
+	.nav-link {
+		color: color-mix(in srgb, var(--color-text) 80%, transparent);
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: 500;
+		padding: 4px 8px;
+		border-radius: var(--radius-sm);
+		transition: color 0.15s ease;
+	}
+
+	.nav-link:hover {
+		color: var(--color-accent-ink);
+	}
+
 	.site-header-controls {
 		display: flex;
 		align-items: center;
 		gap: var(--space-2);
+		flex-shrink: 0;
 	}
 
-	/* The header already has no room to spare on narrow phones (the wordmark
-	   + 4 language links + theme toggle alone are already tight) — the demo
-	   CTA repeats seconds later as the hero's own primary button, so it's
-	   dropped here rather than crowding out the language switcher/theme
-	   toggle. */
-	@media (max-width: 480px) {
+	.header-login-btn {
+		font-size: 13px;
+		padding: 4px 12px;
+		height: 32px;
+		box-sizing: border-box;
+		white-space: nowrap;
+	}
+
+	/* On tablet & mobile, drop header demo CTA (available right below in hero)
+	   and prevent navigation link from wrapping */
+	@media (max-width: 768px) {
 		.header-demo-btn {
 			display: none;
+		}
+
+		.header-login-btn {
+			font-size: 12px;
+			padding: 0 8px;
+		}
+
+		.site-header {
+			padding: var(--space-3) var(--space-3);
+			gap: 8px;
+		}
+
+		.brand-group {
+			gap: 8px;
+			min-width: 0;
+		}
+
+		.brand {
+			min-width: 0;
+			gap: 6px;
+		}
+
+		.nav-link {
+			white-space: nowrap;
+			font-size: 13px;
+			padding: 4px 6px;
+		}
+
+		.site-header-controls {
+			gap: 6px;
+		}
+
+		:global(.site-header .btn-icon) {
+			width: 32px;
+			height: 32px;
+			font-size: 14px;
+			flex-shrink: 0;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.header-login-btn {
+			display: none;
+		}
+	}
+
+	@media (max-width: 420px) {
+		.site-header {
+			padding: var(--space-3) 8px;
+			gap: 6px;
+		}
+
+		.wordmark {
+			font-size: 14px;
+		}
+
+		.nav-link {
+			font-size: 12px;
+			padding: 2px 4px;
+		}
+	}
+
+	@media (max-width: 360px) {
+		.site-header {
+			padding: var(--space-2) 6px;
+			gap: 4px;
+		}
+
+		.brand-group {
+			gap: 4px;
+		}
+
+		.wordmark {
+			font-size: 13px;
+		}
+
+		.nav-link {
+			font-size: 11px;
+			padding: 2px 3px;
+		}
+
+		.site-header-controls {
+			gap: 4px;
 		}
 	}
 </style>

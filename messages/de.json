@@ -3,5 +3,8 @@
 	"theme_switch_to_light": "Zum hellen Design wechseln",
 	"theme_switch_to_dark": "Zum dunklen Design wechseln",
 	"language_switcher_label": "Sprache",
-	"header_try_demo": "Demo ausprobieren"
+	"header_try_demo": "Demo ausprobieren",
+	"nav_playbook": "Playbook",
+	"header_login": "Anmelden",
+	"hero_already_have_account": "Bereits registriert?"
 }

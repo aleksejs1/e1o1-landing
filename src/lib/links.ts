@@ -3,6 +3,7 @@
  * four locale content files — these aren't translated content.
  */
 
+export const SITE_URL = 'https://private1on1.eu';
 export const GITHUB_URL = 'https://github.com/aleksejs1/encrypted1on1';
 export const DOCS_URL = 'https://github.com/aleksejs1/encrypted1on1/tree/main/docs';
 export const ENCRYPTION_DOCS_URL =
@@ -28,6 +29,14 @@ export const CAL_COM_URL = 'https://cal.com/aleksejs1/demo';
  * sales" links, unaffected by this constant).
  */
 export const CLOUD_SIGNUP_URL = 'https://app.private1on1.eu/create-company';
+export const CLOUD_APP_URL = 'https://app.private1on1.eu/';
+
+/**
+ * Returns the cloud app login URL with current language preference preserved.
+ */
+export function appLoginUrl(locale: string): string {
+	return `${CLOUD_APP_URL}?lang=${locale}`;
+}
 
 /**
  * The real running product — every "Try the demo"/"Try the live demo" CTA
