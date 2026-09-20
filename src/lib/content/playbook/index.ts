@@ -98,7 +98,16 @@ export interface PlaybookUiStrings {
 	oneOnOnePhilosophyHeading: string;
 	keyPrinciplesHeading: string;
 	questionsFromBookHeading: string;
+	relatedTemplateLabel: string;
 	viewRelatedTemplateBtn: string;
+
+	// Rich Template Section Headings
+	preparationHeading: string;
+	antiPatternsHeading: string;
+	followUpHeading: string;
+	antiPatternMistakeLabel: string;
+	antiPatternWhyBadLabel: string;
+	antiPatternBetterWayLabel: string;
 }
 
 const uiStringsEn: PlaybookUiStrings = {
@@ -149,7 +158,15 @@ const uiStringsEn: PlaybookUiStrings = {
 	oneOnOnePhilosophyHeading: '1:1 Philosophy & Impact',
 	keyPrinciplesHeading: 'Key Management Heuristics',
 	questionsFromBookHeading: 'High-Leverage Questions from the Book',
-	viewRelatedTemplateBtn: 'Explore Related Template →'
+	relatedTemplateLabel: 'Related Playbook Template:',
+	viewRelatedTemplateBtn: 'Explore Related Template →',
+
+	preparationHeading: 'Before the Meeting: Preparation & Invitation',
+	antiPatternsHeading: 'Common Anti-Patterns to Avoid',
+	followUpHeading: 'After the Meeting: Follow-up & Momentum',
+	antiPatternMistakeLabel: 'Anti-Pattern',
+	antiPatternWhyBadLabel: 'Why It Damages Trust',
+	antiPatternBetterWayLabel: 'What to Do Instead'
 };
 
 const uiStringsRu: PlaybookUiStrings = {
@@ -200,7 +217,15 @@ const uiStringsRu: PlaybookUiStrings = {
 	oneOnOnePhilosophyHeading: 'Философия 1-на-1 и эффект',
 	keyPrinciplesHeading: 'Ключевые управленческие эвристики',
 	questionsFromBookHeading: 'Вопросы из книги для встреч 1-на-1',
-	viewRelatedTemplateBtn: 'Смотреть связанный шаблон →'
+	relatedTemplateLabel: 'Связанный шаблон плейбука:',
+	viewRelatedTemplateBtn: 'Смотреть связанный шаблон →',
+
+	preparationHeading: 'Подготовка и отправка приглашения',
+	antiPatternsHeading: 'Типичные ошибки и антипаттерны',
+	followUpHeading: 'Что делать после встречи (первые 24 часа)',
+	antiPatternMistakeLabel: 'Частая ошибка',
+	antiPatternWhyBadLabel: 'Почему это ломает доверие',
+	antiPatternBetterWayLabel: 'Как поступить правильно'
 };
 
 const uiStringsDe: PlaybookUiStrings = {
@@ -251,7 +276,15 @@ const uiStringsDe: PlaybookUiStrings = {
 	oneOnOnePhilosophyHeading: '1:1-Philosophie & Wirkung',
 	keyPrinciplesHeading: 'Zentrale Führungsprinzipien',
 	questionsFromBookHeading: 'Praxiserprobte Fragen aus dem Buch',
-	viewRelatedTemplateBtn: 'Zugehörige Vorlage ansehen →'
+	relatedTemplateLabel: 'Zugehörige Playbook-Vorlage:',
+	viewRelatedTemplateBtn: 'Zugehörige Vorlage ansehen →',
+
+	preparationHeading: 'Vorbereitung & Einladung',
+	antiPatternsHeading: 'Typische Fehler und Anti-Patterns',
+	followUpHeading: 'Nach dem Gespräch: Erste 24 Stunden',
+	antiPatternMistakeLabel: 'Häufiger Fehler',
+	antiPatternWhyBadLabel: 'Warum es Vertrauen zerstört',
+	antiPatternBetterWayLabel: 'Besser so'
 };
 
 const uiStringsEs: PlaybookUiStrings = {
@@ -302,7 +335,15 @@ const uiStringsEs: PlaybookUiStrings = {
 	oneOnOnePhilosophyHeading: 'Filosofía del 1 a 1 e impacto',
 	keyPrinciplesHeading: 'Principios clave de gestión',
 	questionsFromBookHeading: 'Preguntas del libro para tus 1 a 1',
-	viewRelatedTemplateBtn: 'Ver plantilla relacionada →'
+	relatedTemplateLabel: 'Plantilla de playbook relacionada:',
+	viewRelatedTemplateBtn: 'Ver plantilla relacionada →',
+
+	preparationHeading: 'Preparación e invitación',
+	antiPatternsHeading: 'Errores comunes y antipatrones',
+	followUpHeading: 'Después de la reunión (primeras 24 horas)',
+	antiPatternMistakeLabel: 'Error común',
+	antiPatternWhyBadLabel: 'Por qué daña la confianza',
+	antiPatternBetterWayLabel: 'Qué hacer en su lugar'
 };
 
 const uiStringsFr: PlaybookUiStrings = {
@@ -353,7 +394,15 @@ const uiStringsFr: PlaybookUiStrings = {
 	oneOnOnePhilosophyHeading: 'Philosophie du 1:1 et impact',
 	keyPrinciplesHeading: 'Heuristiques managériales clés',
 	questionsFromBookHeading: 'Questions clés issues du livre',
-	viewRelatedTemplateBtn: 'Voir le modèle associé →'
+	relatedTemplateLabel: 'Modèle de playbook associé :',
+	viewRelatedTemplateBtn: 'Voir le modèle associé →',
+
+	preparationHeading: 'Préparation et invitation',
+	antiPatternsHeading: 'Erreurs courantes et anti-patterns',
+	followUpHeading: 'Après la réunion (les premières 24 heures)',
+	antiPatternMistakeLabel: 'Erreur courante',
+	antiPatternWhyBadLabel: 'Pourquoi cela nuit à la confiance',
+	antiPatternBetterWayLabel: 'Que faire à la place'
 };
 
 const uiStringsLv: PlaybookUiStrings = {
@@ -404,7 +453,15 @@ const uiStringsLv: PlaybookUiStrings = {
 	oneOnOnePhilosophyHeading: '1 pret 1 filozofija un ietekme',
 	keyPrinciplesHeading: 'Būtiskie vadības principi',
 	questionsFromBookHeading: 'Jautājumi no grāmatas sarunām',
-	viewRelatedTemplateBtn: 'Skatīt saistīto šablonu →'
+	relatedTemplateLabel: 'Saistītais rokasgrāmatas šablons:',
+	viewRelatedTemplateBtn: 'Skatīt saistīto šablonu →',
+
+	preparationHeading: 'Sagatavošanās un ielūgums',
+	antiPatternsHeading: 'Biežākās kļūdas un antipatērni',
+	followUpHeading: 'Pēc sarunas (pirmās 24 stundas)',
+	antiPatternMistakeLabel: 'Bieža kļūda',
+	antiPatternWhyBadLabel: 'Kāpēc tas grauj uzticību',
+	antiPatternBetterWayLabel: 'Kā rīkoties labāk'
 };
 
 const uiByLocale: Record<string, PlaybookUiStrings> = {

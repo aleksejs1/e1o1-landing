@@ -146,7 +146,7 @@
 				<!-- Cross-link to Related Template -->
 				<footer class="book-footer">
 					<div class="related-template-info">
-						<span class="related-label">Related Playbook Template:</span>
+						<span class="related-label">{ui.relatedTemplateLabel}</span>
 						<span class="related-title">{book.relatedTemplateTitle}</span>
 					</div>
 					<a

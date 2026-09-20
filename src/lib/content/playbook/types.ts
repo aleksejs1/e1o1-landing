@@ -8,6 +8,12 @@ export interface PlaybookAgendaItem {
 	questions: string[];
 }
 
+export interface PlaybookAntiPattern {
+	mistake: string;
+	whyBad: string;
+	betterAlternative: string;
+}
+
 export interface PlaybookItem {
 	slug: string;
 	title: string;
@@ -19,7 +25,10 @@ export interface PlaybookItem {
 	targetAudience: string;
 	summaryHtml: string;
 	whyItMattersHtml: string;
+	preparationHtml?: string;
 	agenda: PlaybookAgendaItem[];
+	antiPatterns?: PlaybookAntiPattern[];
+	followUpHtml?: string;
 	tips: string[];
 	keyTakeaway: string;
 }

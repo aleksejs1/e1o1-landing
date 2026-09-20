@@ -149,6 +149,16 @@
 			</div>
 		</section>
 
+		<!-- Preparation Section (if present) -->
+		{#if item.preparationHtml}
+			<section class="section-block prep-section">
+				<h2>{ui.preparationHeading}</h2>
+				<div class="prose prep-box">
+					{@html item.preparationHtml}
+				</div>
+			</section>
+		{/if}
+
 		<!-- Action bar -->
 		<div class="action-bar">
 			<button type="button" class="btn btn-secondary copy-btn" onclick={copyAgendaToClipboard}>
@@ -183,6 +193,43 @@
 				{/each}
 			</div>
 		</section>
+
+		<!-- Anti-Patterns Section (if present) -->
+		{#if item.antiPatterns && item.antiPatterns.length > 0}
+			<section class="section-block antipatterns-section">
+				<h2>{ui.antiPatternsHeading}</h2>
+				<div class="antipatterns-grid">
+					{#each item.antiPatterns as ap (ap.mistake)}
+						<div class="antipattern-card">
+							<div class="ap-header">
+								<span class="ap-badge">{ui.antiPatternMistakeLabel}</span>
+								<h3 class="ap-mistake-title">{ap.mistake}</h3>
+							</div>
+							<div class="ap-body">
+								<div class="ap-row ap-why">
+									<span class="ap-label">{ui.antiPatternWhyBadLabel}:</span>
+									<p>{ap.whyBad}</p>
+								</div>
+								<div class="ap-row ap-better">
+									<span class="ap-label">{ui.antiPatternBetterWayLabel}:</span>
+									<p>{ap.betterAlternative}</p>
+								</div>
+							</div>
+						</div>
+					{/each}
+				</div>
+			</section>
+		{/if}
+
+		<!-- Follow-up Section (if present) -->
+		{#if item.followUpHtml}
+			<section class="section-block followup-section">
+				<h2>{ui.followUpHeading}</h2>
+				<div class="prose followup-box">
+					{@html item.followUpHtml}
+				</div>
+			</section>
+		{/if}
 
 		<!-- Tips for Managers -->
 		{#if item.tips && item.tips.length > 0}
@@ -399,6 +446,141 @@
 
 	:global(.prose em) {
 		font-style: italic;
+	}
+
+	.prep-box,
+	.followup-box {
+		background: var(--color-surface);
+		border: 1px solid var(--color-divider);
+		border-radius: var(--radius-md);
+		padding: var(--space-6);
+	}
+
+	:global(.prep-box .invite-box) {
+		background: color-mix(in srgb, var(--color-accent) 6%, var(--color-surface));
+		border: 1px solid color-mix(in srgb, var(--color-accent) 25%, var(--color-divider));
+		border-left: 4px solid var(--color-accent);
+		border-radius: var(--radius-sm);
+		padding: var(--space-4) var(--space-5);
+		margin: var(--space-4) 0;
+	}
+
+	:global(.prep-box .invite-badge) {
+		display: inline-block;
+		font-size: 11px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: var(--color-accent-ink);
+		margin-bottom: var(--space-2);
+	}
+
+	:global(.prep-box .invite-text) {
+		font-size: 14.5px;
+		line-height: 1.6;
+		font-style: italic;
+		color: var(--color-text);
+		margin: 0;
+	}
+
+	:global(.prep-box ul),
+	:global(.followup-box ul) {
+		margin: var(--space-3) 0 0;
+		padding-left: var(--space-5);
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-2);
+	}
+
+	.antipatterns-grid {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-4);
+	}
+
+	.antipattern-card {
+		background: var(--color-surface);
+		border: 1px solid var(--color-divider);
+		border-radius: var(--radius-md);
+		padding: var(--space-5) var(--space-6);
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-3);
+	}
+
+	.ap-header {
+		display: flex;
+		align-items: baseline;
+		gap: var(--space-3);
+		flex-wrap: wrap;
+	}
+
+	.ap-badge {
+		font-size: 11px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		padding: 3px 8px;
+		border-radius: 4px;
+		background: color-mix(in srgb, #e05252 14%, transparent);
+		color: #e05252;
+		flex-shrink: 0;
+	}
+
+	.ap-mistake-title {
+		font-size: 16px;
+		font-weight: 700;
+		margin: 0;
+		color: var(--color-text);
+		line-height: 1.4;
+	}
+
+	.ap-body {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-3);
+	}
+
+	.ap-row {
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+	}
+
+	.ap-label {
+		font-size: 11px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.ap-why .ap-label {
+		color: color-mix(in srgb, var(--color-text) 60%, transparent);
+	}
+
+	.ap-why p {
+		font-size: 14px;
+		line-height: 1.55;
+		color: color-mix(in srgb, var(--color-text) 85%, transparent);
+		margin: 0;
+	}
+
+	.ap-better {
+		background: color-mix(in srgb, var(--color-accent) 6%, transparent);
+		border-left: 3px solid var(--color-accent);
+		border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+		padding: var(--space-3) var(--space-4);
+	}
+
+	.ap-better .ap-label {
+		color: var(--color-accent-ink);
+	}
+
+	.ap-better p {
+		font-size: 14px;
+		line-height: 1.55;
+		color: var(--color-text);
+		margin: 0;
 	}
 
 	.agenda-items {
