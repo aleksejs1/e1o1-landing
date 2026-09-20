@@ -65,6 +65,7 @@ export interface LandingContent {
 	origin: {
 		heading: string;
 		paragraphsHtml: string[];
+		illustrationAlt?: string;
 	};
 
 	methodology: {
@@ -72,6 +73,7 @@ export interface LandingContent {
 		intro: string;
 		points: ResearchPoint[];
 		closingHtml: string;
+		illustrationAlt?: string;
 	};
 
 	comparison: {

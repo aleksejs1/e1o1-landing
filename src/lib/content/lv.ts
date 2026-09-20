@@ -58,7 +58,8 @@ export const lv: LandingContent = {
 			'Nekam no tā nekad nevajadzētu būt redzamam nevienam ārpus abiem dalībniekiem — ne augstākā līmeņa vadītājam, ne, pēc noklusējuma, personāla nodaļai, ne IT, un, kā mēs ar zināmu neveiklību sapratām, patiesībā ne pat <em>pašam piegādātājam</em>, lai gan tehniski piegādātājs to vienmēr varēja redzēt. Slēgšana ir tieši tas brīdis, kad uzņēmuma datu apstrādes prakse tiek pārbaudīta visstingrāk: atbalsta darbinieki veic datu izgūšanu, pircējs veic tehnisko izpēti, atlikusī neliela komanda visu noslēdz termiņu spiedienā. Mums nebija iemesla domāt, ka ar mūsu datiem konkrēti notiks kaut kas slikts. Bet mums arī nebija veida, kā to <em>zināt</em> — jo visa sistēma balstījās uz „uzticieties mums”, un „mēs” bija uzņēmums, kas tobrīd tieši izbeidza savu darbību.',
 			'Šī ir plaisa, ko mēs izlēmām aizvērt pareizi — ne tikai savai organizācijai, bet kā kaut ko, ko ikviens tādā pašā situācijā varētu pats pārbaudīt, nevis pieņemt uz ticības. Ja 1:1 platforma glabā dažas no visjutīgākajām sarunām, kādas uzņēmumā notiek, „mēs apsolām neskatīties” nav pietiekami stingra garantija. Vienīgā pietiekami stingrā garantija ir tāda, kurā skatīšanās <em>nav iespējama</em> — kad operators, IT komanda, uzņēmums, kas platformu uztur pats, un pat pilnīga servera kompromitēšana iegūst tikai šifrētu tekstu. Tā nav politika. Tas ir pareizi īstenots šifrējums no gala līdz galam, ar atvērtu kodu, ko ikviens var pārbaudīt, lai pārliecinātos, ka šis apgalvojums patiešām ir patiess.',
 			'encrypted1on1 ir tā rezultāts.'
-		]
+		],
+		illustrationAlt: 'Konfidenciāla 1:1 saruna zem aizsargājošas arkas ar pilnīgas šifrēšanas simboliem'
 	},
 
 	methodology: {
@@ -83,7 +84,8 @@ export const lv: LandingContent = {
 			}
 		],
 		closingHtml:
-			'Šajos pētījumos vērojama konsekventa likumsakarība: vērtība nav pašā <em>tikšanos faktā</em>. Tā ir tikšanās rīkošanā <strong>regulāri, strukturēti un ar pēctecību</strong> — sekojot līdzi tam, kas tika teikts iepriekšējā reizē, kādas saistības tika uzņemtas, kādi mērķi vēl ir atvērti. Tieši šī pēctecība pazūd brīdī, kad 1:1 tikšanās dzīvo izkaisītos dokumentos, atmiņā vai kādā rīkā, kas nejauši bija atvērts konkrētajā nedēļā.'
+			'Šajos pētījumos vērojama konsekventa likumsakarība: vērtība nav pašā <em>tikšanos faktā</em>. Tā ir tikšanās rīkošanā <strong>regulāri, strukturēti un ar pēctecību</strong> — sekojot līdzi tam, kas tika teikts iepriekšējā reizē, kādas saistības tika uzņemtas, kādi mērķi vēl ir atvērti. Tieši šī pēctecība pazūd brīdī, kad 1:1 tikšanās dzīvo izkaisītos dokumentos, atmiņā vai kādā rīkā, kas nejauši bija atvērts konkrētajā nedēļā.',
+		illustrationAlt: 'Darbinieks un vadītājs, kāpjot pa soļiem uz mērķiem ar līdzsvarotu vadības sviru'
 	},
 
 	comparison: {

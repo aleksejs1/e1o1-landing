@@ -58,7 +58,8 @@ export const de: LandingContent = {
 			'Nichts davon soll jemals für jemanden außerhalb der beiden Beteiligten sichtbar sein — nicht für den Vorgesetzten des Managers, nicht standardmäßig für die Personalabteilung, nicht für die IT, und, wie uns mit einigem Unbehagen klar wurde, eigentlich auch nicht für <em>den Anbieter selbst</em>, obwohl der Anbieter technisch gesehen jederzeit hätte mitlesen können. Eine Betriebseinstellung ist genau der Moment, in dem die Datenpraktiken eines Unternehmens am härtesten auf die Probe gestellt werden: Support-Mitarbeiter, die Exporte durchführen, ein Erwerber, der eine technische Due-Diligence-Prüfung vornimmt, ein Rumpfteam, das unter Zeitdruck alles abwickelt. Wir hatten keinen Grund zur Annahme, dass mit unseren Daten konkret etwas Schlimmes passieren würde. Aber wir hatten auch keine Möglichkeit, <em>sicher zu wissen</em>, dass es nicht passieren würde — denn das gesamte Modell beruhte auf „vertraut uns“, und „uns“ war ein Unternehmen, das gerade sein Geschäft aufgab.',
 			'Das ist die Lücke, die wir richtig schließen wollten — nicht nur für unsere eigene Organisation, sondern als etwas, das jeder in derselben Lage selbst überprüfen kann, statt es einfach zu glauben. Wenn eine 1:1-Plattform einige der sensibelsten Gespräche eines Unternehmens speichert, ist „wir versprechen, nicht mitzulesen“ keine ausreichend starke Garantie. Die einzige ausreichend starke Garantie ist eine, bei der Mitlesen <em>gar nicht möglich</em> ist — bei der der Betreiber, das IT-Team, das Unternehmen, das die Plattform hostet, und selbst eine vollständige Kompromittierung des Servers nichts als Chiffretext erhalten. Das ist keine Richtlinie. Das ist Ende-zu-Ende-Verschlüsselung, richtig umgesetzt, mit offenem Quellcode, damit jeder überprüfen kann, dass diese Behauptung tatsächlich zutrifft.',
 			'encrypted1on1 ist das Ergebnis davon.'
-		]
+		],
+		illustrationAlt: 'Vertrauliches 1:1-Gespräch unter einem schützenden Bogen mit Symbolen für Ende-zu-Ende-Verschlüsselung'
 	},
 
 	methodology: {
@@ -83,7 +84,8 @@ export const de: LandingContent = {
 			}
 		],
 		closingHtml:
-			'Das Muster, das sich durch all diese Forschung zieht, ist konsistent: Der Wert liegt nicht darin, <em>Gespräche zu führen</em>. Er liegt darin, sie <strong>regelmäßig, strukturiert und mit Kontinuität</strong> zu führen — nachzuverfolgen, was beim letzten Mal besprochen wurde, welche Zusagen gemacht wurden, welche Ziele noch offen sind. Genau diese Kontinuität geht verloren, sobald 1:1-Gespräche in verstreuten Dokumenten, im Gedächtnis oder in dem Tool leben, das diese Woche gerade offen war.'
+			'Das Muster, das sich durch all diese Forschung zieht, ist konsistent: Der Wert liegt nicht darin, <em>Gespräche zu führen</em>. Er liegt darin, sie <strong>regelmäßig, strukturiert und mit Kontinuität</strong> zu führen — nachzuverfolgen, was beim letzten Mal besprochen wurde, welche Zusagen gemacht wurden, welche Ziele noch offen sind. Genau diese Kontinuität geht verloren, sobald 1:1-Gespräche in verstreuten Dokumenten, im Gedächtnis oder in dem Tool leben, das diese Woche gerade offen war.',
+		illustrationAlt: 'Mitarbeiter und Führungskraft auf dem Weg zu Zielen mit balanciertem Hebel'
 	},
 
 	comparison: {

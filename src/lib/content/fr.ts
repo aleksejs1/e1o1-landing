@@ -58,7 +58,8 @@ export const fr: LandingContent = {
 			"Rien de tout cela n'est censé être visible par quiconque en dehors des deux participants — ni leur n+2, ni les RH par défaut, ni l'informatique, et, nous l'avons réalisé avec un certain malaise, pas vraiment <em>le fournisseur non plus</em>, même si celui-ci pouvait techniquement toujours y accéder. Une fermeture est exactement le moment où les pratiques de gestion des données d'une entreprise sont mises à l'épreuve le plus durement : du personnel support qui effectue des exports, un acquéreur qui mène un audit technique, une équipe réduite qui liquide tout sous la pression des délais. Nous n'avions aucune raison de penser qu'il arriverait quelque chose de grave à nos données en particulier. Mais nous n'avions pas non plus de moyen de <em>savoir</em> que ce ne serait pas le cas — car tout le modèle reposait sur « faites-nous confiance », et « nous » désignait une entreprise en train de cesser son activité.",
 			"C'est l'écart que nous avons décidé de combler pour de bon, pas seulement pour notre propre organisation, mais comme quelque chose que n'importe qui dans la même situation pourrait vérifier par soi-même plutôt que devoir le croire sur parole. Si une plateforme de 1 à 1 doit conserver certaines des conversations les plus sensibles d'une entreprise, « nous promettons de ne pas regarder » n'est pas une garantie assez solide. La seule garantie assez solide est celle où regarder <em>n'est pas possible</em> — où l'exploitant, l'équipe informatique, l'entreprise qui héberge le service, et même une compromission totale du serveur, n'obtiennent rien d'autre que du texte chiffré. Ce n'est pas une politique. C'est du chiffrement de bout en bout, fait correctement, avec un code source ouvert pour que chacun puisse vérifier que cette affirmation est bien exacte.",
 			'encrypted1on1 est le résultat de tout cela.'
-		]
+		],
+		illustrationAlt: "Entretien individuel confidentiel sous une arche protectrice avec symboles de chiffrement de bout en bout"
 	},
 
 	methodology: {
@@ -83,7 +84,8 @@ export const fr: LandingContent = {
 			}
 		],
 		closingHtml:
-			"Le constat qui se dégage de l'ensemble de ces travaux est cohérent : la valeur ne réside pas dans le fait de <em>tenir des réunions</em>. Elle réside dans le fait de les tenir <strong>régulièrement, de façon structurée et avec continuité</strong> — en suivant ce qui a été dit la dernière fois, les engagements pris, les objectifs encore ouverts. Cette continuité est exactement ce qui se perd dès que les 1 à 1 vivent dans des documents épars, dans la mémoire de chacun, ou dans l'outil qui se trouvait ouvert cette semaine-là."
+			"Le constat qui se dégage de l'ensemble de ces travaux est cohérent : la valeur ne réside pas dans le fait de <em>tenir des réunions</em>. Elle réside dans le fait de les tenir <strong>régulièrement, de façon structurée et avec continuité</strong> — en suivant ce qui a été dit la dernière fois, les engagements pris, les objectifs encore ouverts. Cette continuité est exactement ce qui se perd dès que les 1 à 1 vivent dans des documents épars, dans la mémoire de chacun, ou dans l'outil qui se trouvait ouvert cette semaine-là.",
+		illustrationAlt: "Collaborateur et manager gravissant des étapes vers leurs objectifs avec levier d'efficacité"
 	},
 
 	comparison: {

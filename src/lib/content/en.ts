@@ -58,7 +58,8 @@ export const en: LandingContent = {
 			'None of that content is ever supposed to be visible to anyone beyond the two participants — not their skip-level manager, not HR by default, not IT, and, we realized with some discomfort, not really <em>the vendor either</em>, even though the vendor could, technically, always see it. A shutdown is exactly the moment when a company’s data-handling practices get tested hardest: support staff doing exports, an acquirer doing technical due diligence, a skeleton crew winding things down under deadline pressure. We had no reason to think anything bad would happen with our data specifically. But we also had no way to <em>know</em> that it wouldn’t — because the entire model was “trust us,” and “us” was a company actively going out of business.',
 			'That’s the gap we decided was worth closing properly, not just for our own organization, but as something anyone in the same position could actually verify for themselves rather than take on faith. If a 1:1 platform is going to hold some of the most sensitive conversations a company has, “we promise not to look” isn’t a strong enough guarantee. The only guarantee strong enough is one where looking is <em>not possible</em> — where the operator, the IT team, the company that self-hosts it, even a full server compromise, gets nothing but ciphertext. That’s not a policy. That’s end-to-end encryption, done properly, with the code open for anyone to check that the claim is actually true.',
 			'encrypted1on1 is what came out of that.'
-		]
+		],
+		illustrationAlt: 'Confidential 1-on-1 conversation under a protective arch with end-to-end encryption symbols'
 	},
 
 	methodology: {
@@ -83,7 +84,8 @@ export const en: LandingContent = {
 			}
 		],
 		closingHtml:
-			'The pattern across all of this research is consistent: the value isn’t in <em>having meetings</em>. It’s in having them <strong>regularly, structurally, and with continuity</strong> — tracking what was said last time, what commitments were made, what goals are still open. That consistency is exactly what gets lost the moment 1:1s live in scattered documents, memory, or whatever tool happened to be open that week.'
+			'The pattern across all of this research is consistent: the value isn’t in <em>having meetings</em>. It’s in having them <strong>regularly, structurally, and with continuity</strong> — tracking what was said last time, what commitments were made, what goals are still open. That consistency is exactly what gets lost the moment 1:1s live in scattered documents, memory, or whatever tool happened to be open that week.',
+		illustrationAlt: 'Employee and manager ascending steps toward goals with a balancing leverage beam'
 	},
 
 	comparison: {

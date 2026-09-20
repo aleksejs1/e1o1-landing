@@ -126,7 +126,22 @@
 <section class="section" id="origin">
 	<div class="section-inner">
 		<h2>{content.origin.heading}</h2>
-		{#each content.origin.paragraphsHtml as html, i (i)}
+		{#each content.origin.paragraphsHtml.slice(0, 3) as html, i (i)}
+			<p>{@html html}</p>
+		{/each}
+
+		<figure class="editorial-figure">
+			<img
+				class="editorial-img"
+				src="/images/landing/origin-trust.jpg"
+				alt={content.origin.illustrationAlt ?? ''}
+				width="1376"
+				height="768"
+				loading="lazy"
+			/>
+		</figure>
+
+		{#each content.origin.paragraphsHtml.slice(3) as html, i (i + 3)}
 			<p>{@html html}</p>
 		{/each}
 	</div>
@@ -142,6 +157,17 @@
 				<li>{@html point.html}</li>
 			{/each}
 		</ul>
+
+		<figure class="editorial-figure">
+			<img
+				class="editorial-img"
+				src="/images/landing/methodology-leverage.jpg"
+				alt={content.methodology.illustrationAlt ?? ''}
+				width="1376"
+				height="768"
+				loading="lazy"
+			/>
+		</figure>
 
 		<p>{@html content.methodology.closingHtml}</p>
 	</div>
@@ -503,6 +529,24 @@
 	.section-inner {
 		max-width: 820px;
 		margin: 0 auto;
+	}
+
+	.editorial-figure {
+		margin: var(--space-6) 0;
+		padding: 0;
+		border-radius: var(--radius-md);
+		overflow: hidden;
+		border: 1px solid var(--color-divider);
+		box-shadow: var(--shadow-sm);
+		background: var(--color-surface);
+	}
+
+	.editorial-img {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+		display: block;
 	}
 
 	.research-list {
