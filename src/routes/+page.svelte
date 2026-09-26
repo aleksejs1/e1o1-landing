@@ -232,7 +232,7 @@
 			{/each}
 		</div>
 
-		<div class="question-bank-banner card elev-sm">
+		<div class="question-bank-banner elev-sm">
 			<div class="question-bank-banner-content">
 				<div class="question-bank-badge">
 					<span class="badge-icon" aria-hidden="true">💡</span>
@@ -734,7 +734,7 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: var(--space-4);
-		margin-bottom: var(--space-6);
+		margin-bottom: var(--space-8);
 	}
 
 	@media (min-width: 768px) {
@@ -848,11 +848,20 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-4);
-		padding: var(--space-5);
+		padding: var(--space-5) var(--space-4);
 		background: color-mix(in srgb, var(--color-accent) 6%, var(--color-surface));
 		border: 1px solid var(--color-divider);
 		border-radius: var(--radius-md);
 		align-items: stretch;
+		box-sizing: border-box;
+		max-width: 100%;
+	}
+
+	@media (min-width: 640px) {
+		.question-bank-banner {
+			padding: var(--space-6);
+			gap: var(--space-5);
+		}
 	}
 
 	@media (min-width: 860px) {
@@ -860,6 +869,8 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
+			gap: var(--space-6);
+			padding: var(--space-6) var(--space-8);
 		}
 
 		.question-bank-banner-content {
@@ -875,20 +886,40 @@
 	}
 
 	.question-bank-banner h3 {
-		font-size: 18px;
-		margin: 0 0 var(--space-1);
+		font-size: 19px;
+		line-height: 1.25;
+		margin: 0 0 var(--space-2);
 	}
 
 	.question-bank-banner p {
 		margin: 0;
-		font-size: 14px;
+		font-size: 14.5px;
+		line-height: 1.55;
 		color: color-mix(in srgb, var(--color-text) 75%, transparent);
 	}
 
 	.question-bank-banner-actions {
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: column;
 		gap: var(--space-2);
 		flex-shrink: 0;
+	}
+
+	@media (min-width: 540px) {
+		.question-bank-banner-actions {
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: var(--space-3);
+		}
+
+		.question-bank-banner-actions .btn {
+			white-space: nowrap;
+		}
+	}
+
+	.question-bank-banner-actions .btn {
+		text-align: center;
+		justify-content: center;
 	}
 </style>
