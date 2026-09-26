@@ -89,6 +89,18 @@ export const de: LandingContent = {
 		illustrationAlt: 'Mitarbeiter und Führungskraft auf dem Weg zu Zielen mit balanciertem Hebel'
 	},
 
+	playbooks: {
+		heading: 'Praxisnahe Playbooks für Engineering-Teams',
+		intro:
+			'Praxiserprobte Gesprächsleitfäden, Frameworks und Taktiken, die zähe Status-Updates in wirkungsvolle 1:1-Gespräche verwandeln.',
+		readPlaybook: 'Playbook lesen',
+		viewAllPlaybooks: 'Alle Playbooks entdecken',
+		questionBankTitle: 'Interaktive Fragen-Datenbank',
+		questionBankDescription:
+			'Über 60 wirkungsvolle Diagnosefragen zu Energie, Blockaden, Strategie und Karriere mit Hinweisen, worauf beim Zuhören zu achten ist.',
+		openQuestionBank: 'Fragen-Datenbank öffnen'
+	},
+
 	comparison: {
 		heading: 'Ein gemeinsames Dokument ist kein System',
 		intro:

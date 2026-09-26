@@ -1,7 +1,13 @@
 import type { Locale } from '$lib/paraglide/runtime';
 
 export type QuestionCategory =
-	'icebreaker' | 'upward-feedback' | 'team-dynamics' | 'blockers' | 'career' | 'workload';
+	| 'icebreaker'
+	| 'upward-feedback'
+	| 'team-dynamics'
+	| 'blockers'
+	| 'strategy'
+	| 'career'
+	| 'workload';
 
 export interface QuestionItem {
 	id: string;
@@ -38,6 +44,12 @@ export const questionCategoriesEn: QuestionCategoryMeta[] = [
 		description: 'Eliminating friction, unnecessary meetings, and slow pipelines.'
 	},
 	{
+		id: 'strategy',
+		label: 'Strategy & Purpose',
+		description:
+			'Connecting daily engineering work to business goals, user impact, and company direction.'
+	},
+	{
 		id: 'career',
 		label: 'Growth & Ambition',
 		description: 'Long-term trajectory, skill development, and expanded scope.'
@@ -69,6 +81,12 @@ export const questionCategoriesRu: QuestionCategoryMeta[] = [
 		id: 'blockers',
 		label: 'Блокеры и процессы',
 		description: 'Устранение трения, бессмысленных встреч и медленных процессов.'
+	},
+	{
+		id: 'strategy',
+		label: 'Стратегия и смысл',
+		description:
+			'Связь повседневных технических задач с целями бизнеса, продуктом и вектором компании.'
 	},
 	{
 		id: 'career',
@@ -108,6 +126,13 @@ export const questionsEn: QuestionItem[] = [
 		text: 'Did you get to do any deep, uninterrupted work this week, or did it feel fragmented?',
 		whyAsk: 'Evaluates calendar fragmentation and maker time.'
 	},
+	{
+		id: 'e5',
+		category: 'icebreaker',
+		text: 'Which task this sprint gave you creative momentum, and which felt like a soul-draining chore?',
+		whyAsk:
+			'Uncovers unbalanced distribution of chores, on-call spikes, or repetitive manual tasks.'
+	},
 
 	// Feedback to Manager
 	{
@@ -140,6 +165,25 @@ export const questionsEn: QuestionItem[] = [
 		text: 'Am I giving you feedback early enough, or does it ever feel like a surprise?',
 		whyAsk: 'Ensures feedback latency is near zero.'
 	},
+	{
+		id: 'm6',
+		category: 'upward-feedback',
+		text: 'Where am I unintentionally creating a bottleneck or delay for you?',
+		whyAsk: 'Identifies delayed code reviews, slow approvals, or unnecessary micromanagement.'
+	},
+	{
+		id: 'm7',
+		category: 'upward-feedback',
+		text: 'Did I handle any meeting or situation poorly recently where I could have shown up better?',
+		whyAsk: 'Surfaces blind spots in communication, tone, or team defense.'
+	},
+	{
+		id: 'm8',
+		category: 'upward-feedback',
+		text: 'What is something you wish I understood better about your day-to-day reality?',
+		whyAsk:
+			'Bridges empathy gaps between high-level management planning and ground-level technical implementation.'
+	},
 
 	// Team & Culture
 	{
@@ -165,6 +209,18 @@ export const questionsEn: QuestionItem[] = [
 		category: 'team-dynamics',
 		text: 'Do code reviews and technical debates in our team feel constructive and collaborative, or stressful?',
 		whyAsk: 'Validates health of the day-to-day engineering culture.'
+	},
+	{
+		id: 't5',
+		category: 'team-dynamics',
+		text: 'How is collaboration feeling across the team right now? Does anyone feel isolated or out of the loop?',
+		whyAsk: 'Diagnoses remote disconnect, timezone silos, or simmering quiet disagreements.'
+	},
+	{
+		id: 't6',
+		category: 'team-dynamics',
+		text: 'Do you feel your ideas and RFCs are taken seriously by the rest of the team?',
+		whyAsk: 'Uncovers feelings of exclusion, seniority bias, or dominant voices dismissing input.'
 	},
 
 	// Bottlenecks & Process
@@ -192,6 +248,73 @@ export const questionsEn: QuestionItem[] = [
 		text: 'If we could improve one part of our local development, CI, or deployment workflow, what would make the biggest impact?',
 		whyAsk: 'Pins down developer experience bottlenecks.'
 	},
+	{
+		id: 'b5',
+		category: 'blockers',
+		text: 'What is harder in your day-to-day work than it should be?',
+		whyAsk:
+			'The classic high-signal friction prompt: slow pipelines, flaky tests, lack of staging data, or painful approvals.'
+	},
+	{
+		id: 'b6',
+		category: 'blockers',
+		text: 'Is there any part of our codebase or architecture that you or the team are terrified to touch, and why?',
+		whyAsk:
+			'Identifies legacy landmines without test coverage and single-point-of-failure services.'
+	},
+	{
+		id: 'b7',
+		category: 'blockers',
+		text: 'What is the clunkiest internal tool or process we still tolerate just because "that’s how we’ve always done it"?',
+		whyAsk:
+			'Uncovers outdated deployment checklists, manual permission grants, or inertia-driven habits.'
+	},
+	{
+		id: 'b8',
+		category: 'blockers',
+		text: 'If you had two full days to fix any technical debt in our service, what would you tackle first?',
+		whyAsk:
+			'Surfaces high-ROI refactoring ideas that engineers usually keep to themselves due to sprint pressure.'
+	},
+	{
+		id: 'b9',
+		category: 'blockers',
+		text: 'Did you run into any permission, cloud IAM, or credential roadblocks this cycle?',
+		whyAsk: 'Identifies security bureaucracy, slow IT approvals, or missing staging environments.'
+	},
+
+	// Strategy & Purpose
+	{
+		id: 's1',
+		category: 'strategy',
+		text: 'Do you feel clear on why our current sprint goals matter to our customers and the business?',
+		whyAsk:
+			'Prevents engineers from feeling like disconnected factory workers typing tickets without purpose.'
+	},
+	{
+		id: 's2',
+		category: 'strategy',
+		text: 'Were there any recent announcements or leadership pivots that felt confusing or contradicted our goals?',
+		whyAsk: 'Uncovers rumors, strategic whiplash, and gaps in executive context.'
+	},
+	{
+		id: 's3',
+		category: 'strategy',
+		text: 'If a candidate asked you in an interview what our company’s top priority is this quarter, what would you say?',
+		whyAsk: 'Tests strategic alignment and whether company goals actually filter down to the team.'
+	},
+	{
+		id: 's4',
+		category: 'strategy',
+		text: 'Do you feel we are building the right thing, or are we solving the wrong customer problem?',
+		whyAsk: 'Unearths frontline technical doubts about product viability before time is wasted.'
+	},
+	{
+		id: 's5',
+		category: 'strategy',
+		text: 'What would happen if we didn’t ship this current milestone for another month? Does it actually matter?',
+		whyAsk: 'Separates genuine business urgency from artificial, management-induced panic.'
+	},
 
 	// Growth & Ambition
 	{
@@ -218,6 +341,19 @@ export const questionsEn: QuestionItem[] = [
 		text: 'What is one recent piece of work where you felt you performed at your absolute best?',
 		whyAsk: 'Identifies high-water marks and energizing work.'
 	},
+	{
+		id: 'c5',
+		category: 'career',
+		text: 'What is the single biggest skill gap holding you back from reaching the next level?',
+		whyAsk:
+			'Focuses career conversations on actionable growth areas (system design, ambiguity, leadership).'
+	},
+	{
+		id: 'c6',
+		category: 'career',
+		text: 'Do you feel you are learning faster than the market, or does your professional progress feel stagnant?',
+		whyAsk: 'The #1 leading indicator of engineer attrition and disengagement.'
+	},
 
 	// Capacity & Well-being
 	{
@@ -243,6 +379,27 @@ export const questionsEn: QuestionItem[] = [
 		category: 'workload',
 		text: 'Do you feel pressure to respond to messages outside working hours, even if it’s unspoken?',
 		whyAsk: 'Surfaces accidental peer or leadership pressure.'
+	},
+	{
+		id: 'w5',
+		category: 'workload',
+		text: 'I noticed you’ve been working late nights or weekends recently. How are you holding up physically?',
+		whyAsk:
+			'Checks for sleep deprivation, physical exhaustion, and health symptoms before acute burnout occurs.'
+	},
+	{
+		id: 'w6',
+		category: 'workload',
+		text: 'When was the last time you took a full day off and completely disconnected from Slack and email?',
+		whyAsk:
+			'Surfaces vacation guilt, hero syndrome, or fear that things will collapse in their absence.'
+	},
+	{
+		id: 'w7',
+		category: 'workload',
+		text: 'How can I give you air cover so you can catch your breath and reset this coming week?',
+		whyAsk:
+			'Invites concrete protective commitments from the manager (declining meetings, pushing deadlines).'
 	}
 ];
 
@@ -271,6 +428,12 @@ export const questionsRu: QuestionItem[] = [
 		category: 'icebreaker',
 		text: 'Удалось ли на этой неделе позаниматься глубокой сфокусированной работой (deep work), или всё время ушло на переключения?',
 		whyAsk: 'Диагностирует фрагментацию календаря и качество фокуса.'
+	},
+	{
+		id: 'e5',
+		category: 'icebreaker',
+		text: 'Какая часть твоей работы ощущалась драйвовым творчеством, а какая — бессмысленной рутиной?',
+		whyAsk: 'Выявляет накопление монотонных задач, ручных проверок или избытка дежурств.'
 	},
 
 	// Фидбек руководителю
@@ -305,6 +468,26 @@ export const questionsRu: QuestionItem[] = [
 		text: 'Доходит ли обратная связь от меня достаточно быстро, или бывает ощущение, что фидбек пришел «задним числом»?',
 		whyAsk: 'Помогает руководителю сократить задержку в передаче полезного фидбека.'
 	},
+	{
+		id: 'm6',
+		category: 'upward-feedback',
+		text: 'В каких вопросах я ненамеренно создаю для тебя бутылочное горлышко или задержки?',
+		whyAsk:
+			'Помогает вовремя заметить задержки код-ревью, зависшие согласования или избыточный контроль.'
+	},
+	{
+		id: 'm7',
+		category: 'upward-feedback',
+		text: 'Были ли за последнее время встречи или ситуации, где я повёл(а) себя неудачно и мог(ла) бы сработать лучше?',
+		whyAsk: 'Вскрывает слепые зоны в коммуникации лида, тоне общения или защите интересов команды.'
+	},
+	{
+		id: 'm8',
+		category: 'upward-feedback',
+		text: 'Что из твоей повседневной реальности ты хотел(а) бы, чтобы я понимал(а) лучше?',
+		whyAsk:
+			'Устраняет разрыв в понимании между высокоуровневым планированием и реалиями инженерного стека.'
+	},
 
 	// Команда и культура
 	{
@@ -330,6 +513,18 @@ export const questionsRu: QuestionItem[] = [
 		category: 'team-dynamics',
 		text: 'Проходят ли код-ревью и технические споры конструктивно, или в них ощущается токсичность и давление?',
 		whyAsk: 'Оценивает реальное состояние инженерной культуры команды.'
+	},
+	{
+		id: 't5',
+		category: 'team-dynamics',
+		text: 'Как сейчас атмосфера и общение в команде? Нет ли ощущения, что кто-то изолирован или оторван от контекста?',
+		whyAsk: 'Диагностирует проблемы удаленки, барьеры часовых поясов и невысказанное напряжение.'
+	},
+	{
+		id: 't6',
+		category: 'team-dynamics',
+		text: 'Чувствуешь ли ты, что к твоим идеям, предложениям и RFC прислушиваются?',
+		whyAsk: 'Вскрывает ощущение обесценивания, доминирование авторитетов или предвзятость по стажу.'
 	},
 
 	// Блокеры и процессы
@@ -357,6 +552,73 @@ export const questionsRu: QuestionItem[] = [
 		text: 'Какое одно улучшение в нашем CI/CD, локальном окружении или деплое принесло бы наибольшую отдачу?',
 		whyAsk: 'Находит реальные узкие места в Developer Experience (DevEx).'
 	},
+	{
+		id: 'b5',
+		category: 'blockers',
+		text: 'Что в твоей повседневной работе сейчас сложнее, чем должно быть?',
+		whyAsk:
+			'Классический точный вопрос анкеты: медленный CI/CD, флакующие тесты, отсутствие тестовых данных или бюрократия.'
+	},
+	{
+		id: 'b6',
+		category: 'blockers',
+		text: 'Есть ли часть нашей кодовой базы или архитектуры, к которой всей команде страшно прикасаться, и почему?',
+		whyAsk:
+			'Выявляет мины замедленного действия, легаси без тестов и узкие места надежности системы.'
+	},
+	{
+		id: 'b7',
+		category: 'blockers',
+		text: 'Какой внутренний процесс или инструмент мы до сих пор терпим просто потому, что «так исторически сложилось»?',
+		whyAsk: 'Вскрывает устаревшие релизные чеклисты, ручные выдачи доступов и привычки по инерции.'
+	},
+	{
+		id: 'b8',
+		category: 'blockers',
+		text: 'Если бы у тебя было два свободных дня на закрытие любого техдолга, за что бы ты взялся(лась) в первую очередь?',
+		whyAsk:
+			'Помогает найти идеи рефакторинга с высоким ROI, о которых инженеры часто молчат из-за дедлайнов.'
+	},
+	{
+		id: 'b9',
+		category: 'blockers',
+		text: 'Были ли за последнее время проблемы с доступами, правами в облаке или лицензиями?',
+		whyAsk:
+			'Выявляет бюрократию безопасности, задержки IT-поддержки или отсутствие необходимых прав.'
+	},
+
+	// Стратегия и смысл
+	{
+		id: 's1',
+		category: 'strategy',
+		text: 'Понятно ли тебе, почему задачи текущего спринта важны для бизнеса и пользователей?',
+		whyAsk:
+			'Предотвращает превращение инженеров в изолированных «перекладывателей тикетов» без понимания смысла.'
+	},
+	{
+		id: 's2',
+		category: 'strategy',
+		text: 'Были ли за последнее время новости или решения руководства, смысл которых остался непонятен или противоречив?',
+		whyAsk: 'Вскрывает слухи, тревогу от смены курса и дефицит стратегического контекста сверху.'
+	},
+	{
+		id: 's3',
+		category: 'strategy',
+		text: 'Если бы кандидат на собеседовании спросил тебя о главной цели компании на этот квартал, что бы ты ответил(а)?',
+		whyAsk: 'Проверяет, насколько стратегия компании реально понятна и близка людям на передовой.'
+	},
+	{
+		id: 's4',
+		category: 'strategy',
+		text: 'Чувствуешь ли ты, что мы создаем правильный продукт, или мы решаем не ту проблему клиентов?',
+		whyAsk: 'Вскрывает экспертные сомнения команды в жизнеспособности продуктовых гипотез.'
+	},
+	{
+		id: 's5',
+		category: 'strategy',
+		text: 'Что произойдет, если мы задержим текущий релиз на месяц? Это реально критично для бизнеса?',
+		whyAsk: 'Помогает отличить реальную срочность для бизнеса от искусственной паники менеджмента.'
+	},
 
 	// Рост и амбиции
 	{
@@ -383,6 +645,19 @@ export const questionsRu: QuestionItem[] = [
 		text: 'В какой задаче за последнее время ты чувствовал(а), что выдал(а) свой абсолютный максимум и гордишься результатом?',
 		whyAsk: 'Помогает обнаружить условия, при которых человек работает на пике отдачи.'
 	},
+	{
+		id: 'c5',
+		category: 'career',
+		text: 'Какой ключевой пробел в навыках или опыте сильнее всего сдерживает твой переход на следующий уровень?',
+		whyAsk:
+			'Фокусирует карьерный диалог на конкретных зонах роста (системный дизайн, управление неопределенностью, влияние).'
+	},
+	{
+		id: 'c6',
+		category: 'career',
+		text: 'Чувствуешь ли ты, что учишься быстрее рынка, или твой профессиональный рост замедлился?',
+		whyAsk: 'Главный опережающий индикатор выгорания и риска ухода сильных инженеров.'
+	},
 
 	// Нагрузка и баланс
 	{
@@ -408,6 +683,27 @@ export const questionsRu: QuestionItem[] = [
 		category: 'workload',
 		text: 'Чувствуешь ли ты негласное давление отвечать на рабочие сообщения во внерабочее время?',
 		whyAsk: 'Выявляет скрытое токсичное давление или ложные ожидания доступности.'
+	},
+	{
+		id: 'w5',
+		category: 'workload',
+		text: 'Я замечаю, что в последнее время тебе приходится задерживаться по вечерам или на выходных. Как ты себя чувствуешь физически?',
+		whyAsk:
+			'Проверяет симптомы хронического стресса, недосып и усталость до наступления острого выгорания.'
+	},
+	{
+		id: 'w6',
+		category: 'workload',
+		text: 'Когда ты в последний раз брал(а) полноценный выходной и полностью отключался(лась) от рабочих чатов и почты?',
+		whyAsk:
+			'Выявляет чувство вины за отпуск, синдром незаменимого героя или страх, что без человека всё рухнет.'
+	},
+	{
+		id: 'w7',
+		category: 'workload',
+		text: 'Как я могу прикрыть тебя и обеспечить «воздушный щит», чтобы ты мог(ла) перевести дух на следующей неделе?',
+		whyAsk:
+			'Предлагает конкретную помощь лида: снятие лишних встреч, сдвиг дедлайнов, блокировка входящих запросов.'
 	}
 ];
 
@@ -431,6 +727,12 @@ export const questionCategoriesDe: QuestionCategoryMeta[] = [
 		id: 'blockers',
 		label: 'Engpässe & Prozesse',
 		description: 'Beseitigung von Reibung, überflüssigen Meetings und Bremsen.'
+	},
+	{
+		id: 'strategy',
+		label: 'Strategie & Sinn',
+		description:
+			'Verbindung der täglichen Entwicklungsarbeit mit Unternehmenszielen und Kundenbedürfnissen.'
 	},
 	{
 		id: 'career',
@@ -466,6 +768,12 @@ export const questionCategoriesEs: QuestionCategoryMeta[] = [
 		description: 'Eliminación de fricciones, reuniones inútiles y trabas.'
 	},
 	{
+		id: 'strategy',
+		label: 'Estrategia y propósito',
+		description:
+			'Conexión del trabajo técnico diario con los objetivos de negocio y el impacto real.'
+	},
+	{
 		id: 'career',
 		label: 'Crecimiento y metas',
 		description: 'Trayectoria a largo plazo, nuevas competencias e impacto.'
@@ -497,6 +805,12 @@ export const questionCategoriesFr: QuestionCategoryMeta[] = [
 		id: 'blockers',
 		label: 'Freins & Processus',
 		description: 'Suppression des lourdeurs, réunions stériles et blocages.'
+	},
+	{
+		id: 'strategy',
+		label: 'Stratégie & Sens',
+		description:
+			'Relier le travail technique quotidien aux objectifs métier, aux utilisateurs et à la vision.'
 	},
 	{
 		id: 'career',
@@ -532,6 +846,12 @@ export const questionCategoriesLv: QuestionCategoryMeta[] = [
 		description: 'Aizķeršanos, lieku sapulču un birokrātijas novēršana.'
 	},
 	{
+		id: 'strategy',
+		label: 'Stratēģija un jēga',
+		description:
+			'Ikdienas izstrādes darba sasaiste ar biznesa mērķiem, lietotāju vajadzībām un uzņēmuma virzienu.'
+	},
+	{
 		id: 'career',
 		label: 'Izaugsme un ambīcijas',
 		description: 'Ilgtermiņa virziens, jaunas prasmes un ietekme.'
@@ -544,11 +864,13 @@ export const questionCategoriesLv: QuestionCategoryMeta[] = [
 ];
 
 export const questionsDe: QuestionItem[] = [
+	// Kontakt & Energie
 	{
 		id: 'e1',
 		category: 'icebreaker',
 		text: 'Wie steht dein Energielevel und deine mentale Batterie diese Woche auf einer Skala von 1 bis 5?',
-		whyAsk: 'Schneller quantitativer Stimmungscheck.'
+		whyAsk:
+			'Schneller quantitativer Stimmungscheck, der das offene Gespräch über Energie normalisiert.'
 	},
 	{
 		id: 'e2',
@@ -568,6 +890,15 @@ export const questionsDe: QuestionItem[] = [
 		text: 'Konntest du diese Woche fokussiert und ungestört an großen Themen arbeiten?',
 		whyAsk: 'Bewertet Kalenderfragmentierung und Deep-Work-Zeit.'
 	},
+	{
+		id: 'e5',
+		category: 'icebreaker',
+		text: 'Welche Aufgabe hat dir kreativen Schwung verliehen und welche fühlte sich wie ermüdende Routine an?',
+		whyAsk:
+			'Deckt ungleiche Verteilung von Routineaufgaben, Bereitschaftsspitzen oder manuelle Fleißarbeit auf.'
+	},
+
+	// Feedback an Führungskraft
 	{
 		id: 'm1',
 		category: 'upward-feedback',
@@ -599,6 +930,27 @@ export const questionsDe: QuestionItem[] = [
 		whyAsk: 'Stellt minimale Latenz beim Feedback sicher.'
 	},
 	{
+		id: 'm6',
+		category: 'upward-feedback',
+		text: 'An welcher Stelle bin ich unbeabsichtigt ein Flaschenhals oder Verzögerungsfaktor für dich?',
+		whyAsk: 'Macht verzögerte Code-Reviews, schleppende Freigaben oder Mikromanagement sichtbar.'
+	},
+	{
+		id: 'm7',
+		category: 'upward-feedback',
+		text: 'Gab es kürzlich ein Meeting oder eine Situation, die ich unglücklich moderiert habe und besser hätte lösen können?',
+		whyAsk: 'Legt blinde Flecken in der Kommunikation, im Tonfall oder beim Schutz des Teams offen.'
+	},
+	{
+		id: 'm8',
+		category: 'upward-feedback',
+		text: 'Was aus deiner alltäglichen Arbeitsrealität sollte ich deiner Meinung nach besser verstehen?',
+		whyAsk:
+			'Schließt die Empathielücke zwischen übergeordneter Planung und technischer Praxis an der Basis.'
+	},
+
+	// Team & Kultur
+	{
 		id: 't1',
 		category: 'team-dynamics',
 		text: 'Wer im Team oder in Nachbarabteilungen hat dir in letzter Zeit besonders geholfen?',
@@ -622,6 +974,21 @@ export const questionsDe: QuestionItem[] = [
 		text: 'Verlaufen Code-Reviews und technische Debatten bei uns konstruktiv oder stressig?',
 		whyAsk: 'Validiert die Gesundheit der gelebten Ingenieurskultur.'
 	},
+	{
+		id: 't5',
+		category: 'team-dynamics',
+		text: 'Wie fühlt sich die Zusammenarbeit im Team derzeit an? Gibt es jemanden, der isoliert oder abgehängt wirkt?',
+		whyAsk: 'Erkennt Remote-Isolation, Zeitzonensilos oder schwelende unausgesprochene Differenzen.'
+	},
+	{
+		id: 't6',
+		category: 'team-dynamics',
+		text: 'Hast du das Gefühl, dass deine Ideen, Vorschläge und RFCs vom Team wirklich ernst genommen werden?',
+		whyAsk:
+			'Macht Gefühle der Ausgrenzung, Senioritäts-Hierarchien oder dominantes Verhalten sichtbar.'
+	},
+
+	// Engpässe & Prozesse
 	{
 		id: 'b1',
 		category: 'blockers',
@@ -647,6 +1014,79 @@ export const questionsDe: QuestionItem[] = [
 		whyAsk: 'Findet echte Engpässe in der Developer Experience.'
 	},
 	{
+		id: 'b5',
+		category: 'blockers',
+		text: 'Was in deiner täglichen Arbeit ist mühsamer oder komplizierter, als es eigentlich sein sollte?',
+		whyAsk:
+			'Klassischer Reibungs-Indikator: langsame CI/CD-Pipelines, instabile Tests, fehlende Staging-Daten oder Freigabestau.'
+	},
+	{
+		id: 'b6',
+		category: 'blockers',
+		text: 'Gibt es Teile unserer Codebasis oder Architektur, die das Team aus Angst kaum anzurühren wagt, und warum?',
+		whyAsk: 'Legt Altlasten ohne Testabdeckung und Single-Points-of-Failure schonungslos offen.'
+	},
+	{
+		id: 'b7',
+		category: 'blockers',
+		text: 'Welches umständliche interne Tool oder Verfahren dulden wir nur noch, weil "wir das schon immer so gemacht haben"?',
+		whyAsk:
+			'Macht veraltete Release-Checklisten, manuelle Berechtigungsvergaben und träge Gewohnheiten sichtbar.'
+	},
+	{
+		id: 'b8',
+		category: 'blockers',
+		text: 'Wenn du zwei volle Tage Zeit hättest, um technische Schulden abzutragen, woran würdest du zuerst ansetzen?',
+		whyAsk:
+			'Bringt wertvolle Refactoring-Ideen mit hoher Hebelwirkung ans Licht, die sonst im Tagesgeschäft untergehen.'
+	},
+	{
+		id: 'b9',
+		category: 'blockers',
+		text: 'Bist du in diesem Zyklus auf Berechtigungsprobleme, Cloud-IAM-Hürden oder fehlende Zugänge gestoßen?',
+		whyAsk:
+			'Zeigt Sicherheitsbürokratie, schleppenden IT-Support oder mangelnde Berechtigungen auf.'
+	},
+
+	// Strategie & Sinn
+	{
+		id: 's1',
+		category: 'strategy',
+		text: 'Ist dir klar verständlich, warum unsere aktuellen Sprint-Ziele für unsere Kunden und das Geschäft wichtig sind?',
+		whyAsk:
+			'Verhindert, dass sich Entwickler wie isolierte Ticket-Abarbeiter ohne Sinnbezug fühlen.'
+	},
+	{
+		id: 's2',
+		category: 'strategy',
+		text: 'Gab es kürzlich Ankündigungen oder Kurswechsel der Führung, die verwirrend wirkten oder unseren Zielen widersprachen?',
+		whyAsk:
+			'Macht Gerüchte, Richtungsunsicherheiten und Lücken in der Unternehmenskommunikation sichtbar.'
+	},
+	{
+		id: 's3',
+		category: 'strategy',
+		text: 'Wenn ein Bewerber dich im Vorstellungsgespräch nach der obersten Unternehmenspriorität dieses Quartals fragte: Was würdest du sagen?',
+		whyAsk:
+			'Prüft, wie klar die strategische Vision an der Basis tatsächlich ankommt und verstanden wird.'
+	},
+	{
+		id: 's4',
+		category: 'strategy',
+		text: 'Hast du das Gefühl, dass wir das Richtige bauen, oder lösen wir das falsche Kundenproblem?',
+		whyAsk:
+			'Bringt wertvolle Zweifel an Produktentscheidungen ans Licht, bevor monatelang in die falsche Richtung entwickelt wird.'
+	},
+	{
+		id: 's5',
+		category: 'strategy',
+		text: 'Was würde passieren, wenn sich der aktuelle Meilenstein um einen Monat verschiebt? Ist das geschäftlich wirklich kritisch?',
+		whyAsk:
+			'Unterscheidet zwischen echter geschäftlicher Dringlichkeit und künstlich erzeugtem Management-Stress.'
+	},
+
+	// Wachstum & Ambitionen
+	{
 		id: 'c1',
 		category: 'career',
 		text: 'Welcher Bereich auf unserer kommenden Roadmap reizt dich am meisten?',
@@ -671,6 +1111,21 @@ export const questionsDe: QuestionItem[] = [
 		whyAsk: 'Identifiziert Aufgaben, die besondere Stärken aktivieren.'
 	},
 	{
+		id: 'c5',
+		category: 'career',
+		text: 'Welche konkrete Kompetenzlücke bremst deinen nächsten Entwicklungsschritt derzeit am stärksten?',
+		whyAsk:
+			'Lenkt Entwicklungsgespräche auf greifbare Wachstumsfelder (Systemdesign, Umgang mit Ambiguität, Führung).'
+	},
+	{
+		id: 'c6',
+		category: 'career',
+		text: 'Hast du das Gefühl, dass du schneller lernst als der Markt, oder stagniert dein fachlicher Fortschritt?',
+		whyAsk: 'Der wichtigste Frühindikator für Abwanderung und Demotivation bei Top-Entwicklern.'
+	},
+
+	// Kapazität & Wohlbefinden
+	{
 		id: 'w1',
 		category: 'workload',
 		text: 'Wie nachhaltig fühlt sich dein aktuelles Arbeitstempo über die nächsten 2–3 Monate an?',
@@ -692,16 +1147,38 @@ export const questionsDe: QuestionItem[] = [
 		id: 'w4',
 		category: 'workload',
 		text: 'Spürst du Druck, außerhalb der Arbeitszeiten erreichbar zu sein?',
-		whyAsk: 'Deckung ungesunden Erreichbarkeitsdrucks auf.'
+		whyAsk: 'Deckt ungesunden Erreichbarkeitsdruck auf.'
+	},
+	{
+		id: 'w5',
+		category: 'workload',
+		text: 'Mir ist aufgefallen, dass du zuletzt spät abends oder am Wochenende gearbeitet hast. Wie geht es dir körperlich dabei?',
+		whyAsk:
+			'Prüft auf Schlafmangel, körperliche Erschöpfung und chronischen Stress vor einem akuten Burnout.'
+	},
+	{
+		id: 'w6',
+		category: 'workload',
+		text: 'Wann hattest du das letzte Mal einen freien Tag und hast Slack und E-Mails wirklich komplett ignoriert?',
+		whyAsk:
+			'Macht Schuldgefühle bei Urlaub, Helden-Syndrome oder die Angst vor Kontrollverlust greifbar.'
+	},
+	{
+		id: 'w7',
+		category: 'workload',
+		text: 'Wie kann ich dir den Rücken freihalten, damit du in der kommenden Woche durchatmen und neue Kraft schöpfen kannst?',
+		whyAsk:
+			'Ermöglicht konkrete Schutzmaßnahmen durch die Führungskraft (Meetings absagen, Fristen verschieben).'
 	}
 ];
 
 export const questionsEs: QuestionItem[] = [
+	// Contacto y energía
 	{
 		id: 'e1',
 		category: 'icebreaker',
 		text: '¿Cómo está tu batería mental y nivel de energía esta semana del 1 al 5?',
-		whyAsk: 'Pulso cuantitativo rápido que normaliza hablar del cansancio.'
+		whyAsk: 'Pulso cuantitativo rápido que normaliza hablar del cansancio y la energía.'
 	},
 	{
 		id: 'e2',
@@ -721,6 +1198,15 @@ export const questionsEs: QuestionItem[] = [
 		text: '¿Tuviste tiempo para trabajo enfocado e ininterrumpido esta semana?',
 		whyAsk: 'Evalúa la fragmentación de la agenda y el tiempo de concentración.'
 	},
+	{
+		id: 'e5',
+		category: 'icebreaker',
+		text: '¿Qué tarea te dio impulso creativo en este sprint y cuál se sintió como una rutina desgastante?',
+		whyAsk:
+			'Identifica acumulación de tareas monótonas, sobrecarga de guardias o procesos manuales repetitivos.'
+	},
+
+	// Feedback al mánager
 	{
 		id: 'm1',
 		category: 'upward-feedback',
@@ -752,6 +1238,29 @@ export const questionsEs: QuestionItem[] = [
 		whyAsk: 'Asegura que el feedback fluya con mínima latencia.'
 	},
 	{
+		id: 'm6',
+		category: 'upward-feedback',
+		text: '¿En qué momentos me convierto sin querer en un cuello de botella o motivo de demora para ti?',
+		whyAsk:
+			'Permite detectar revisiones de código retrasadas, aprobaciones lentas o microgestión involuntaria.'
+	},
+	{
+		id: 'm7',
+		category: 'upward-feedback',
+		text: '¿Hubo alguna reunión o situación reciente que yo haya gestionado mal y donde pudiera haber actuado mejor?',
+		whyAsk:
+			'Destapa puntos ciegos en la comunicación, el tono o la defensa de los intereses del equipo.'
+	},
+	{
+		id: 'm8',
+		category: 'upward-feedback',
+		text: '¿Qué aspecto de tu realidad laboral diaria te gustaría que yo comprendiera mejor?',
+		whyAsk:
+			'Cierra la brecha de empatía entre la planificación estratégica y los retos técnicos reales sobre el terreno.'
+	},
+
+	// Equipo y cultura
+	{
 		id: 't1',
 		category: 'team-dynamics',
 		text: '¿Quién del equipo o de otras áreas te ha ayudado de forma especial recientemente?',
@@ -775,6 +1284,21 @@ export const questionsEs: QuestionItem[] = [
 		text: '¿Las revisiones de código y debates técnicos se sienten constructivos o estresantes?',
 		whyAsk: 'Verifica la salud de la cultura de ingeniería.'
 	},
+	{
+		id: 't5',
+		category: 'team-dynamics',
+		text: '¿Cómo se siente la colaboración en el equipo ahora mismo? ¿Hay alguien que parezca aislado o fuera del circuito?',
+		whyAsk: 'Diagnostica desconexión en remoto, silos horarios o desacuerdos silenciosos.'
+	},
+	{
+		id: 't6',
+		category: 'team-dynamics',
+		text: '¿Sientes que el resto del equipo toma en serio tus ideas, propuestas y documentos de diseño (RFC)?',
+		whyAsk:
+			'Detecta posibles sentimientos de exclusión, sesgo de antigüedad o voces dominantes que anulan opiniones.'
+	},
+
+	// Bloqueos y procesos
 	{
 		id: 'b1',
 		category: 'blockers',
@@ -800,6 +1324,79 @@ export const questionsEs: QuestionItem[] = [
 		whyAsk: 'Identifica trabas en la experiencia de desarrollo (DevEx).'
 	},
 	{
+		id: 'b5',
+		category: 'blockers',
+		text: '¿Qué aspectos de tu trabajo diario son más difíciles o lentos de lo que deberían ser?',
+		whyAsk:
+			'La clásica pregunta de fricción: pipelines lentos, tests intermitentes, falta de datos de prueba o burocracia.'
+	},
+	{
+		id: 'b6',
+		category: 'blockers',
+		text: '¿Hay alguna parte de nuestro código o arquitectura que al equipo le dé pánico tocar, y por qué?',
+		whyAsk:
+			'Identifica bombas de relojería heredadas sin tests y servicios que son un único punto de fallo.'
+	},
+	{
+		id: 'b7',
+		category: 'blockers',
+		text: '¿Cuál es la herramienta o proceso interno más engorroso que aún toleramos solo "porque siempre se ha hecho así"?',
+		whyAsk:
+			'Destapa listas de verificación obsoletas, solicitudes manuales de accesos e inercia organizativa.'
+	},
+	{
+		id: 'b8',
+		category: 'blockers',
+		text: 'Si tuvieras dos días completos para solventar deuda técnica en nuestro servicio, ¿qué resolverías primero?',
+		whyAsk:
+			'Saca a la superficie ideas de refactorización de alto rendimiento que los ingenieros suelen callar por las prisas.'
+	},
+	{
+		id: 'b9',
+		category: 'blockers',
+		text: '¿Te has topado con trabas de permisos, accesos en la nube o credenciales en este ciclo?',
+		whyAsk:
+			'Identifica burocracia de seguridad, lentitud en soporte de TI o falta de credenciales de desarrollo.'
+	},
+
+	// Estrategia y propósito
+	{
+		id: 's1',
+		category: 'strategy',
+		text: '¿Tienes claro por qué los objetivos del sprint actual son relevantes para los clientes y el negocio?',
+		whyAsk:
+			'Evita que los desarrolladores se sientan como simples ejecutores de tareas desconectados del impacto real.'
+	},
+	{
+		id: 's2',
+		category: 'strategy',
+		text: '¿Hubo anuncios o giros recientes de la dirección que te parecieran confusos o contradictorios con nuestras metas?',
+		whyAsk: 'Detecta rumores, bandazos estratégicos y falta de contexto por parte del liderazgo.'
+	},
+	{
+		id: 's3',
+		category: 'strategy',
+		text: 'Si un candidato te preguntara en una entrevista cuál es la máxima prioridad de la empresa este trimestre, ¿qué le dirías?',
+		whyAsk:
+			'Comprueba el grado real de alineación estratégica y si los objetivos calan en el día a día.'
+	},
+	{
+		id: 's4',
+		category: 'strategy',
+		text: '¿Crees que estamos construyendo lo adecuado o estamos intentando resolver el problema equivocado del cliente?',
+		whyAsk:
+			'Detecta dudas fundadas del equipo sobre la viabilidad del producto antes de malgastar recursos.'
+	},
+	{
+		id: 's5',
+		category: 'strategy',
+		text: '¿Qué pasaría realmente si retrasamos este hito un mes? ¿Es verdaderamente crítico para el negocio?',
+		whyAsk:
+			'Distingue la urgencia empresarial real del pánico artificial autoimpuesto por la gestión.'
+	},
+
+	// Crecimiento y metas
+	{
 		id: 'c1',
 		category: 'career',
 		text: 'Mirando la hoja de ruta de los próximos meses, ¿qué reto te entusiasma más?',
@@ -824,6 +1421,21 @@ export const questionsEs: QuestionItem[] = [
 		whyAsk: 'Descubre las condiciones donde rinde con mayor plenitud.'
 	},
 	{
+		id: 'c5',
+		category: 'career',
+		text: '¿Cuál es la principal brecha de habilidades o experiencia que frena tu salto al siguiente nivel?',
+		whyAsk:
+			'Centra la conversación en áreas de crecimiento concretas (diseño de sistemas, gestión de la incertidumbre, liderazgo).'
+	},
+	{
+		id: 'c6',
+		category: 'career',
+		text: '¿Sientes que estás aprendiendo más rápido que el mercado o percibes que tu progreso profesional se estanca?',
+		whyAsk: 'El indicador temprano número uno de desmotivación y fuga de talento técnico clave.'
+	},
+
+	// Carga y bienestar
+	{
 		id: 'w1',
 		category: 'workload',
 		text: '¿Qué tan sostenible sientes tu ritmo de trabajo actual para los próximos 2–3 meses?',
@@ -846,15 +1458,37 @@ export const questionsEs: QuestionItem[] = [
 		category: 'workload',
 		text: '¿Sientes presión implícita por responder mensajes fuera del horario laboral?',
 		whyAsk: 'Destapa presiones tóxicas de disponibilidad.'
+	},
+	{
+		id: 'w5',
+		category: 'workload',
+		text: 'He notado que has estado trabajando hasta tarde o en fines de semana últimamente. ¿Cómo estás físicamente?',
+		whyAsk:
+			'Evalúa falta de sueño, agotamiento corporal y síntomas de estrés antes de caer en un agotamiento severo.'
+	},
+	{
+		id: 'w6',
+		category: 'workload',
+		text: '¿Cuándo fue la última vez que te tomaste un día libre y desconectaste al 100% de Slack y del correo?',
+		whyAsk:
+			'Detecta sentimiento de culpa al descansar, síndrome del héroe o temor a que las cosas se desmoronen.'
+	},
+	{
+		id: 'w7',
+		category: 'workload',
+		text: '¿Cómo puedo hacerte de escudo protector para que puedas respirar y recuperar energía la próxima semana?',
+		whyAsk:
+			'Ofrece medidas protectoras concretas del mánager: cancelar reuniones, negociar plazos o frenar peticiones.'
 	}
 ];
 
 export const questionsFr: QuestionItem[] = [
+	// Contact & Énergie
 	{
 		id: 'e1',
 		category: 'icebreaker',
 		text: 'Où se situe ta batterie mentale et ton niveau d’énergie cette semaine de 1 à 5 ?',
-		whyAsk: 'Mesure rapide qui normalise la discussion sur la fatigue.'
+		whyAsk: 'Mesure rapide qui normalise la discussion sur la fatigue et la réserve d’énergie.'
 	},
 	{
 		id: 'e2',
@@ -874,6 +1508,15 @@ export const questionsFr: QuestionItem[] = [
 		text: 'As-tu pu avancer sur des plages de travail concentré cette semaine sans être interrompu(e) ?',
 		whyAsk: 'Évalue la fragmentation de l’agenda et le temps de réflexion.'
 	},
+	{
+		id: 'e5',
+		category: 'icebreaker',
+		text: 'Quelle tâche t’a apporté un élan créatif ce sprint, et laquelle t’a semblé être une corvée épuisante ?',
+		whyAsk:
+			'Met au jour l’accumulation de tâches ingrates, de pics d’astreinte ou de corvées manuelles.'
+	},
+
+	// Feedback au manager
 	{
 		id: 'm1',
 		category: 'upward-feedback',
@@ -905,6 +1548,29 @@ export const questionsFr: QuestionItem[] = [
 		whyAsk: 'Garantit une latence minimale dans les échanges de feedback.'
 	},
 	{
+		id: 'm6',
+		category: 'upward-feedback',
+		text: 'Où est-ce que je constitue involontairement un goulot d’étranglement ou un frein pour toi ?',
+		whyAsk:
+			'Permet de repérer les revues de code en attente, les approbations lentes ou la micro-gestion.'
+	},
+	{
+		id: 'm7',
+		category: 'upward-feedback',
+		text: 'Y a-t-il eu récemment une réunion ou une situation que j’ai mal gérée et où j’aurais pu mieux faire ?',
+		whyAsk:
+			'Révèle les angles morts dans la communication, le ton employé ou la défense de l’équipe.'
+	},
+	{
+		id: 'm8',
+		category: 'upward-feedback',
+		text: 'Qu’aimerais-tu que je comprenne mieux concernant ta réalité technique au quotidien ?',
+		whyAsk:
+			'Comble le fossé d’empathie entre la planification stratégique et les contraintes techniques du terrain.'
+	},
+
+	// Équipe & Culture
+	{
 		id: 't1',
 		category: 'team-dynamics',
 		text: 'Qui dans l’équipe ou les services voisins t’a particulièrement aidé(e) récemment ?',
@@ -928,6 +1594,22 @@ export const questionsFr: QuestionItem[] = [
 		text: 'Les revues de code et débats techniques te semblent-ils constructifs ou anxiogènes ?',
 		whyAsk: 'Vérifie la maturité de la culture technique.'
 	},
+	{
+		id: 't5',
+		category: 'team-dynamics',
+		text: 'Comment perçois-tu la collaboration au sein de l’équipe actuellement ? Quelqu’un semble-t-il isolé ou exclu ?',
+		whyAsk:
+			'Diagnostique l’isolement en télétravail, les silos de fuseaux horaires ou les désaccords silencieux.'
+	},
+	{
+		id: 't6',
+		category: 'team-dynamics',
+		text: 'Sens-tu que tes idées, propositions et RFC sont réellement prises au sérieux par le reste de l’équipe ?',
+		whyAsk:
+			'Met en lumière le sentiment d’exclusion, les biais d’ancienneté ou la confiscation du débat par des voix dominantes.'
+	},
+
+	// Freins & Processus
 	{
 		id: 'b1',
 		category: 'blockers',
@@ -953,6 +1635,79 @@ export const questionsFr: QuestionItem[] = [
 		whyAsk: 'Isole les freins dans l’expérience développeur (DevEx).'
 	},
 	{
+		id: 'b5',
+		category: 'blockers',
+		text: 'Qu’est-ce qui est plus difficile dans ton travail quotidien que cela ne devrait l’être ?',
+		whyAsk:
+			'L’indicateur classique de friction : pipelines CI/CD lents, tests instables, manque de données de test ou bureaucratie.'
+	},
+	{
+		id: 'b6',
+		category: 'blockers',
+		text: 'Y a-t-il une partie de notre base de code ou de notre architecture que l’équipe a peur de modifier, et pourquoi ?',
+		whyAsk: 'Identifie le code hérité dangereux non testé et les points de défaillance uniques.'
+	},
+	{
+		id: 'b7',
+		category: 'blockers',
+		text: 'Quel est l’outil ou le processus interne le plus archaïque qu’on tolère encore simplement parce que « ça a toujours été comme ça » ?',
+		whyAsk:
+			'Met au jour des checklists de déploiement dépassées, des autorisations manuelles et des habitudes tenaces.'
+	},
+	{
+		id: 'b8',
+		category: 'blockers',
+		text: 'Si tu disposais de deux jours entiers pour résorber de la dette technique, par quoi commencerais-tu ?',
+		whyAsk:
+			'Fait émerger des idées de refactoring à fort ROI que les ingénieurs gardent pour eux sous la pression des délais.'
+	},
+	{
+		id: 'b9',
+		category: 'blockers',
+		text: 'As-tu rencontré des blocages d’accès, de droits IAM cloud ou d’identifiants pendant ce cycle ?',
+		whyAsk:
+			'Révèle la bureaucratie liée à la sécurité, les lenteurs du support informatique ou les accès manquants.'
+	},
+
+	// Stratégie & Sens
+	{
+		id: 's1',
+		category: 'strategy',
+		text: 'Comprends-tu clairement pourquoi les objectifs du sprint actuel sont importants pour nos clients et l’entreprise ?',
+		whyAsk:
+			'Évite que les ingénieurs ne se sentent comme de simples exécutants de tickets privés de sens.'
+	},
+	{
+		id: 's2',
+		category: 'strategy',
+		text: 'Y a-t-il eu récemment des annonces ou des changements de cap de la direction qui t’ont semblé confus ou contradictoires ?',
+		whyAsk:
+			'Fait remonter les rumeurs, l’incompréhension stratégique et le manque d’explications de la direction.'
+	},
+	{
+		id: 's3',
+		category: 'strategy',
+		text: 'Si un candidat te demandait en entretien quelle est la priorité n°1 de l’entreprise ce trimestre, que répondrais-tu ?',
+		whyAsk:
+			'Évalue l’alignement stratégique et la diffusion réelle des priorités jusqu’aux équipes techniques.'
+	},
+	{
+		id: 's4',
+		category: 'strategy',
+		text: 'Penses-tu que nous construisons le bon produit, ou résolvons-nous le mauvais problème utilisateur ?',
+		whyAsk:
+			'Révèle les doutes techniques et fonctionnels sur la pertinence du produit avant de perdre des mois d’efforts.'
+	},
+	{
+		id: 's5',
+		category: 'strategy',
+		text: 'Que se passerait-il si nous repoussions cette livraison d’un mois ? Est-ce réellement critique pour le business ?',
+		whyAsk:
+			'Distingue l’urgence commerciale réelle de la panique artificielle induite par le management.'
+	},
+
+	// Évolution & Ambitions
+	{
 		id: 'c1',
 		category: 'career',
 		text: 'Au vu de notre feuille de route, quel projet ou défi te motive le plus ?',
@@ -977,6 +1732,21 @@ export const questionsFr: QuestionItem[] = [
 		whyAsk: 'Révèle les conditions propices à l’excellence.'
 	},
 	{
+		id: 'c5',
+		category: 'career',
+		text: 'Quel est le principal écart de compétences qui freine ton passage au niveau supérieur ?',
+		whyAsk:
+			'Oriente la discussion sur des axes de progression concrets (conception système, gestion de l’ambiguïté, leadership).'
+	},
+	{
+		id: 'c6',
+		category: 'career',
+		text: 'As-tu l’impression d’apprendre plus vite que le marché, ou ton développement professionnel stagne-t-il ?',
+		whyAsk: 'L’indicateur précurseur n°1 du risque de départ ou de désengagement des ingénieurs.'
+	},
+
+	// Charge & Équilibre
+	{
 		id: 'w1',
 		category: 'workload',
 		text: 'À quel point ton rythme de travail actuel te semble-t-il tenable sur les 2–3 prochains mois ?',
@@ -999,15 +1769,37 @@ export const questionsFr: QuestionItem[] = [
 		category: 'workload',
 		text: 'Ressens-tu une pression implicite à répondre aux messages en dehors des heures ouvrées ?',
 		whyAsk: 'Met au jour une fausse injonction de disponibilité permanente.'
+	},
+	{
+		id: 'w5',
+		category: 'workload',
+		text: 'J’ai remarqué que tu as travaillé tard le soir ou le week-end récemment. Comment tiens-tu le coup physiquement ?',
+		whyAsk:
+			'Vérifie le manque de sommeil, l’épuisement physique et les signes de stress avant le burn-out aigu.'
+	},
+	{
+		id: 'w6',
+		category: 'workload',
+		text: 'À quand remonte ton dernier vrai jour de congé où tu t’es totalement déconnecté(e) de Slack et des e-mails ?',
+		whyAsk:
+			'Révèle la culpabilité de prendre des vacances, le syndrome du héros ou la peur que tout s’effondre en son absence.'
+	},
+	{
+		id: 'w7',
+		category: 'workload',
+		text: 'Comment puis-je te protéger et te faire gagner de l’espace pour que tu puisses souffler la semaine prochaine ?',
+		whyAsk:
+			'Permet au manager d’agir concrètement : refuser des réunions, repousser des échéances, absorber la pression.'
 	}
 ];
 
 export const questionsLv: QuestionItem[] = [
+	// Kontakts un enerģija
 	{
 		id: 'e1',
 		category: 'icebreaker',
 		text: 'Kāds ir tavs mentālais resurss un enerģijas līmenis šonedēļ skalā no 1 līdz 5?',
-		whyAsk: 'Ātrs kvantitatīvs rādītājs, kas normalizē sarunu par nogurumu.'
+		whyAsk: 'Ātrs kvantitatīvs rādītājs, kas normalizē atklātu sarunu par enerģiju un nogurumu.'
 	},
 	{
 		id: 'e2',
@@ -1027,6 +1819,14 @@ export const questionsLv: QuestionItem[] = [
 		text: 'Vai šonedēļ izdevās netraucēti pastrādāt pie sarežģītākiem uzdevumiem (deep work)?',
 		whyAsk: 'Novērtē kalendāra sadrumstalotību un koncentrēšanās iespējas.'
 	},
+	{
+		id: 'e5',
+		category: 'icebreaker',
+		text: 'Kurš uzdevums šajā sprintā deva radošu enerģiju un kurš šķita kā nogurdinoša rutīna?',
+		whyAsk: 'Atklāj vienveidīgu uzdevumu uzkrāšanos, dežūru pārslodzi vai manuālu darbu.'
+	},
+
+	// Atgriezeniskā saite vadītājam
 	{
 		id: 'm1',
 		category: 'upward-feedback',
@@ -1058,6 +1858,28 @@ export const questionsLv: QuestionItem[] = [
 		whyAsk: 'Nodrošina minimālu laika aizturi atgriezeniskās saites sniegšanā.'
 	},
 	{
+		id: 'm6',
+		category: 'upward-feedback',
+		text: 'Kuros posmos es neviļus kļūstu par šauro vietu vai aiztures cēloni tavā darbā?',
+		whyAsk:
+			'Palīdz pamanīt aizkavētas koda pārskates, lēnus saskaņojumus vai nevajadzīgu mikromenedžmentu.'
+	},
+	{
+		id: 'm7',
+		category: 'upward-feedback',
+		text: 'Vai pēdējā laikā bija kāda sapulce vai situācija, ko es novadīju neveiksmīgi un varēju rīkoties labāk?',
+		whyAsk: 'Atklāj aklās zonas vadītāja komunikācijā, balss tonī vai komandas interešu aizstāvībā.'
+	},
+	{
+		id: 'm8',
+		category: 'upward-feedback',
+		text: 'Ko par tavu ikdienas darba realitāti tu vēlētos, lai es izprastu labāk?',
+		whyAsk:
+			'Mazina plaisu starp augsta līmeņa plānošanu un reālajiem tehniskās izstrādes izaicinājumiem.'
+	},
+
+	// Komanda un kultūra
+	{
 		id: 't1',
 		category: 'team-dynamics',
 		text: 'Kurš komandā vai no citiem departamentiem tev pēdējā laikā ir īpaši palīdzējis?',
@@ -1081,6 +1903,21 @@ export const questionsLv: QuestionItem[] = [
 		text: 'Vai koda pārskatīšana (code review) un tehniskās diskusijas rit konstruktīvi vai rada stresu?',
 		whyAsk: 'Pārbauda ikdienas inženierijas kultūras veselīgumu.'
 	},
+	{
+		id: 't5',
+		category: 'team-dynamics',
+		text: 'Kāda pašlaik ir sadarbība komandā? Vai nav sajūtas, ka kāds ir izolēts vai palaists garām no konteksta?',
+		whyAsk:
+			'Diagnosticē attālinātā darba atsvešinātību, laika joslu barjeras un neizteiktu saspīlējumu.'
+	},
+	{
+		id: 't6',
+		category: 'team-dynamics',
+		text: 'Vai jūti, ka tavas idejas, priekšlikumi un tehniskie risinājumi (RFC) komandā tiek uztverti nopietni?',
+		whyAsk: 'Atklāj ignorēšanas sajūtu, stāža aizspriedumus vai dominējošo kolēģu spiedienu.'
+	},
+
+	// Šķēršļi un procesi
 	{
 		id: 'b1',
 		category: 'blockers',
@@ -1106,6 +1943,75 @@ export const questionsLv: QuestionItem[] = [
 		whyAsk: 'Atrod praktiskus izstrādātāja pieredzes (DevEx) šķēršļus.'
 	},
 	{
+		id: 'b5',
+		category: 'blockers',
+		text: 'Kas tavā ikdienas darbā pašlaik ir sarežģītāks vai lēnāks, nekā tam vajadzētu būt?',
+		whyAsk:
+			'Klasisks šķēršļu diagnostikas jautājums: lēns CI/CD, nestabili testi, testa datu trūkums vai birokrātija.'
+	},
+	{
+		id: 'b6',
+		category: 'blockers',
+		text: 'Vai mūsu koda bāzē vai arhitektūrā ir kāda daļa, kurai komanda baidās pieskarties, un kāpēc?',
+		whyAsk: 'Atklāj nepārbaudītu vēsturisko kodu, aizkavētas mīnas un sistēmas vājās vietas.'
+	},
+	{
+		id: 'b7',
+		category: 'blockers',
+		text: 'Kuru neērto iekšējo rīku vai procesu mēs joprojām paciešam tikai tāpēc, ka "tā vēsturiski iegājies"?',
+		whyAsk: 'Atmasko novecojušus laišanas sarakstus, manuālu piekļuvju dalīšanu un inerci.'
+	},
+	{
+		id: 'b8',
+		category: 'blockers',
+		text: 'Ja tev būtu divas pilnas dienas jebkura tehniskā parāda novēršanai mūsu servisā, kam tu ķertos klāt vispirms?',
+		whyAsk:
+			'Palīdz atklāt augstas atdeves refaktorēšanas idejas, par kurām izstrādātāji klusē termiņu spiediena dēļ.'
+	},
+	{
+		id: 'b9',
+		category: 'blockers',
+		text: 'Vai šajā ciklā saskāries ar piekļuvju, mākoņa tiesību vai akreditācijas datu šķēršļiem?',
+		whyAsk: 'Atklāj drošības birokrātiju, lēnu IT atbalstu vai trūkstošas vides piekļuves.'
+	},
+
+	// Stratēģija un jēga
+	{
+		id: 's1',
+		category: 'strategy',
+		text: 'Vai tev ir skaidrs, kāpēc pašreizējā sprinta mērķi ir svarīgi mūsu klientiem un biznesam?',
+		whyAsk:
+			'Novērš situāciju, kad inženieri jūtas kā izolēti «uzdevumu izpildītāji» bez mērķa izpratnes.'
+	},
+	{
+		id: 's2',
+		category: 'strategy',
+		text: 'Vai pēdējā laikā bija kādi vadības paziņojumi vai virziena maiņas, kas šķita neskaidri vai pretrunīgi mūsu mērķiem?',
+		whyAsk:
+			'Izgaismo baumas, trauksmi par prioritāšu maiņu un stratēģiskā konteksta trūkumu no vadības puses.'
+	},
+	{
+		id: 's3',
+		category: 'strategy',
+		text: 'Ja kandidāts darba intervijā tev jautātu par uzņēmuma galveno šī ceturkšņa prioritāti, ko tu atbildētu?',
+		whyAsk:
+			'Pārbauda, cik precīzi uzņēmuma stratēģiskais virziens ir saprotams darbiniekiem ikdienā.'
+	},
+	{
+		id: 's4',
+		category: 'strategy',
+		text: 'Vai tev šķiet, ka mēs veidojam pareizo produktu, vai arī risinām nepareizo klientu problēmu?',
+		whyAsk: 'Atklāj komandas šaubas par produkta hipotēžu dzīvotspēju, pirms iztērēti resursi.'
+	},
+	{
+		id: 's5',
+		category: 'strategy',
+		text: 'Kas notiktu, ja mēs aizkavētu pašreizējo laidienu par mēnesi? Vai tas tiešām ir kritiski biznesam?',
+		whyAsk: 'Palīdz atšķirt reālu biznesa steidzamību no mākslīgi radītas vadības panikas.'
+	},
+
+	// Izaugsme un ambīcijas
+	{
 		id: 'c1',
 		category: 'career',
 		text: 'Raugoties uz mūsu nākamajiem mērķiem, pie kura projekta tev gribētos strādāt visvairāk?',
@@ -1130,6 +2036,22 @@ export const questionsLv: QuestionItem[] = [
 		whyAsk: 'Atklāj apstākļus, kuros darbinieks strādā ar visaugstāko atdevi.'
 	},
 	{
+		id: 'c5',
+		category: 'career',
+		text: 'Kura prasmju vai pieredzes nepilnība pašlaik visvairāk kavē tavu pāreju nākamajā līmenī?',
+		whyAsk:
+			'Koncentrē sarunu uz konkrētām izaugsmes jomām (sistēmu arhitektūra, nenoteiktības pārvaldība, līderība).'
+	},
+	{
+		id: 'c6',
+		category: 'career',
+		text: 'Vai jūti, ka mācies un aud ātrāk par tirgu, vai arī profesionālā attīstība šķiet iestrēgusi?',
+		whyAsk:
+			'Galvenais agrīnais signāls par spēcīgu inženieru motivācijas zudumu un aiziešanas risku.'
+	},
+
+	// Slodze un līdzsvars
+	{
 		id: 'w1',
 		category: 'workload',
 		text: 'Cik ilgtspējīgs šķiet pašreizējais darba temps nākamo 2–3 mēnešu perspektīvā?',
@@ -1152,6 +2074,27 @@ export const questionsLv: QuestionItem[] = [
 		category: 'workload',
 		text: 'Vai jūti neizteiktu spiedienu atbildēt uz ziņām ārpus oficiālā darba laika?',
 		whyAsk: 'Atklāj toksisku pieejamības spiedienu.'
+	},
+	{
+		id: 'w5',
+		category: 'workload',
+		text: 'Esmu pamanījis(-usi), ka pēdējā laikā tev sanāk strādāt vēlos vakaros vai brīvdienās. Kā tu jūties fiziski?',
+		whyAsk:
+			'Pārbauda miega trūkumu, fizisko izsīkumu un hroniska stresa simptomus pirms akūtas izdegšanas.'
+	},
+	{
+		id: 'w6',
+		category: 'workload',
+		text: 'Kad tu pēdējo reizi paņēmi pilnvērtīgu brīvdienu un pilnībā atslēdzies no saziņas rīkiem un e-pastiem?',
+		whyAsk:
+			'Izgaismo vainas sajūtu par atpūtu, neaizvietojamā varoņa sindromu vai bailes, ka bez viņa viss apstāsies.'
+	},
+	{
+		id: 'w7',
+		category: 'workload',
+		text: 'Kā es varu dot tev aizsegu un atbrīvot telpu, lai nākamnedēļ tu varētu mierīgi atvilkt elpu?',
+		whyAsk:
+			'Piedāvā konkrētu vadītāja rīcību: nevajadzīgu sapulču atcelšanu, termiņu pārcelšanu, ienākošā spiediena mazināšanu.'
 	}
 ];
 

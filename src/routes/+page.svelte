@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { getContent } from '$lib/content';
+	import { getPlaybookItems, getCategories } from '$lib/content/playbook';
 	import {
 		appDemoUrl,
 		appLoginUrl,
@@ -8,10 +9,19 @@
 		GITHUB_URL,
 		DOCS_URL
 	} from '$lib/links';
-	import { getLocale } from '$lib/paraglide/runtime';
+	import { getLocale, localizeHref } from '$lib/paraglide/runtime';
 	import * as m from '$lib/paraglide/messages';
 
 	const content = $derived(getContent());
+	const locale = $derived(getLocale());
+	const allPlaybooks = $derived(getPlaybookItems(locale));
+	const categories = $derived(getCategories(locale));
+	const featuredSlugs = ['manager-playbook', 'employee-playbook', 'handling-difficult-situations'];
+	const featuredPlaybooks = $derived(
+		featuredSlugs
+			.map((slug) => allPlaybooks.find((p) => p.slug === slug))
+			.filter((p): p is NonNullable<typeof p> => Boolean(p))
+	);
 </script>
 
 <svelte:head>
@@ -173,7 +183,77 @@
 	</div>
 </section>
 
-<section class="section">
+<section class="section playbooks-showcase" id="playbooks">
+	<div class="section-inner playbooks-inner">
+		<div class="section-header text-center">
+			<h2>{content.playbooks.heading}</h2>
+			<p class="section-subhead">{content.playbooks.intro}</p>
+		</div>
+
+		<div class="featured-playbooks-grid">
+			{#each featuredPlaybooks as item (item.slug)}
+				{@const categoryMeta = categories.find((c) => c.id === item.category)}
+				<article class="featured-playbook-card card elev-sm">
+					<a
+						class="featured-card-cover-link"
+						href={localizeHref(`/playbook/${item.slug}/`)}
+						tabindex="-1"
+						aria-hidden="true"
+					>
+						<img
+							class="featured-card-cover-img"
+							src="/images/playbook/{item.slug}.jpg"
+							alt=""
+							width="720"
+							height="405"
+							loading="lazy"
+						/>
+					</a>
+					<div class="featured-card-content">
+						<div class="featured-card-meta">
+							{#if categoryMeta}
+								<span class="tag tag-outline">{categoryMeta.label}</span>
+							{/if}
+							<span class="read-time text-muted">{item.readTime}</span>
+						</div>
+						<h3 class="featured-card-title">
+							<a href={localizeHref(`/playbook/${item.slug}/`)}>
+								{item.title}
+							</a>
+						</h3>
+						<p class="featured-card-subtitle">{item.subtitle}</p>
+						<div class="featured-card-footer">
+							<a class="card-action-link" href={localizeHref(`/playbook/${item.slug}/`)}>
+								{content.playbooks.readPlaybook} →
+							</a>
+						</div>
+					</div>
+				</article>
+			{/each}
+		</div>
+
+		<div class="question-bank-banner card elev-sm">
+			<div class="question-bank-banner-content">
+				<div class="question-bank-badge">
+					<span class="badge-icon" aria-hidden="true">💡</span>
+					<span class="tag tag-outline">Question Bank</span>
+				</div>
+				<h3>{content.playbooks.questionBankTitle}</h3>
+				<p>{content.playbooks.questionBankDescription}</p>
+			</div>
+			<div class="question-bank-banner-actions">
+				<a class="btn btn-primary" href={localizeHref('/playbook/questions/')}>
+					{content.playbooks.openQuestionBank} →
+				</a>
+				<a class="btn btn-secondary" href={localizeHref('/playbook/')}>
+					{content.playbooks.viewAllPlaybooks} →
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section section-alt">
 	<div class="section-inner">
 		<h2>{content.comparison.heading}</h2>
 		<p>{content.comparison.intro}</p>
@@ -191,7 +271,7 @@
 	</div>
 </section>
 
-<section class="section section-alt" id="privacy">
+<section class="section" id="privacy">
 	<div class="section-inner">
 		<h2>{content.privacy.heading}</h2>
 		<p>{content.privacy.intro}</p>
@@ -215,7 +295,7 @@
 	</div>
 </section>
 
-<section class="section" id="pricing">
+<section class="section section-alt" id="pricing">
 	<div class="section-inner">
 		<h2>{content.pricing.heading}</h2>
 
@@ -623,5 +703,192 @@
 
 	.pricing-footnote {
 		font-size: 12px;
+	}
+
+	/* Playbooks showcase section */
+	.playbooks-showcase {
+		padding: var(--space-8) var(--space-4);
+	}
+
+	.playbooks-inner {
+		max-width: 1080px;
+		margin: 0 auto;
+	}
+
+	.section-header {
+		margin-bottom: var(--space-6);
+	}
+
+	.section-header.text-center {
+		text-align: center;
+	}
+
+	.section-subhead {
+		font-size: 16px;
+		max-width: 720px;
+		margin: 0 auto;
+		color: color-mix(in srgb, var(--color-text) 75%, transparent);
+	}
+
+	.featured-playbooks-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: var(--space-4);
+		margin-bottom: var(--space-6);
+	}
+
+	@media (min-width: 768px) {
+		.featured-playbooks-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	.featured-playbook-card {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+		overflow: hidden;
+		transition:
+			transform 0.2s ease,
+			box-shadow 0.2s ease;
+		background: var(--color-surface);
+		border-radius: var(--radius-md);
+	}
+
+	.featured-playbook-card:hover {
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-md);
+	}
+
+	.featured-card-cover-link {
+		display: block;
+		overflow: hidden;
+		aspect-ratio: 16 / 9;
+		background: var(--color-bg);
+		border-bottom: 1px solid var(--color-divider);
+	}
+
+	.featured-card-cover-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+		transition: transform 0.3s ease;
+	}
+
+	.featured-playbook-card:hover .featured-card-cover-img {
+		transform: scale(1.03);
+	}
+
+	.featured-card-content {
+		padding: var(--space-4);
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+
+	.featured-card-meta {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--space-2);
+		margin-bottom: var(--space-2);
+	}
+
+	.read-time {
+		font-size: 12px;
+	}
+
+	.featured-card-title {
+		font-size: 17px;
+		line-height: 1.3;
+		margin: 0 0 var(--space-2);
+	}
+
+	.featured-card-title a {
+		color: var(--color-text);
+		text-decoration: none;
+		transition: color 0.15s ease;
+	}
+
+	.featured-card-title a:hover {
+		color: var(--color-accent-ink);
+	}
+
+	.featured-card-subtitle {
+		font-size: 13.5px;
+		line-height: 1.45;
+		color: color-mix(in srgb, var(--color-text) 70%, transparent);
+		margin: 0 0 var(--space-4);
+		flex-grow: 1;
+	}
+
+	.featured-card-footer {
+		margin-top: auto;
+		padding-top: var(--space-2);
+	}
+
+	.card-action-link {
+		font-size: 13.5px;
+		font-weight: 600;
+		color: var(--color-accent-ink);
+		text-decoration: none;
+		display: inline-flex;
+		align-items: center;
+		gap: 4px;
+		transition: transform 0.15s ease;
+	}
+
+	.card-action-link:hover {
+		text-decoration: underline;
+		transform: translateX(2px);
+	}
+
+	.question-bank-banner {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-4);
+		padding: var(--space-5);
+		background: color-mix(in srgb, var(--color-accent) 6%, var(--color-surface));
+		border: 1px solid var(--color-divider);
+		border-radius: var(--radius-md);
+		align-items: stretch;
+	}
+
+	@media (min-width: 860px) {
+		.question-bank-banner {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.question-bank-banner-content {
+			max-width: 580px;
+		}
+	}
+
+	.question-bank-badge {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		margin-bottom: var(--space-2);
+	}
+
+	.question-bank-banner h3 {
+		font-size: 18px;
+		margin: 0 0 var(--space-1);
+	}
+
+	.question-bank-banner p {
+		margin: 0;
+		font-size: 14px;
+		color: color-mix(in srgb, var(--color-text) 75%, transparent);
+	}
+
+	.question-bank-banner-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-2);
+		flex-shrink: 0;
 	}
 </style>

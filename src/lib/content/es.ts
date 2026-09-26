@@ -90,6 +90,18 @@ export const es: LandingContent = {
 			'Empleado y responsable ascendiendo hacia los objetivos con palanca de alto impacto'
 	},
 
+	playbooks: {
+		heading: 'Playbooks prácticos para equipos de ingeniería',
+		intro:
+			'Marcos de trabajo probados, guiones para reuniones y tácticas reales para transformar actualizaciones monótonas en conversaciones de alto impacto.',
+		readPlaybook: 'Leer playbook',
+		viewAllPlaybooks: 'Explorar todos los playbooks',
+		questionBankTitle: 'Banco interactivo de preguntas',
+		questionBankDescription:
+			'Más de 60 preguntas diagnósticas de alto impacto clasificadas por energía, bloqueos, estrategia y desarrollo, con pautas sobre qué escuchar.',
+		openQuestionBank: 'Abrir banco de preguntas'
+	},
+
 	comparison: {
 		heading: 'Un documento compartido no es un sistema',
 		intro:

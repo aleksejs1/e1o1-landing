@@ -90,6 +90,18 @@ export const fr: LandingContent = {
 			"Collaborateur et manager gravissant des étapes vers leurs objectifs avec levier d'efficacité"
 	},
 
+	playbooks: {
+		heading: 'Playbooks pratiques pour les équipes d’ingénierie',
+		intro:
+			'Des cadres éprouvés, des scripts d’entretiens et des tactiques concrètes pour transformer les bilans d’avancement passifs en leviers managériaux majeurs.',
+		readPlaybook: 'Lire le playbook',
+		viewAllPlaybooks: 'Explorer tous les playbooks',
+		questionBankTitle: 'Banque interactive de questions',
+		questionBankDescription:
+			'Plus de 60 questions diagnostiques à fort impact réparties par énergie, blocages, stratégie et évolution de carrière, avec des repères d’écoute active.',
+		openQuestionBank: 'Ouvrir la banque de questions'
+	},
+
 	comparison: {
 		heading: "Un document partagé n'est pas un système",
 		intro:

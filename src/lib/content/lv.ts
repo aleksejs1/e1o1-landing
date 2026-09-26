@@ -90,6 +90,18 @@ export const lv: LandingContent = {
 			'Darbinieks un vadītājs, kāpjot pa soļiem uz mērķiem ar līdzsvarotu vadības sviru'
 	},
 
+	playbooks: {
+		heading: 'Praktiskās rokasgrāmatas inženieru komandām',
+		intro:
+			'Pārbaudīti sarunu scenāriji, struktūras un taktikas, kas pārvērš formālas statusa sapulces par jēgpilnām, augstas atdeves 1:1 sarunām.',
+		readPlaybook: 'Lasīt rokasgrāmatu',
+		viewAllPlaybooks: 'Skatīt visas rokasgrāmatas',
+		questionBankTitle: 'Interaktīvā jautājumu krātuve',
+		questionBankDescription:
+			'Vairāk nekā 60 diagnostisku jautājumu par enerģiju, šķēršļiem, stratēģiju un izaugsmi ar norādēm, kam pievērst uzmanību atbildēs.',
+		openQuestionBank: 'Atvērt jautājumu krātuvi'
+	},
+
 	comparison: {
 		heading: 'Kopīgs dokuments nav sistēma',
 		intro:

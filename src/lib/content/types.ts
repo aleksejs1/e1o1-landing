@@ -76,6 +76,16 @@ export interface LandingContent {
 		illustrationAlt?: string;
 	};
 
+	playbooks: {
+		heading: string;
+		intro: string;
+		readPlaybook: string;
+		viewAllPlaybooks: string;
+		questionBankTitle: string;
+		questionBankDescription: string;
+		openQuestionBank: string;
+	};
+
 	comparison: {
 		heading: string;
 		intro: string;

@@ -385,3 +385,65 @@ test('skip-level playbook template renders rich practical sections: preparation,
 		'Pattern Extraction within 24 hours'
 	);
 });
+
+test('homepage renders playbooks showcase section with 3 cards, cover images, and question bank banner', async ({
+	page
+}) => {
+	await page.goto('/en/', { waitUntil: 'networkidle' });
+
+	const showcase = page.locator('.playbooks-showcase');
+	await expect(showcase).toBeVisible();
+	await expect(showcase.locator('h2')).toHaveText('Actionable Playbooks for Engineering Teams');
+
+	const cards = showcase.locator('.featured-playbook-card');
+	await expect(cards).toHaveCount(3);
+
+	// Check cover images
+	for (const card of await cards.all()) {
+		const img = card.locator('img');
+		await expect(img).toBeVisible();
+		const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
+		expect(naturalWidth).toBeGreaterThan(0);
+	}
+
+	// Check question bank banner
+	const banner = showcase.locator('.question-bank-banner');
+	await expect(banner).toBeVisible();
+	await expect(banner.locator('h3')).toHaveText('Interactive Question Bank');
+	await expect(banner.locator('a[href*="/playbook/questions/"]')).toBeVisible();
+
+	// Check Russian homepage
+	await page.goto('/ru/', { waitUntil: 'networkidle' });
+	const ruShowcase = page.locator('.playbooks-showcase');
+	await expect(ruShowcase).toBeVisible();
+	await expect(ruShowcase.locator('h2')).toHaveText('Практические плейбуки для инженерных команд');
+	await expect(ruShowcase.locator('.featured-playbook-card')).toHaveCount(3);
+});
+
+test('question bank page displays enriched questions and new strategy category', async ({
+	page
+}) => {
+	await page.goto('/en/playbook/questions/', { waitUntil: 'networkidle' });
+
+	// Check total questions count is at least 40
+	const questions = page.locator('.question-card');
+	const count = await questions.count();
+	expect(count).toBeGreaterThanOrEqual(44);
+
+	// Check Strategy filter pill exists
+	const strategyPill = page.locator('.filter-pill', { hasText: 'Strategy & Purpose' });
+	await expect(strategyPill).toBeVisible();
+
+	// Click Strategy pill
+	await strategyPill.click();
+	const filteredCount = await page.locator('.question-card').count();
+	expect(filteredCount).toBe(5);
+
+	// Test Russian question bank
+	await page.goto('/ru/playbook/questions/', { waitUntil: 'networkidle' });
+	const ruStrategyPill = page.locator('.filter-pill', { hasText: 'Стратегия и смысл' });
+	await expect(ruStrategyPill).toBeVisible();
+	await ruStrategyPill.click();
+	const ruFilteredCount = await page.locator('.question-card').count();
+	expect(ruFilteredCount).toBe(5);
+});

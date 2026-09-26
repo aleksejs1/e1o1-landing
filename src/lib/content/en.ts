@@ -90,6 +90,18 @@ export const en: LandingContent = {
 			'Employee and manager ascending steps toward goals with a balancing leverage beam'
 	},
 
+	playbooks: {
+		heading: 'Actionable Playbooks for Engineering Teams',
+		intro:
+			'Practical frameworks, field-tested meeting scripts, and battle-proven tactics to transform awkward status updates into continuous high-leverage conversations.',
+		readPlaybook: 'Read Playbook',
+		viewAllPlaybooks: 'Explore All Playbooks',
+		questionBankTitle: 'Interactive Question Bank',
+		questionBankDescription:
+			'Over 60 high-leverage diagnostic questions categorized by energy, blockers, strategy, and career progression with actionable "what to listen for" cues.',
+		openQuestionBank: 'Open Question Bank'
+	},
+
 	comparison: {
 		heading: 'A shared doc isn’t a system',
 		intro:
