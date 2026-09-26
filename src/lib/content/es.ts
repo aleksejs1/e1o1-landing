@@ -49,6 +49,42 @@ export const es: LandingContent = {
 			'Una reunión 1 a 1 real de encrypted1on1: estado de ánimo y sensaciones respondidos, un hilo de comentarios abierto, y un icono de candado que marca este lado como cifrado de extremo a extremo.'
 	},
 
+	howItWorks: {
+		heading: 'Cómo funciona en la práctica',
+		subhead:
+			'Un proceso rítmico y estructurado que transforma reuniones incómodas en palancas de alto impacto para el equipo.',
+		steps: [
+			{
+				step: '01',
+				title: 'Preparación asíncrona en 3 minutos',
+				description:
+					'Colaborador y responsable registran pulso, objetivos y bloqueos antes de la reunión. Sin hojas en blanco.',
+				badge: 'Asíncrono'
+			},
+			{
+				step: '02',
+				title: 'Cifrado de conocimiento cero en el navegador',
+				description:
+					'Todas las respuestas se cifran localmente en tu dispositivo antes de viajar por la red. El servidor solo ve texto cifrado.',
+				badge: 'Zero-Knowledge'
+			},
+			{
+				step: '03',
+				title: 'Foco en la conversación y continuidad',
+				description:
+					'La reunión se centra en el crecimiento real. Los objetivos acordados pasan automáticamente al siguiente ciclo.',
+				badge: 'Continuidad'
+			},
+			{
+				step: '04',
+				title: 'Informe de evaluación de desempeño en 1 clic',
+				description:
+					'Al llegar el periodo de revisión, todos los logros y el progreso se consolidan en un informe con un solo clic.',
+				badge: '1 Clic'
+			}
+		]
+	},
+
 	origin: {
 		heading: 'Por qué lo creamos',
 		paragraphsHtml: [
@@ -106,6 +142,40 @@ export const es: LandingContent = {
 		heading: 'Un documento compartido no es un sistema',
 		intro:
 			'A la mayoría de los equipos no les falta un lugar donde escribir. Google Docs, Notion, una carpeta compartida: cualquiera de estos puede técnicamente contener notas de reuniones 1 a 1. Ese es exactamente el problema: contienen notas, no un proceso.',
+		tableHeading: 'encrypted1on1 frente a documentos compartidos',
+		tableColumns: ['Característica', 'encrypted1on1', 'Google Docs / Notion / Notas'],
+		tableRows: [
+			{
+				feature: 'Cifrado de extremo a extremo (Zero-Knowledge)',
+				e1o1: 'Sí, totalmente inaccesible incluso para administradores',
+				others: 'No, los operadores de la plataforma pueden leerlo',
+				isAdvantage: true
+			},
+			{
+				feature: 'Continuidad de objetivos entre ciclos',
+				e1o1: 'Traspaso automático con historial completo',
+				others: 'Búsqueda manual o copia y pega en documentos viejos',
+				isAdvantage: true
+			},
+			{
+				feature: 'Preparación de evaluación de desempeño',
+				e1o1: 'Vista agregada de hitos y logros en 1 clic',
+				others: 'Relectura tediosa de meses de notas dispersas',
+				isAdvantage: true
+			},
+			{
+				feature: 'Estructura y preguntas guiadas',
+				e1o1: 'Marcos probados y banco de más de 60 preguntas',
+				others: 'Página en blanco, depende de la memoria del mánager',
+				isAdvantage: true
+			},
+			{
+				feature: 'Soberanía de datos e instalación',
+				e1o1: 'Autoalojado en tus servidores o nube privada europea',
+				others: 'Atrapado en nubes SaaS comerciales cerradas',
+				isAdvantage: true
+			}
+		],
 		points: [
 			{
 				title: 'Sin estructura.',
@@ -130,6 +200,52 @@ export const es: LandingContent = {
 		],
 		closingHtml:
 			'encrypted1on1 sustituye «un documento, si te acuerdas» por un sistema: un conjunto de preguntas fijo y cuidadosamente diseñado para ambas partes, periodicidad automática y correos de recordatorio, objetivos que persisten y se trasladan entre ciclos con su historial de progreso completo, y un informe de evaluación de desempeño que agrega logros y progreso de objetivos en cualquier rango de fechas, generado del lado del cliente, a partir de datos que el servidor nunca tuvo la capacidad de leer.'
+	},
+
+	architecture: {
+		heading: 'Arquitectura criptográfica: por qué mirar es imposible',
+		subhead:
+			'La seguridad se basa en garantías criptográficas y pruebas matemáticas, no en promesas redactadas en una política de privacidad.',
+		steps: [
+			{
+				stepNumber: '1',
+				actor: 'Navegador del empleado',
+				action: 'Derivación de claves y cifrado',
+				detail:
+					'Claves derivadas con Argon2id y X25519. Todas las respuestas se cifran localmente antes de transmitirse a la red.',
+				badge: 'Lado del cliente'
+			},
+			{
+				stepNumber: '2',
+				actor: 'Servidor y base de datos',
+				action: 'Almacenamiento Zero-Knowledge',
+				detail:
+					'El servidor solo recibe y almacena bloques opacos de texto cifrado. Los administradores no tienen claves de descifrado.',
+				badge: 'Zero-Knowledge'
+			},
+			{
+				stepNumber: '3',
+				actor: 'Navegador del mánager',
+				action: 'Descifrado autorizado',
+				detail:
+					'Únicamente la otra persona de la reunión con su clave privada verificada puede descifrar y leer el contenido.',
+				badge: 'Estrictamente 1:1'
+			}
+		],
+		guaranteeTitle: 'Garantías que sobreviven al cierre de la empresa',
+		guaranteeTextHtml:
+			'Incluso ante una vulneración total del servidor, un atacante solo obtiene bytes pseudialeatorios. Todo el código es libre y auditable en GitHub.'
+	},
+
+	quickstart: {
+		heading: 'Despliega en tu infraestructura en 2 minutos',
+		subhead:
+			'Un único contenedor autónomo, sin dependencias SaaS externas y con control total sobre los datos de tu empresa.',
+		command: 'docker run -d -p 8080:8080 --name e1o1 ghcr.io/aleksejs1/encrypted1on1:latest',
+		copyButtonText: 'Copiar comando',
+		copiedNotice: '¡Comando copiado al portapapeles!',
+		docsLinkText: 'Ver guía de despliegue en Docker y Kubernetes →',
+		note: 'AGPLv3 • Miembros de equipo ilimitados • Cero telemetría'
 	},
 
 	privacy: {
@@ -160,6 +276,15 @@ export const es: LandingContent = {
 			answer2Html:
 				'<strong>Y en la práctica, esto no es un callejón sin salida.</strong> Cada reunión 1 a 1 puede ser leída exactamente por sus dos participantes, de forma independiente, nunca mediante una clave compartida única de la empresa. Si una investigación involucra a uno de los participantes, el contenido sigue estando disponible a través del otro, de la misma forma que lo estaría si esa misma conversación hubiera ocurrido en papel o en un cuaderno personal: un proceso legal puede obligar a una <em>persona</em> a entregar lo que tiene. Simplemente nunca fue algo que una <em>plataforma</em> pudiera entregar por sí sola, que es precisamente el objetivo.'
 		}
+	},
+
+	finalCta: {
+		heading: 'Comienza a realizar 1:1s privados y de alto impacto',
+		subhead:
+			'Prueba la demo interactiva completa ahora mismo o despliega una instancia en tu propia infraestructura en minutos.',
+		ctaTryDemo: 'Probar demo en vivo',
+		ctaGetStarted: 'Crear espacio de trabajo',
+		ctaGithub: 'Ver en GitHub'
 	},
 
 	pricing: {

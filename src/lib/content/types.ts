@@ -26,6 +26,46 @@ export interface Highlight {
 	body: string;
 }
 
+export interface HowItWorksStep {
+	step: string;
+	title: string;
+	description: string;
+	badge: string;
+}
+
+export interface ArchitectureStep {
+	stepNumber: string;
+	actor: string;
+	action: string;
+	detail: string;
+	badge: string;
+}
+
+export interface ComparisonRow {
+	feature: string;
+	e1o1: string;
+	others: string;
+	isAdvantage: boolean;
+}
+
+export interface DockerQuickstart {
+	heading: string;
+	subhead: string;
+	command: string;
+	copyButtonText: string;
+	copiedNotice: string;
+	docsLinkText: string;
+	note: string;
+}
+
+export interface FinalCta {
+	heading: string;
+	subhead: string;
+	ctaTryDemo: string;
+	ctaGetStarted: string;
+	ctaGithub: string;
+}
+
 export interface PricingTable {
 	columns: string[];
 	rows: { label: string; values: string[] }[];
@@ -62,6 +102,12 @@ export interface LandingContent {
 		screenshotAlt: string;
 	};
 
+	howItWorks: {
+		heading: string;
+		subhead: string;
+		steps: HowItWorksStep[];
+	};
+
 	origin: {
 		heading: string;
 		paragraphsHtml: string[];
@@ -89,9 +135,22 @@ export interface LandingContent {
 	comparison: {
 		heading: string;
 		intro: string;
+		tableHeading: string;
+		tableColumns: [string, string, string];
+		tableRows: ComparisonRow[];
 		points: ComparisonPoint[];
 		closingHtml: string;
 	};
+
+	architecture: {
+		heading: string;
+		subhead: string;
+		steps: ArchitectureStep[];
+		guaranteeTitle: string;
+		guaranteeTextHtml: string;
+	};
+
+	quickstart: DockerQuickstart;
 
 	privacy: {
 		heading: string;
@@ -104,6 +163,8 @@ export interface LandingContent {
 			answer2Html: string;
 		};
 	};
+
+	finalCta: FinalCta;
 
 	pricing: {
 		heading: string;

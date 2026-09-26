@@ -14,6 +14,15 @@
 			<span class="wordmark">encrypted1on1</span>
 		</a>
 		<nav class="site-nav">
+			<a class="nav-link nav-anchor" href="{localizeHref('/')}#how-it-works">
+				{m.nav_how_it_works()}
+			</a>
+			<a class="nav-link nav-anchor" href="{localizeHref('/')}#privacy">
+				{m.nav_security()}
+			</a>
+			<a class="nav-link nav-anchor" href="{localizeHref('/')}#pricing">
+				{m.nav_pricing()}
+			</a>
 			<a class="nav-link" href={localizeHref('/playbook/')}>
 				{m.nav_playbook()}
 			</a>
@@ -105,6 +114,12 @@
 		height: 32px;
 		box-sizing: border-box;
 		white-space: nowrap;
+	}
+
+	@media (max-width: 980px) {
+		.nav-anchor {
+			display: none;
+		}
 	}
 
 	/* On tablet & mobile, drop header demo CTA (available right below in hero)

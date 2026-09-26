@@ -49,6 +49,42 @@ export const de: LandingContent = {
 			'Ein echtes 1:1-Gespräch in encrypted1on1: Stimmung und Gefühle beantwortet, ein offener Kommentar-Thread, und ein Vorhängeschloss-Symbol, das diese Seite als Ende-zu-Ende-verschlüsselt kennzeichnet.'
 	},
 
+	howItWorks: {
+		heading: 'So funktioniert es in der Praxis',
+		subhead:
+			'Ein strukturierter, rhythmischer Workflow, der unangenehme Status-Meetings in wirksame Führungsgespräche verwandelt.',
+		steps: [
+			{
+				step: '01',
+				title: '3-Minuten asynchrone Vorbereitung',
+				description:
+					'Mitarbeiter und Führungskraft erfassen Stimmung, Zielerreichung und Blocker vorab. Keine leeren Seiten mehr.',
+				badge: 'Asynchron'
+			},
+			{
+				step: '02',
+				title: 'Client-seitige Zero-Knowledge-Verschlüsselung',
+				description:
+					'Alle Einträge werden lokal im Browser verschlüsselt, bevor sie übertragen werden. Der Server sieht nur Chiffretext.',
+				badge: 'Zero-Knowledge'
+			},
+			{
+				step: '03',
+				title: 'Fokus auf Dialog und Kontinuität',
+				description:
+					'Die Gesprächszeit gehört echtem Coaching und Weiterentwicklung. Vereinbarte Ziele fließen automatisch in den nächsten Zyklus.',
+				badge: 'Kontinuität'
+			},
+			{
+				step: '04',
+				title: 'Performance-Review-Bericht mit 1 Klick',
+				description:
+					'Zum Beurteilungszeitpunkt werden monatelange Erfolge und Zielmeilensteine mit einem Klick aggregiert.',
+				badge: '1 Klick'
+			}
+		]
+	},
+
 	origin: {
 		heading: 'Warum wir das gebaut haben',
 		paragraphsHtml: [
@@ -105,6 +141,40 @@ export const de: LandingContent = {
 		heading: 'Ein gemeinsames Dokument ist kein System',
 		intro:
 			'Den meisten Teams fehlt es nicht an einem Ort, um Dinge festzuhalten. Google Docs, Notion, ein gemeinsamer Ordner — jedes davon kann technisch gesehen 1:1-Notizen enthalten. Genau das ist das Problem: Sie enthalten Notizen, keinen Prozess.',
+		tableHeading: 'encrypted1on1 im Vergleich zu Notiz-Tools',
+		tableColumns: ['Funktion', 'encrypted1on1', 'Google Docs / Notion / Notizen'],
+		tableRows: [
+			{
+				feature: 'Ende-zu-Ende-Verschlüsselung (Zero-Knowledge)',
+				e1o1: 'Ja, selbst für Serverbetreiber unlesbar',
+				others: 'Nein, Plattformbetreiber können den Klartext einsehen',
+				isAdvantage: true
+			},
+			{
+				feature: 'Ziel-Kontinuität über Zyklen hinweg',
+				e1o1: 'Automatischer Übertrag mit vollständiger Historie',
+				others: 'Manuelles Suchen in alten Dokumenten',
+				isAdvantage: true
+			},
+			{
+				feature: 'Vorbereitung auf Beurteilungsgespräche',
+				e1o1: 'Aggregierte Übersicht aller Meilensteine mit 1 Klick',
+				others: 'Mühsames Nachlesen monatelanger Notizen',
+				isAdvantage: true
+			},
+			{
+				feature: 'Strukturierte Leitfragen & Impulse',
+				e1o1: 'Erprobte Frameworks & Fragenkatalog mit 60+ Fragen',
+				others: 'Leeres Dokument, abhängig vom Gedächtnis des Managers',
+				isAdvantage: true
+			},
+			{
+				feature: 'Datensouveränität & Bereitstellung',
+				e1o1: 'Self-hosted auf Ihren Servern oder private EU-Cloud',
+				others: 'Gebunden an geschlossene US-SaaS-Plattformen',
+				isAdvantage: true
+			}
+		],
 		points: [
 			{
 				title: 'Keine Struktur.',
@@ -129,6 +199,52 @@ export const de: LandingContent = {
 		],
 		closingHtml:
 			'encrypted1on1 ersetzt „ein Dokument, wenn man daran denkt“ durch ein System: einen festen, durchdachten Fragenkatalog für beide Seiten, automatische Periodizität und Erinnerungs-E-Mails, Ziele, die über Zyklen hinweg bestehen bleiben und mit ihrer vollständigen Fortschrittshistorie weitergetragen werden, sowie einen Beurteilungsbericht, der Erfolge und Zielfortschritt über jeden beliebigen Zeitraum aggregiert — clientseitig erstellt, aus Daten, die der Server von Anfang an gar nicht lesen konnte.'
+	},
+
+	architecture: {
+		heading: 'Kryptografische Architektur: Warum Mitlesen unmöglich ist',
+		subhead:
+			'Sicherheit basiert auf mathematischen Garantien und kryptografischen Beweisen, nicht auf Zusicherungen in einer Datenschutzerklärung.',
+		steps: [
+			{
+				stepNumber: '1',
+				actor: 'Browser des Mitarbeiters',
+				action: 'Schlüsselableitung & Verschlüsselung',
+				detail:
+					'Schlüsselableitung via Argon2id und X25519. Sämtliche Eingaben werden lokal verschlüsselt, bevor sie übertragen werden.',
+				badge: 'Client-seitig'
+			},
+			{
+				stepNumber: '2',
+				actor: 'Server & Datenbank',
+				action: 'Zero-Knowledge Speicherung',
+				detail:
+					'Der Server speichert ausschließlich undurchsichtige Chiffretexte. Administratoren besitzen keine Entschlüsselungsschlüssel.',
+				badge: 'Zero-Knowledge'
+			},
+			{
+				stepNumber: '3',
+				actor: 'Browser der Führungskraft',
+				action: 'Autorisierte Entschlüsselung',
+				detail:
+					'Ausschließlich der verifizierte Gesprächspartner kann mit seinem privaten Schlüssel die Inhalte im Browser entschlüsseln.',
+				badge: 'Exklusiv 1:1'
+			}
+		],
+		guaranteeTitle: 'Garantien, die auch eine Anbieter-Aufgabe überdauern',
+		guaranteeTextHtml:
+			'Selbst bei vollständiger Kompromittierung des Servers erhält ein Angreifer nur Zufallsdaten. Der gesamte Quellcode ist quelloffen auf GitHub einsehbar.'
+	},
+
+	quickstart: {
+		heading: 'In 2 Minuten auf eigener Infrastruktur starten',
+		subhead:
+			'Ein autarker Docker-Container, keine externen SaaS-Abhängigkeiten, volle Kontrolle über Ihre Unternehmensdaten.',
+		command: 'docker run -d -p 8080:8080 --name e1o1 ghcr.io/aleksejs1/encrypted1on1:latest',
+		copyButtonText: 'Befehl kopieren',
+		copiedNotice: 'Befehl in die Zwischenablage kopiert!',
+		docsLinkText: 'Leitfaden für Docker- & Kubernetes-Bereitstellung →',
+		note: 'AGPLv3 • Unbegrenzte Teammitglieder • Keine Telemetrie'
 	},
 
 	privacy: {
@@ -159,6 +275,15 @@ export const de: LandingContent = {
 			answer2Html:
 				'<strong>Und praktisch gesehen ist das kein Sackgasse.</strong> Jedes 1:1-Gespräch ist ausschließlich für seine beiden Beteiligten lesbar, unabhängig voneinander — niemals über einen einzigen gemeinsamen Unternehmensschlüssel. Ist eine Untersuchung gegen eine der beiden Personen gerichtet, bleibt der Inhalt über die andere Person weiterhin zugänglich — genauso, wie es wäre, hätte dasselbe Gespräch auf Papier oder in einem persönlichen Notizbuch stattgefunden: Ein rechtliches Verfahren kann eine <em>Person</em> zur Herausgabe zwingen, was sie besitzt. Es war nur nie etwas, das eine <em>Plattform</em> von sich aus hätte herausgeben können — genau das ist der Sinn der Sache.'
 		}
+	},
+
+	finalCta: {
+		heading: 'Starten Sie vertrauensvolle, wirksame 1:1-Gespräche',
+		subhead:
+			'Erleben Sie das vollständige Produkt in unserer interaktiven Live-Demo oder starten Sie in wenigen Minuten auf Ihrer eigenen Infrastruktur.',
+		ctaTryDemo: 'Live-Demo testen',
+		ctaGetStarted: 'Workspace erstellen',
+		ctaGithub: 'Auf GitHub ansehen'
 	},
 
 	pricing: {

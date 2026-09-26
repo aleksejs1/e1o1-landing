@@ -49,6 +49,42 @@ export const lv: LandingContent = {
 			'Reāla encrypted1on1 anketa: atbildēts uz noskaņojuma un sajūtu jautājumiem, atvērts viens komentāru pavediens, un piekaramās atslēgas ikona atzīmē šo pusi kā šifrētu no gala līdz galam.'
 	},
 
+	howItWorks: {
+		heading: 'Kā tas strādā praksē',
+		subhead:
+			'Vienkāršs, ritmisks process, kas pārvērš neērtas statusa sapulces par jaudīgu komandas izaugsmes rīku.',
+		steps: [
+			{
+				step: '01',
+				title: '3 minūšu asinhrona sagatavošanās',
+				description:
+					'Darbinieks un vadītājs pirms tikšanās atzīmē noskaņojumu, mērķu progresu un šķēršļus. Bez tukšām lapām un negaidītiem jautājumiem.',
+				badge: 'Asinhroni'
+			},
+			{
+				step: '02',
+				title: 'Pilnīga šifrēšana pārlūkprogrammā',
+				description:
+					'Visi dati tiek nošifrēti jūsu ierīcē pirms nosūtīšanas tīklā. Serveris redz tikai neizlasāmu šifrotekstu.',
+				badge: 'Zero-Knowledge'
+			},
+			{
+				step: '03',
+				title: 'Fokuss uz sarunu un mērķiem',
+				description:
+					'Tikšanās veltīta reālām problēmām un attīstībai. Vienotie mērķi automātiski pāriet uz nākamo ciklu.',
+				badge: 'Pēctecība'
+			},
+			{
+				step: '04',
+				title: 'Pārskats darba novērtējumam ar 1 klikšķi',
+				description:
+					'Pārskata perioda beigās visi sasniegumi un mērķu vēsture tiek apkopoti strukturētā ziņojumā.',
+				badge: '1 klikšķis'
+			}
+		]
+	},
+
 	origin: {
 		heading: 'Kāpēc mēs to izveidojām',
 		paragraphsHtml: [
@@ -106,6 +142,40 @@ export const lv: LandingContent = {
 		heading: 'Kopīgs dokuments nav sistēma',
 		intro:
 			'Lielākajai daļai komandu netrūkst vietas, kur pierakstīt. Google Docs, Notion, kopīga mape — jebkurš no tiem tehniski var glabāt 1:1 piezīmes. Tieši tas ir problēmas kodols: tie glabā piezīmes, nevis procesu.',
+		tableHeading: 'encrypted1on1 salīdzinājumā ar koplietojamiem dokumentiem',
+		tableColumns: ['Iespēja', 'encrypted1on1', 'Google Docs / Notion / Piezīmes'],
+		tableRows: [
+			{
+				feature: 'Šifrēšana no gala līdz galam (Zero-Knowledge)',
+				e1o1: 'Jā, nav pieejams pat servera administratoriem',
+				others: 'Nē, platformas uzturētāji var lasīt visu tekstu',
+				isAdvantage: true
+			},
+			{
+				feature: 'Mērķu pēctecība starp cikliem',
+				e1o1: 'Automātiska pārnešana ar pilnu statusu vēsturi',
+				others: 'Manuāla meklēšana vecajos dokumentos',
+				isAdvantage: true
+			},
+			{
+				feature: 'Sagatavošanās darba novērtēšanai',
+				e1o1: 'Visi mērķi un sasniegumi apkopoti ar 1 klikšķi',
+				others: 'Pusgada piezīmju manuāla pārlasīšana',
+				isAdvantage: true
+			},
+			{
+				feature: 'Struktūra un ieteikumi',
+				e1o1: 'Pārbaudīti ietvari un jautājumu banka',
+				others: 'Tukša lapa, atkarīga no vadītāja atmiņas',
+				isAdvantage: true
+			},
+			{
+				feature: 'Datu suverenitāte un uzturēšana',
+				e1o1: 'Pašmitināšana savos serveros vai ES mākonis',
+				others: 'Piesaiste mākoņa piegādātājam',
+				isAdvantage: true
+			}
+		],
 		points: [
 			{
 				title: 'Nav struktūras.',
@@ -130,6 +200,52 @@ export const lv: LandingContent = {
 		],
 		closingHtml:
 			'encrypted1on1 aizstāj „dokumentu, ja par to atceras” ar sistēmu: fiksētu, pārdomāti izstrādātu jautājumu kopu abām pusēm, automātisku periodiskumu un atgādinājuma e-pastus, mērķus, kas saglabājas un tiek pārnesti starp cikliem kopā ar pilnu progresa vēsturi, un snieguma izvērtēšanas atskaiti, kas apkopo sasniegumus un mērķu progresu par jebkuru laika periodu — tā tiek ģenerēta klienta pusē, no datiem, kurus serveris nekad nav varējis izlasīt.'
+	},
+
+	architecture: {
+		heading: 'Kriptogrāfiskā arhitektūra: kāpēc piekļuve nav iespējama',
+		subhead:
+			'Drošība balstās uz kriptogrāfiskām garantijām un matemātisku pierādījumu, nevis solījumiem privātuma politikā.',
+		steps: [
+			{
+				stepNumber: '1',
+				actor: 'Darbinieka pārlūks',
+				action: 'Atslēgu ģenerēšana un šifrēšana',
+				detail:
+					'Atslēgas tiek atvasinātas no lietotāja paroles ar Argon2id un X25519. Šifrēšana notiek lokāli pirms nosūtīšanas.',
+				badge: 'Klienta puse'
+			},
+			{
+				stepNumber: '2',
+				actor: 'Serveris un datubāze',
+				action: 'Zero-Knowledge glabāšana',
+				detail:
+					'Serveris saņem un glabā tikai šifrētus datu blokus. Servera administratoriem nav iespēju tos atšifrēt.',
+				badge: 'Zero-Knowledge'
+			},
+			{
+				stepNumber: '3',
+				actor: 'Vadītāja pārlūks',
+				action: 'Atšifrēšana ar uzticamu atslēgu',
+				detail:
+					'Tikai otrs tikšanās dalībnieks ar verificētu atslēgu var atšifrēt un izlasīt saturu.',
+				badge: 'Tikai 1:1'
+			}
+		],
+		guaranteeTitle: 'Garantijas, kas pārdzīvo pakalpojuma slēgšanu',
+		guaranteeTextHtml:
+			'Pat pilnīgas servera kompromitēšanas gadījumā uzbrucējs iegūst tikai nejaušus baitus. Kods ir pilnībā atvērts pārbaudei GitHub.'
+	},
+
+	quickstart: {
+		heading: 'Izvietojiet savā infrastruktūrā 2 minūtēs',
+		subhead:
+			'Viens autonoms konteiners, bez ārējām atkarībām, pilnīga kontrole pār organizācijas datiem.',
+		command: 'docker run -d -p 8080:8080 --name e1o1 ghcr.io/aleksejs1/encrypted1on1:latest',
+		copyButtonText: 'Kopēt komandu',
+		copiedNotice: 'Komanda nokopēta starpliktuvē!',
+		docsLinkText: 'Skatīt Docker un Kubernetes izvietošanas rokasgrāmatu →',
+		note: 'AGPLv3 • Neierobežots komandas locekļu skaits • Bez telemetrijas'
 	},
 
 	privacy: {
@@ -160,6 +276,15 @@ export const lv: LandingContent = {
 			answer2Html:
 				'<strong>Un praktiski tas nav strupceļš.</strong> Katru 1:1 tikšanos var izlasīt tieši tās divi dalībnieki, neatkarīgi viens no otra — nekad ar vienotu, koplietotu uzņēmuma atslēgu. Ja izmeklēšana skar vienu dalībnieku, saturs joprojām ir pieejams caur otru — tieši tāpat, kā tas būtu, ja tā pati saruna būtu notikusi uz papīra vai personiskā piezīmju blociņā: tiesiskais process var uzlikt par pienākumu <em>personai</em> uzrādīt to, kas viņai ir. Vienkārši tas nekad nav bijis kaut kas, ko <em>platforma</em> varētu nodot pati — tieši tajā ir visa jēga.'
 		}
+	},
+
+	finalCta: {
+		heading: 'Sāciet veidot patiesi uzticamas un efektīvas 1:1 tikšanās',
+		subhead:
+			'Izmēģiniet interaktīvo demonstrāciju vai palaidiet instanci savā infrastruktūrā dažu minūšu laikā.',
+		ctaTryDemo: 'Izmēģināt demo',
+		ctaGetStarted: 'Izveidot darbvietu',
+		ctaGithub: 'Skatīt GitHub'
 	},
 
 	pricing: {

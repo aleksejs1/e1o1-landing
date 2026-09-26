@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onDestroy } from 'svelte';
 	import { getContent } from '$lib/content';
 	import { getPlaybookItems, getCategories } from '$lib/content/playbook';
 	import {
@@ -7,7 +8,8 @@
 		CAL_COM_URL,
 		CLOUD_SIGNUP_URL,
 		GITHUB_URL,
-		DOCS_URL
+		DOCS_URL,
+		DEPLOYMENT_DOCS_URL
 	} from '$lib/links';
 	import { getLocale, localizeHref } from '$lib/paraglide/runtime';
 	import * as m from '$lib/paraglide/messages';
@@ -22,6 +24,30 @@
 			.map((slug) => allPlaybooks.find((p) => p.slug === slug))
 			.filter((p): p is NonNullable<typeof p> => Boolean(p))
 	);
+
+	let copied = $state(false);
+	let copyTimeout: ReturnType<typeof setTimeout> | undefined;
+
+	async function copyCommand(cmd: string) {
+		if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
+			try {
+				await navigator.clipboard.writeText(cmd);
+				copied = true;
+				clearTimeout(copyTimeout);
+				copyTimeout = setTimeout(() => {
+					copied = false;
+				}, 2500);
+			} catch {
+				// Clipboard API write was denied or not supported in this environment
+			}
+		}
+	}
+
+	onDestroy(() => {
+		if (copyTimeout) {
+			clearTimeout(copyTimeout);
+		}
+	});
 </script>
 
 <svelte:head>
@@ -47,11 +73,33 @@
 			url: 'https://private1on1.eu'
 		}
 	})}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: [
+			{
+				'@type': 'Question',
+				name: content.privacy.faq.question,
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text:
+						content.privacy.faq.answer1Html.replace(/<[^>]*>/g, '') +
+						' ' +
+						content.privacy.faq.answer2Html.replace(/<[^>]*>/g, '')
+				}
+			}
+		]
+	})}</script>`}
 </svelte:head>
 
 <section class="hero">
 	<div class="hero-grid">
 		<div class="hero-content">
+			<div class="hero-badge-wrap">
+				<span class="tag tag-outline hero-pill">
+					<span class="pill-dot" aria-hidden="true"></span> AGPLv3 Open Source • End-to-End Encrypted
+				</span>
+			</div>
 			<h1>{content.hero.headline}</h1>
 			<p class="hero-subhead">{content.hero.subhead}</p>
 
@@ -62,7 +110,10 @@
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					{content.hero.ctaTryDemo}
+					{content.hero.ctaTryDemo} →
+				</a>
+				<a class="btn btn-secondary" href="{localizeHref('/')}#quickstart">
+					⚡ Docker Quickstart
 				</a>
 				<a
 					class="btn btn-secondary"
@@ -71,9 +122,6 @@
 					rel="noopener noreferrer"
 				>
 					{content.hero.ctaGetStarted}
-				</a>
-				<a class="btn btn-secondary" href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
-					{content.hero.ctaGithub}
 				</a>
 			</div>
 
@@ -85,6 +133,10 @@
 					rel="noopener noreferrer"
 				>
 					{m.hero_already_have_account()} <strong>{m.header_login()} →</strong>
+				</a>
+				<span class="hero-sublinks-sep" aria-hidden="true">•</span>
+				<a class="hero-docs-link" href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+					GitHub ⭐
 				</a>
 				<span class="hero-sublinks-sep" aria-hidden="true">•</span>
 				<a class="hero-docs-link" href={DOCS_URL} target="_blank" rel="noopener noreferrer">
@@ -100,21 +152,29 @@
 		</div>
 
 		<div class="hero-visual">
-			<img
-				class="hero-screenshot hero-screenshot-light"
-				src="/screenshots/anketa-preview-{getLocale()}-light.png"
-				alt={content.hero.screenshotAlt}
-				width="688"
-				height="560"
-			/>
-			<img
-				class="hero-screenshot hero-screenshot-dark"
-				src="/screenshots/anketa-preview-{getLocale()}-dark.png"
-				alt=""
-				aria-hidden="true"
-				width="688"
-				height="560"
-			/>
+			<div class="hero-screenshot-card">
+				<img
+					class="hero-screenshot hero-screenshot-light"
+					src="/screenshots/anketa-preview-{getLocale()}-light.png"
+					alt={content.hero.screenshotAlt}
+					width="688"
+					height="560"
+					fetchpriority="high"
+				/>
+				<img
+					class="hero-screenshot hero-screenshot-dark"
+					src="/screenshots/anketa-preview-{getLocale()}-dark.png"
+					alt=""
+					aria-hidden="true"
+					width="688"
+					height="560"
+					loading="lazy"
+				/>
+				<div class="hero-screenshot-tags">
+					<span class="tag tag-outline">🔒 Client-Side Encrypted</span>
+					<span class="tag tag-outline">🎯 Persistent Goals</span>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -133,57 +193,201 @@
 	</div>
 </section>
 
-<section class="section" id="origin">
+<!-- How It Works Section -->
+<section class="section section-alt" id="how-it-works">
 	<div class="section-inner">
-		<h2>{content.origin.heading}</h2>
-		{#each content.origin.paragraphsHtml.slice(0, 3) as html, i (i)}
-			<p>{@html html}</p>
-		{/each}
+		<div class="section-header text-center">
+			<h2>{content.howItWorks.heading}</h2>
+			<p class="section-subhead">{content.howItWorks.subhead}</p>
+		</div>
 
-		<figure class="editorial-figure">
-			<img
-				class="editorial-img"
-				src="/images/landing/origin-trust.jpg"
-				alt={content.origin.illustrationAlt ?? ''}
-				width="1376"
-				height="768"
-				loading="lazy"
-			/>
-		</figure>
-
-		{#each content.origin.paragraphsHtml.slice(3) as html, i (i + 3)}
-			<p>{@html html}</p>
-		{/each}
-	</div>
-</section>
-
-<section class="section section-alt">
-	<div class="section-inner">
-		<h2>{content.methodology.heading}</h2>
-		<p>{content.methodology.intro}</p>
-
-		<ul class="research-list">
-			{#each content.methodology.points as point, i (i)}
-				<li>{@html point.html}</li>
+		<div class="how-steps-grid">
+			{#each content.howItWorks.steps as item (item.step)}
+				<div class="card elev-sm how-step-card">
+					<div class="how-step-header">
+						<span class="step-num">{item.step}</span>
+						<span class="tag tag-outline">{item.badge}</span>
+					</div>
+					<h3 class="step-title">{item.title}</h3>
+					<p class="card-body">{item.description}</p>
+				</div>
 			{/each}
-		</ul>
-
-		<figure class="editorial-figure">
-			<img
-				class="editorial-img"
-				src="/images/landing/methodology-leverage.jpg"
-				alt={content.methodology.illustrationAlt ?? ''}
-				width="1376"
-				height="768"
-				loading="lazy"
-			/>
-		</figure>
-
-		<p>{@html content.methodology.closingHtml}</p>
+		</div>
 	</div>
 </section>
 
-<section class="section playbooks-showcase" id="playbooks">
+<!-- Comparison Table Section -->
+<section class="section" id="comparison">
+	<div class="section-inner">
+		<div class="section-header text-center">
+			<h2>{content.comparison.heading}</h2>
+			<p class="section-subhead">{content.comparison.intro}</p>
+		</div>
+
+		<div class="comparison-table-wrap elev-sm">
+			<div class="table-scroll">
+				<table class="table comparison-table">
+					<caption class="sr-only">{content.comparison.tableHeading}</caption>
+					<thead>
+						<tr>
+							{#each content.comparison.tableColumns as col, i (col)}
+								<th class={i === 1 ? 'col-highlight' : ''}>{col}</th>
+							{/each}
+						</tr>
+					</thead>
+					<tbody>
+						{#each content.comparison.tableRows as row (row.feature)}
+							<tr>
+								<td class="feature-col">
+									<strong>{row.feature}</strong>
+								</td>
+								<td class="col-highlight">
+									<div class="status-cell">
+										<span class="status-check" aria-hidden="true">✓</span>
+										<span>{row.e1o1}</span>
+									</div>
+								</td>
+								<td class="text-muted">
+									<div class="status-cell">
+										<span class="status-cross" aria-hidden="true">✕</span>
+										<span>{row.others}</span>
+									</div>
+								</td>
+							</tr>
+						{/each}
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="point-grid comparison-points">
+			{#each content.comparison.points as point, i (i)}
+				<div class="card elev-sm">
+					<h3 class="card-title">{point.title}</h3>
+					<p class="card-body">{point.body}</p>
+				</div>
+			{/each}
+		</div>
+
+		<p class="comparison-closing">{@html content.comparison.closingHtml}</p>
+	</div>
+</section>
+
+<!-- Architecture & Cryptography Section -->
+<section class="section section-alt" id="architecture">
+	<div class="section-inner">
+		<div class="section-header text-center">
+			<h2>{content.architecture.heading}</h2>
+			<p class="section-subhead">{content.architecture.subhead}</p>
+		</div>
+
+		<div class="crypto-flow-grid">
+			{#each content.architecture.steps as item, i (item.stepNumber)}
+				<div class="card elev-sm crypto-card">
+					<div class="crypto-card-top">
+						<span class="step-num">{item.stepNumber}</span>
+						<span class="tag tag-outline">{item.badge}</span>
+					</div>
+					<div class="crypto-card-icon" aria-hidden="true">
+						{#if i === 0}💻{:else if i === 1}🔒{:else}👥{/if}
+					</div>
+					<h3 class="card-title">{item.actor}</h3>
+					<div class="crypto-action-badge">{item.action}</div>
+					<p class="card-body">{item.detail}</p>
+				</div>
+			{/each}
+		</div>
+
+		<div class="crypto-guarantee elev-sm">
+			<span class="guarantee-icon" aria-hidden="true">🛡️</span>
+			<div class="guarantee-body">
+				<h3 class="card-title">{content.architecture.guaranteeTitle}</h3>
+				<p class="card-body">{@html content.architecture.guaranteeTextHtml}</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Quickstart Docker Section -->
+<section class="section quickstart-section" id="quickstart">
+	<div class="section-inner">
+		<div class="quickstart-box elev-md">
+			<div class="quickstart-header">
+				<div class="quickstart-meta-bar">
+					<span class="tag tag-outline">Self-Hosted</span>
+					<div class="terminal-dots" aria-hidden="true">
+						<span class="dot dot-red"></span>
+						<span class="dot dot-yellow"></span>
+						<span class="dot dot-green"></span>
+					</div>
+				</div>
+				<h2>{content.quickstart.heading}</h2>
+				<p class="quickstart-subhead">{content.quickstart.subhead}</p>
+			</div>
+
+			<div class="terminal-window">
+				<div class="terminal-top">
+					<span class="terminal-title">bash</span>
+					<button
+						type="button"
+						class="btn terminal-copy-btn"
+						aria-live="polite"
+						onclick={() => copyCommand(content.quickstart.command)}
+					>
+						{#if copied}
+							✓ {content.quickstart.copiedNotice}
+						{:else}
+							📋 {content.quickstart.copyButtonText}
+						{/if}
+					</button>
+				</div>
+				<pre class="terminal-code"><code
+						><span class="terminal-prompt">$</span> {content.quickstart.command}</code
+					></pre>
+			</div>
+
+			<div class="quickstart-footer">
+				<a
+					href={DEPLOYMENT_DOCS_URL}
+					class="quickstart-docs-link"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					{content.quickstart.docsLinkText}
+				</a>
+				<span class="text-muted quickstart-note">{content.quickstart.note}</span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Privacy & Security Section -->
+<section class="section" id="privacy">
+	<div class="section-inner">
+		<h2>{content.privacy.heading}</h2>
+		<p>{content.privacy.intro}</p>
+
+		<div class="point-grid point-grid-narrow">
+			{#each content.privacy.points as point, i (i)}
+				<div class="card elev-sm">
+					<h3 class="card-title">{point.title}</h3>
+					<p class="card-body">{point.body}</p>
+				</div>
+			{/each}
+		</div>
+
+		<p>{@html content.privacy.resolutionHtml}</p>
+
+		<div class="card faq-card elev-sm">
+			<h4>{content.privacy.faq.question}</h4>
+			<p>{@html content.privacy.faq.answer1Html}</p>
+			<p>{@html content.privacy.faq.answer2Html}</p>
+		</div>
+	</div>
+</section>
+
+<!-- Playbooks Showcase Section -->
+<section class="section playbooks-showcase section-alt" id="playbooks">
 	<div class="section-inner playbooks-inner">
 		<div class="section-header text-center">
 			<h2>{content.playbooks.heading}</h2>
@@ -206,7 +410,6 @@
 							alt=""
 							width="720"
 							height="405"
-							loading="lazy"
 						/>
 					</a>
 					<div class="featured-card-content">
@@ -253,49 +456,60 @@
 	</div>
 </section>
 
-<section class="section section-alt">
+<!-- Origin Section -->
+<section class="section" id="origin">
 	<div class="section-inner">
-		<h2>{content.comparison.heading}</h2>
-		<p>{content.comparison.intro}</p>
+		<h2>{content.origin.heading}</h2>
+		{#each content.origin.paragraphsHtml.slice(0, 3) as html, i (i)}
+			<p>{@html html}</p>
+		{/each}
 
-		<div class="point-grid">
-			{#each content.comparison.points as point, i (i)}
-				<div class="card elev-sm">
-					<h3 class="card-title">{point.title}</h3>
-					<p class="card-body">{point.body}</p>
-				</div>
-			{/each}
-		</div>
+		<figure class="editorial-figure">
+			<img
+				class="editorial-img"
+				src="/images/landing/origin-trust.jpg"
+				alt={content.origin.illustrationAlt ?? ''}
+				width="1376"
+				height="768"
+				loading="lazy"
+			/>
+		</figure>
 
-		<p>{@html content.comparison.closingHtml}</p>
+		{#each content.origin.paragraphsHtml.slice(3) as html, i (i + 3)}
+			<p>{@html html}</p>
+		{/each}
 	</div>
 </section>
 
-<section class="section" id="privacy">
+<!-- Methodology Section -->
+<section class="section section-alt" id="methodology">
 	<div class="section-inner">
-		<h2>{content.privacy.heading}</h2>
-		<p>{content.privacy.intro}</p>
+		<h2>{content.methodology.heading}</h2>
+		<p>{content.methodology.intro}</p>
 
-		<div class="point-grid point-grid-narrow">
-			{#each content.privacy.points as point, i (i)}
-				<div class="card elev-sm">
-					<h3 class="card-title">{point.title}</h3>
-					<p class="card-body">{point.body}</p>
-				</div>
+		<ul class="research-list">
+			{#each content.methodology.points as point, i (i)}
+				<li>{@html point.html}</li>
 			{/each}
-		</div>
+		</ul>
 
-		<p>{@html content.privacy.resolutionHtml}</p>
+		<figure class="editorial-figure">
+			<img
+				class="editorial-img"
+				src="/images/landing/methodology-leverage.jpg"
+				alt={content.methodology.illustrationAlt ?? ''}
+				width="1376"
+				height="768"
+				loading="lazy"
+			/>
+		</figure>
 
-		<div class="card faq-card elev-sm">
-			<h4>{content.privacy.faq.question}</h4>
-			<p>{@html content.privacy.faq.answer1Html}</p>
-			<p>{@html content.privacy.faq.answer2Html}</p>
-		</div>
+		<p>{@html content.methodology.closingHtml}</p>
 	</div>
 </section>
 
-<section class="section section-alt" id="pricing">
+<!-- Pricing Section -->
+<section class="section" id="pricing">
 	<div class="section-inner">
 		<h2>{content.pricing.heading}</h2>
 
@@ -376,6 +590,40 @@
 		</div>
 
 		<p class="pricing-footnote text-muted">{@html content.pricing.footnoteHtml}</p>
+	</div>
+</section>
+
+<!-- Final Call to Action Section -->
+<section class="section final-cta-section" id="get-started">
+	<div class="section-inner">
+		<div class="final-cta-card elev-md">
+			<h2>{content.finalCta.heading}</h2>
+			<p class="final-cta-subhead">{content.finalCta.subhead}</p>
+			<div class="final-cta-actions">
+				<a
+					class="btn btn-primary final-btn-main"
+					href={appDemoUrl(getLocale())}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					{content.finalCta.ctaTryDemo} →
+				</a>
+				<a class="btn btn-secondary" href="{localizeHref('/')}#quickstart">
+					⚡ Docker Quickstart
+				</a>
+				<a
+					class="btn btn-secondary"
+					href={CLOUD_SIGNUP_URL}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					{content.finalCta.ctaGetStarted}
+				</a>
+				<a class="btn btn-secondary" href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+					{content.finalCta.ctaGithub}
+				</a>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -921,5 +1169,416 @@
 	.question-bank-banner-actions .btn {
 		text-align: center;
 		justify-content: center;
+	}
+
+	/* Hero badge and tags */
+	.hero-badge-wrap {
+		margin-bottom: var(--space-3);
+		display: flex;
+		justify-content: center;
+	}
+	@media (min-width: 860px) {
+		.hero-badge-wrap {
+			justify-content: flex-start;
+		}
+	}
+	.hero-pill {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		font-size: 12.5px;
+		font-weight: 500;
+	}
+	.pill-dot {
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		background: var(--color-accent);
+	}
+	.hero-screenshot-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--space-2);
+		max-width: 480px;
+		width: 100%;
+	}
+	.hero-screenshot-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-2);
+		justify-content: center;
+		margin-top: var(--space-2);
+	}
+
+	/* How It Works Grid */
+	.how-steps-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: var(--space-4);
+	}
+	@media (min-width: 640px) {
+		.how-steps-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media (min-width: 980px) {
+		.how-steps-grid {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	.how-step-card {
+		display: flex;
+		flex-direction: column;
+		padding: var(--space-5);
+		background: var(--color-bg);
+		border-radius: var(--radius-md);
+		border: 1px solid var(--color-divider);
+		height: 100%;
+		box-sizing: border-box;
+	}
+	.how-step-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: var(--space-3);
+	}
+	.step-num {
+		font-family: var(--font-heading);
+		font-weight: var(--font-heading-weight);
+		font-size: 20px;
+		color: var(--color-accent-ink);
+		line-height: 1;
+	}
+	.step-title {
+		font-size: 16.5px;
+		margin: 0 0 var(--space-2);
+		line-height: 1.3;
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border-width: 0;
+	}
+
+	/* Comparison Table */
+	.comparison-table-wrap {
+		border: 1px solid var(--color-divider);
+		border-radius: var(--radius-md);
+		background: var(--color-surface);
+		overflow: hidden;
+		margin-bottom: var(--space-4);
+	}
+	.comparison-table {
+		width: 100%;
+		min-width: 620px;
+		border-collapse: collapse;
+		font-size: 14px;
+	}
+	.comparison-table th,
+	.comparison-table td {
+		padding: var(--space-3) var(--space-4);
+		border-bottom: 1px solid var(--color-divider);
+		vertical-align: middle;
+	}
+	.comparison-table th {
+		background: color-mix(in srgb, var(--color-text) 5%, transparent);
+		font-weight: 600;
+		text-align: left;
+	}
+	.col-highlight {
+		background: color-mix(in srgb, var(--color-accent) 8%, var(--color-surface));
+		font-weight: 500;
+	}
+	th.col-highlight {
+		background: color-mix(in srgb, var(--color-accent) 14%, var(--color-surface));
+		color: var(--color-accent-ink);
+	}
+	.status-cell {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+	.status-check {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: color-mix(in srgb, var(--color-accent-2) 20%, transparent);
+		color: var(--color-accent-2-800);
+		font-weight: bold;
+		flex-shrink: 0;
+	}
+	:global(:root[data-theme='dark']) .status-check {
+		color: var(--color-accent-2);
+	}
+	@media (prefers-color-scheme: dark) {
+		:global(:root:not([data-theme='light'])) .status-check {
+			color: var(--color-accent-2);
+		}
+	}
+	.status-cross {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: color-mix(in srgb, var(--color-text) 10%, transparent);
+		color: var(--color-text);
+		opacity: 0.6;
+		flex-shrink: 0;
+	}
+	.comparison-points {
+		margin-top: var(--space-6);
+	}
+	.comparison-closing {
+		margin-top: var(--space-4);
+	}
+
+	/* Crypto Architecture Grid */
+	.crypto-flow-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: var(--space-4);
+		margin-bottom: var(--space-6);
+	}
+	@media (min-width: 768px) {
+		.crypto-flow-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	.crypto-card {
+		padding: var(--space-5);
+		background: var(--color-bg);
+		border-radius: var(--radius-md);
+		border: 1px solid var(--color-divider);
+		display: flex;
+		flex-direction: column;
+	}
+	.crypto-card-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: var(--space-3);
+	}
+	.crypto-card-icon {
+		font-size: 28px;
+		margin-bottom: var(--space-2);
+		line-height: 1;
+	}
+	.crypto-action-badge {
+		font-size: 13px;
+		font-weight: 600;
+		color: var(--color-accent-ink);
+		margin-bottom: var(--space-2);
+	}
+	.crypto-guarantee {
+		display: flex;
+		gap: var(--space-4);
+		padding: var(--space-5);
+		background: color-mix(in srgb, var(--color-accent-2) 8%, var(--color-surface));
+		border: 1px solid var(--color-divider);
+		border-radius: var(--radius-md);
+		align-items: flex-start;
+	}
+	.guarantee-icon {
+		font-size: 28px;
+		line-height: 1;
+		flex-shrink: 0;
+	}
+	.guarantee-body {
+		flex: 1;
+	}
+	.guarantee-body h3 {
+		font-size: 17px;
+		margin-bottom: var(--space-2);
+	}
+	.guarantee-body p {
+		margin: 0;
+		font-size: 14px;
+		line-height: 1.5;
+	}
+
+	/* Quickstart Docker Terminal */
+	.quickstart-section {
+		padding: var(--space-8) var(--space-4);
+	}
+	.quickstart-box {
+		padding: var(--space-6);
+		background: var(--color-surface);
+		border: 1px solid var(--color-divider);
+		border-radius: var(--radius-lg);
+		max-width: 820px;
+		margin: 0 auto;
+	}
+	@media (min-width: 640px) {
+		.quickstart-box {
+			padding: var(--space-8);
+		}
+	}
+	.quickstart-meta-bar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: var(--space-3);
+	}
+	.terminal-dots {
+		display: flex;
+		gap: 6px;
+	}
+	.terminal-dots .dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+	}
+	.dot-red {
+		background: #ff5f56;
+	}
+	.dot-yellow {
+		background: #ffbd2e;
+	}
+	.dot-green {
+		background: #27c93f;
+	}
+	.quickstart-subhead {
+		font-size: 16px;
+		color: color-mix(in srgb, var(--color-text) 75%, transparent);
+		margin-bottom: var(--space-5);
+	}
+	.terminal-window {
+		background: #181715;
+		color: #f3ece0;
+		border-radius: var(--radius-sm);
+		overflow: hidden;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		margin-bottom: var(--space-4);
+		box-shadow: var(--shadow-md);
+	}
+	.terminal-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 8px 14px;
+		background: #252320;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	}
+	.terminal-title {
+		font-family: monospace;
+		font-size: 12px;
+		color: #a19786;
+	}
+	.terminal-copy-btn {
+		display: inline-flex;
+		align-items: center;
+		font-size: 12px;
+		padding: 4px 10px;
+		height: 28px;
+		cursor: pointer;
+		color: #f3ece0;
+		background: rgba(255, 255, 255, 0.08);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-radius: var(--radius-sm);
+		transition:
+			background 0.15s ease,
+			border-color 0.15s ease,
+			color 0.15s ease;
+	}
+	.terminal-copy-btn:hover {
+		background: rgba(255, 255, 255, 0.16);
+		border-color: rgba(255, 255, 255, 0.35);
+		color: #ffffff;
+	}
+	.terminal-copy-btn:focus-visible {
+		outline: 2px solid var(--color-accent);
+		outline-offset: 2px;
+	}
+	.terminal-code {
+		margin: 0;
+		padding: var(--space-4);
+		font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+		font-size: 13.5px;
+		line-height: 1.5;
+		overflow-x: auto;
+		white-space: pre-wrap;
+		word-break: break-all;
+	}
+	.terminal-prompt {
+		color: var(--color-accent);
+		font-weight: bold;
+		user-select: none;
+		margin-right: 6px;
+	}
+	.quickstart-footer {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-2);
+		margin-top: var(--space-4);
+	}
+	@media (min-width: 640px) {
+		.quickstart-footer {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+	.quickstart-docs-link {
+		font-weight: 600;
+		color: var(--color-accent-ink);
+		text-decoration: none;
+	}
+	.quickstart-docs-link:hover {
+		text-decoration: underline;
+	}
+	.quickstart-note {
+		font-size: 13px;
+	}
+
+	/* Final CTA Section */
+	.final-cta-section {
+		padding: var(--space-8) var(--space-4) var(--space-10);
+	}
+	.final-cta-card {
+		text-align: center;
+		padding: var(--space-8) var(--space-5);
+		background: color-mix(in srgb, var(--color-accent) 7%, var(--color-surface));
+		border: 1px solid var(--color-divider);
+		border-radius: var(--radius-lg);
+		max-width: 820px;
+		margin: 0 auto;
+	}
+	@media (min-width: 640px) {
+		.final-cta-card {
+			padding: var(--space-8) var(--space-8);
+		}
+	}
+	.final-cta-card h2 {
+		font-size: clamp(24px, 4.5vw, 36px);
+		margin-bottom: var(--space-3);
+	}
+	.final-cta-subhead {
+		font-size: 16px;
+		max-width: 600px;
+		margin: 0 auto var(--space-6);
+		color: color-mix(in srgb, var(--color-text) 75%, transparent);
+	}
+	.final-cta-actions {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: var(--space-3);
+	}
+	.final-btn-main {
+		padding: var(--space-3) var(--space-6);
+		font-size: 15px;
 	}
 </style>

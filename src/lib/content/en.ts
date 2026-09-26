@@ -49,6 +49,42 @@ export const en: LandingContent = {
 			'A real encrypted1on1 anketa: mood and feelings answered, one comment thread open, and a padlock icon marking this side as end-to-end encrypted.'
 	},
 
+	howItWorks: {
+		heading: 'How it works in practice',
+		subhead:
+			'A rhythmic, structured workflow that turns awkward status meetings into high-leverage conversations.',
+		steps: [
+			{
+				step: '01',
+				title: '3-minute async preparation',
+				description:
+					'Employee and manager log pulse, goal progress, and blockers ahead of time. No blank pages, no surprise status interrogations.',
+				badge: 'Async'
+			},
+			{
+				step: '02',
+				title: 'Client-side zero-knowledge encryption',
+				description:
+					'All notes and feelings are encrypted locally in your browser before transmission. The server sees only opaque ciphertext.',
+				badge: 'Zero-Knowledge'
+			},
+			{
+				step: '03',
+				title: 'High-leverage conversation & continuity',
+				description:
+					'Spend meeting time on real coaching and growth. Agreed goals automatically roll over into the next cycle with full history.',
+				badge: 'Continuity'
+			},
+			{
+				step: '04',
+				title: 'One-click performance review reports',
+				description:
+					'When review cycle arrives, aggregate months of achievements, feedback, and goal milestones into a structured report in one click.',
+				badge: '1-Click'
+			}
+		]
+	},
+
 	origin: {
 		heading: 'Why we built this',
 		paragraphsHtml: [
@@ -106,6 +142,40 @@ export const en: LandingContent = {
 		heading: 'A shared doc isn’t a system',
 		intro:
 			'Most teams don’t lack a place to write things down. Google Docs, Notion, a shared folder — any of these can technically hold 1:1 notes. That’s exactly the problem: they hold notes, not a process.',
+		tableHeading: 'encrypted1on1 vs Shared Docs',
+		tableColumns: ['Capability', 'encrypted1on1', 'Google Docs / Notion / Notes'],
+		tableRows: [
+			{
+				feature: 'End-to-End Encryption (Zero-Knowledge)',
+				e1o1: 'Yes, completely unreadable even to server operators',
+				others: 'No, platform operators can inspect all plaintext',
+				isAdvantage: true
+			},
+			{
+				feature: 'Goal Continuity Across Cycles',
+				e1o1: 'Automatic carryover with full progress history',
+				others: 'Manual copy-paste or searching old documents',
+				isAdvantage: true
+			},
+			{
+				feature: 'Performance Review Preparation',
+				e1o1: 'Aggregated view of milestones & growth in 1 click',
+				others: 'Painful re-reading of six months of scattered docs',
+				isAdvantage: true
+			},
+			{
+				feature: 'Structured Cadence & Prompts',
+				e1o1: 'Built-in research-backed questions & reminders',
+				others: 'Blank slate, dependent on manager recall',
+				isAdvantage: true
+			},
+			{
+				feature: 'Data Sovereignty & Deployment',
+				e1o1: 'Self-hosted on your infra or private EU Cloud',
+				others: 'Locked into multi-tenant US SaaS cloud',
+				isAdvantage: true
+			}
+		],
 		points: [
 			{
 				title: 'No structure.',
@@ -130,6 +200,52 @@ export const en: LandingContent = {
 		],
 		closingHtml:
 			'encrypted1on1 replaces “a doc, if you remember” with a system: a fixed, thoughtfully-designed question set on both sides, automatic periodicity and reminder emails, goals that persist and carry forward across cycles with their full progress history, and a performance-review report that aggregates achievements and goal progress across any date range — generated client-side, from data the server never had the ability to read in the first place.'
+	},
+
+	architecture: {
+		heading: 'Cryptographic Architecture: Why Looking Is Impossible',
+		subhead:
+			'Security is rooted in cryptographic guarantees and mathematical proof, not vague promises in a privacy policy.',
+		steps: [
+			{
+				stepNumber: '1',
+				actor: 'Employee Browser',
+				action: 'Key Derivation & Encryption',
+				detail:
+					'Session keys derived via Argon2id & X25519. All responses and notes are encrypted locally before touching the network.',
+				badge: 'Client-Side'
+			},
+			{
+				stepNumber: '2',
+				actor: 'Server & Database',
+				action: 'Zero-Knowledge Storage',
+				detail:
+					'The server only receives and stores opaque ciphertext blobs. Operators and DBAs have zero ability to decrypt.',
+				badge: 'Zero-Knowledge'
+			},
+			{
+				stepNumber: '3',
+				actor: 'Manager Browser',
+				action: 'Authorized Decryption',
+				detail:
+					'Only the designated 1:1 counterparty with their verified private key can decrypt and read the notes.',
+				badge: 'Strictly 1:1'
+			}
+		],
+		guaranteeTitle: 'Guarantees That Survive Company Shutdowns',
+		guaranteeTextHtml:
+			'Even in the event of complete server compromise, an attacker obtains nothing but pseudorandom bytes. Every line of code is open source and auditable on GitHub.'
+	},
+
+	quickstart: {
+		heading: 'Deploy On-Premises in 2 Minutes',
+		subhead:
+			'A single self-contained container, zero external SaaS dependencies, and full control over your organization’s sensitive data.',
+		command: 'docker run -d -p 8080:8080 --name e1o1 ghcr.io/aleksejs1/encrypted1on1:latest',
+		copyButtonText: 'Copy command',
+		copiedNotice: 'Command copied to clipboard!',
+		docsLinkText: 'View Docker & Kubernetes Deployment Guide →',
+		note: 'AGPLv3 • Unlimited team members • Zero tracking or telemetry'
 	},
 
 	privacy: {
@@ -159,6 +275,15 @@ export const en: LandingContent = {
 			answer2Html:
 				'<strong>And practically, this isn’t a dead end.</strong> Every 1:1 is readable by exactly its two participants, independently — never through a single shared company key. If an investigation involves one participant, the content remains available through the other one, the same way it would if the same conversation had happened on paper or in a personal notebook: legal process can compel a <em>person</em> to produce what they have. It was just never something a <em>platform</em> could hand over on its own, which is the entire point.'
 		}
+	},
+
+	finalCta: {
+		heading: 'Start Running High-Leverage, Verifiably Private 1:1s',
+		subhead:
+			'Explore the full product in our live interactive demo, or spin up an instance inside your own infrastructure in minutes.',
+		ctaTryDemo: 'Try the live demo',
+		ctaGetStarted: 'Create workspace',
+		ctaGithub: 'View on GitHub'
 	},
 
 	pricing: {
