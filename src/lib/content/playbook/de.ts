@@ -602,5 +602,315 @@ export const playbookItemsDe: PlaybookItem[] = [
 		],
 		keyTakeaway:
 			'Skip-Levels dienen nicht der Kontrolle von Teamleitern, sondern der Schärfung der organisatorischen Wahrnehmung. Eine gesunde Kultur wächst dort, wo Führungskräfte direkt auf die Stimmen jener hören, die mit ihren Händen die Systeme der Zukunft bauen.'
+	},
+	{
+		slug: 'manager-playbook',
+		title: 'Das Manager-Playbook: Wirksame 1:1-Gespräche führen',
+		subtitle:
+			'Mindset, 15-Minuten-Vorbereitungs-Checkliste, aktives Zuhören, das SBI-Feedbackmodell und echtes Sponsoring.',
+		category: 'leadership',
+		readTime: '8 Min. Lesezeit',
+		cadence: 'Zweiwöchentliche Routine (Vorbereitungs- und Gesprächsroutine)',
+		duration: '30–45 Minuten',
+		targetAudience: 'Engineering Manager, neue Teamleiter & Direktoren',
+		summaryHtml:
+			'Der maßgebliche Praxisleitfaden für Führungskräfte in der Softwareentwicklung. Vollziehen Sie den Wandel von der Statuskontrolle zum wirksamen Multiplikator: aktives Zuhören, Kontextanalyse vor dem Termin, konstruktives SBI-Feedback und 24-Stunden-Erfolge.',
+		whyItMattersHtml:
+			'<p><strong>Vom Kontrollorgan zum Multiplikator:</strong> Wenn Sie neu in einer Führungsrolle sind, ist die größte Versuchung, 1:1-Gespräche für Statusabfragen zu nutzen. Widerstehen Sie diesem Impuls entschlossen. Aufgaben gehören in Jira oder GitHub; im 1:1 geht es ausschließlich um Energie, systemische Hindernisse und strategische Ausrichtung.</p><p><strong>Die Andy-Grove-Hebelwirkung:</strong> In <em>High Output Management</em> wies Andy Grove nach, dass 90 Minuten gezielte 1:1-Zeit die Arbeitsleistung eines Entwicklers für 80 Stunden zwischen den Zyklen verbessert (>50-facher ROI). Ihre Aufgabe ist nicht die Überwachung, sondern das Ausräumen von Hindernissen, die Ihr Team bremsen.</p><p><strong>Die 80/20-Zuhörformel:</strong> Spricht die Führungskraft 70 % der Zeit, ist es ein Vortrag, keine Partnerschaft. Der Mitarbeiter sollte rund 80 % der Zeit sprechen. Ihre Werkzeuge sind offene Fragen, bewusstes Schweigen und Notizen.</p><p><strong>Kontinuität & Vertrauen:</strong> Im Gespräch gemachte und bis Montag vergessene Zusagen erzeugen Zynismus. Wahre Glaubwürdigkeit entsteht, wenn Vereinbarungen über Zyklen hinweg bestehen bleiben und offene Punkte nachverfolgt werden, bis sie gelöst sind.</p>',
+		preparationHtml:
+			'<p><strong>Schritt 1: Kontext prüfen (10–15 Min. vorher):</strong> Betrachten Sie operative Signale der letzten zwei Wochen ohne Mikromanagement. Lag ein Pull Request 5 Tage im Review? Gab es Commits nach 22:00 Uhr oder am Wochenende? Gab es fordernde On-Call-Einsätze? Nutzen Sie diese Fakten für Empathie, nicht für Vorwürfe.</p><p><strong>Schritt 2: Workflow in encrypted1on1:</strong><br>1. <em>Sparklines analysieren:</em> Öffnen Sie die Anketa des Paares und prüfen Sie die Entwicklung von Stimmung und Arbeitslast.<br>2. <em>Antworten des Mitarbeiters zuerst lesen:</em> Achten Sie auf Gefühlstags, Reibungspunkte unter „Was schwieriger ist als nötig“ und Themen für die Diskussion.<br>3. <em>Manager-Seite ausfüllen:</em> Konstruktives Feedback geben, Teamkontext vermitteln, konkrete Unterstützung beim Entblockieren anbieten und mindestens einen unaufgeforderten Erfolg würdigen.<br>4. <em>Eigene Seite veröffentlichen:</em> Beide Seiten werden synchron sichtbar, bevor der Anruf startet.<br>5. <em>Private Notizen nutzen:</em> Nutzen Sie die verschlüsselte private Notizenspalte für Coaching-Ideen, vertraulichen Kontext und Gehaltsüberlegungen, die für Dritte unsichtbar bleiben.</p>',
+		agenda: [
+			{
+				title: 'Säule 1: Energiepuls & Menschlicher Kontakt (5–7 Min.)',
+				durationMinutes: 7,
+				description:
+					'Energielevel und emotionale Bandbreite erfassen, bevor Arbeitsinhalte besprochen werden.',
+				questions: [
+					'Wie war dein Energielevel in diesem Sprint auf einer Skala von 1 bis 5? Was gab dir Kraft, was hat dich erschöpft?',
+					'Welche Aufgabe fühlte sich nach echtem Fortschritt an und welche nach unnötiger Bürokratie?'
+				]
+			},
+			{
+				title: 'Säule 2: Blockaden & Systemische Reibung (15 Min.)',
+				durationMinutes: 15,
+				description:
+					'Reibungspunkte aufdecken, die die Auslieferungsgeschwindigkeit und Moral belasten.',
+				questions: [
+					'Wenn du einen Zauberstab hättest und ein Tool, einen Prozess oder ein Meeting dieser Woche abschaffen könntest: Was wäre das?',
+					'An welcher Stelle stockt die Zusammenarbeit zwischen unserem Team und anderen Teams derzeit?',
+					'Gibt es einen Teil unserer Codebasis oder Infrastruktur, den anzufassen sich das Team scheut?'
+				]
+			},
+			{
+				title: 'Säule 3: Strategische Klarheit & Kontext (10 Min.)',
+				durationMinutes: 10,
+				description: 'Die tägliche Entwicklungsarbeit mit den übergeordneten Zielen verknüpfen.',
+				questions: [
+					'Ist dir klar, warum unser aktueller Meilenstein für das Unternehmen wichtig ist, oder wirkt es wie Arbeit im Dunkeln?',
+					'Gab es in letzter Zeit Entscheidungen der Unternehmensleitung, die verwirrend oder unlogisch wirkten?'
+				]
+			},
+			{
+				title: 'Säule 4: Konstruktives SBI-Feedback & Vereinbarungen (10 Min.)',
+				durationMinutes: 10,
+				description:
+					'Konkrete Verhaltensbeobachtungen teilen und bilaterale Maßnahmen vereinbaren.',
+				questions: [
+					'Nach dem SBI-Modell (Situation–Verhalten–Wirkung): Welche konkrete Beobachtung wollen wir für die Zukunft kalibrieren?',
+					'Was sollte ich als dein Lead beginnen, beenden oder beibehalten, um dich besser zu unterstützen?',
+					'Welche 1–2 Verbindlichkeiten halten wir unter Vereinbarungen für den nächsten Zyklus fest?'
+				]
+			}
+		],
+		antiPatterns: [
+			{
+				mistake: '„Ich habe nichts, du hast nichts – sagen wir es ab“',
+				whyBad:
+					'Zerstört die Gewohnheit psychologischer Sicherheit. Probleme schwelen im Verborgenen, bis plötzlich eine Kündigung auf dem Tisch liegt.',
+				betterAlternative:
+					'Gibt es keine dringenden Tickets, wechseln Sie sofort zu Karrierepfaden, technischen Schulden, Teamkultur oder Coaching.'
+			},
+			{
+				mistake: 'Der abgetauchte Manager (Vergessene Zusagen)',
+				whyBad:
+					'Wenn Vereinbarungen im Nichts verpuffen, folgern Mitarbeiter, dass das Wort der Führungskraft wertlos ist.',
+				betterAlternative:
+					'Halten Sie Zusagen in den Vereinbarungen fest. encrypted1on1 übernimmt offene Punkte automatisch in den Folgezyklus.'
+			},
+			{
+				mistake: 'Videoaufzeichnung des 1:1-Gesprächs',
+				whyBad:
+					'Löst sofortige Selbstzensur aus. Niemand teilt verletzliche Gedanken, wenn ein roter Aufnahme-Punkt blinkt.',
+				betterAlternative:
+					'Zeichnen Sie 1:1s niemals auf. Verlassen Sie sich ausschließlich auf clientseitig Ende-zu-Ende verschlüsselte Notizen in encrypted1on1.'
+			},
+			{
+				mistake: 'Unüberlegte Zusagen zu Beförderungen oder Gehalt',
+				whyBad:
+					'Titel oder Gehaltssprünge vor der Abstimmung mit HR und Budget zuzusagen, zerstört bei einer Absage die Glaubwürdigkeit völlig.',
+				betterAlternative:
+					'Gehen Sie die objektive Kompetenzmatrix gemeinsam durch, analysieren Sie Lücken transparent und sichern Sie offene Fürsprache zu.'
+			}
+		],
+		followUpHtml:
+			'<p><strong>1. 1–3 Vereinbarungen festhalten:</strong> Notieren Sie gemeinsame Maßnahmen im Bereich Vereinbarungen. Das sind taktische Aufgaben für einen Zyklus mit klarer Zuständigkeit.</p><p><strong>2. Entwicklungsziele aktualisieren:</strong> Fügen Sie aktiven Monatszielen einen Status-Checkpoint (Auf Kurs, Gefährdet, Blockiert) hinzu.</p><p><strong>3. Schnellen Erfolg in 24 Stunden liefern:</strong> Wählen Sie ein vom Mitarbeiter genanntes Hindernis (fehlende Lizenz, Zugang, Abmeldung von sinnlosem Meeting) und lösen Sie es binnen 24 Stunden. Das schafft sofortiges Vertrauen.</p><p><strong>4. Zyklus archivieren:</strong> Klicken Sie auf Archivieren, um die nächste Anketa automatisch anzulegen und ungelöste Punkte nahtlos mitzunehmen.</p>',
+		tips: [
+			'5-bis-7-Sekunden-Schweigen: Wenn der Mitarbeiter geendet hat, zählen Sie innerlich bis fünf – verletzliche Wahrheiten folgen in der Pause.',
+			'80/20-Regel: Der Mitarbeiter spricht 80 % der Zeit, die Führungskraft hört zu und stellt klärende Fragen zu 20 %.',
+			'Liefern Sie nach jedem 1:1 innerhalb von 24 Stunden einen greifbaren Entlastungserfolg, um die Hebelwirkung zu beweisen.',
+			'Formulieren Sie kritisches Feedback nach dem SBI-Modell (Situation, Verhalten, Wirkung) statt über pauschale Charaktereigenschaften.'
+		],
+		keyTakeaway:
+			'Ihr Ergebnis als Führungskraft ist das Ergebnis Ihrer Organisation. Ihre Aufgabe ist nicht Kontrolle, sondern das Beseitigen aller Hürden auf dem Weg Ihres Teams zu Höchstleistungen.'
+	},
+	{
+		slug: 'employee-playbook',
+		title: 'Das Mitarbeiter-Playbook: Das eigene 1:1 steuern',
+		subtitle:
+			'Wie Software-Entwickler, Designer und Teammitglieder Gesprächsängste abbauen, die Agenda bestimmen und die eigene Karriere voranbringen.',
+		category: 'foundations',
+		readTime: '7 Min. Lesezeit',
+		cadence: 'Kontinuierliches asynchrones Erfassen + zweiwöchentlicher Sync',
+		duration: '30–45 Minuten',
+		targetAudience: 'Software-Entwickler, Designer & direkte Mitarbeiter',
+		summaryHtml:
+			'Das 1:1 gehört Ihnen, nicht Ihrer Führungskraft. Erfahren Sie, wie Sie regelmäßige Check-ins in Ihr wirksamstes Instrument für Karriere und Zufriedenheit verwandeln: kontinuierliches Festhalten von Erfolgen, lösungsorientierte Problemformulierung, Gehaltsgespräche ohne Unbehagen und professioneller Umgang mit Feedback.',
+		whyItMattersHtml:
+			'<p><strong>Dieses Meeting gehört Ihnen:</strong> Ihre Führungskraft hat Sprint-Planungen, Standups und Architekturrunden, um über Projektergebnisse des Unternehmens zu sprechen. Dieser 30–45-Minuten-Slot ist der einzige regelmäßige Termin im Kalender, der allein Ihren Bedürfnissen, Herausforderungen und Ihrer Entwicklung gewidmet ist.</p><p><strong>Was ein 1:1 NICHT ist:</strong> Es ist kein verdecktes Leistungsverhör, kein Ticket-Statusbericht und keine Falle. Einzugestehen, dass eine Aufgabe schwierig ist oder Sie sich überlastet fühlen, ist ein Zeichen professioneller Reife, keine Schwäche.</p><p><strong>Was ein 1:1 IST:</strong> Es ist Ihr persönlicher Problemlöser, das Steuerrad Ihrer Karriere und Ihr Schutzventil gegen schleichendes Burnout.</p><p><strong>Der Preis des Schweigens:</strong> Führungskräfte können keine Gedanken lesen. Wer still 12-Stunden-Tage einlegt, um fehlerhafte CI oder unklare Vorgaben auszugleichen, signalisiert der Leitung, dass alles läuft – und bekommt noch mehr Aufgaben. Rechtzeitiges Ansprechen schützt Ihren Fokus.</p>',
+		preparationHtml:
+			'<p><strong>Schritt 1: Kontinuierliche Notizen zwischen den Terminen:</strong> Geraten Sie nicht 5 Minuten vor dem Call in Panik, zwei Wochen rekonstruieren zu müssen. Nutzen Sie encrypted1on1 während des Sprints:<br>• <em>Entwicklung:</em> Eine knifflige Debugging-Lösung gefunden oder ein spannendes RFC gelesen? Auf „Eintrag hinzufügen“ klicken.<br>• <em>Erfolge:</em> Ein Feature ausgeliefert, einen Bug behoben oder einen Kollegen eingearbeitet? Sofort notieren.<br>• <em>Besprechen:</em> Fragen und Themen direkt bei ihrem Auftreten eintragen.</p><p><strong>Schritt 2: 5-Minuten-Vorbereitung (24 Stunden vorher):</strong><br>1. Stimmung auswählen und Gefühlstags setzen (angespannt, überlastet, motiviert, gelassen).<br>2. Arbeitslast einstufen (Zu viel, Genau richtig, Zu wenig).<br>3. „Was schwieriger ist als nötig“ ausfüllen – langsame Builds, fehlende Zugänge oder Verzögerungen benennen.<br>4. Auf „Veröffentlichen“ klicken, damit Ihre Führungskraft Zeit hat, Unterstützung vorzubereiten.<br>5. Private Notizen für vertrauliche Erinnerungen nutzen, die für Lead und Admins unsichtbar bleiben.</p>',
+		agenda: [
+			{
+				title: 'Säule 1: Energielevel & Arbeitslast-Realität (5 Min.)',
+				durationMinutes: 5,
+				description: 'Signalisieren Sie Ihre Kapazität, Ihr Stresslevel und Ihre Verfassung.',
+				questions: [
+					'Meine Arbeitslast fühlt sich aktuell erdrückend / tragfähig / entspannt an – so wirkt sich das Tempo auf meine Fokuszeit aus.',
+					'Ich habe in der Anketa diese Gefühlstags markiert: Das ist der Hintergrund dazu.'
+				]
+			},
+			{
+				title: 'Säule 2: Reibung & Problemlösung: Problem + Auswirkung + Vorschlag (15 Min.)',
+				durationMinutes: 15,
+				description: 'Hindernisse konstruktiv im dreistufigen Modell formulieren.',
+				questions: [
+					'Problem: Unsere Staging-Umgebung fiel in diesem Sprint während der Releasetests dreimal aus.',
+					'Auswirkung: Das verzögerte die QA-Abnahme und erzeugte Stress im gesamten Frontend-Team.',
+					'Vorschlag: Können wir im nächsten Sprint 2 Tage reservieren, um das Staging-Deployment zu automatisieren? Ich brauche deine Hilfe bei der Priorisierung mit dem Produktmanagement.'
+				]
+			},
+			{
+				title: 'Säule 3: Karriererichtung & Kompetenzstufen (15 Min.)',
+				durationMinutes: 15,
+				description: 'Entwicklung, Fähigkeiten und Beförderungskriterien unbefangen besprechen.',
+				questions: [
+					'Ich möchte die Lücke zwischen meinen aktuellen Ergebnissen und den Erwartungen an einen Senior Engineer verstehen – können wir die Matrix durchgehen?',
+					'Mein Ziel für dieses Jahr ist mehr Systemarchitektur: Welche anstehende Initiative wäre ein gutes Entwicklungsprojekt für mich?',
+					'Auf welchen Bereich meiner technischen oder kommunikativen Fähigkeiten sollte ich mich als Nächstes konzentrieren?'
+				]
+			},
+			{
+				title: 'Säule 4: Gegenseitige Vereinbarungen (10 Min.)',
+				durationMinutes: 10,
+				description: 'Konkrete Maßnahmen für sich und die Führungskraft festhalten.',
+				questions: [
+					'Können wir diese 2 konkreten Punkte unter Vereinbarungen festhalten?',
+					'Aufgabe Lead: Mit dem Plattform-Team bezüglich CI-Runner-Kapazitäten sprechen.',
+					'Meine Aufgabe: Den RFC-Entwurf für das Datenbank-Verbindungspooling bis Freitag ausarbeiten.'
+				]
+			}
+		],
+		antiPatterns: [
+			{
+				mistake: 'Der stille Dulder (Leiden im Verborgenen)',
+				whyBad:
+					'Überarbeitung zu verschweigen führt zu chronischer Erschöpfung, Fehlern und Kündigung, ohne dem Lead eine Chance zur Hilfe zu geben.',
+				betterAlternative:
+					'Sagen Sie klar: „Meine Auslastung ist derzeit nicht tragbar. Lassen Sie uns besprechen, was wir verschieben, streichen oder delegieren können.“'
+			},
+			{
+				mistake: 'Hektik 5 Minuten vor dem Termin',
+				whyBad:
+					'Überstürztes Ausfüllen führt zu oberflächlichen Statusgesprächen statt echter Unterstützung.',
+				betterAlternative:
+					'Halten Sie Erfolge und Reibungspunkte kontinuierlich über den Sprint hinweg in encrypted1on1 fest.'
+			},
+			{
+				mistake: 'Vages Jammern ohne Auswirkung oder Lösung',
+				whyBad:
+					'Aussagen wie „alles ist chaotisch“ ohne konkrete Fakten lassen die Führungskraft ratlos zurück.',
+				betterAlternative:
+					'Nutzen Sie Problem + Auswirkung + Vorschlag: Sachverhalt benennen, Teameffekt aufzeigen und Lösung skizzieren.'
+			},
+			{
+				mistake: 'Die Gehaltsforderung aus dem Hinterhalt',
+				whyBad:
+					'Sofort 20 % mehr Gehalt zu fordern, drängt Führungskräfte in die Defensive und scheitert fast immer.',
+				betterAlternative:
+					'Verknüpfen Sie Gehalt mit objektiven Kriterien der Entwicklungsstufen und geplanten Review-Zyklen.'
+			}
+		],
+		followUpHtml:
+			'<p><strong>1. Vereinbarungen schrittweise abhaken:</strong> Haken Sie erledigte Aufgaben direkt in der offenen Anketa ab. Sie verantworten Ihre Punkte, Ihre Führungskraft die ihren.</p><p><strong>2. Leistungsbericht zum Performance Review exportieren:</strong> Öffnen Sie zur Review-Saison den Bereich <strong>Bericht</strong> in encrypted1on1. Entschlüsseln Sie Ihre verifizierten Einträge zu Erfolgen, Erkenntnissen und Zielen der letzten 6 Monate in ein strukturiertes Markdown-Dokument. Sie müssen Ihre Leistungen nie wieder aus dem Gedächtnis zusammenkratzen.</p>',
+		tips: [
+			'Nutzen Sie bei Problemen stets die Formel Problem + Auswirkung + Vorschlag.',
+			'Protokoll für Feedback-Empfänger: Durchatmen, zuhören um zu verstehen, danken und gemeinsame Lösung vereinbaren.',
+			'Verwenden Sie private Notizen für Entwürfe, Gehaltsgedanken oder persönliche Notizen.',
+			'Rechtzeitig Grenzen zu setzen und Unterstützung anzufordern ist ein Zeichen hoher Seniorität.'
+		],
+		keyTakeaway:
+			'Das 1:1 ist Ihr Gespräch. Wenn Sie das Steuer übernehmen – Erfolge festhalten, Hürden benennen und Sponsoring einfordern – steuern Sie Ihren beruflichen Weg selbstbestimmt.'
+	},
+	{
+		slug: 'handling-difficult-situations',
+		title: 'Schwierige Situationen meistern: Leitfaden für heikle 1:1s',
+		subtitle:
+			'Konkrete Gesprächsleitfäden und psychologische Modelle für den Umgang mit Spannungen, Tränen, kritischem Feedback und Gehaltsultimaten.',
+		category: 'difficult',
+		readTime: '9 Min. Lesezeit',
+		cadence: 'Situationsbezogen / Krisen & heikle Momente',
+		duration: '30–60 Minuten',
+		targetAudience:
+			'Führungskräfte & Mitarbeiter in emotionalen und organisatorischen Konfliktsituationen',
+		summaryHtml:
+			'Wenn es im 1:1 brenzlig wird, versagen Standardratschläge. Ein praxisnaher Leitfaden mit erprobten Dialogleitfäden für sechs heikle Szenarien: Mauern mit „Alles gut“, kritisches Leistungsfeedback, emotionale Erschöpfung und Tränen, abrupte Gehaltsforderungen, Mikromanagement-Vorwürfe und Zynismus gegenüber der Unternehmensstrategie.',
+		whyItMattersHtml:
+			'<p><strong>Die wahre Führungsprüfung:</strong> Ein 1:1 zu leiten ist einfach, wenn Sprints rundlaufen und Beförderungen anstehen. Die wahre Reife zeigt sich in unangenehmen Momenten: wenn ein Entwickler verstummt, jemand weint oder kritisches Leistungsfeedback unvermeidbar ist.</p><p><strong>Psychologische Sicherheit unter Druck:</strong> In schwierigen Momenten reagieren Menschen reflexartig mit Abwehr, Schuldzuweisungen oder Rückzug. Wenn Führungskräfte in Panik verfallen, schwindet das Vertrauen. Krisenbewältigung erfordert Empathie, Faktenbezug und die Kunst, Pausen auszuhalten.</p><p><strong>Vertraulichkeit als Schutzraum:</strong> Verletzlichkeit braucht absolute Diskretion. Heikle Gespräche dürfen unter keinen Umständen aufgezeichnet werden, und Notizen müssen streng clientseitig verschlüsselt bleiben.</p>',
+		preparationHtml:
+			'<p><strong>Vorbereitung auf heikle Gespräche:</strong><br>1. <em>Sparklines & Gefühlstags prüfen:</em> Trends der letzten Zyklen analysieren, um akute Belastungen von chronischem Burnout zu unterscheiden.<br>2. <em>An beobachtbaren Fakten ausrichten:</em> Verhalten von persönlichen Bewertungen trennen. Daten, konkrete PRs oder Vorfälle notieren.<br>3. <em>Private Notizen vorbereiten:</em> Nutzen Sie die private Notizenspalte in encrypted1on1 für Gesprächsanker und Hypothesen. Diagnose-Notizen niemals unbedacht teilen.<br>4. <em>Zeitpuffer einplanen:</em> Mindestens 15 Minuten Puffer nach dem Termin reservieren, um ein emotionales Gespräch nicht abrupt abbrechen zu müssen.</p>',
+		agenda: [
+			{
+				title: 'Szenario 1: Die Mauer des „Alles gut“ (10 Min.)',
+				durationMinutes: 10,
+				description:
+					'Umgang mit einsilbigen Antworten bei erkennbarem Leistungs- und Energieabfall.',
+				questions: [
+					'Leitfaden: „Ich höre dich sagen, dass alles gut ist. Aber in den letzten zwei Wochen fiel mir auf: Die Standups wirken gedrückt, und der Auth-Service-PR zieht sich ungewöhnlich lange.“',
+					'Leitfaden: „Ich spreche das nicht an, um dich zu bewerten, sondern um deinen Arbeitsfluss zu schützen. Wenn es so ruhig wird, deutet das meist auf versteckte Hürden oder Überlastung hin.“',
+					'Leitfaden: „Was war in diesem Sprint anstrengender als sonst? (Und dann 7 Sekunden lang schweigen).“'
+				]
+			},
+			{
+				title: 'Szenario 2: Kritisches Leistungsfeedback übermitteln (15 Min.)',
+				durationMinutes: 15,
+				description:
+					'Mängel in Codequalität oder schroffe Kommunikation nach dem SBI-Modell ansprechen.',
+				questions: [
+					'Situation: „Im Code-Review am Dienstag beim Payment-Gateway-Refactoring...“',
+					"Verhalten: „...als Jordan nach der Fallback-Logik fragte, lautete deine Antwort: 'Lies die Doku, ich habe keine Zeit für Grundlagen.'“",
+					'Wirkung: „...was dazu führte, dass Jordan sich scheut, Architekturfragen zu stellen, Reviews stocken und Spannungen im Team entstehen.“',
+					'Alternative: „Eine kooperative Review-Kultur ist genauso wichtig wie Liefertempo. Was ging in dem Moment in dir vor?“'
+				]
+			},
+			{
+				title: 'Szenario 3: Emotionale Erschöpfung & Tränen (10 Min.)',
+				durationMinutes: 10,
+				description: 'Einfühlsam Raum geben, wenn ein Teammitglied unter Belastung zusammenbricht.',
+				questions: [
+					'Leitfaden: „Nimm dir alle Zeit. Es gibt absolut keine Eile, und du musst dich für nichts entschuldigen. Wir arbeiten an komplexen Systemen und sind alle zuerst Menschen.“',
+					'Leitfaden: „Möchtest du 5 Minuten durchatmen, ein Glas Wasser holen und wiederkommen? Oder vertagen wir das Gespräch auf morgen? Was immer du brauchst, ist völlig in Ordnung.“',
+					'Regel: Den Termin niemals aufzeichnen. Konzentrieren Sie sich auf Zuhören und Sicherheit, nicht auf Sofortlösungen.'
+				]
+			},
+			{
+				title: 'Szenario 4: Ultimative Gehalts- oder Beförderungsforderungen (10 Min.)',
+				durationMinutes: 10,
+				description: 'Konstruktiv auf abrupte finanzielle Forderungen reagieren.',
+				questions: [
+					'Leitfaden: „Danke für deine Offenheit. Ich schätze deinen Ehrgeiz sehr und möchte, dass dein Einsatz fair honoriert wird.“',
+					'Leitfaden: „Ich kann heute kein sofortiges Ja zu Gehalt oder Titel geben, da Einstufungen an unsere Matrix und Budgetentscheidungen gebunden sind. Was ich dir verspreche, ist volle Transparenz.“',
+					'Leitfaden: „Lass uns die Senior-Matrix gemeinsam öffnen, deine Beiträge abgleichen, Entwicklungsfelder definieren und damit in die nächste Bewertungsrunde gehen.“'
+				]
+			},
+			{
+				title: 'Szenario 5 & 6: Mikromanagement-Vorwürfe & Zynismus (10 Min.)',
+				durationMinutes: 10,
+				description: 'Autonomie abstimmen und Frustration über Strategieentscheidungen auffangen.',
+				questions: [
+					'Mikromanagement: „Danke für deine Offenheit. Wenn meine Nachfragen als Mikromanagement ankommen, hakt unsere Kommunikation. Welcher Update-Rhythmus gibt mir den Überblick, um dich abzusichern, ohne dich kontrolliert fühlen zu lassen?“',
+					'Zynismus: „Ich verstehe deinen Ärger über den Kurswechsel nach all der Arbeit. Hier ist der Marktkontext hinter dieser Entscheidung... Welche Architekturrisiken siehst du und wie federn wir sie ab?“'
+				]
+			}
+		],
+		antiPatterns: [
+			{
+				mistake: 'Das „Lob-Sandwich“ (Lob–Kritik–Lob)',
+				whyBad:
+					'Verwässert den Kern. Der Mitarbeiter glaubt, alles sei bestens, während die Führungskraft meint, ernste Kritik geübt zu haben.',
+				betterAlternative:
+					'Geben Sie direktes, respektvolles SBI-Feedback. Seien Sie präzise und partnerschaftlich.'
+			},
+			{
+				mistake: 'Defensiver Gegenangriff',
+				whyBad:
+					'Gereizt auf Kritik an Mikromanagement oder Firmenstrategie zu reagieren, zerstört psychologische Sicherheit nachhaltig.',
+				betterAlternative:
+					'Bedanken Sie sich für die Offenheit, erkennen Sie das Unbehagen an und laden Sie zur gemeinsamen Problemlösung ein.'
+			},
+			{
+				mistake: 'Halsüberkopf-Zusagen zur Beruhigung',
+				whyBad:
+					'Beförderungen oder Budget aus Verlegenheit zuzusagen, endet im Vertrauensbruch, wenn die Geschäftsleitung ablehnt.',
+				betterAlternative:
+					'Empathisch zuhören und Prozesstransparenz bieten, aber niemals unabgestimmte Garantien abgeben.'
+			},
+			{
+				mistake: 'Gefühle herunterspielen („Nicht weinen, ist doch nicht schlimm!“)',
+				whyBad:
+					'Macht die emotionale Realität der Person zunichte und verstärkt das Gefühl der Scham.',
+				betterAlternative:
+					'Eine Pause anbieten, Gefühle als menschlich anerkennen und die Möglichkeit bieten, den Termin zu vertagen.'
+			}
+		],
+		followUpHtml:
+			'<p><strong>1. Sofortiges Entblockieren in 24 Stunden:</strong> Zeigte das Gespräch systemischen Burnout oder Tooling-Frust, leiten Sie sofort konkrete Schritte ein. Das beweist, dass Offenheit sicher ist und gewürdigt wird.</p><p><strong>2. Sachlich in privaten Notizen dokumentieren:</strong> Halten Sie Fakten und vereinbarte Unterstützung in verschlüsselten privaten Notizen fest. Vertrauliche persönliche Details niemals auf unverschlüsselten Firmenlaufwerken speichern.</p><p><strong>3. Kurzen Check-in nach 3–5 Tagen ansetzen:</strong> Nach emotional fordernden Gesprächen fängt ein 15-minütiger kurzer Kaffee-Sync das Wohlbefinden auf und festigt die Sicherheit im Team.</p>',
+		tips: [
+			'Nach einer tiefen Diagnosefrage innerlich bis 7 zählen: Ehrliche Gedanken brauchen Stille, um ausgesprochen zu werden.',
+			'Entwicklungs- und Coachinggespräche stets von Gehaltsverhandlungen trennen.',
+			'Verstehen Sie Abwehrverhalten fast immer als Schutzschild gegen Überlastung oder unklare Vorgaben.',
+			'Nutzen Sie die Vorlage support_checkin in encrypted1on1, sobald Symptome von Burnout sichtbar werden.'
+		],
+		keyTakeaway:
+			'Schwierige Gespräche beschädigen Beziehungen nicht – ein unreifer Umgang damit tut es. Mit Empathie, ruhigem Zuhören und garantierter Privatsphäre geführt, werden heikle Momente zum festen Fundament vertrauensvoller Teams.'
 	}
 ];

@@ -59,7 +59,8 @@ export const fr: LandingContent = {
 			"C'est l'écart que nous avons décidé de combler pour de bon, pas seulement pour notre propre organisation, mais comme quelque chose que n'importe qui dans la même situation pourrait vérifier par soi-même plutôt que devoir le croire sur parole. Si une plateforme de 1 à 1 doit conserver certaines des conversations les plus sensibles d'une entreprise, « nous promettons de ne pas regarder » n'est pas une garantie assez solide. La seule garantie assez solide est celle où regarder <em>n'est pas possible</em> — où l'exploitant, l'équipe informatique, l'entreprise qui héberge le service, et même une compromission totale du serveur, n'obtiennent rien d'autre que du texte chiffré. Ce n'est pas une politique. C'est du chiffrement de bout en bout, fait correctement, avec un code source ouvert pour que chacun puisse vérifier que cette affirmation est bien exacte.",
 			'encrypted1on1 est le résultat de tout cela.'
 		],
-		illustrationAlt: "Entretien individuel confidentiel sous une arche protectrice avec symboles de chiffrement de bout en bout"
+		illustrationAlt:
+			'Entretien individuel confidentiel sous une arche protectrice avec symboles de chiffrement de bout en bout'
 	},
 
 	methodology: {
@@ -85,7 +86,8 @@ export const fr: LandingContent = {
 		],
 		closingHtml:
 			"Le constat qui se dégage de l'ensemble de ces travaux est cohérent : la valeur ne réside pas dans le fait de <em>tenir des réunions</em>. Elle réside dans le fait de les tenir <strong>régulièrement, de façon structurée et avec continuité</strong> — en suivant ce qui a été dit la dernière fois, les engagements pris, les objectifs encore ouverts. Cette continuité est exactement ce qui se perd dès que les 1 à 1 vivent dans des documents épars, dans la mémoire de chacun, ou dans l'outil qui se trouvait ouvert cette semaine-là.",
-		illustrationAlt: "Collaborateur et manager gravissant des étapes vers leurs objectifs avec levier d'efficacité"
+		illustrationAlt:
+			"Collaborateur et manager gravissant des étapes vers leurs objectifs avec levier d'efficacité"
 	},
 
 	comparison: {

@@ -605,5 +605,313 @@ export const playbookItemsEs: PlaybookItem[] = [
 		],
 		keyTakeaway:
 			'Las reuniones skip-level no existen para fiscalizar a los mánagers, sino para aportar claridad estratégica y eliminar la fricción organizacional. Una cultura técnica sólida florece cuando la dirección escucha de primera mano a los ingenieros que construyen el futuro con sus propias manos.'
+	},
+	{
+		slug: 'manager-playbook',
+		title: 'El Playbook del Manager: Liderando 1 a 1 de Alto Impacto',
+		subtitle:
+			'Cambio de mentalidad, lista de preparación de 15 minutos, escucha activa, modelo de feedback SBI y patrocinio genuino.',
+		category: 'leadership',
+		readTime: '8 min de lectura',
+		cadence: 'Rutina quincenal (hábito recurrente de preparación y reunión)',
+		duration: '30–45 minutos',
+		targetAudience: 'Nuevos Team Leads, Engineering Managers y Directores',
+		summaryHtml:
+			'La guía definitiva para líderes de equipos técnicos. Pasa de ser un policía de estados a un multiplicador de impacto dominando la escucha activa, el análisis de contexto previo, el feedback constructivo SBI y victorias rápidas en 24 horas.',
+		whyItMattersHtml:
+			'<p><strong>De policía de estados a multiplicador:</strong> Al asumir el rol de líder, la mayor tentación es usar los 1 a 1 para preguntar en qué trabaja cada persona. Resiste ese impulso con fuerza. Las tareas pertenecen a Jira o GitHub; el 1 a 1 se enfoca exclusivamente en energía, bloqueos sistémicos y rumbo.</p><p><strong>La fórmula de apalancamiento de Andy Grove:</strong> En <em>High Output Management</em>, Andy Grove demostró que 90 minutos de 1 a 1 reflexivo mejoran el rendimiento de un ingeniero durante 80 horas entre ciclos (>50x de retorno). Tu función no es vigilar, sino eliminar todo obstáculo que limite el potencial de tu equipo.</p><p><strong>La regla de escucha 80/20:</strong> Si el manager habla el 70 % del tiempo, es una clase, no una conversación. El colaborador debe hablar el 80 % del tiempo. Tus herramientas son preguntas abiertas, pausas conscientes y notas precisas.</p><p><strong>Continuidad y confianza:</strong> Las promesas hechas en una llamada y olvidadas el lunes generan cinismo. La credibilidad se construye cuando los acuerdos trascienden entre ciclos y los bloqueos se rastrean hasta cerrarse.</p>',
+		preparationHtml:
+			'<p><strong>Paso 1: Análisis de contexto (10–15 min antes):</strong> Observa las señales de las últimas dos semanas sin microgestión. ¿Una pull request estuvo 5 días esperando revisión? ¿Hubo commits después de las 22:00 o en fin de semana? ¿Hubo incidentes nocturnos exigentes? Usa los hechos para calibrar la empatía, no para acusar.</p><p><strong>Paso 2: Flujo en encrypted1on1:</strong><br>1. <em>Revisar gráficos de tendencia:</em> Abre la Anketa del par y evalúa la evolución de ánimo y carga laboral.<br>2. <em>Leer primero las respuestas del colaborador:</em> Revisa sus etiquetas de sentimientos, la sección «Qué es más difícil de lo que debería» y temas a tratar.<br>3. <em>Completar la sección del manager:</em> Brinda feedback objetivo, comparte contexto general, ofrece apoyo concreto de desbloqueo y destaca al menos un logro observado por ti.<br>4. <em>Publicar tu lado:</em> Ambas partes se vuelven visibles a la vez antes de iniciar la llamada.<br>5. <em>Notas privadas:</em> Utiliza la columna de notas privadas cifradas para ideas de coaching, contexto confidencial y aspectos salariales invisibles para terceros.</p>',
+		agenda: [
+			{
+				title: 'Pilar 1: Pulso de energía y conexión humana (5–7 min)',
+				durationMinutes: 7,
+				description:
+					'Evaluar el nivel de batería y la disposición emocional antes de temas laborales.',
+				questions: [
+					'En una escala del 1 al 5, ¿cuál fue tu nivel de energía en este sprint? ¿Qué te recargó y qué te agotó?',
+					'¿Qué tarea sentiste como avance real y cuál como pura fricción burocrática?'
+				]
+			},
+			{
+				title: 'Pilar 2: Bloqueos y fricción sistémica (15 min)',
+				durationMinutes: 15,
+				description: 'Identificar trabas que frenan la velocidad de entrega y la moral.',
+				questions: [
+					'Si tuvieras una varita mágica para eliminar una herramienta, proceso o reunión de esta semana, ¿cuál sería?',
+					'¿En qué punto se atasca el trabajo entre nosotros y otros equipos?',
+					'¿Hay alguna parte de nuestro código o infraestructura que el equipo tema tocar?'
+				]
+			},
+			{
+				title: 'Pilar 3: Claridad estratégica y contexto (10 min)',
+				durationMinutes: 10,
+				description: 'Conectar el desarrollo diario con el propósito general del producto.',
+				questions: [
+					'¿Tienes claro por qué este objetivo del sprint importa para la compañía, o sientes que avanzas a ciegas?',
+					'¿Hubo decisiones recientes de la dirección que te hayan parecido confusas o difíciles de comprender?'
+				]
+			},
+			{
+				title: 'Pilar 4: Feedback constructivo SBI y compromisos (10 min)',
+				durationMinutes: 10,
+				description: 'Compartir observaciones concretas de conducta y pactar acciones mutuas.',
+				questions: [
+					'Bajo el modelo SBI (Situación–Conducta–Impacto): ¿qué comportamiento concreto debemos calibrar?',
+					'¿Qué debería yo comenzar, dejar o seguir haciendo como tu líder para apoyarte mejor?',
+					'¿Cuáles son los 1–2 compromisos que dejamos registrados en Conclusiones para el próximo ciclo?'
+				]
+			}
+		],
+		antiPatterns: [
+			{
+				mistake: '«Yo no tengo nada, tú no tienes nada: cancelemos»',
+				whyBad:
+					'Destruye el hábito de la seguridad psicológica. Los problemas crecen en silencio hasta que aparece una renuncia inesperada.',
+				betterAlternative:
+					'Si no hay temas urgentes, habla de desarrollo profesional, deuda técnica, clima del equipo o mentoría.'
+			},
+			{
+				mistake: 'El líder fantasma (Promesas olvidadas)',
+				whyBad:
+					'El colaborador siente que las palabras del manager no valen nada y deja de plantear dificultades.',
+				betterAlternative:
+					'Registra los compromisos en Conclusiones. encrypted1on1 traslada automáticamente lo pendiente al próximo ciclo.'
+			},
+			{
+				mistake: 'Grabar la videollamada del 1 a 1',
+				whyBad:
+					'Activa la autocensura de inmediato. Nadie comparte inquietudes reales con un indicador rojo de grabación.',
+				betterAlternative:
+					'Nunca grabes los 1 a 1. Confía plenamente en notas cifradas en tu navegador mediante encrypted1on1.'
+			},
+			{
+				mistake: 'Prometer aumentos o ascensos sin respaldo',
+				whyBad:
+					'Prometer mejoras salariales antes de la aprobación de RRHH y presupuesto destruye tu credibilidad si son rechazadas.',
+				betterAlternative:
+					'Revisen juntos la matriz de competencias, identifiquen brechas con claridad y comprométete a defender su caso.'
+			}
+		],
+		followUpHtml:
+			'<p><strong>1. Registrar 1–3 Conclusiones:</strong> Anota acciones mutuas en la sección Conclusiones. Son tareas tácticas de un solo ciclo con responsable asignado.</p><p><strong>2. Actualizar Objetivos:</strong> Agrega un punto de control con estado (En curso, En riesgo, Bloqueado) a las metas de mediano plazo.</p><p><strong>3. Entregar una victoria rápida en 24 horas:</strong> Elige un bloqueo mencionado por el colaborador (una licencia, un acceso, liberarlo de una reunión inútil) y resuélvelo en 24 horas. Genera confianza instantánea.</p><p><strong>4. Archivar ciclo:</strong> Haz clic en Archivar para crear la siguiente Anketa trasladando automáticamente temas pendientes y objetivos activos.</p>',
+		tips: [
+			'Regla de la pausa de 5 a 7 segundos: al terminar de hablar el colaborador, espera en silencio antes de responder; las verdades complejas surgen en la pausa.',
+			'Regla 80/20: el colaborador habla el 80 % del tiempo; el manager escucha y formula preguntas clarificadoras el 20 %.',
+			'Aporta una solución visible dentro de las 24 horas posteriores para validar la utilidad real del 1 a 1.',
+			'Formula el feedback difícil según el modelo SBI (Situación, Conducta, Impacto) en lugar de juicios de personalidad.'
+		],
+		keyTakeaway:
+			'Tu resultado como líder es el resultado de tu equipo. Tu función no es controlar el trabajo, sino despejar el camino para que alcancen su mayor nivel.'
+	},
+	{
+		slug: 'employee-playbook',
+		title: 'El Playbook del Colaborador: Dueño de tu 1 a 1',
+		subtitle:
+			'Cómo ingenieros, diseñadores y miembros del equipo pueden vencer la ansiedad, dirigir la agenda e impulsar su carrera.',
+		category: 'foundations',
+		readTime: '7 min de lectura',
+		cadence: 'Registro asíncrono continuo + sincronización quincenal',
+		duration: '30–45 minutos',
+		targetAudience: 'Ingenieros de Software, Diseñadores y Colaboradores',
+		summaryHtml:
+			'La reunión 1 a 1 te pertenece a ti, no a tu responsable. Descubre cómo convertir tus sincronizaciones habituales en la palanca más potente para tu carrera y bienestar: registro continuo de logros, planteamiento constructivo de problemas, conversaciones salariales naturales y recepción de feedback.',
+		whyItMattersHtml:
+			'<p><strong>Esta reunión te pertenece:</strong> Tu responsable dispone de planificaciones de sprint, standups y revisiones de diseño para tratar los entregables de la empresa. Este espacio de 30–45 minutos es el único del calendario pensado exclusivamente para tus necesidades, retos y trayectoria.</p><p><strong>Lo que un 1 a 1 NO es:</strong> No es un examen de rendimiento encubierto, no es un reporte de tickets de Jira y no es una trampa. Reconocer que una tarea es difícil o que estás saturado es muestra de madurez profesional, no de incapacidad.</p><p><strong>Lo que un 1 a 1 SÍ es:</strong> Es tu motor de desbloqueo personal, el timón de tu crecimiento y tu válvula de escape frente al desgaste crónico.</p><p><strong>El coste del silencio:</strong> Los managers no leen la mente. Si trabajas jornadas de 12 horas para compensar problemas de CI o requerimientos imprecisos, pensarán que todo marcha bien y asignarán más carga. Hablar a tiempo protege tu salud y rendimiento.</p>',
+		preparationHtml:
+			'<p><strong>Paso 1: Registro continuo entre reuniones:</strong> No intentes recordar dos semanas de trabajo 5 minutos antes de la llamada. Aprovecha encrypted1on1 a lo largo del sprint:<br>• <em>Crecimiento:</em> ¿Descubriste un truco útil de debugging o leíste un buen RFC? Pulsa «Añadir entrada».<br>• <em>Logros:</em> ¿Publicaste una función compleja, solucionaste un fallo difícil o ayudaste a un compañero? Anótalo al instante.<br>• <em>A tratar:</em> Apunta dudas y temas según surjan durante la semana.</p><p><strong>Paso 2: Puesta a punto en 5 minutos (24 horas antes):</strong><br>1. Selecciona tu estado de ánimo y marca etiquetas de sentimientos (ansiedad, sobrecarga, motivación, calma).<br>2. Evalúa tu carga de trabajo (Excesiva, Adecuada, Escasa).<br>3. Completa «Qué es más difícil de lo que debería» (Fricción): menciona builds lentas, permisos demorados o dependencias bloqueadas.<br>4. Pulsa «Publicar» para que tu líder pueda preparar soluciones.<br>5. Usa notas privadas para apuntes personales invisibles para tu manager y administradores.</p>',
+		agenda: [
+			{
+				title: 'Pilar 1: Nivel de batería y realidad de la carga (5 min)',
+				durationMinutes: 5,
+				description: 'Transmitir tu capacidad actual, nivel de estrés y estado de ánimo.',
+				questions: [
+					'Mi carga de trabajo se siente actualmente pesada / sostenible / ligera: así afecta el ritmo a mis horas de concentración.',
+					'Marqué estas etiquetas de sentimientos en la encuesta: este es el contexto de fondo.'
+				]
+			},
+			{
+				title: 'Pilar 2: Fricción y desbloqueo: Problema + Impacto + Propuesta (15 min)',
+				durationMinutes: 15,
+				description: 'Exponer obstáculos de forma constructiva con el método de tres pasos.',
+				questions: [
+					'Problema: Nuestro entorno de pruebas se cayó 3 veces este sprint durante las pruebas de release.',
+					'Impacto: Retrasó la validación de QA y generó tensión en todo el equipo de frontend.',
+					'Propuesta: ¿Podemos asignar 2 días el próximo sprint a automatizar los despliegues de staging? Necesito tu apoyo para priorizarlo con Producto.'
+				]
+			},
+			{
+				title: 'Pilar 3: Rumbo profesional y escala de competencias (15 min)',
+				durationMinutes: 15,
+				description: 'Tratar progreso, habilidades y expectativas de nivel con total naturalidad.',
+				questions: [
+					'Quiero entender la brecha entre mis entregas actuales y lo que se espera de un perfil Senior: ¿revisamos juntos la matriz?',
+					'Mi objetivo de este año es involucrarme más en arquitectura técnica: ¿qué iniciativa próxima sería un buen reto para mí?',
+					'¿Qué aspecto técnico o de comunicación consideras que debería pulir prioritariamente?'
+				]
+			},
+			{
+				title: 'Pilar 4: Acuerdos compartidos (10 min)',
+				durationMinutes: 10,
+				description: 'Fijar pasos concretos tanto para ti como para tu manager.',
+				questions: [
+					'¿Podemos registrar estas 2 acciones específicas en Conclusiones?',
+					'Acción del líder: Hablar con el equipo de infraestructura sobre capacidad de runners de CI.',
+					'Mi acción: Redactar la propuesta de RFC para el pool de conexiones de base de datos antes del viernes.'
+				]
+			}
+		],
+		antiPatterns: [
+			{
+				mistake: 'El mártir silencioso (Sufrir callado)',
+				whyBad:
+					'Callar el exceso de trabajo desemboca en fatiga crónica, errores y dimisión sin permitir que tu líder ayude.',
+				betterAlternative:
+					'Comunica claramente: «Mi carga actual no es viable. Decidamos qué podemos posponer, delegar o cancelar».'
+			},
+			{
+				mistake: 'Completar la encuesta 5 minutos antes',
+				whyBad:
+					'Apresurarse convierte la reunión en un simple repaso superficial sin soluciones reales.',
+				betterAlternative:
+					'Anota logros y fricciones de forma progresiva a lo largo del sprint en encrypted1on1.'
+			},
+			{
+				mistake: 'Quejas genéricas sin impacto ni propuesta',
+				whyBad:
+					'Decir «todo es un caos» sin detalles concretos impide que el manager pueda defender al equipo.',
+				betterAlternative:
+					'Aplica Problema + Impacto + Propuesta: expón el hecho, demuestra el coste para el equipo y plantea una solución.'
+			},
+			{
+				mistake: 'Exigencias salariales imprevistas',
+				whyBad:
+					'Exigir un aumento inmediato del 20 % coloca al manager a la defensiva y rara vez prospera.',
+				betterAlternative:
+					'Apóyate en la matriz de competencias, metas conseguidas y los periodos acordados de revisión.'
+			}
+		],
+		followUpHtml:
+			'<p><strong>1. Marcar compromisos a lo largo del sprint:</strong> Ve completando tus tareas en la Anketa abierta. Tú gestionas tus puntos y tu manager los suyos.</p><p><strong>2. Descargar el reporte de periodo para evaluaciones:</strong> Cuando llegue la evaluación semestral o anual, accede a <strong>Informe</strong> en encrypted1on1. Descifra el registro verificado de logros, aprendizajes y objetivos de los últimos 6 meses en un documento Markdown listo para usar. Nunca más tendrás que reconstruir tu trabajo de memoria.</p>',
+		tips: [
+			'Usa siempre la fórmula Problema + Impacto + Propuesta al señalar dificultades en procesos o herramientas.',
+			'Protocolo para recibir feedback: respira, escucha para comprender, agradece y pide colaboración en los pasos siguientes.',
+			'Aprovecha las notas privadas para borradores personales, metas salariales o reflexiones íntimas.',
+			'Marcar límites y solicitar apoyo a tiempo es señal inequívoca de alta madurez técnica.'
+		],
+		keyTakeaway:
+			'El 1 a 1 es tu reunión. Cuando tomas el mando —registrando éxitos, señalando fricciones y buscando patrocinio— diriges el rumbo de tu crecimiento profesional.'
+	},
+	{
+		slug: 'handling-difficult-situations',
+		title: 'Gestión de Situaciones Difíciles: Guiones para 1 a 1 Críticos',
+		subtitle:
+			'Guiones conversacionales exactos y marcos psicológicos para desescalar tensiones, lágrimas, feedback crítico y ultimátums.',
+		category: 'difficult',
+		readTime: '9 min de lectura',
+		cadence: 'Situacional / Momentos de crisis y alta tensión',
+		duration: '30–60 minutos',
+		targetAudience: 'Líderes y colaboradores gestionando fricciones emocionales y organizativas',
+		summaryHtml:
+			'Cuando las reuniones 1 a 1 se complican, los consejos genéricos no sirven. Una guía práctica con guiones contrastados para seis escenarios críticos: el muro del «todo bien», feedback de rendimiento severo, llanto y angustia emocional, demandas salariales inmediatas, acusaciones de microgestión y cinismo organizativo.',
+		whyItMattersHtml:
+			'<p><strong>La auténtica prueba de liderazgo:</strong> Gestionar un 1 a 1 es sencillo cuando los proyectos van sobre ruedas y hay promociones. El verdadero calibre de un líder se demuestra en situaciones difíciles: cuando alguien se encierra en sí mismo, rompe a llorar o requiere feedback riguroso sobre su rendimiento.</p><p><strong>Seguridad psicológica bajo presión:</strong> Ante momentos críticos, la respuesta humana habitual es la defensa, la culpa o la evasión. Cuando los líderes pierden la calma, la confianza desaparece. Superar estos momentos exige empatía profunda, apego a los hechos y saber sostener las pausas.</p><p><strong>Confidencialidad como refugio seguro:</strong> La sinceridad emocional no puede florecer sin certeza absoluta de privacidad. Las conversaciones complejas nunca deben grabarse y las notas deben permanecer cifradas en el dispositivo.</p>',
+		preparationHtml:
+			'<p><strong>Preparación previa para conversaciones complejas:</strong><br>1. <em>Revisar tendencias y estados emocionales:</em> Analiza el ánimo y la carga de los últimos ciclos para distinguir entre un pico puntual y un agotamiento acumulado.<br>2. <em>Basarse en hechos observables:</em> Separa conductas tangibles de juicios personales. Anota fechas, PRs o eventos concretos.<br>3. <em>Preparar notas privadas:</em> Utiliza las notas privadas cifradas en encrypted1on1 para estructurar ideas e hipótesis. Jamás compartas apuntes de diagnóstico íntimo.<br>4. <em>Dejar margen en el calendario:</em> Reserva al menos 15 minutos libres tras la reunión para evitar cortar bruscamente una conversación sensible.</p>',
+		agenda: [
+			{
+				title: 'Escenario 1: El muro del «Todo bien» (10 min)',
+				durationMinutes: 10,
+				description:
+					'Gestionar monosílabos defensivos cuando el rendimiento y la energía caen a la vista.',
+				questions: [
+					'Guion: «Te escucho decir que todo va bien, pero he notado un cambio en las últimas dos semanas: los standups se sienten apagados y esa PR de Auth se percibe muy pesada».',
+					'Guion: «No comento esto para juzgarte ni presionarte. Mi labor es proteger tu ritmo. Cuando hay este silencio, suele haber un bloqueo oculto o exceso de carga».',
+					'Guion: «¿Qué aspecto puntual de este sprint te ha resultado más agotador de lo normal? (Y sostén 7 segundos de completo silencio)».'
+				]
+			},
+			{
+				title: 'Escenario 2: Transmitir feedback crítico de rendimiento (15 min)',
+				durationMinutes: 15,
+				description:
+					'Abordar deficiencias de calidad o comunicaciones cortantes aplicando el modelo SBI.',
+				questions: [
+					'Situación: «El martes, durante la revisión de código del refactor de pasarela de pago...»',
+					"Conducta: «...cuando Jordan preguntó por el flujo de fallback, tu respuesta fue: 'Lee la documentación, no tengo tiempo para explicar lo básico'».",
+					'Impacto: «...lo que provocó que Jordan dudara en hacer preguntas de arquitectura, ralentizó las revisiones y tensó al equipo».',
+					'Alternativa: «Cuidar la colaboración en las revisiones es tan vital como la velocidad de entrega. ¿Qué estaba sucediendo contigo en ese instante?»'
+				]
+			},
+			{
+				title: 'Escenario 3: Angustia emocional y llanto (10 min)',
+				durationMinutes: 10,
+				description: 'Ofrecer contención empática cuando alguien se desborda por estrés.',
+				questions: [
+					'Guion: «Tómate tu tiempo. No hay prisa alguna y no tienes nada por lo que disculparte. Trabajamos con sistemas complejos y exigentes, y ante todo somos personas».',
+					'Guion: «¿Prefieres tomarte 5 minutos, beber un vaso de agua y regresar, o aplazamos el resto para mañana? Lo que necesites está perfecto».',
+					'Regla: Nunca grabes la llamada. Céntrate en escuchar y brindar seguridad, no en resolver problemas técnicos de inmediato.'
+				]
+			},
+			{
+				title: 'Escenario 4: Demandas salariales o de ascenso inmediatas (10 min)',
+				durationMinutes: 10,
+				description: 'Responder con sensatez a un ultimátum económico o de cargo.',
+				questions: [
+					'Guion: «Agradezco tu franqueza sobre tus expectativas. Valoro mucho tu ambición y quiero que tu aportación se reconozca con justicia».',
+					'Guion: «No puedo darte un sí inmediato hoy sobre sueldo o puesto, ya que dependen de la matriz de niveles y aprobaciones de presupuesto. Lo que sí te prometo es transparencia total».',
+					'Guion: «Abramos la matriz del nivel Senior, comparemos tus logros, identifiquemos áreas de mejora y presentemos ese análisis en la próxima ronda de revisión».'
+				]
+			},
+			{
+				title: 'Escenario 5 y 6: Acusaciones de microgestión y cinismo (10 min)',
+				durationMinutes: 10,
+				description:
+					'Ajustar la visibilidad frente a la autonomía y tratar el desencanto con la estrategia.',
+				questions: [
+					'Microgestión: «Gracias por decírmelo con franqueza. Si sientes mis consultas como microgestión, tenemos un desajuste comunicativo. ¿Qué cadencia de novedades te resulta cómoda para que yo tenga contexto y pueda respaldarte sin agobiarte?»',
+					'Cinismo: «Entiendo tu malestar ante el cambio de rumbo tras el esfuerzo invertido. Este es el contexto de mercado que motiva la decisión... ¿Qué riesgos técnicos prevés y cómo podemos mitigarlos?»'
+				]
+			}
+		],
+		antiPatterns: [
+			{
+				mistake: 'El «sándwich de elogios» (Elogio–Crítica–Elogio)',
+				whyBad:
+					'Diluye la seriedad del mensaje. El colaborador se va creyendo que todo marcha perfecto y el líder piensa que fue exigente.',
+				betterAlternative:
+					'Aplica el método SBI con respeto y claridad. Sé conciso y céntrate en construir juntos.'
+			},
+			{
+				mistake: 'Contraatacar a la defensiva',
+				whyBad:
+					'Responder con enfado ante críticas de microgestión o de rumbo empresarial destruye la seguridad psicológica para siempre.',
+				betterAlternative:
+					'Agradece la valentía de compartirlo, acepta la fricción con calma e invita a co-diseñar el camino.'
+			},
+			{
+				mistake: 'Hacer promesas improvisadas para calmar los ánimos',
+				whyBad:
+					'Garantizar promociones o aumentos por evitar la incomodidad causa una ruptura total de confianza si la dirección lo rechaza.',
+				betterAlternative:
+					'Ofrece escucha genuina y claridad en los pasos, pero nunca asegures decisiones que no dependen solo de ti.'
+			},
+			{
+				mistake: 'Minimizar las emociones («¡No llores, que no pasa nada!»)',
+				whyBad:
+					'Desconocer el dolor ajeno invalida la realidad de la persona y eleva su sensación de vergüenza.',
+				betterAlternative:
+					'Facilita un respiro, normaliza el momento como algo humano y permite posponer la conversación.'
+			}
+		],
+		followUpHtml:
+			'<p><strong>1. Desbloqueo prioritario en 24 horas:</strong> Si la conversación destapó sobrecarga o fallos en herramientas, actúa de inmediato. Solucionar algo concreto prueba que la honestidad es bien recibida.</p><p><strong>2. Documentación objetiva en notas privadas:</strong> Deja constancia de los hechos y apoyos comprometidos en tus notas privadas cifradas. No almacenes vivencias personales delicadas en herramientas corporativas sin cifrar.</p><p><strong>3. Breve seguimiento tras 3–5 días:</strong> En situaciones con alta carga emocional, un café virtual de 15 minutos a los pocos días restablece la tranquilidad y confirma que todo sigue adelante con normalidad.</p>',
+		tips: [
+			'Espera 7 segundos en silencio tras formular una pregunta profunda: la sinceridad auténtica requiere tiempo para aflorar.',
+			'Diferencia siempre las charlas de coaching y desarrollo de las negociaciones de sueldo.',
+			'Ten presente que las actitudes defensivas casi siempre son escudos ante el estrés o la falta de claridad.',
+			'Recurre a la plantilla support_checkin en encrypted1on1 en cuanto percibas saturación continuada o riesgo de desgaste.'
+		],
+		keyTakeaway:
+			'Las conversaciones difíciles no deterioran las relaciones; lo hace gestionarlas con torpeza. Tratadas con empatía, serenidad y confidencialidad inviolable, los momentos críticos son la piedra angular de los equipos de alto rendimiento.'
 	}
 ];

@@ -597,5 +597,308 @@ export const playbookItemsLv: PlaybookItem[] = [
 		],
 		keyTakeaway:
 			'Skip-level mērķis nav kontrolēt vadītājus, bet gan ieviest stratēģisku skaidrību un novērst organizatorisko berzi. Spēcīga inženierijas kultūra uzplaukst tad, kad vadība ieklausās tieši tajos, kuru rokas būvē nākotni.'
+	},
+	{
+		slug: 'manager-playbook',
+		title: 'Vadītāja rokasgrāmata: Augstas ietekmes 1 pret 1 sarunas',
+		subtitle:
+			'Domāšanas maiņa, 15 minūšu sagatavošanās kontrolsaraksts, aktīvā klausīšanās, SBI modelis un patiess atbalsts.',
+		category: 'leadership',
+		readTime: '8 min lasīšanai',
+		cadence: 'Divu nedēļu rutīna (regulārs sagatavošanās un sarunu ieradums)',
+		duration: '30–45 minūtes',
+		targetAudience: 'Jaunie komandu vadītāji, inženieru vadītāji un direktori',
+		summaryHtml:
+			'Galvenais praktiskais ceļvedis tehnoloģiju komandu vadītājiem. Pārejiet no statusa uzrauga uz komandas multiplikatoru, apgūstot aktīvo klausīšanos, konteksta analīzi pirms sarunas, SBI konstruktīvo atgriezenisko saiti un 24 stundu ātros atrisinājumus.',
+		whyItMattersHtml:
+			'<p><strong>No uzrauga par multiplikatoru:</strong> Ja nesen kļuvāt par vadītāju, lielākais kārdinājums ir izmantot 1 pret 1 sarunas, lai uzzinātu uzdevumu statusus. Pretojieties šim impulsam. Statusus skatās Jira vai GitHub; 1 pret 1 saruna ir veltīta tikai enerģijai, sistēmiskiem šķēršļiem un attīstības virzienam.</p><p><strong>Endija Grova sviras formula:</strong> Grāmatā <em>High Output Management</em> Endijs Grovs aprēķināja, ka 90 minūtes pārdomātas 1 pret 1 sarunas uzlabo inženiera darba kvalitāti un motivāciju par 80 stundām starp sarunu cikliem (>50x laika atdeve). Vadītāja mērķis nav kontrole, bet gan visu šķēršļu novēršana, kas kavē komandas potenciālu.</p><p><strong>80/20 klausīšanās proporcija:</strong> Ja vadītājs runā 70 % laika, tā ir lekcija, nevis sadarbība. Darbiniekam jārunā aptuveni 80 % sarunas laika. Vadītāja instrumenti ir atvērti jautājumi, apzināta pauze un piezīmju veikšana.</p><p><strong>Pēctecība un uzticība:</strong> Solījumi, kas doti sarunā un aizmirsti līdz pirmdienai, rada cinismu. Uzticība rodas tad, kad vienošanās pāriet no cikla uz ciklu un tiek izsekotas līdz pilnīgai izpildei.</p>',
+		preparationHtml:
+			'<p><strong>1. solis: Konteksta izvērtēšana (10–15 min pirms):</strong> Novērtējiet objektīvos faktorus bez mikromenedžmenta. Vai koda recenzija (PR) stāvēja 5 dienas? Vai bija novērojami nakts komiti (pēc 22:00) vai darbs brīvdienās? Vai bija smagas dežūras? Izmantojiet faktus empātijai, nevis pārmetumiem.</p><p><strong>2. solis: Darbplūsma encrypted1on1 vidē:</strong><br>1. <em>Apskatiet tendences:</em> Atveriet anketu un novērtējiet noskaņojuma un darba slodzes dinamiku.<br>2. <em>Vispirms izlasiet darbinieka atbildes:</em> Pievērsiet uzmanību sajūtu birkām, punktiem sadaļā «Kas ir sarežģītāk, nekā vajadzētu» un pārrunājamajām tēmām.<br>3. <em>Aizpildiet vadītāja pusi:</em> Sniedziet objektīvu atgriezenisko saiti, piedāvājiet skaidru palīdzību un izceliet vismaz vienu sasniegumu, ko pamanījāt personīgi.<br>4. <em>Publicējiet savu pusi:</em> Abas puses kļūst redzamas reizē pirms sarunas sākuma.<br>5. <em>Privātās piezīmes:</em> Izmantojiet šifrēto privāto piezīmju paneli koučinga norādēm, konfidenciālam kontekstam un atalgojuma plāniem, kas citiem nav pieejami.</p>',
+		agenda: [
+			{
+				title: '1. balsts: Enerģijas pulss un cilvēciskais kontakts (5–7 min)',
+				durationMinutes: 7,
+				description: 'Baterijas līmeņa un emocionālā fona novērtējums pirms darba tēmām.',
+				questions: [
+					'Kāds šajā sprintā bija tavs enerģijas līmenis skalā no 1 līdz 5? Kas deva spēku un kas visvairāk iztukšoja?',
+					'Kāds uzdevums radīja sajūtu par patiesu progresu un kāds šķita bezjēdzīga birokrātija?'
+				]
+			},
+			{
+				title: '2. balsts: Šķēršļi un sistēmiskā berze (15 min)',
+				durationMinutes: 15,
+				description: 'Sastrēguma punktu noteikšana procesos, kas bremzē komandas darba ātrumu.',
+				questions: [
+					'Ja tev būtu burvju nūjiņa un iespēja atcelt vienu šīs nedēļas rīku, procesu vai sanāksmi — kas tas būtu?',
+					'Kurā vietā šobrīd iestrēgst darbs starp mums un blakus komandām?',
+					'Vai mūsu koda bāzē vai infrastruktūrā ir kāda daļa, kurai komanda baidās pieskarties?'
+				]
+			},
+			{
+				title: '3. balsts: Stratēģiskā skaidrība un konteksts (10 min)',
+				durationMinutes: 10,
+				description: 'Ikdienas izstrādes sasaiste ar produkta mērķiem un jēgu.',
+				questions: [
+					'Vai tev ir skaidrs, kāpēc šī sprinta mērķis ir nozīmīgs visam uzņēmumam, vai arī ir sajūta par darbu tumsā?',
+					'Vai pēdējā laikā ir bijuši vadības lēmumi, kas šķita mulsinoši vai nesaprotami?'
+				]
+			},
+			{
+				title: '4. balsts: Konstruktīva SBI atgriezeniskā saite un vienošanās (10 min)',
+				durationMinutes: 10,
+				description: 'Konkrēti uzvedības novērojumi un abpusēju soļu fiksēšana.',
+				questions: [
+					'Pēc SBI modeļa (Situācija–Uzvedība–Ietekme): kādu konkrētu rīcību mums vajadzētu pielāgot nākotnē?',
+					'Ko man kā vadītājam vajadzētu sākt, pārtraukt vai turpināt darīt, lai labāk tevi atbalstītu?',
+					'Kuras 1–2 saistības mēs fiksējam Vienošanos sadaļā nākamajam ciklam?'
+				]
+			}
+		],
+		antiPatterns: [
+			{
+				mistake: '«Man nekā nav, tev nekā nav — atceļam»',
+				whyBad:
+					'Iznīcina psiholoģiskās drošības ieradumu. Problēmas briest klusumā, līdz tiek iesniegts negaidīts atlūgums.',
+				betterAlternative:
+					'Ja nav degošu uzdevumu, pievērsieties karjeras attīstībai, tehniskajam parādam vai koučingam.'
+			},
+			{
+				mistake: 'Pazūdošais vadītājs (Aizmirsti solījumi)',
+				whyBad:
+					'Darbinieks saprot, ka vadītāja vārdiem nav svara, un pārstāj stāstīt par sarežģījumiem.',
+				betterAlternative:
+					'Fiksējiet apņemšanās Vienošanās sadaļā. encrypted1on1 automātiski pārnes atvērtos punktus uz nākamo ciklu.'
+			},
+			{
+				mistake: '1 pret 1 sarunas videoieraksts',
+				whyBad:
+					'Ieslēdz tūlītēju pašcenzūru. Neviens nedalās atklātās pārdomās, ja deg ieraksta indikators.',
+				betterAlternative:
+					'Nekad neierakstiet 1 pret 1 sarunas. Paļaujieties tikai uz klienta pusē šifrētām piezīmēm encrypted1on1 platformā.'
+			},
+			{
+				mistake: 'Pārsteidzīgi solījumi par amatu vai algas pieaugumu',
+				whyBad:
+					'Solīt amatu vai algu pirms saskaņošanas ar vadību sagrauj jūsu autoritāti atteikuma gadījumā.',
+				betterAlternative:
+					'Kopīgi izejiet cauri kompetenču matricai, atklāti iezīmējiet trūkumus un apsoliet caurskatāmu interešu aizstāvību.'
+			}
+		],
+		followUpHtml:
+			'<p><strong>1. Piefiksējiet 1–3 Vienošanās:</strong> Ievadiet soļus Vienošanos blokā. Tās ir taktiskas viena cikla apņemšanās ar skaidru atbildīgo.</p><p><strong>2. Atjauniniet Mērķus:</strong> Pievienojiet statusa kontrolpunktu («Pēc plāna», «Apdraudēts», «Bloķēts») vidēja termiņa mērķiem.</p><p><strong>3. Nodrošiniet ātru uzvaru 24 stundās:</strong> Izvēlieties vienu darbinieka minēto šķērsli (piekļuve, licence, atbrīvošana no nevajadzīgas sanāksmes) un atrisiniet to 24 stundu laikā. Tas rada tūlītēju uzticību formātam.</p><p><strong>4. Arhivējiet ciklu:</strong> Nospiediet «Arhivēt», lai izveidotu nākamā cikla anketu un automātiski pārnestu neizpildītās vienošanās un mērķus.</p>',
+		tips: [
+			'Ieturiet 5 līdz 7 sekunžu pauzi: kad sarunu biedrs pabeidz teikumu, nogaidiet pirms atbildat — būtiskākais izskan pauzē.',
+			'80/20 likums: darbinieks runā 80 % laika, vadītājs klausās un precizē 20 % laika.',
+			'Sniedziet taustāmu atrisinājumu 24 stundu laikā, lai apliecinātu sarunas praktisko jēgu.',
+			'Formulējiet kritisku atgriezenisko saiti pēc SBI modeļa (Situācija, Uzvedība, Ietekme), nevis kā personības vērtējumus.'
+		],
+		keyTakeaway:
+			'Vadītāja rezultāts ir komandas rezultāts. Jūsu loma nav uzraudzīt darbu, bet gan noņemt visus šķēršļus, lai komanda varētu sasniegt savu augstāko potenciālu.'
+	},
+	{
+		slug: 'employee-playbook',
+		title: 'Darbinieka rokasgrāmata: Pārņemiet iniciatīvu 1 pret 1 sarunās',
+		subtitle:
+			'Kā inženieriem, dizaineriem un komandas dalībniekiem pārvarēt uztraukumu, vadīt darba kārtību un virzīt savu karjeru.',
+		category: 'foundations',
+		readTime: '7 min lasīšanai',
+		cadence: 'Nepārtraukta asinhrona fiksēšana + divu nedēļu saruna',
+		duration: '30–45 minūtes',
+		targetAudience: 'Programmatūras inženieri, dizaineri un komandas dalībnieki',
+		summaryHtml:
+			'1 pret 1 saruna pieder jums, nevis jūsu vadītājam. Uzziniet, kā regulāras tikšanās pārvērst par spēcīgāko karjeras un labsajūtas sviru: sasniegumu reģistrēšana, konstruktīva problēmu pieteikšana, atalgojuma sarunas bez neērtībām un atgriezeniskās saites pieņemšana.',
+		whyItMattersHtml:
+			'<p><strong>Šī saruna pieder jums:</strong> Jūsu vadītājam ir sprinta plānošanas, standup un arhitektūras sanāksmes, lai apspriestu uzņēmuma projektus. Šis 30–45 minūšu laiks kalendārā ir vienīgais, kas paredzēts tikai jūsu vajadzībām, izaicinājumiem un izaugsmei.</p><p><strong>Kas 1 pret 1 saruna NAV:</strong> Tā nav slēpta atestācija, nav atskaitīšanās par Jira biļetēm un nav slazds. Atzīt, ka uzdevums ir sarežģīts vai ka esat pārslogots, ir profesionāla brieduma pazīme, nevis vājums.</p><p><strong>Kas 1 pret 1 saruna IR:</strong> Tas ir jūsu personīgais šķēršļu novēršanas dzinējs, jūsu karjeras stūre un drošības vārsts pret izdegšanu.</p><p><strong>Klusēšanas cena:</strong> Vadītāji nelasa domas. Ja klusējot strādāsiet 12 stundas dienā, lai kompensētu problēmas ar rīkiem vai neskaidrām prasībām, vadība pieņems, ka viss ir kārtībā, un uzliks vēl vairāk darba. Savlaicīga robežu noteikšana aizsargā jūsu fokusu.</p>',
+		preparationHtml:
+			'<p><strong>1. solis: Piezīmju veikšana starp sarunām:</strong> Necentieties atcerēties divu nedēļu darbu 5 minūtes pirms zvana. Izmantojiet encrypted1on1 visā sprinta laikā:<br>• <em>Izaugsme:</em> Apguvāt noderīgu atkļūdošanas paņēmienu vai izlasījāt labu arhitektūras dokumentu? Nospiediet «Pievienot ierakstu».<br>• <em>Sasniegumi:</em> Pabeidzāt sarežģītu funkcionalitāti, novērsāt kļūdu vai palīdzējāt kolēģim? Pierakstiet uzreiz.<br>• <em>Pārrunāt:</em> Pierakstiet jautājumus brīdī, kad tie rodas nedēļas laikā.</p><p><strong>2. solis: 5 minūšu sagatavošanās (24h pirms):</strong><br>1. Izvēlieties Noskaņojumu un atzīmējiet sajūtu birkas (nemierīgs, pārslogots, motivēts, mierīgs).<br>2. Novērtējiet Slodzi (Pārāk liela, Tieši laikā, Pārāk maza).<br>3. Aizpildiet lauku «Kas ir sarežģītāk, nekā vajadzētu» (Berze) — atzīmējiet lēnu koda būvēšanu vai piekļuves trūkumu.<br>4. Nospiediet «Publicēt», lai vadītājam būtu laiks sagatavoties atbalstam.<br>5. Lietojiet privātās piezīmes personiskiem atgādinājumiem, kas nav redzami vadītājam un administratoriem.</p>',
+		agenda: [
+			{
+				title: '1. balsts: Baterijas līmenis un slodzes realitāte (5 min)',
+				durationMinutes: 5,
+				description: 'Signāls par jūsu kapacitāti, stresa līmeni un emocionālo stāvokli.',
+				questions: [
+					'Mana slodze pašlaik šķiet smaga / sabalansēta / viegla — lūk, kā šis temps ietekmē manu dziļā darba fokusu.',
+					'Es anketā atzīmēju šīs sajūtu birkas: lūk, kāds konteksts ir aiz tām.'
+				]
+			},
+			{
+				title: '2. balsts: Berze un šķēršļu novēršana: Problēma + Ietekme + Priekšlikums (15 min)',
+				durationMinutes: 15,
+				description: 'Konstruktīva grūtību pasniegšana pēc trīs soļu metodes.',
+				questions: [
+					'Problēma: Mūsu testa vide šajā sprintā nokrita 3 reizes laidiena testēšanas laikā.',
+					'Ietekme: Tas aizkavēja kvalitātes pārbaudi un radīja stresu visai komandai.',
+					'Priekšlikums: Vai nākamajā sprintā varam veltīt 2 dienas testa vides automatizācijai? Man nepieciešams tavs atbalsts prioritātes saskaņošanai ar produkta vadītāju.'
+				]
+			},
+			{
+				title: '3. balsts: Karjeras virziens un kompetenču līmeņi (15 min)',
+				durationMinutes: 15,
+				description: 'Pārrunājiet izaugsmi, prasmes un nākamā līmeņa prasības bez neērtībām.',
+				questions: [
+					'Vēlos izprast atšķirību starp maniem pašreizējiem rezultātiem un Senior inženiera prasībām — vai varam kopīgi pārskatīt matricu?',
+					'Mans mērķis šim gadam ir padziļināt prasmes sistēmu arhitektūrā: kura no gaidāmajām iniciatīvām būtu labs izaicinājums?',
+					'Kuru jomu manās tehniskajās vai komunikācijas prasmēs tu ieteiktu uzlabot vispirms?'
+				]
+			},
+			{
+				title: '4. balsts: Abpusējās vienošanās (10 min)',
+				durationMinutes: 10,
+				description: 'Konkrētu soļu fiksēšana gan sev, gan savam vadītājam.',
+				questions: [
+					'Vai varam piefiksēt šos 2 punktus Vienošanos sadaļā?',
+					'Vadītāja solis: Pārrunāt ar infrastruktūras komandu CI testa darbinātāju kapacitāti.',
+					'Mans solis: Sagatavot datubāzes savienojumu pūla RFC priekšlikumu līdz piektdienai.'
+				]
+			}
+		],
+		antiPatterns: [
+			{
+				mistake: 'Klusējošais moceklis (Ciešanas klusumā)',
+				whyBad:
+					'Pārslodzes noklusēšana noved pie hroniska noguruma, kļūdām un aiziešanas, nedodot vadītājam iespēju palīdzēt.',
+				betterAlternative:
+					'Sakiet atklāti: «Mana slodze šobrīd nav ilgtspējīga. Izlemsim kopā, ko varam atlikt, deleģēt vai atcelt».'
+			},
+			{
+				mistake: 'Anketas aizpildīšana 5 minūtes pirms sarunas',
+				whyBad: 'Steiga pārvērš tikšanos par virspusēju statusa pārskatu bez reāliem risinājumiem.',
+				betterAlternative:
+					'Fiksējiet sasniegumus un šķēršļus pakāpeniski sprinta laikā encrypted1on1 vidē.'
+			},
+			{
+				mistake: 'Vispārīgas sūdzības bez ietekmes un risinājuma',
+				whyBad:
+					'Apgalvojumi, ka «viss ir slikti», bez konkrētiem faktiem liedz vadītājam iespēju jūs aizstāvēt.',
+				betterAlternative:
+					'Lietojiet Problēma + Ietekme + Priekšlikums: nosauciet faktu, parādiet cenu komandai un piedāvājiet variantu.'
+			},
+			{
+				mistake: 'Negaidīts algas ultimāts',
+				whyBad:
+					'Tūlītēja 20 % pielikuma pieprasīšana nostāda vadītāju aizsardzības pozīcijā un reti vainagojas panākumiem.',
+				betterAlternative:
+					'Balstieties uz kompetenču matricu, sasniegtajiem mērķiem un paredzētajiem pārskatīšanas periodiem.'
+			}
+		],
+		followUpHtml:
+			'<p><strong>1. Izpildiet vienošanās sprinta gaitā:</strong> Atzīmējiet pabeigtos uzdevumus tieši atvērtajā anketā. Jūs atbildat par saviem punktiem, vadītājs — par savējiem.</p><p><strong>2. Eksportējiet perioda pārskatu pirms ikgadējā novērtējuma:</strong> Novērtēšanas laikā atveriet sadaļu <strong>Pārskats</strong> encrypted1on1 sistēmā. Atšifrējiet pārbaudītu sasniegumu, atziņu un mērķu žurnālu par pēdējiem 6 mēnešiem sagatavotā Markdown dokumentā. Jums nekad vairs nebūs jāatceras savi nopelni no galvas.</p>',
+		tips: [
+			'Vienmēr izmantojiet formulu Problēma + Ietekme + Priekšlikums, piesakot rīku vai procesu berzi.',
+			'Atgriezeniskās saites pieņemšanas protokols: elpojiet, klausieties, lai saprastu, pasakiet paldies un vienojieties par soļiem.',
+			'Izmantojiet privātās piezīmes melnrakstiem, algas mērķiem vai personiskām atziņām.',
+			'Savlaicīga robežu novilkšana un atbalsta lūgšana ir pieredzējuša profesionāļa brieduma apliecinājums.'
+		],
+		keyTakeaway:
+			'1 pret 1 ir jūsu saruna. Kad pārņemat iniciatīvu — reģistrējot panākumus, izgaismojot šķēršļus un prasot atbalstu —, jūs paši vadāt savas karjeras virzību.'
+	},
+	{
+		slug: 'handling-difficult-situations',
+		title: 'Sarežģītu situāciju risināšana: Scenāriji kritiskiem 1 pret 1 brīžiem',
+		subtitle:
+			'Pārbaudīti sarunu scenāriji un psiholoģiskie ietvari spriedzes, asaru, kritiskas atgriezeniskās saites un ultimātu risināšanai.',
+		category: 'difficult',
+		readTime: '9 min lasīšanai',
+		cadence: 'Situatīvs / Krīzes un paaugstinātas spriedzes brīži',
+		duration: '30–60 minūtes',
+		targetAudience: 'Vadītāji un darbinieki emocionālu un organizatorisku beržu brīžos',
+		summaryHtml:
+			'Kad 1 pret 1 sarunas kļūst sarežģītas, standarta padomi nedarbojas. Praktisks ceļvedis ar pārbaudītiem scenārijiem sešām kritiskām situācijām: «viss kārtībā» siena, kritiska snieguma atgriezeniskā saite, asaras un emocionāls pārgurums, pēkšņas algas prasības, mikromenedžmenta pārmetumi un cinisms pret uzņēmuma stratēģiju.',
+		whyItMattersHtml:
+			'<p><strong>Līderības patiesais pārbaudījums:</strong> Vadīt 1 pret 1 sarunu ir vienkārši, kad sprinti norit gludi un darbinieki ir apmierināti. Vadītāja patiesais briedums atklājas saspringtos brīžos: kad darbinieks noslēdzas, nespēj valdīt asaras vai kad nepieciešams sniegt stingru atgriezenisko saiti.</p><p><strong>Psiholoģiskā drošība spriedzes apstākļos:</strong> Saspringtos brīžos dabiska cilvēciska reakcija ir aizsardzība, vainošana vai izvairīšanās. Ja vadītājs pakļaujas panikai, uzticība zūd. Krīžu pārvarēšanai nepieciešama dziļa empātija, balstīšanās faktos un prasme noturēt pauzi.</p><p><strong>Konfidencialitāte kā drošības osta:</strong> Atklātība nav iespējama bez garantētas privātuma aizsardzības. Sarežģītas sarunas nedrīkst ierakstīt, un piezīmēm jāpaliek šifrētām jūsu iekārtā.</p>',
+		preparationHtml:
+			'<p><strong>Sagatavošanās saspringtai sarunai:</strong><br>1. <em>Pārbaudiet dinamiku un sajūtu birkas:</em> Analizējiet iepriekšējo ciklu rādītājus, lai atšķirtu īslaicīgu nogurumu no hroniskas izdegšanas.<br>2. <em>Balstieties uz novērojamiem faktiem:</em> Nošķiriet konkrētu rīcību no personiskiem spriedumiem. Pierakstiet datumus, PR un faktus.<br>3. <em>Sagatavojiet privātās piezīmes:</em> Izmantojiet privāto piezīmju paneli encrypted1on1 vidē sarunas punktiem. Nekad nedalieties ar šīm piezīmēm.<br>4. <em>Ieplānojiet laika rezervi:</em> Atstājiet vismaz 15 minūtes brīva laika pēc sarunas, lai nevajadzētu pēkšņi pārtraukt emocionāli jutīgu dialogu.</p>',
+		agenda: [
+			{
+				title: '1. scenārijs: Siena «Viss kārtībā» (10 min)',
+				durationMinutes: 10,
+				description:
+					'Kā rīkoties ar vienzilbīgām atbildēm, kad progress un enerģija acīmredzami krītas.',
+				questions: [
+					'Scenārijs: «Es dzirdu, ka saki — viss ir kārtībā. Taču pēdējās divās nedēļās pamanīju, ka ikdienas sanāksmēs esi klusāks un autorizācijas servisa uzdevums virzās neierasti smagi».',
+					'Scenārijs: «Es to nepieminu, lai tevi vērtētu. Mans mērķis ir pasargāt tavu darba tempu. Kad iestājas šāds klusums, tas parasti liecina par slēptu šķērsli vai pārslodzi».',
+					'Scenārijs: «Kas šajā sprintā paņēma visvairāk spēku? (Un ieturiet 7 sekunžu pilnīgu klusumu)».'
+				]
+			},
+			{
+				title: '2. scenārijs: Kritiska atgriezeniskā saite par darba kvalitāti (15 min)',
+				durationMinutes: 15,
+				description: 'Asas komunikācijas vai kvalitātes krituma risināšana pēc SBI modeļa.',
+				questions: [
+					'Situācija: «Otrdien koda recenzijas laikā pie maksājumu vārtejas koda...»',
+					"Uzvedība: «...kad Džordans jautāja par rezerves loģiku, tava atbilde bija: 'Izlasi dokumentāciju, man nav laika skaidrot pamatus'».",
+					'Ietekme: «...tā rezultātā Džordans baidījās uzdot svarīgus arhitektūras jautājumus, recenzēšana aizkavējās un komandā radās spriedze».',
+					'Alternatīva: «Savstarpējs atbalsts recenzijās mums ir tikpat būtisks kā koda piegādes ātrums. Kas tajā brīdī notika ar tevi?»'
+				]
+			},
+			{
+				title: '3. scenārijs: Asaras un emocionāls pārgurums (10 min)',
+				durationMinutes: 10,
+				description: 'Cilvēcīgs un iejūtīgs atbalsts brīdī, kad kolēģis netiek galā ar stresu.',
+				questions: [
+					'Scenārijs: «Nesteidzies. Viss ir labi, tev pilnīgi nav par ko atvainoties. Mēs strādājam ar sarežģītām sistēmām, un mēs visi pirmkārt esam cilvēki».',
+					'Scenārijs: «Vai vēlies paņemt 5 minūšu pauzi, iedzert ūdeni un atgriezties? Vai arī pārcelsim sarunas atlikušo daļu uz rītdienu? Jebkurš variants ir pilnīgi pieņemams».',
+					'Likums: Nekad neierakstiet sarunu. Koncentrējieties uz uzklausīšanu un drošību, nevis tūlītēju problēmu risināšanu.'
+				]
+			},
+			{
+				title: '4. scenārijs: Negaidīts algas vai amata ultimāts (10 min)',
+				durationMinutes: 10,
+				description: 'Līdzsvarota reakcija uz pēkšņu finansiālu prasību.',
+				questions: [
+					'Scenārijs: «Paldies par atklātību. Es novērtēju tavu apņēmību un vēlos, lai tavs ieguldījums tiktu novērtēts taisnīgi».',
+					'Scenārijs: «Es šodien nevaru dot tūlītēju atbildi par summu vai amatu, jo pārskatīšana ir piesaistīta kompetenču matricai un budžeta apstiprināšanai. Taču es apsolu pilnīgu caurspīdīgumu».',
+					'Scenārijs: «Atvērsim kopā Senior līmeņa prasības, salīdzināsim tavus sasniegumus, iezīmēsim attīstības zonas un iesim ar šo analīzi uz tuvāko pārskatīšanas ciklu».'
+				]
+			},
+			{
+				title: '5. un 6. scenārijs: Mikromenedžmenta pārmetumi un cinisms (10 min)',
+				durationMinutes: 10,
+				description: 'Autonomijas kalibrēšana un vilšanās mazināšana uzņēmuma stratēģijā.',
+				questions: [
+					'Mikromenedžments: «Paldies par tiešumu. Ja manas intereses šķiet kā pārlieka kontrole, mūsu sadarbības formāts nestrādā labi. Kāds atjauninājumu ritms tev šķistu ērts, lai man būtu skaidrība tevis aizstāvēšanai bez kontroles sajūtas?»',
+					'Cinisms: «Es saprotu tavu neapmierinātību par kursa maiņu pēc ieguldītā darba. Lūk, tirgus konteksts, kas noteica šo lēmumu... Kādus tehniskos riskus tu saskati un kā mēs tos varam novērst?»'
+				]
+			}
+		],
+		antiPatterns: [
+			{
+				mistake: '«Uzslavu sviestmaize» (Uzslava–Kritika–Uzslava)',
+				whyBad:
+					'Izpludina aizrādījuma būtību. Darbinieks aiziet ar pārliecību, ka viss ir lieliski, bet vadītājs domā, ka sniedzis skaidru aizrādījumu.',
+				betterAlternative:
+					'Sniedziet tiešu, cieņpilnu SBI atgriezenisko saiti. Esiet kodolīgi un aiciniet uz sadarbību.'
+			},
+			{
+				mistake: 'Aizsargājoša pretagresija',
+				whyBad:
+					'Dusmīga reakcija uz pārmetumiem par mikromenedžmentu vai stratēģiju neatgriezeniski sagrauj uzticību.',
+				betterAlternative:
+					'Pateicieties par drosmi runāt atklāti, mierīgi atzīstiet berzi un aiciniet kopīgi veidot risinājumu.'
+			},
+			{
+				mistake: 'Vieglprātīgi solījumi nomierināšanas nolūkā',
+				whyBad:
+					'Apsolīt algas pieaugumu vai amatu neērtības dēļ beidzas ar katastrofālu uzticības zaudēšanu, kad augstākā vadība to noraida.',
+				betterAlternative:
+					'Uzklausiet ar empātiju un nodrošiniet procesa caurspīdīgumu, bet nekad nedodiet vienpusējas garantijas.'
+			},
+			{
+				mistake: 'Emociju noniecināšana («Neraudi, viss taču ir labi!»)',
+				whyBad: 'Aizrādījums neraudāt noniecina cilvēka pārdzīvojumus un pastiprina kauna sajūtu.',
+				betterAlternative:
+					'Piedāvājiet pauzi, aplieciniet, ka šāda reakcija ir cilvēciska, un dodiet izvēli pārcelt sarunu.'
+			}
+		],
+		followUpHtml:
+			'<p><strong>1. Ātrs šķēršļa novēršanas solis 24 stundās:</strong> Ja sarunas gaitā atklājās pārslodze vai rīku problēmas, rīkojieties tūlīt. Tas pierāda, ka atklātība ir droša un tiek novērtēta.</p><p><strong>2. Objektīva fiksēšana privātajās piezīmēs:</strong> Fiksējiet faktus un apsolītos soļus šifrētās privātajās piezīmēs. Nekad neglabājiet sensitīvus personiskus datus nešifrētās uzņēmuma sistēmās.</p><p><strong>3. Īsa saziņa pēc 3–5 dienām:</strong> Emocionāli smagos gadījumos organizējiet īsu 15 minūšu sarunu pēc pāris dienām, lai atjaunotu mieru un nostiprinātu drošības sajūtu komandā.</p>',
+		tips: [
+			'Pēc dziļa diagnostiska jautājuma domās noskaitiet līdz septiņi: cilvēkam nepieciešams laiks, lai uzdrošinātos runāt no sirds.',
+			'Vienmēr nodaliet izaugsmes un koučinga sarunas no atalgojuma pārskatīšanas procesa.',
+			'Atcerieties, ka aizsargājoša nostāja gandrīz vienmēr ir vairogs pret lielu stresu vai neskaidrām gaidām.',
+			'Izmantojiet sagatavi support_checkin encrypted1on1 vidē, tiklīdz pamanāt hronisku pārslodzi vai izdegšanas pazīmes.'
+		],
+		keyTakeaway:
+			'Sarežģītas sarunas neizjauc darba attiecības — to izdara neveikla rīcība ar tām. Ar empātiju, mieru un negrozāmu privātumu risināti saspringti brīži kļūst par stabilāko uzticības pamatu komandā.'
 	}
 ];

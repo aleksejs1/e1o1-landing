@@ -59,7 +59,8 @@ export const de: LandingContent = {
 			'Das ist die Lücke, die wir richtig schließen wollten — nicht nur für unsere eigene Organisation, sondern als etwas, das jeder in derselben Lage selbst überprüfen kann, statt es einfach zu glauben. Wenn eine 1:1-Plattform einige der sensibelsten Gespräche eines Unternehmens speichert, ist „wir versprechen, nicht mitzulesen“ keine ausreichend starke Garantie. Die einzige ausreichend starke Garantie ist eine, bei der Mitlesen <em>gar nicht möglich</em> ist — bei der der Betreiber, das IT-Team, das Unternehmen, das die Plattform hostet, und selbst eine vollständige Kompromittierung des Servers nichts als Chiffretext erhalten. Das ist keine Richtlinie. Das ist Ende-zu-Ende-Verschlüsselung, richtig umgesetzt, mit offenem Quellcode, damit jeder überprüfen kann, dass diese Behauptung tatsächlich zutrifft.',
 			'encrypted1on1 ist das Ergebnis davon.'
 		],
-		illustrationAlt: 'Vertrauliches 1:1-Gespräch unter einem schützenden Bogen mit Symbolen für Ende-zu-Ende-Verschlüsselung'
+		illustrationAlt:
+			'Vertrauliches 1:1-Gespräch unter einem schützenden Bogen mit Symbolen für Ende-zu-Ende-Verschlüsselung'
 	},
 
 	methodology: {

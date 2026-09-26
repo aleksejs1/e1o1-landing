@@ -59,7 +59,8 @@ export const es: LandingContent = {
 			'Esa es la brecha que decidimos cerrar de verdad, no solo para nuestra propia organización, sino como algo que cualquiera en la misma situación pudiera verificar por sí mismo en lugar de aceptarlo por fe. Si una plataforma de reuniones 1 a 1 va a guardar algunas de las conversaciones más sensibles de una empresa, «prometemos no mirar» no es una garantía suficientemente sólida. La única garantía suficientemente sólida es aquella en la que mirar <em>no es posible</em>: donde el operador, el equipo de TI, la empresa que aloja el sistema, e incluso un compromiso total del servidor, no obtienen más que texto cifrado. Eso no es una política. Eso es cifrado de extremo a extremo, hecho correctamente, con el código abierto para que cualquiera pueda comprobar que esa afirmación es realmente cierta.',
 			'encrypted1on1 es el resultado de todo eso.'
 		],
-		illustrationAlt: 'Conversación confidencial 1:1 bajo un arco protector con símbolos de cifrado de extremo a extremo'
+		illustrationAlt:
+			'Conversación confidencial 1:1 bajo un arco protector con símbolos de cifrado de extremo a extremo'
 	},
 
 	methodology: {
@@ -85,7 +86,8 @@ export const es: LandingContent = {
 		],
 		closingHtml:
 			'El patrón que se repite en toda esta investigación es consistente: el valor no está en <em>tener reuniones</em>. Está en tenerlas <strong>de forma regular, estructurada y con continuidad</strong>, haciendo seguimiento de lo que se dijo la última vez, de los compromisos adquiridos, de qué objetivos siguen abiertos. Esa continuidad es exactamente lo que se pierde en el momento en que las reuniones 1 a 1 viven en documentos dispersos, en la memoria o en la herramienta que estuviera abierta esa semana.',
-		illustrationAlt: 'Empleado y responsable ascendiendo hacia los objetivos con palanca de alto impacto'
+		illustrationAlt:
+			'Empleado y responsable ascendiendo hacia los objetivos con palanca de alto impacto'
 	},
 
 	comparison: {

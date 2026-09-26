@@ -597,5 +597,311 @@ export const playbookItemsEn: PlaybookItem[] = [
 		],
 		keyTakeaway:
 			'Skip-levels are not about policing managers; they are about clarifying executive vision and removing organizational friction. A resilient culture flourishes when leaders listen directly to the engineers whose hands build the future.'
+	},
+	{
+		slug: 'manager-playbook',
+		title: 'The Manager’s Playbook: Leading High-Impact 1:1s',
+		subtitle:
+			'Mindset, 15-minute preparation checklist, active listening, the SBI feedback model, and building real sponsorship.',
+		category: 'leadership',
+		readTime: '8 min read',
+		cadence: 'Bi-weekly routine (recurring preparation and meeting habit)',
+		duration: '30–45 minutes',
+		targetAudience: 'New Team Leads, Engineering Managers & Directors',
+		summaryHtml:
+			'The definitive field guide for engineering managers. Transition from a status-check cop to a high-leverage multiplier by mastering active listening, pre-meeting context scanning, SBI constructive feedback, and 24-hour quick wins.',
+		whyItMattersHtml:
+			'<p><strong>From Status Cop to Multiplier:</strong> If you recently stepped into leadership, your biggest temptation is using 1:1s to ask what people are working on. Resist this impulse with every fiber of your being. Tasks belong in Jira or GitHub; 1:1s are strictly for energy, systemic blockers, and direction.</p><p><strong>The Andy Grove Leverage Formula:</strong> In <em>High Output Management</em>, Andy Grove demonstrated that 90 minutes of thoughtful 1:1 time enhances an engineer’s output for 80 hours between cycles (>50x ROI). Your purpose is not to inspect work, but to remove obstacles standing between your team and their best work.</p><p><strong>The 80/20 Listening Equation:</strong> A manager talking 70% of the time is a lecture, not a partnership. The direct report must speak ~80% of the time. Your tools are open inquiry, deliberate silence, and taking notes.</p><p><strong>Continuity & Trust:</strong> Promises made in conversation and forgotten by Monday breed cynicism. Real managerial credibility is forged when action items survive across cycles and unresolved blockers are tracked until closed.</p>',
+		preparationHtml:
+			'<p><strong>Step 1: Context Scanning (10–15 min before):</strong> Review operational signals over the past two weeks without micromanaging. Did a pull request languish in review for 5 days? Were there commits past 22:00 or over the weekend? Was there a rough on-call shift? Use these facts to calibrate empathy, not to accuse.</p><p><strong>Step 2: In-App encrypted1on1 Workflow:</strong><br>1. <em>Check Sparklines:</em> Open the pair’s Anketa and review mood and workload trends.<br>2. <em>Read Employee Answers First:</em> Notice their feelings tags, friction points in "What\'s harder than it should be", and topics to discuss.<br>3. <em>Fill Manager Side:</em> Log objective feedback, provide high-level team context, offer explicit unblocking help, and record at least one unprompted achievement you noticed.<br>4. <em>Publish Your Side:</em> Both sides become visible simultaneously before dialing in.<br>5. <em>Private Notes:</em> Use the encrypted Private Notes panel for coaching cues, confidential context, and compensation thoughts invisible to everyone else.</p>',
+		agenda: [
+			{
+				title: 'Pillar 1: Energy Pulse & Human Connection (5–7 min)',
+				durationMinutes: 7,
+				description:
+					'Gauge battery level and emotional bandwidth before touching operational topics.',
+				questions: [
+					'On a scale of 1 to 5, what was your energy level this sprint? What gave you energy, and what drained it?',
+					'Which task felt like meaningful progress, and which felt like bureaucratic friction?'
+				]
+			},
+			{
+				title: 'Pillar 2: Blockers & Systemic Friction (15 min)',
+				durationMinutes: 15,
+				description: 'Identify friction points slowing down delivery and morale.',
+				questions: [
+					'If you had a magic wand and could eliminate one tool, process, or meeting this week, what would it be?',
+					'Where is work getting stuck between us and other teams right now?',
+					'Is there any part of our codebase or infrastructure that you or the team are afraid to touch?'
+				]
+			},
+			{
+				title: 'Pillar 3: Strategic Clarity & Context (10 min)',
+				durationMinutes: 10,
+				description: 'Connect daily engineering efforts with organizational purpose.',
+				questions: [
+					'Do you feel clear on why our current milestone matters to the company, or does it feel like building in the dark?',
+					'Are there any recent leadership decisions that felt confusing or didn’t make sense to you?'
+				]
+			},
+			{
+				title: 'Pillar 4: Constructive SBI Feedback & Commitments (10 min)',
+				durationMinutes: 10,
+				description: 'Share precise behavioral observations and agree on bilateral action items.',
+				questions: [
+					'Using SBI (Situation–Behavior–Impact): what specific observation do we need to calibrate for future sprints?',
+					'What is one thing I should start, stop, or continue doing as your lead to better support you?',
+					'What are the 1–2 commitments we are logging under Meeting Outcomes for the next cycle?'
+				]
+			}
+		],
+		antiPatterns: [
+			{
+				mistake: '"I have nothing, you have nothing, let’s cancel"',
+				whyBad:
+					'Destroys the habit of psychological safety. Problems simmer silently until an unexpected resignation letter arrives.',
+				betterAlternative:
+					'If no urgent tickets exist, pivot immediately to career trajectory, architecture debt, team culture, or deep coaching.'
+			},
+			{
+				mistake: 'The Disappearing Manager (Forgotten Promises)',
+				whyBad:
+					'When agreements made in meetings vanish into thin air, direct reports conclude their manager has zero influence or follow-through.',
+				betterAlternative:
+					'Log commitments in Meeting Outcomes. Let encrypted1on1 carry unresolved items forward automatically into the next cycle.'
+			},
+			{
+				mistake: 'Recording the 1:1 call on video',
+				whyBad:
+					'Triggers instant self-censorship. Nobody shares vulnerable thoughts when a red recording dot is blinking.',
+				betterAlternative:
+					'Never record 1:1 calls. Rely exclusively on zero-knowledge client-side encrypted notes in encrypted1on1.'
+			},
+			{
+				mistake: 'Giving unchecked promises on promotions or compensation',
+				whyBad:
+					'Promising titles or pay bumps before HR and executive calibration destroys your credibility if corporate budgets veto it.',
+				betterAlternative:
+					'Walk through the objective leveling rubric together, map gaps transparently, and commit to advocating for them in executive reviews.'
+			}
+		],
+		followUpHtml:
+			'<p><strong>1. Log 1–3 Meeting Outcomes:</strong> Record mutual commitments in the Outcomes section. Outcomes are single-cycle tactical action items with clear ownership.</p><p><strong>2. Review & Update Goals:</strong> Add a status Checkpoint (On track, At risk, Blocked) to active multi-month development goals.</p><p><strong>3. Deliver the 24-Hour Quick Win:</strong> Pick one obstacle raised by the employee (a missing license, an unblocking introduction, getting off a pointless calendar invite) and solve it within 24 hours. This creates instant trust.</p><p><strong>4. Archive Cycle:</strong> Click Archive to roll over unfinished outcomes and active goals cleanly into the next cycle’s encrypted anketa.</p>',
+		tips: [
+			'Practice the 5-to-7 second silence rule: when an employee finishes speaking, wait before answering—vulnerable truths emerge in the pause.',
+			'Adopt the 80/20 rule: the direct report speaks 80% of the time, the manager listens and asks clarifying questions 20% of the time.',
+			'Deliver a 24-hour quick win after every meeting to prove that the 1:1 creates tangible real-world leverage.',
+			'Frame constructive feedback using SBI (Situation, Behavior, Impact) rather than subjective trait critiques.'
+		],
+		keyTakeaway:
+			'Your output as a manager is the output of your organization. Your job is not to inspect work, but to remove every obstacle standing between your team and their highest potential.'
+	},
+	{
+		slug: 'employee-playbook',
+		title: 'The Direct Report’s Playbook: Owning Your 1:1',
+		subtitle:
+			'How engineers, designers, and team members can overcome meeting anxiety, drive the agenda, and accelerate their career.',
+		category: 'foundations',
+		readTime: '7 min read',
+		cadence: 'Continuous async logging + bi-weekly sync',
+		duration: '30–45 minutes',
+		targetAudience: 'Software Engineers, Designers & Direct Reports',
+		summaryHtml:
+			'The 1:1 meeting belongs to you, not your manager. Learn how to transform regular check-ins into your most powerful career and sanity lever: continuous win logging, constructive problem framing, discussing compensation without awkwardness, and handling feedback.',
+		whyItMattersHtml:
+			'<p><strong>This Meeting Belongs to You:</strong> Your manager has sprint plannings, team standups, and architecture reviews to discuss company deliverables. This 30–45 minute slot is the only recurring meeting on the calendar dedicated entirely to your needs, your challenges, and your career trajectory.</p><p><strong>What a 1:1 is NOT:</strong> It is not a performance interrogation, not a ticket status report, and not a trap. Acknowledging that a project is difficult or that you feel overwhelmed is an act of professional maturity, not weakness.</p><p><strong>What a 1:1 IS:</strong> It is your personal unblocking engine, your career steering wheel, and your primary defense against creeping burnout.</p><p><strong>The Cost of Silence:</strong> Managers cannot read minds. If you silently work 12-hour days to compensate for broken CI or unclear specs, leadership assumes everything is fine and adds more work. Speaking up proactively protects your focus and longevity.</p>',
+		preparationHtml:
+			'<p><strong>Step 1: Continuous Logging Between Meetings:</strong> Don’t panic 5 minutes before the meeting trying to remember two weeks of work. Use encrypted1on1 throughout your sprint:<br>• <em>Growth:</em> Learned a tricky debugging technique or read an insightful RFC? Click "Add entry".<br>• <em>Achievements:</em> Shipped a feature, resolved a thorny bug, or helped onboard a colleague? Log it immediately.<br>• <em>Discuss:</em> Note questions and topics as they occur during the week.</p><p><strong>Step 2: The 5-Minute Pre-Meeting Polish (24h Before):</strong><br>1. Select Mood and tag emotional feelings (anxious, overwhelmed, motivated, calm).<br>2. Rate your Workload (Too much, Just right, Too little).<br>3. Complete "What’s harder than it should be" (Friction)—name slow builds, missing credentials, or cross-team delays.<br>4. Click Publish so your manager has time to review and prepare support.<br>5. Use Private Notes for private reminders strictly invisible to your lead and admins.</p>',
+		agenda: [
+			{
+				title: 'Pillar 1: Battery Level & Workload Reality (5 min)',
+				durationMinutes: 5,
+				description: 'Signal your current capacity, stress level, and emotional trend.',
+				questions: [
+					'My workload is currently feeling heavy / sustainable / light—here is how the pace is affecting my deep work.',
+					'I flagged these feeling tags in the anketa: here is the context behind them.'
+				]
+			},
+			{
+				title: 'Pillar 2: Friction & Unblocking: Problem + Impact + Proposal (15 min)',
+				durationMinutes: 15,
+				description: 'Frame obstacles constructively using the Problem–Impact–Proposal model.',
+				questions: [
+					'Problem: Our staging environment was unstable 3 times this sprint during release testing.',
+					'Impact: It delayed QA validation and created stress for the entire frontend team.',
+					'Proposal: Can we allocate 2 days next sprint to automate staging deployment? I need your help prioritizing this with Product.'
+				]
+			},
+			{
+				title: 'Pillar 3: Career Direction & Competency Leveling (15 min)',
+				durationMinutes: 15,
+				description: 'Discuss growth, skills, and promotion criteria without awkwardness.',
+				questions: [
+					'I want to understand the gap between my current output and Senior Engineer expectations—can we review the rubric together?',
+					'My goal for this year is stepping into technical architecture: which upcoming initiative would be an ideal stretch assignment?',
+					'What is one area of technical or leadership craft you think I should focus on polishing next?'
+				]
+			},
+			{
+				title: 'Pillar 4: Mutual Agreements & Outcome Logging (10 min)',
+				durationMinutes: 10,
+				description: 'Capture concrete action items for both you and your manager.',
+				questions: [
+					'Can we log these 2 specific action items under Meeting Outcomes?',
+					'Manager action: Follow up with Platform lead regarding CI test runner capacity.',
+					'My action: Draft the technical proposal for database connection pooling by Friday.'
+				]
+			}
+		],
+		antiPatterns: [
+			{
+				mistake: 'The Silent Sufferer (Suffering in Silence)',
+				whyBad:
+					'Hiding overwork or confusion leads directly to chronic exhaustion, bugs, and eventual resignation without giving your manager a chance to help.',
+				betterAlternative:
+					'Say clearly: "My workload is currently unsustainable. Can we review my commitments and decide what to drop, delay, or delegate?"'
+			},
+			{
+				mistake: 'The 5-Minute Pre-Meeting Scramble',
+				whyBad:
+					'Rushing to fill out notes right before the call results in superficial status updates and missed opportunities for real unblocking.',
+				betterAlternative:
+					'Log achievements and friction notes incrementally as they happen during the sprint using the open cycle in encrypted1on1.'
+			},
+			{
+				mistake: 'Vague Venting without Impact or Solutions',
+				whyBad:
+					'Complaining that "everything is broken" without concrete examples leaves managers powerless to advocate on your behalf.',
+				betterAlternative:
+					'Use the Problem + Impact + Proposal formula: name the issue, demonstrate team impact, and offer a viable solution.'
+			},
+			{
+				mistake: 'The Ambush Salary Demand',
+				whyBad:
+					'Demanding an immediate 20% raise on the spot puts managers in a defensive corner and rarely succeeds.',
+				betterAlternative:
+					'De-couple compensation from emotional ultimatums: anchor talks in objective leveling rubrics, skill milestones, and planned review cycles.'
+			}
+		],
+		followUpHtml:
+			'<p><strong>1. Check Off Outcomes As You Go:</strong> Over the next two weeks, mark completed action items directly in your open Anketa. You own your items; your manager owns theirs.</p><p><strong>2. Export Your Period Brag Sheet:</strong> When bi-annual or annual performance review season arrives, open the <strong>Report</strong> view in encrypted1on1. Decrypt your verified log of achievements, growth discoveries, and completed goals over the past 6 months into a structured Markdown document. You will never have to reconstruct your accomplishments from memory again.</p>',
+		tips: [
+			'Always use the Problem + Impact + Proposal formula when bringing up team or tooling friction.',
+			'Adopt the Feedback Receiver Protocol: breathe, listen for understanding without defending, say thank you, and ask for partnership.',
+			'Use the encrypted Private Notes panel for draft thoughts, salary milestones, or personal reflection.',
+			'Remember: asking for help and setting boundaries is a hallmark of senior engineering maturity.'
+		],
+		keyTakeaway:
+			'The 1:1 is your meeting. When you take the steering wheel—logging your wins, naming friction, and asking for sponsorship—you take full control of your engineering trajectory.'
+	},
+	{
+		slug: 'handling-difficult-situations',
+		title: 'Handling Difficult Situations: Scripts for High-Stakes 1:1s',
+		subtitle:
+			'Exact conversational scripts and psychological frameworks for de-escalating tension, tears, critical feedback, and ultimatums.',
+		category: 'difficult',
+		readTime: '9 min read',
+		cadence: 'Situational / Crisis & High-Stakes moments',
+		duration: '30–60 minutes',
+		targetAudience: 'Managers & Direct Reports navigating emotional and organizational friction',
+		summaryHtml:
+			'When 1:1s get messy, standard advice falls apart. A field guide with battle-tested scripts for six high-stakes scenarios: the "I’m fine" stonewall, critical performance feedback, emotional distress and tears, salary demands, micromanagement complaints, and organizational cynicism.',
+		whyItMattersHtml:
+			'<p><strong>The Real Test of Leadership:</strong> Anyone can run a 1:1 when sprints are green and promotions are flowing. The true test of managerial skill and human maturity arrives when conversations get uncomfortable: an engineer goes silent, someone breaks into tears, or a critical performance intervention is required.</p><p><strong>Psychological Safety Under Pressure:</strong> In difficult moments, the natural human reaction is defensiveness, blame, or avoidance. When leaders panic, trust evaporates. Navigating these conversations requires radical empathy, objective anchoring, and deliberate conversational pauses.</p><p><strong>Confidentiality as a Safe Harbor:</strong> Emotional vulnerability cannot survive without guaranteed confidentiality. Difficult conversations must never be recorded, and notes must remain strictly encrypted under client keys.</p>',
+		preparationHtml:
+			'<p><strong>Pre-Conversation Checklist:</strong><br>1. <em>Check Sparklines & Feeling Tags:</em> Look at recent mood and workload trends to diagnose whether this is an acute spike or chronic burnout.<br>2. <em>Anchor to Observable Facts:</em> Separate objective behaviors from subjective judgements. Write down dates, specific PRs, or concrete incidents.<br>3. <em>Prepare Your Private Notes:</em> Use the Private Notes column in encrypted1on1 to jot down your conversational anchors and hypotheses. Never share private diagnostic notes.<br>4. <em>Clear Calendar Buffers:</em> Ensure you have at least 15 minutes of free calendar after the meeting so you are not forced to rush an emotionally charged conversation.</p>',
+		agenda: [
+			{
+				title: 'Scenario 1: The "I’m Fine" Stonewall (10 min)',
+				durationMinutes: 10,
+				description: 'Navigating terse, defensive one-word answers when work is visibly slipping.',
+				questions: [
+					'Script: "I hear you saying things are fine, but I’ve noticed a pattern over the past couple of weeks: standups feel subdued, and that Auth service PR seems unusually heavy."',
+					'Script: "I’m not bringing this up to evaluate you or push you. My job is to protect your momentum. When things get quiet like this, it usually means there is a hidden blocker or you are carrying too much alone."',
+					'Script: "What is one thing that has been more exhausting than usual this sprint? (Then stay silent for 7 seconds)."'
+				]
+			},
+			{
+				title: 'Scenario 2: Delivering Critical Performance Feedback (15 min)',
+				durationMinutes: 15,
+				description: 'Addressing poor code quality or abrasive communication using the SBI model.',
+				questions: [
+					'Situation: "During Tuesday\'s code review on the Payment Gateway refactoring..."',
+					"Behavior: \"...when Jordan asked about the fallback logic, your response was: 'Read the docs, I don't have time to explain basics.'\"",
+					'Impact: "...which caused Jordan to shut down, slowed down review cycles, and damaged team safety."',
+					'Alternative & Partnership: "Maintaining collaborative review culture is just as vital as velocity. What was going on for you in that moment?"'
+				]
+			},
+			{
+				title: 'Scenario 3: Emotional Distress & Tears (10 min)',
+				durationMinutes: 10,
+				description: 'Holding compassionate space when a direct report breaks down under stress.',
+				questions: [
+					'Script: "Hey, take your time. There is absolutely no rush, and you have nothing to apologize for. We work with complex, stressful systems, and we are all human beings first."',
+					'Script: "Would you like to take a 5-minute break, grab a glass of water, and come back? Or would you prefer to reschedule the rest of our chat to tomorrow? Whatever you need is completely okay."',
+					'Rule: Never record the call. Focus exclusively on listening and emotional safety, not immediate problem-solving.'
+				]
+			},
+			{
+				title: 'Scenario 4: Immediate Raise or Promotion Demands (10 min)',
+				durationMinutes: 10,
+				description: 'Responding to sudden financial or title ultimatums constructively.',
+				questions: [
+					'Script: "Thank you for being direct with me about where your head is at. I really value your ambition, and I want to make sure you feel fairly rewarded for your impact here."',
+					'Script: "I cannot give you an instant \'yes\' today on title or budget, because promotions involve our leveling rubric and executive calibration. What I CAN promise you is 100% transparency."',
+					'Script: "Let\'s open our Senior rubric together, map where your contributions hit the mark and where the gaps are, and take that gap analysis to leadership for the upcoming cycle."'
+				]
+			},
+			{
+				title: 'Scenario 5 & 6: Micromanagement Accusations & Cynicism (10 min)',
+				durationMinutes: 10,
+				description:
+					'Calibrating visibility versus autonomy and addressing organizational cynicism.',
+				questions: [
+					'Micromanagement Script: "Thank you for telling me directly. If my check-ins feel like micromanagement, our communication has a breakdown. What update cadence gives me the context to protect you without making you feel policed?"',
+					'Cynicism Script: "I understand why this architectural pivot feels jarring after all our hard work. Here is the market context driving this decision... What architectural risks do you foresee and how can we mitigate them?"'
+				]
+			}
+		],
+		antiPatterns: [
+			{
+				mistake: 'The "Praise Sandwich" (Compliment–Criticism–Compliment)',
+				whyBad:
+					'Dilutes critical feedback. The employee leaves thinking they are doing great, while the manager assumes they delivered tough guidance.',
+				betterAlternative:
+					'Deliver clear, compassionate SBI feedback directly. Be concise, transparent, and focus on collaborative partnership.'
+			},
+			{
+				mistake: 'Counter-Attacking Defensively',
+				whyBad:
+					'When an employee accuses you of micromanaging or complains about company strategy, reacting with anger obliterates psychological safety.',
+				betterAlternative:
+					'Thank them for their candor, acknowledge the friction calmly, and invite them to co-design the solution.'
+			},
+			{
+				mistake: 'Making Reckless Promises to Pacify Tears or Demands',
+				whyBad:
+					'Promising promotions or budget out of discomfort creates catastrophic betrayal when upper management rejects the request.',
+				betterAlternative:
+					'Offer empathetic listening and complete procedural transparency, but never guarantee executive decisions unilaterally.'
+			},
+			{
+				mistake: 'Minimizing Emotional Distress ("Don’t cry, it’s fine!")',
+				whyBad:
+					'Telling someone not to cry invalidates their authentic emotional reality and increases their embarrassment.',
+				betterAlternative:
+					'Offer a pause, normalize their feelings as human, and give them the choice to take a break or reschedule.'
+			}
+		],
+		followUpHtml:
+			'<p><strong>1. Deliver Immediate Unblocking within 24 Hours:</strong> If a tough conversation revealed systemic burnout or tooling friction, take visible action to unblock them immediately. Resolving even one friction point proves that vulnerability is safe and rewarded.</p><p><strong>2. Document Objectively in Private Notes:</strong> Capture factual timelines and promised support in your device-encrypted Private Notes. Never store sensitive personal disclosures on unencrypted corporate drives.</p><p><strong>3. Schedule a Gentle Follow-up:</strong> In emotionally charged cases, schedule a brief 15-minute coffee check-in 3–5 days later to re-anchor psychological safety and calibrate ongoing momentum.</p>',
+		tips: [
+			'Count to 7 in silence after asking a deep diagnostic question: vulnerable truths need space to surface.',
+			'Always separate performance coaching from compensation negotiations.',
+			'Remember that defensiveness is almost always a protective armor born of stress or unclear expectations.',
+			'Use the support_checkin template in encrypted1on1 whenever chronic overload or burnout is detected.'
+		],
+		keyTakeaway:
+			'Difficult conversations do not ruin working relationships; mishandled conversations do. Navigated with empathy, calm listening, and mathematical confidentiality, high-stakes moments become the bedrock of high-trust teams.'
 	}
 ];

@@ -33,6 +33,9 @@
 			<a href={localizeHref('/playbook/questions/')}>Question Bank</a>
 			<a href={localizeHref('/playbook/books/')}>Bookshelf</a>
 			<a href={localizeHref('/playbook/high-leverage-1-on-1/')}>1:1 Manifesto</a>
+			<a href={localizeHref('/playbook/manager-playbook/')}>Manager Playbook</a>
+			<a href={localizeHref('/playbook/employee-playbook/')}>Direct Report Playbook</a>
+			<a href={localizeHref('/playbook/handling-difficult-situations/')}>Tough Moments</a>
 			<a href={localizeHref('/playbook/first-1-on-1/')}>First 1:1</a>
 			<a href={localizeHref('/playbook/bi-weekly-pulse/')}>Bi-Weekly Pulse</a>
 			<a href={localizeHref('/playbook/career-growth/')}>Career Growth</a>

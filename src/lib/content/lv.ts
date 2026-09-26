@@ -59,7 +59,8 @@ export const lv: LandingContent = {
 			'Šī ir plaisa, ko mēs izlēmām aizvērt pareizi — ne tikai savai organizācijai, bet kā kaut ko, ko ikviens tādā pašā situācijā varētu pats pārbaudīt, nevis pieņemt uz ticības. Ja 1:1 platforma glabā dažas no visjutīgākajām sarunām, kādas uzņēmumā notiek, „mēs apsolām neskatīties” nav pietiekami stingra garantija. Vienīgā pietiekami stingrā garantija ir tāda, kurā skatīšanās <em>nav iespējama</em> — kad operators, IT komanda, uzņēmums, kas platformu uztur pats, un pat pilnīga servera kompromitēšana iegūst tikai šifrētu tekstu. Tā nav politika. Tas ir pareizi īstenots šifrējums no gala līdz galam, ar atvērtu kodu, ko ikviens var pārbaudīt, lai pārliecinātos, ka šis apgalvojums patiešām ir patiess.',
 			'encrypted1on1 ir tā rezultāts.'
 		],
-		illustrationAlt: 'Konfidenciāla 1:1 saruna zem aizsargājošas arkas ar pilnīgas šifrēšanas simboliem'
+		illustrationAlt:
+			'Konfidenciāla 1:1 saruna zem aizsargājošas arkas ar pilnīgas šifrēšanas simboliem'
 	},
 
 	methodology: {
@@ -85,7 +86,8 @@ export const lv: LandingContent = {
 		],
 		closingHtml:
 			'Šajos pētījumos vērojama konsekventa likumsakarība: vērtība nav pašā <em>tikšanos faktā</em>. Tā ir tikšanās rīkošanā <strong>regulāri, strukturēti un ar pēctecību</strong> — sekojot līdzi tam, kas tika teikts iepriekšējā reizē, kādas saistības tika uzņemtas, kādi mērķi vēl ir atvērti. Tieši šī pēctecība pazūd brīdī, kad 1:1 tikšanās dzīvo izkaisītos dokumentos, atmiņā vai kādā rīkā, kas nejauši bija atvērts konkrētajā nedēļā.',
-		illustrationAlt: 'Darbinieks un vadītājs, kāpjot pa soļiem uz mērķiem ar līdzsvarotu vadības sviru'
+		illustrationAlt:
+			'Darbinieks un vadītājs, kāpjot pa soļiem uz mērķiem ar līdzsvarotu vadības sviru'
 	},
 
 	comparison: {
