@@ -68,6 +68,57 @@ npm run verify:docker
 
 Builds the real image, runs it, and checks real HTTP status codes for a fixed table of paths — both with and without a trailing slash (`/ru`, `/ru/`, `/ru/terms`, `/ru/terms/`, ...) and a genuine 404 case. Exists because a real bug shipped that nothing else here would have caught: the Caddy layer 404'd on any trailing-slash URL, because `/ru/` is itself an existing _directory_ on disk (it holds `ru/terms.html`/`ru/privacy.html`), so a naive `try_files {path} {path}.html` matched the directory on its first candidate and never got to try `.html`. Paraglide's `localizeHref()` always appends a trailing slash when localizing the _root_ path, so `/ru/`, `/lv/`, `/es/` are exactly what the language switcher's home-page links generate — not an edge case. `npm run test:e2e` (against the dev server) can't catch this class of bug at all, since the dev server doesn't go through `docker/prod/Caddyfile`. Needs a working `docker` on `PATH`; not wired into any CI (none exists yet for this repo).
 
+## Product Promo Video Pipeline
+
+The repository includes a fully reproducible, automated pipeline for recording and dubbing the product demo walkthrough video against the local dev environment (`http://localhost:5173`).
+
+### Generated Assets (`static/videos/`)
+
+- 🇬🇧 **English:**
+  - `static/videos/encrypted1on1-demo-en.mp4` (H.264 / AAC, 1080p 25fps, 76.4s)
+  - `static/videos/encrypted1on1-demo-en.webm` (VP8 / Opus, 1080p 25fps, 76.5s)
+- 🇷🇺 **Russian:**
+  - `static/videos/encrypted1on1-demo-ru.mp4` (H.264 / AAC, 1080p 25fps, 76.4s)
+  - `static/videos/encrypted1on1-demo-ru.webm` (VP8 / Opus, 1080p 25fps, 76.5s)
+- 🔇 **Silent Master:** `static/videos/encrypted1on1-demo.webm`
+- 🖼️ **Poster Frame:** `static/videos/demo-poster.png`
+
+### Pipeline Commands
+
+```sh
+# 1. Record deterministic 1080p master screencast with Playwright:
+npm run make:video
+
+# 2. Synthesize neural TTS voiceover and mux video + audio (EN + RU):
+npm run make:voiceover
+
+# Or dub a single locale:
+python scripts/dub-promo-video.py --lang en
+python scripts/dub-promo-video.py --lang ru
+```
+
+### Automation Architecture
+
+1. **Deterministic Screen Automation (`scripts/generate-promo-video.mjs`)**:
+   - Resets backend demo seed data via `docker exec encrypted1on1-backend-1 php bin/console app:reset-demo-data`.
+   - Injects a high-visibility cursor with click ripples (`demo-cursor`, `.demo-ripple`).
+   - Injects an internal SPA link interceptor (`history.pushState`) to prevent full reloads and preserve in-memory cryptographic keys across views.
+   - Shows informative on-screen banners and a cryptographic network inspector modal displaying client-side encrypted payloads (`employeeBlob`, `employeeSealedKey`).
+   - Uses milestone-based timeline pacing (`waitUntilElapsed`) ensuring exact visual alignment to the storyboard.
+
+2. **Neural TTS & Synchronization (`scripts/dub-promo-video.py`)**:
+   - Uses Microsoft Edge Neural TTS (`en-US-AndrewNeural` for EN, `ru-RU-DmitryNeural` for RU).
+   - Precision audio delays (`adelay` filter in FFmpeg) place narration segments at exact scene moments:
+     - **0:01.0**: Login & client-side Argon2id key derivation
+     - **0:12.0**: Dashboard cadence & cycle history
+     - **0:20.5**: 3-minute async prep (mood, pulse, blockers)
+     - **0:31.0**: Isolated private scratchpad notes
+     - **0:40.0**: Zero-Knowledge network payload proof
+     - **0:49.8**: Action items & goals rollover
+     - **0:57.8**: 1-click performance review report
+     - **0:66.2**: Dark mode toggle, Docker self-host command & AGPLv3 CTA
+   - Audio is padded with `apad` to match the exact 76.44s master video duration, eliminating mid-sentence truncation.
+
 ## Known gaps, not yet done
 
 - **ToS and Privacy Policy are complete, specific drafts, but still not lawyer-reviewed** — flagged as such on the pages themselves (`noindex`, an on-page disclaimer banner). Both need real legal review before this site goes live for real. Content lives in `src/lib/content/legal.ts`, English-only by deliberate choice (see below), with facts baked in: governing law is Latvia, "the Operator" is used generically (no company incorporated yet), Cloud data location is Lithuania, contact is `CONTACT_EMAIL` in `src/lib/links.ts`. Still genuinely open: payment processor and the specific hosting/email-provider names (Cloud isn't live yet), stated honestly as pending rather than guessed.

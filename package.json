@@ -13,7 +13,9 @@
 		"lint": "prettier --check .",
 		"format": "prettier --write .",
 		"test:e2e": "playwright test",
-		"verify:docker": "node scripts/verify-docker.mjs"
+		"verify:docker": "node scripts/verify-docker.mjs",
+		"make:video": "node scripts/generate-promo-video.mjs",
+		"make:voiceover": "python scripts/dub-promo-video.py"
 	},
 	"devDependencies": {
 		"@inlang/paraglide-js": "^2.18.2",

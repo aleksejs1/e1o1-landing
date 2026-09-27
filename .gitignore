@@ -30,3 +30,7 @@ project.inlang/cache/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+# Video automation temp
+/.temp-*
+/temp_*
