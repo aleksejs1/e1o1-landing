@@ -263,7 +263,7 @@ export const en: LandingContent = {
 			},
 			{
 				title: 'End-to-end encrypted, specifically.',
-				body: '1:1 content — answers, feelings, feedback, comments, meeting outcomes, goal progress — is encrypted in the browser before it ever reaches the server, with keys derived from each user’s own password and never transmitted. The server stores ciphertext. It cannot decrypt it — not the operator, not IT, not us, not an attacker who compromises the database. The one deliberate, narrow exception: a goal’s title, description, and status are stored as plain text specifically so goals can support company-wide alignment and light reporting — everything else in a 1:1 stays private to the two participants, full stop.'
+				body: '1:1 content — answers, feelings, feedback, comments, meeting outcomes, goal progress — is encrypted in the browser before it ever reaches the server, with keys derived from each user’s own password and never transmitted. The server stores ciphertext. It cannot decrypt it — not the operator, not IT, not us, not an attacker who compromises the database. The two deliberate, narrow exceptions: (1) a goal’s title, description, and status are stored as plain text specifically so goals can support company-wide alignment and light reporting, and (2) custom company templates (template names, descriptions, and question definitions authored by admins, plus which template version a meeting references) are stored unencrypted so teams can share meeting structures. Answers to all questions, feedback, private notes, and goal checkpoints remain strictly private to the two participants, full stop.'
 			}
 		],
 		resolutionHtml:

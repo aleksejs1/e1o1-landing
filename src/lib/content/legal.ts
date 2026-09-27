@@ -94,7 +94,7 @@ export const legal: LegalContent = {
 			{
 				heading: '2. What we can technically see, and what we can’t',
 				bodyHtml:
-					'This is the most important section on this page. Metadata we can see: who talks to whom, meeting dates, account emails. Content we structurally cannot see, because of end-to-end encryption: answers, feedback, comments, goal checkpoints. For the technical reader who wants the real threat model, not just the summary, see <a href="' +
+					'This is the most important section on this page. <strong>Metadata and unencrypted fields we can see:</strong> account emails, who talks to whom, meeting dates, periodicity, and status. There are two deliberate, narrow plaintext exceptions: (1) a goal’s title, description, status, and target date (so goals can be tracked across meeting cycles without decrypting historical anketas); and (2) custom company template definitions (template names, descriptions, and question definitions authored by admins, plus which template version an anketa references). <strong>Content we structurally cannot see, because of end-to-end encryption:</strong> answers to all questions (built-in or custom), feedback, comments, meeting outcomes, private notes, and goal progress checkpoints. For the technical reader who wants the real threat model, not just the summary, see <a href="' +
 					ENCRYPTION_DOCS_URL +
 					'" target="_blank" rel="noopener noreferrer">our encryption documentation</a>.'
 			},
