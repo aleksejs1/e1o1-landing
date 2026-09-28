@@ -122,5 +122,58 @@ export const blogPostsEn: BlogPost[] = [
 				]
 			}
 		]
+	},
+	{
+		slug: 'v1-2-0-release',
+		title: 'encrypted1on1 v1.2.0: Form Versioning, Self-Edit, and Human UX',
+		subtitle:
+			'How to evolve 1:1 question templates over time without breaking historical meeting records, plus author-scoped editing and date rescheduling.',
+		description:
+			'encrypted1on1 v1.2.0 introduces anketa form versioning to safely evolve question sets, self-edit for meeting outcomes and comments, upcoming date rescheduling, and display names.',
+		date: '2026-08-25',
+		formattedDate: 'August 25, 2026',
+		readTime: '4 min read',
+		category: 'Release',
+		author: {
+			name: 'Aleksejs',
+			role: 'Founder & Maintainer'
+		},
+		tags: ['v1.2.0', 'Release', 'UX', 'Form Versioning', 'Open Source'],
+		coverImage: '/images/landing/methodology-leverage.jpg',
+		leadHtml:
+			'Two weeks after releasing v1.0.0, we are shipping <strong>encrypted1on1 v1.2.0</strong>. This release focuses on daily usability and architectural integrity: solving the problem of evolving 1:1 question templates without distorting past meeting notes, giving participants control to edit their own contributions, and polishing core UX interactions.',
+		sections: [
+			{
+				heading: 'The problem of historical fidelity in form templates',
+				paragraphsHtml: [
+					'In any 1:1 meeting tool, the question templates you use inevitably evolve. For instance, in encrypted1on1, we wanted to expand the employee check-in’s “feelings” assessment from 6 coarse emotions to 12 nuanced states (adding options like <em>calm</em>, <em>grateful</em>, <em>stressed</em>, <em>proud</em>, <em>bored</em>, and <em>lonely</em>).',
+					'In standard applications, teams simply update the questions array. But in a 1:1 platform that preserves meeting history, that creates a subtle and dangerous distortion: if you change the template globally, past meetings conducted months ago are silently rendered against the new definition. An option an employee left unchecked because it did not exist at the time suddenly looks indistinguishable from an option they saw and consciously rejected.',
+					'To protect historical fidelity, v1.2.0 introduces <strong>anketa form versioning</strong>. Each meeting form is stamped with <code>formVersion</code> at creation time. Historical forms stay permanently locked to schema v1, while new meetings automatically use schema v2 with the expanded feelings checklist.'
+				]
+			},
+			{
+				heading: 'Self-edit and deletion for meeting outcomes and comments',
+				paragraphsHtml: [
+					'A productive 1:1 meeting is dynamic: people brainstorm, refine action items on the fly, and sometimes post notes with accidental typos. Previously, once an item was committed to the shared outcomes list or discussion thread, it could not be revised.',
+					'In v1.2.0, users can now edit and delete their own items in “Meeting Outcomes” and their own comments in the anketa. Crucially, this is protected by strict author-scoped security policies: participants have full freedom to refine their own words, but no user can modify or erase statements made by their counterpart.'
+				]
+			},
+			{
+				heading: 'Rescheduling upcoming meetings & display names',
+				paragraphsHtml: [
+					'This release also addresses everyday scheduling realities and visual clarity:',
+					'<ul><li><strong>Reschedule upcoming meetings:</strong> In earlier versions, rescheduling was only exposed once a meeting was marked overdue. Now, when calendars conflict or deadlines shift, upcoming meetings can be rescheduled directly from the anketa page.</li><li><strong>Human display names:</strong> Raw email addresses and internal UUIDs across headers, counterpart cards, and meeting summaries have been replaced with friendly display names.</li><li><strong>Dark mode contrast & automated WCAG CI:</strong> Badge colors were retuned for optimal dark-mode readability, backed by an automated WCAG contrast check in our CI pipeline to prevent visual regressions.</li><li><strong>Build transparency:</strong> Self-hosters can now display the running version and git commit hash in the footer via the <code>SHOW_VERSION</code> configuration flag.</li></ul>'
+				]
+			},
+			{
+				heading: 'Deploying v1.2.0',
+				paragraphsHtml: [
+					'The v1.2.0 release is backwards-compatible and includes automatic database migrations for both SQLite and MySQL deployments. You can pull the container image now:',
+					'<pre><code>docker pull ghcr.io/aleksejs1/encrypted1on1:1.2.0</code></pre>',
+					'You can also explore all the new form options and UX refinements live without signing up at <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">demo.private1on1.eu</a>.',
+					'Read the full changelog and technical discussion in the repository on <a href="https://github.com/aleksejs1/encrypted1on1/releases/tag/v1.2.0" target="_blank" rel="noopener noreferrer">GitHub</a>.'
+				]
+			}
+		]
 	}
 ];

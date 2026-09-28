@@ -123,5 +123,58 @@ export const blogPostsEs: BlogPost[] = [
 				]
 			}
 		]
+	},
+	{
+		slug: 'v1-2-0-release',
+		title: 'encrypted1on1 v1.2.0: versionado de formularios, edición propia y mejor experiencia',
+		subtitle:
+			'Cómo evolucionar los cuestionarios 1 a 1 sin distorsionar el historial de reuniones pasadas, edición propia de acuerdos y reprogramación de fechas.',
+		description:
+			'encrypted1on1 v1.2.0 incorpora versionado de cuestionarios para evolucionar preguntas sin romper el pasado, edición propia de acuerdos y comentarios, reprogramación de fechas y nombres visibles.',
+		date: '2026-08-25',
+		formattedDate: '25 de agosto de 2026',
+		readTime: '4 min de lectura',
+		category: 'Lanzamiento',
+		author: {
+			name: 'Aleksejs',
+			role: 'Fundador y desarrollador'
+		},
+		tags: ['v1.2.0', 'Lanzamiento', 'UX', 'Versionado', 'Código Abierto'],
+		coverImage: '/images/landing/methodology-leverage.jpg',
+		leadHtml:
+			'Dos semanas después del lanzamiento de v1.0.0, presentamos <strong>encrypted1on1 v1.2.0</strong>. Esta versión se centra en la usabilidad cotidiana y la integridad de los datos: resuelve el dilema arquitectónico de actualizar plantillas de preguntas sin alterar notas pasadas, brinda a los participantes el control de editar sus aportes y pule aspectos clave de la experiencia de usuario.',
+		sections: [
+			{
+				heading: 'El reto de la fidelidad histórica en las plantillas de reunión',
+				paragraphsHtml: [
+					'En cualquier herramienta de 1 a 1, los cuestionarios evolucionan con el tiempo. Por ejemplo, en encrypted1on1 queríamos ampliar la autoevaluación del estado anímico («sentimientos») del empleado de 6 emociones básicas a 12 matices (añadiendo opciones como <em>calma</em>, <em>gratitud</em>, <em>estrés</em>, <em>orgullo</em>, <em>aburrimiento</em> y <em>soledad</em>).',
+					'En aplicaciones convencionales, el equipo de desarrollo simplemente modifica el listado de preguntas. Pero en un sistema que custodia el historial de reuniones de una empresa, esto genera una peligrosa distorsión retroactiva: si la plantilla cambia a nivel global, las reuniones celebradas hace meses se interpretan según la nueva definición. Una casilla que un empleado no marcó hace tres meses porque no existía pasa a ser indistinguible de una que vio y decidió rechazar deliberadamente.',
+					'Para proteger la fidelidad histórica de los registros, v1.2.0 implementa <strong>versionado de formularios de anketa</strong> (<code>formVersion</code>). Cada reunión queda sellada con su versión al crearse: los encuentros pasados se mantienen en el esquema v1, mientras que los nuevos adoptan el esquema v2 con el catálogo ampliado de emociones.'
+				]
+			},
+			{
+				heading: 'Edición y eliminación propia en acuerdos y comentarios',
+				paragraphsHtml: [
+					'Una reunión 1 a 1 productiva es un proceso vivo: los asistentes intercambian impresiones, refinan acuerdos sobre la marcha y en ocasiones cometen errores tipográficos al escribir rápidamente. Anteriormente, una vez guardado un punto en los acuerdos compartidos o en los comentarios, no era posible editarlo.',
+					'En v1.2.0, los usuarios pueden modificar y eliminar sus propios puntos en «Resultados de la reunión» y sus comentarios en la anketa. Esta función está respaldada por una estricta política de seguridad ligada a la autoría: cada persona tiene total libertad para perfeccionar sus propias palabras, pero nadie puede alterar lo expresado por su interlocutor.'
+				]
+			},
+			{
+				heading: 'Reprogramación de próximas reuniones y nombres legibles',
+				paragraphsHtml: [
+					'Esta versión también incorpora mejoras sustanciales en el día a día:',
+					'<ul><li><strong>Reprogramación de fechas:</strong> anteriormente solo se permitía cambiar la fecha si la reunión ya estaba vencida. Ahora, ante cambios de agenda imprevistos, es posible reprogramar un encuentro planificado directamente desde la propia anketa.</li><li><strong>Nombres de usuario legibles:</strong> los correos electrónicos sin formato y los identificadores UUID han sido sustituidos por nombres visibles en encabezados, resúmenes y listas de participantes.</li><li><strong>Contraste en modo oscuro y verificación WCAG en CI:</strong> se reajustó la paleta de colores de las etiquetas para garantizar una legibilidad óptima y se añadió una comprobación automatizada de contraste WCAG en el pipeline de integración continua.</li><li><strong>Información de versión:</strong> los administradores de sistemas pueden activar la visualización de la versión y el commit de git en el pie de página mediante la variable <code>SHOW_VERSION</code>.</li></ul>'
+				]
+			},
+			{
+				heading: 'Cómo actualizar y desplegar v1.2.0',
+				paragraphsHtml: [
+					'La versión v1.2.0 es totalmente compatible con despliegues anteriores e incorpora migraciones automáticas de base de datos para SQLite y MySQL. Puede descargar la imagen oficial en cualquier momento:',
+					'<pre><code>docker pull ghcr.io/aleksejs1/encrypted1on1:1.2.0</code></pre>',
+					'También puede explorar los nuevos formularios y mejoras visuales sin necesidad de instalar nada en nuestra demo pública interactiva: <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">demo.private1on1.eu</a>.',
+					'El registro completo de cambios y el código están disponibles en el repositorio de <a href="https://github.com/aleksejs1/encrypted1on1/releases/tag/v1.2.0" target="_blank" rel="noopener noreferrer">GitHub</a>.'
+				]
+			}
+		]
 	}
 ];

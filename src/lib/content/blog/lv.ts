@@ -123,5 +123,58 @@ export const blogPostsLv: BlogPost[] = [
 				]
 			}
 		]
+	},
+	{
+		slug: 'v1-2-0-release',
+		title: 'encrypted1on1 v1.2.0: anketu versiju pārvaldība, labojumi un ērta saskarne',
+		subtitle:
+			'Kā attīstīt 1:1 jautājumu kopas, neizkropļojot vēsturisko sarunu saturu, plus iespēja rediģēt savus ierakstus un elastīgi pārcelt datumus.',
+		description:
+			'encrypted1on1 v1.2.0 ievieš anketu versiju pārvaldību, iespēju labot savas vienošanās un komentārus, plānoto sarunu datumu pārcelšanu un lietotājvārdus.',
+		date: '2026-08-25',
+		formattedDate: '2026. gada 25. augusts',
+		readTime: '4 min lasījums',
+		category: 'Laidiens',
+		author: {
+			name: 'Aleksejs',
+			role: 'Dibinātājs un izstrādātājs'
+		},
+		tags: ['v1.2.0', 'Laidiens', 'UX', 'Versiju vadība', 'Atvērtais kods'],
+		coverImage: '/images/landing/methodology-leverage.jpg',
+		leadHtml:
+			'Divas nedēļas pēc v1.0.0 iznākšanas mēs piedāvājam <strong>encrypted1on1 v1.2.0</strong>. Šis laidiens veltīts ikdienas ērtībai un datu integritātei: atrisināta arhitektūras problēma par jautājumu attīstību, saglabājot pagātnes piezīmju patiesumu, ieviesta iespēja rediģēt savus ierakstus un uzlabota saskarne.',
+		sections: [
+			{
+				heading: 'Vēsturiskā patiesuma saglabāšana anketu veidnēs',
+				paragraphsHtml: [
+					'Jebkurā 1 pret 1 sarunu rīkā jautājumu veidnes laika gaitā mainās. Piemēram, encrypted1on1 mēs vēlējāmies paplašināt darbinieka pašsajūtas («sajūtas») novērtējumu no 6 pamata variantiem līdz 12 emocionālām niansēm (pievienojot tādus stāvokļus kā <em>mierīgs</em>, <em>pateicīgs</em>, <em>saspringts</em>, <em>lepns</em>, <em>garlaikots</em> un <em>vientuļš</em>).',
+					'Vienkāršās lietotnēs izstrādātāji vienkārši atjaunina jautājumu masīvu. Taču sistēmā, kas uztur sarunu vēsturi, tas rada bīstamu datu kropļojumu: ja veidni nomaina globāli, senas sarunas pēkšņi tiek attēlotas pēc jaunā standarta. Rūtiņa, kuru darbinieks neatzīmēja pirms trim mēnešiem tikai tāpēc, ka tā vēl nepastāvēja, vizuāli kļūst neatšķirama no opcijas, kuru viņš redzēja un apzināti noraidīja.',
+					'Lai aizsargātu vēsturisko precizitāti, v1.2.0 ievieš <strong>anketu formu versiju pārvaldību</strong> (<code>formVersion</code>). Katrai anketai izveides brīdī tiek fiksēts formas numurs. Senākas anketas vienmēr paliek pie v1 shēmas, savukārt jaunās tiek veidotas pēc v2 shēmas ar paplašināto emociju sarakstu.'
+				]
+			},
+			{
+				heading: 'Iespēja rediģēt un dzēst savas vienošanās un komentārus',
+				paragraphsHtml: [
+					'Dzīva 1 pret 1 saruna ir dinamiska: dalībnieki apspriež idejas, ātri precizē formulējumus un reizēm pieļauj pārrakstīšanās kļūdas. Iepriekš, kad punkts bija pievienots kopīgajam sarunas kopsavilkumam vai komentāru plūsmai, to vairs nevarēja labot.',
+					'Versijā v1.2.0 lietotāji var brīvi labot un dzēst savus ierakstus sadaļā «Sarunas rezultāti» un savus komentārus anketā. Drošība ir stingri piesaistīta autoram: jūs varat noslīpēt savus vārdus, taču neviens nevar mainīt vai dzēst otra sarunas biedra teikto.'
+				]
+			},
+			{
+				heading: 'Plānoto sarunu pārcelšana un lietotājvārdi',
+				paragraphsHtml: [
+					'Šajā laidienā iekļauti arī būtiski ikdienas saskarnes uzlabojumi:',
+					'<ul><li><strong>Elastīga sarunu pārcelšana:</strong> iepriekš pārcelt datumu varēja tikai tad, kad saruna jau bija nokavēta. Tagad, ja mainās kalendārs, plānotās tikšanās datumu var ērti nomainīt tieši no anketas skata.</li><li><strong>Cilvēkiem saprotami vārdi:</strong> e-pasta adreses un sistēmas UUID visā saskarnē, galvenē un kolēģu sarakstos ir aizstāti ar ērtiem lietotājvārdiem.</li><li><strong>Tumšā režīma kontrasts un automatizēts WCAG tests:</strong> nozīmīšu krāsas ir pielāgotas labākai lasāmībai tumšajā režīmā, un CI procesam pievienota automātiska WCAG kontrasta pārbaude.</li><li><strong>Versijas caurspīdīgums:</strong> sistēmas administratori ar parametru <code>SHOW_VERSION</code> var ieslēgt lietotnes versijas un git commita koda attēlošanu kājenē.</li></ul>'
+				]
+			},
+			{
+				heading: 'Uzstādīšana un v1.2.0 Docker laidiens',
+				paragraphsHtml: [
+					'v1.2.0 ir pilnībā savietojams ar iepriekšējām versijām un satur automātiskas datubāzes migrācijas SQLite un MySQL vidēm. Oficiālais konteiners ir pieejams:',
+					'<pre><code>docker pull ghcr.io/aleksejs1/encrypted1on1:1.2.0</code></pre>',
+					'Izmēģināt jaunās anketas iespējas un saskarnes uzlabojumus bez instalēšanas varat demonstrācijas vietnē <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">demo.private1on1.eu</a>.',
+					'Pilns izmaiņu saraksts un kods pieejams <a href="https://github.com/aleksejs1/encrypted1on1/releases/tag/v1.2.0" target="_blank" rel="noopener noreferrer">GitHub</a> repozitorijā.'
+				]
+			}
+		]
 	}
 ];

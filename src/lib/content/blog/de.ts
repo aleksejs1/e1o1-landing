@@ -123,5 +123,58 @@ export const blogPostsDe: BlogPost[] = [
 				]
 			}
 		]
+	},
+	{
+		slug: 'v1-2-0-release',
+		title: 'encrypted1on1 v1.2.0: Fragebogen-Versionierung, eigene Korrekturen und verbesserte UX',
+		subtitle:
+			'Wie Fragebögen für 1:1-Gespräche ohne Bedeutungsverlust vergangener Notizen weiterentwickelt werden, eigene Korrekturen und Terminverschiebungen.',
+		description:
+			'encrypted1on1 v1.2.0 bringt Formular-Versionierung für unverfälschte Historien, eigene Korrekturen an Vereinbarungen und Kommentaren sowie flexible Terminverschiebungen.',
+		date: '2026-08-25',
+		formattedDate: '25. August 2026',
+		readTime: '4 Min. Lesezeit',
+		category: 'Release',
+		author: {
+			name: 'Aleksejs',
+			role: 'Gründer & Entwickler'
+		},
+		tags: ['v1.2.0', 'Release', 'UX', 'Versionierung', 'Open Source'],
+		coverImage: '/images/landing/methodology-leverage.jpg',
+		leadHtml:
+			'Zwei Wochen nach der Veröffentlichung von v1.0.0 folgt nun <strong>encrypted1on1 v1.2.0</strong>. Dieses Release widmet sich der täglichen Praxistauglichkeit und Datenintegrität: Es löst das architektonische Dilemma bei der Weiterentwicklung von Fragenkatalogen, ermöglicht nachträgliche Bearbeitungen eigener Beiträge und verfeinert zentrale UX-Details.',
+		sections: [
+			{
+				heading: 'Das Problem historischer Treue in Gesprächsbögen',
+				paragraphsHtml: [
+					'In jedem Tool für 1:1-Gespräche entwickeln sich Fragebögen kontinuierlich weiter. Beispielsweise wollten wir in encrypted1on1 die Selbsteinschätzung des Wohlbefindens („Gefühle“) von 6 Grundwerten auf 12 differenzierte Emotionen erweitern (unter anderem mit <em>gelassen</em>, <em>dankbar</em>, <em>gestresst</em>, <em>stolz</em>, <em>gelangweilt</em> und <em>isoliert</em>).',
+					'In einfachen Systemen wird schlicht das Fragen-Array im Code aktualisiert. Für eine Plattform, die vertrauliche Gesprächshistorien über Jahre archiviert, birgt das jedoch eine schleichende Verfälschung: Ändert man die Definition global, werden Monate alte Meetings rückwirkend gegen den neuen Katalog gerendert. Eine Checkbox, die ein Mitarbeiter damals gar nicht ankreuzen konnte, weil sie noch nicht existierte, wirkt plötzlich wie eine bewusst abgelehnte Option.',
+					'Um die historische Wahrheit von Notizen zu schützen, führt v1.2.0 eine <strong>Formular-Versionierung</strong> (<code>formVersion</code>) ein. Jeder Bogen wird beim Erstellen unveränderlich mit seiner Version gestempelt. Ältere Gespräche verbleiben dauerhaft im Schema v1, während neue Termine automatisch mit dem erweiterten Schema v2 starten.'
+				]
+			},
+			{
+				heading: 'Eigene Korrekturen an Vereinbarungen und Kommentaren',
+				paragraphsHtml: [
+					'Ein produktives 1:1-Gespräch ist lebendig: Ideen werden verworfen, Beschlüsse formuliert und im schnellen Mitschreiben schleichen sich Tippfehler ein. Bislang konnte ein einmal gespeicherter Punkt weder editiert noch entfernt werden.',
+					'Mit v1.2.0 können Teilnehmende ihre eigenen Einträge in den „Gesprächsergebnissen“ und ihre Kommentare im Fragebogen editieren oder löschen. Dies ist durch strikte Autoren-Berechtigungen geschützt: Jeder kann seine eigenen Formulierungen verfeinern, die Aussagen des Gegenübers bleiben jedoch unantastbar.'
+				]
+			},
+			{
+				heading: 'Termine vorab verschieben & sprechende Benutzernamen',
+				paragraphsHtml: [
+					'Zusätzlich bringt dieses Release handfeste Verbesserungen für die tägliche Nutzung:',
+					'<ul><li><strong>Zukünftige Termine verschieben:</strong> Bisher war ein Rescheduling erst nach Überschreiten des Termins möglich. Ändern sich Kalenderpläne, lässt sich der anstehende Termin nun direkt auf der Anketa-Seite flexibel anpassen.</li><li><strong>Sprechende Benutzernamen:</strong> Reine E-Mail-Adressen und interne UUIDs wurden in Headern, Übersichten und Teilnehmerkarten durch lesbare Anzeigenamen ersetzt.</li><li><strong>Dark-Mode-Kontraste & automatisierter WCAG-Check:</strong> Badge-Farben wurden für optimale Lesbarkeit im Dunkelmodus kalibriert und in der CI-Pipeline durch automatisierte WCAG-Kontrastprüfungen abgesichert.</li><li><strong>Versionsanzeige im Footer:</strong> Administratoren können Version und Git-Commit-Hash über die Umgebungsvariable <code>SHOW_VERSION</code> im Footer einblenden.</li></ul>'
+				]
+			},
+			{
+				heading: 'Upgrade & Docker-Deployment',
+				paragraphsHtml: [
+					'Version v1.2.0 ist vollständig abwärtskompatibel und beinhaltet automatische Datenbankmigrationen für SQLite und MySQL. Das offizielle Docker-Image steht bereit:',
+					'<pre><code>docker pull ghcr.io/aleksejs1/encrypted1on1:1.2.0</code></pre>',
+					'Alle neuen Optionen und Verbesserungen können Sie ohne Registrierung in unserer Live-Demo unter <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">demo.private1on1.eu</a> testen.',
+					'Das vollständige Changelog und der Quellcode sind auf <a href="https://github.com/aleksejs1/encrypted1on1/releases/tag/v1.2.0" target="_blank" rel="noopener noreferrer">GitHub</a> einsehbar.'
+				]
+			}
+		]
 	}
 ];

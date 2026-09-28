@@ -123,5 +123,59 @@ export const blogPostsFr: BlogPost[] = [
 				]
 			}
 		]
+	},
+	{
+		slug: 'v1-2-0-release',
+		title: 'encrypted1on1 v1.2.0 : versionnage des formulaires, édition autonome et UX affinée',
+		subtitle:
+			'Comment faire évoluer les trames d’entretiens 1:1 sans altérer l’historique passé, édition de ses propres accords et report de date.',
+		description:
+			'encrypted1on1 v1.2.0 introduit le versionnage des questionnaires pour faire évoluer les trames en toute sécurité, la modification de ses propres points d’accord et le report de rendez-vous.',
+		date: '2026-08-25',
+		formattedDate: '25 août 2026',
+		readTime: '4 min de lecture',
+		category: 'Version',
+		author: {
+			name: 'Aleksejs',
+			role: 'Fondateur et mainteneur'
+		},
+		tags: ['v1.2.0', 'Version', 'UX', 'Versionnage', 'Open Source'],
+		coverImage: '/images/landing/methodology-leverage.jpg',
+		leadHtml:
+			'Deux semaines après la sortie de v1.0.0, nous publions <strong>encrypted1on1 v1.2.0</strong>. Cette version met l’accent sur la fluidité d’usage au quotidien et l’intégrité des archives : elle résout le casse-tête architectural de l’évolution des questionnaires sans falsifier les réunions passées, permet d’éditer ses propres interventions et perfectionne l’expérience utilisateur.',
+		sections: [
+			{
+				heading: 'Le défi de la fidélité historique des trames d’entretien',
+				paragraphsHtml: [
+					'Dans tout outil de management 1:1, les formulaires de questions évoluent avec le temps. Dans encrypted1on1, nous souhaitions enrichir l’évaluation du ressenti collaborateur (« sentiments ») en passant de 6 états généraux à 12 émotions nuancées (en intégrant des options comme <em>serein</em>, <em>reconnaissant</em>, <em>stressé</em>, <em>fier</em>, <em>désabusé</em> et <em>isolé</em>).',
+					'Dans une application classique, l’équipe met simplement à jour la liste des questions en base. Mais sur une plateforme qui préserve les traces d’entretiens passés, cette pratique crée une distorsion silencieuse : les réunions tenues des mois auparavant se retrouvent interprétées selon la nouvelle nomenclature. Une case qu’un employé n’avait pas cochée tout simplement parce qu’elle n’existait pas devient rétroactivement indiscernable d’une option qu’il a lue et consciemment écartée.',
+					'Afin de préserver l’authenticité des archives, la version 1.2.0 introduit le <strong>versionnage des formulaires d’anketa</strong> (<code>formVersion</code>). Chaque entretien reste figé dans la version de son schéma d’origine (v1), tandis que les nouvelles réunions bénéficient automatiquement de la trame v2 avec le catalogue élargi d’émotions.',
+					'Ce choix garantit que les entretiens menés sur les versions antérieures gardent scrupuleusement leur intégrité d’origine au fil des années.'
+				]
+			},
+			{
+				heading: 'Modification et suppression de ses propres accords et commentaires',
+				paragraphsHtml: [
+					'Un entretien 1:1 efficace est interactif : on échange des perspectives, on affine des plans d’action en direct et il arrive que des fautes de frappe se glissent dans la prise de notes. Auparavant, une fois consigné dans les conclusions ou les commentaires, un élément ne pouvait plus être modifié.',
+					'Avec la v1.2.0, chaque participant peut modifier ou supprimer ses propres entrées dans les « Conclusions d’entretien » et ses commentaires dans l’anketa. Cette souplesse s’accompagne d’un cloisonnement strict par auteur : vous pouvez retoucher vos propres mots, mais il est strictement impossible de modifier les déclarations de votre interlocuteur.'
+				]
+			},
+			{
+				heading: 'Report des entretiens à venir et noms d’affichage',
+				paragraphsHtml: [
+					'Cette version intègre également des gains notables de confort opérationnel :',
+					'<ul><li><strong>Report anticipé de réunion :</strong> auparavant, la reprogrammation n’était accessible qu’une fois la date dépassée. Désormais, en cas d’imprévu d’agenda, la date d’un entretien à venir peut être modifiée d’un clic depuis l’anketa.</li><li><strong>Noms d’affichage personnalisés :</strong> les adresses e-mail brutes et identifiants UUID ont été remplacés par des noms d’affichage conviviaux dans les en-têtes et les récapitulatifs.</li><li><strong>Contraste en mode sombre et tests WCAG en CI :</strong> les badges et contrastes ont été réajustés pour le thème sombre, avec une validation automatique de conformité WCAG dans notre chaîne d’intégration continue.</li><li><strong>Transparence de version :</strong> les administrateurs système peuvent activer l’affichage de la version et de l’empreinte git dans le pied de page via la variable <code>SHOW_VERSION</code>.</li></ul>'
+				]
+			},
+			{
+				heading: 'Mise à niveau et conteneur Docker',
+				paragraphsHtml: [
+					'La version v1.2.0 préserve une rétrocompatibilité intégrale et applique automatiquement les migrations de base de données pour SQLite et MySQL. L’image Docker officielle est disponible :',
+					'<pre><code>docker pull ghcr.io/aleksejs1/encrypted1on1:1.2.0</code></pre>',
+					'Vous pouvez également tester les nouvelles trames et améliorations d’interface sans installation sur notre démo en ligne : <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">demo.private1on1.eu</a>.',
+					'Le journal des modifications et l’ensemble des sources sont accessibles sur <a href="https://github.com/aleksejs1/encrypted1on1/releases/tag/v1.2.0" target="_blank" rel="noopener noreferrer">GitHub</a>.'
+				]
+			}
+		]
 	}
 ];

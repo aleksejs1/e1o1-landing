@@ -182,6 +182,8 @@
 <style>
 	.blog-detail-page {
 		max-width: 820px;
+		width: 100%;
+		box-sizing: border-box;
 		margin: 0 auto;
 		padding: var(--space-6) var(--space-4) var(--space-12);
 	}
@@ -240,17 +242,21 @@
 	}
 
 	.detail-header h1 {
-		font-size: clamp(28px, 4.5vw, 40px);
+		font-size: clamp(24px, 5.5vw, 38px);
 		line-height: 1.2;
 		color: var(--color-heading);
 		margin: 0 0 var(--space-3);
+		overflow-wrap: break-word;
+		word-break: break-word;
 	}
 
 	.detail-subtitle {
-		font-size: clamp(17px, 2.5vw, 20px);
+		font-size: clamp(16px, 2.5vw, 20px);
 		line-height: 1.5;
 		color: color-mix(in srgb, var(--color-text) 80%, transparent);
 		margin: 0 0 var(--space-5);
+		overflow-wrap: break-word;
+		word-break: break-word;
 	}
 
 	.author-bar {
@@ -320,16 +326,20 @@
 		font-size: 17px;
 		line-height: 1.7;
 		color: var(--color-text);
+		overflow-wrap: break-word;
+		word-break: break-word;
 	}
 
 	.article-lead {
-		font-size: 20px;
+		font-size: clamp(17px, 2.5vw, 20px);
 		line-height: 1.6;
 		font-weight: 500;
 		color: var(--color-heading);
 		margin-bottom: var(--space-6);
 		padding-bottom: var(--space-4);
 		border-bottom: 1px solid var(--color-border);
+		overflow-wrap: break-word;
+		word-break: break-word;
 	}
 
 	.article-section {
@@ -523,6 +533,10 @@
 	}
 
 	@media (max-width: 640px) {
+		.blog-detail-page {
+			padding: var(--space-4) 16px var(--space-8);
+		}
+
 		.author-bar {
 			flex-direction: column;
 			align-items: flex-start;

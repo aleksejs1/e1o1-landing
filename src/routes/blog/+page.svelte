@@ -94,6 +94,8 @@
 <style>
 	.blog-page {
 		max-width: 1080px;
+		width: 100%;
+		box-sizing: border-box;
 		margin: 0 auto;
 		padding: var(--space-6) var(--space-4) var(--space-12);
 	}
@@ -281,6 +283,10 @@
 	}
 
 	@media (max-width: 640px) {
+		.blog-page {
+			padding: var(--space-4) 16px var(--space-8);
+		}
+
 		.posts-grid {
 			grid-template-columns: 1fr;
 		}
