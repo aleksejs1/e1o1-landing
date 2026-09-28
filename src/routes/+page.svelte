@@ -1653,6 +1653,13 @@
 		padding-bottom: var(--space-8);
 	}
 
+	@media (max-width: 640px) {
+		.section-video {
+			padding-top: var(--space-2);
+			padding-bottom: var(--space-4);
+		}
+	}
+
 	.video-pill {
 		display: inline-flex;
 		align-items: center;
@@ -1700,7 +1707,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: var(--space-4);
+		gap: var(--space-3) var(--space-4);
 		padding: var(--space-3) var(--space-5);
 		background: color-mix(in srgb, var(--color-surface) 94%, var(--color-bg));
 		border-top: 1px solid var(--color-divider);
@@ -1713,7 +1720,7 @@
 		gap: var(--space-2);
 		font-size: 13.5px;
 		color: color-mix(in srgb, var(--color-text) 80%, transparent);
-		flex: 1 1 280px;
+		max-width: 620px;
 	}
 
 	.video-footer-left .pill-dot {
@@ -1734,12 +1741,13 @@
 			flex-direction: column;
 			align-items: stretch;
 			gap: var(--space-3);
-			padding: var(--space-4);
+			padding: var(--space-3) var(--space-4);
 		}
 
 		.video-footer-left {
 			justify-content: flex-start;
 			text-align: left;
+			max-width: 100%;
 		}
 
 		.video-footer-actions .btn {
