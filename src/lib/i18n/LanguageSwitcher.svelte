@@ -58,26 +58,8 @@
 		{/each}
 	</nav>
 {:else}
-	<!-- Desktop Inline Pills (> 768px) -->
-	<nav class="language-switcher-pills desktop-only" aria-label={m.language_switcher_label()}>
-		{#each locales as code (code)}
-			<a
-				href={localizeHref(currentHref, { locale: code })}
-				aria-current={code === currentLocale ? 'true' : undefined}
-				onclick={() => rememberLocale(code)}
-				data-sveltekit-reload
-			>
-				{LOCALE_NAMES[code]}
-			</a>
-		{/each}
-	</nav>
-
-	<!-- Mobile Dropdown (<= 768px) -->
-	<details
-		bind:this={detailsEl}
-		class="lang-dropdown mobile-only"
-		aria-label={m.language_switcher_label()}
-	>
+	<!-- Header Dropdown (compact and clean on all screen sizes) -->
+	<details bind:this={detailsEl} class="lang-dropdown" aria-label={m.language_switcher_label()}>
 		<summary class="lang-trigger" aria-haspopup="listbox">
 			<span class="lang-current">{LOCALE_NAMES[currentLocale]}</span>
 			<span class="lang-caret" aria-hidden="true">▾</span>
@@ -234,23 +216,5 @@
 	.lang-check {
 		color: var(--color-accent-ink);
 		font-weight: 700;
-	}
-
-	/* Breakpoint toggles */
-	.desktop-only {
-		display: inline-flex;
-	}
-
-	.mobile-only {
-		display: none;
-	}
-
-	@media (max-width: 768px) {
-		.desktop-only {
-			display: none;
-		}
-		.mobile-only {
-			display: inline-block;
-		}
 	}
 </style>

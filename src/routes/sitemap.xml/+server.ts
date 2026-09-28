@@ -1,6 +1,7 @@
 import { SITE_URL } from '$lib/links';
 import { locales, baseLocale, type Locale } from '$lib/paraglide/runtime';
 import { getAllSlugs } from '$lib/content/playbook';
+import { getAllBlogSlugs } from '$lib/content/blog';
 
 export const prerender = true;
 
@@ -21,6 +22,7 @@ function getLocalizedPath(basePath: string, locale: Locale): string {
 
 export function GET() {
 	const slugs = getAllSlugs();
+	const blogSlugs = getAllBlogSlugs();
 
 	// Canonical base paths for indexable public pages (terms/privacy have noindex)
 	const basePaths = [
@@ -28,7 +30,9 @@ export function GET() {
 		'/playbook/',
 		'/playbook/questions/',
 		'/playbook/books/',
-		...slugs.map((s) => `/playbook/${s}/`)
+		...slugs.map((s) => `/playbook/${s}/`),
+		'/blog/',
+		...blogSlugs.map((s) => `/blog/${s}/`)
 	];
 
 	const today = new Date().toISOString().split('T')[0];
@@ -39,8 +43,9 @@ export function GET() {
 	for (const basePath of basePaths) {
 		const isHome = basePath === '/';
 		const isPlaybook = basePath.startsWith('/playbook/');
-		const priority = isHome ? '1.0' : isPlaybook ? '0.8' : '0.5';
-		const changefreq = isHome ? 'weekly' : isPlaybook ? 'weekly' : 'monthly';
+		const isBlog = basePath.startsWith('/blog/');
+		const priority = isHome ? '1.0' : isPlaybook || isBlog ? '0.8' : '0.5';
+		const changefreq = isHome ? 'weekly' : isPlaybook || isBlog ? 'weekly' : 'monthly';
 
 		for (const locale of locales) {
 			const currentUrl = `${SITE_URL}${getLocalizedPath(basePath, locale)}`;

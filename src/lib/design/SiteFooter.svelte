@@ -22,6 +22,7 @@
 				>{content.footer.demoLabel}</a
 			>
 			<a href="{localizeHref('/')}#pricing">{content.footer.pricingLabel}</a>
+			<a href={localizeHref('/blog/')}>{m.nav_blog()}</a>
 			<a href={DOCS_URL} target="_blank" rel="noopener noreferrer">{content.footer.docsLabel}</a>
 			<a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">{content.footer.githubLabel}</a
 			>

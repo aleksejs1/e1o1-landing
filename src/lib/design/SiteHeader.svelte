@@ -9,16 +9,14 @@
 
 <header class="site-header">
 	<div class="brand-group">
-		<a class="brand" href={localizeHref('/')}>
+		<a class="brand" href={localizeHref('/')} aria-label="encrypted1on1">
 			<Logo />
-			<span class="wordmark">encrypted1on1</span>
+			<span class="wordmark wordmark-full">encrypted1on1</span>
+			<span class="wordmark wordmark-short">e1o1</span>
 		</a>
 		<nav class="site-nav">
 			<a class="nav-link nav-anchor" href="{localizeHref('/')}#how-it-works">
 				{m.nav_how_it_works()}
-			</a>
-			<a class="nav-link nav-anchor" href="{localizeHref('/')}#privacy">
-				{m.nav_security()}
 			</a>
 			<a class="nav-link nav-anchor" href="{localizeHref('/')}#pricing">
 				{m.nav_pricing()}
@@ -26,12 +24,15 @@
 			<a class="nav-link" href={localizeHref('/playbook/')}>
 				{m.nav_playbook()}
 			</a>
+			<a class="nav-link" href={localizeHref('/blog/')}>
+				{m.nav_blog()}
+			</a>
 		</nav>
 	</div>
 
 	<div class="site-header-controls">
 		<a
-			class="btn btn-secondary header-login-btn"
+			class="header-login-link"
 			href={appLoginUrl(getLocale())}
 			target="_blank"
 			rel="noopener noreferrer"
@@ -56,8 +57,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 12px;
+		gap: 16px;
 		max-width: 1080px;
+		width: 100%;
+		box-sizing: border-box;
 		margin: 0 auto;
 		padding: var(--space-4) var(--space-4);
 	}
@@ -66,6 +69,7 @@
 		display: flex;
 		align-items: center;
 		gap: var(--space-4);
+		min-width: 0;
 	}
 
 	.brand {
@@ -74,17 +78,24 @@
 		gap: 10px;
 		color: inherit;
 		text-decoration: none;
+		flex-shrink: 0;
 	}
 
 	.wordmark {
 		font-family: var(--font-heading);
 		font-weight: var(--font-heading-weight);
 		font-size: 18px;
+		letter-spacing: -0.01em;
+	}
+
+	.wordmark-short {
+		display: none;
 	}
 
 	.site-nav {
 		display: flex;
 		align-items: center;
+		gap: 4px;
 	}
 
 	.nav-link {
@@ -92,46 +103,75 @@
 		text-decoration: none;
 		font-size: 14px;
 		font-weight: 500;
-		padding: 4px 8px;
+		padding: 5px 10px;
 		border-radius: var(--radius-sm);
-		transition: color 0.15s ease;
+		transition:
+			color 0.15s ease,
+			background 0.15s ease;
+		white-space: nowrap;
 	}
 
 	.nav-link:hover {
 		color: var(--color-accent-ink);
+		background: color-mix(in srgb, var(--color-text) 5%, transparent);
 	}
 
 	.site-header-controls {
 		display: flex;
 		align-items: center;
-		gap: var(--space-2);
+		gap: var(--space-3);
 		flex-shrink: 0;
 	}
 
-	.header-login-btn {
-		font-size: 13px;
-		padding: 4px 12px;
-		height: 32px;
-		box-sizing: border-box;
+	.header-login-link {
+		color: color-mix(in srgb, var(--color-text) 80%, transparent);
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: 500;
+		padding: 4px 8px;
+		border-radius: var(--radius-sm);
+		transition: color 0.15s ease;
 		white-space: nowrap;
 	}
 
-	@media (max-width: 980px) {
+	.header-login-link:hover {
+		color: var(--color-accent-ink);
+	}
+
+	.header-demo-btn {
+		font-size: 13px;
+		font-weight: 600;
+		padding: 6px 14px;
+		height: 32px;
+		box-sizing: border-box;
+		white-space: nowrap;
+		display: inline-flex;
+		align-items: center;
+	}
+
+	/* Responsive thresholds */
+	@media (max-width: 960px) {
+		.wordmark-full {
+			display: none;
+		}
+		.wordmark-short {
+			display: inline;
+		}
+
 		.nav-anchor {
 			display: none;
 		}
 	}
 
-	/* On tablet & mobile, drop header demo CTA (available right below in hero)
-	   and prevent navigation link from wrapping */
-	@media (max-width: 768px) {
+	@media (max-width: 820px) {
 		.header-demo-btn {
 			display: none;
 		}
+	}
 
-		.header-login-btn {
-			font-size: 12px;
-			padding: 0 8px;
+	@media (max-width: 640px) {
+		.header-login-link {
+			display: none;
 		}
 
 		.site-header {
@@ -141,16 +181,13 @@
 
 		.brand-group {
 			gap: 8px;
-			min-width: 0;
 		}
 
 		.brand {
-			min-width: 0;
 			gap: 6px;
 		}
 
 		.nav-link {
-			white-space: nowrap;
 			font-size: 13px;
 			padding: 4px 6px;
 		}
@@ -167,49 +204,14 @@
 		}
 	}
 
-	@media (max-width: 600px) {
-		.header-login-btn {
-			display: none;
-		}
-	}
-
-	@media (max-width: 420px) {
-		.site-header {
-			padding: var(--space-3) 8px;
-			gap: 6px;
-		}
-
-		.wordmark {
-			font-size: 14px;
+	@media (max-width: 400px) {
+		.wordmark-short {
+			font-size: 15px;
 		}
 
 		.nav-link {
 			font-size: 12px;
-			padding: 2px 4px;
-		}
-	}
-
-	@media (max-width: 360px) {
-		.site-header {
-			padding: var(--space-2) 6px;
-			gap: 4px;
-		}
-
-		.brand-group {
-			gap: 4px;
-		}
-
-		.wordmark {
-			font-size: 13px;
-		}
-
-		.nav-link {
-			font-size: 11px;
-			padding: 2px 3px;
-		}
-
-		.site-header-controls {
-			gap: 4px;
+			padding: 3px 5px;
 		}
 	}
 </style>
