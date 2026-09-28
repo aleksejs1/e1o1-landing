@@ -447,3 +447,57 @@ test('question bank page displays enriched questions and new strategy category',
 	const ruFilteredCount = await page.locator('.question-card').count();
 	expect(ruFilteredCount).toBe(5);
 });
+
+test('homepage renders blog showcase section with 3 latest posts, images, and localized links', async ({
+	page
+}) => {
+	await page.goto('/en/', { waitUntil: 'networkidle' });
+
+	const blogSection = page.locator('.blog-showcase');
+	await expect(blogSection).toBeVisible();
+	await expect(blogSection.locator('h2')).toHaveText('Blog & Engineering Notes');
+
+	const cards = blogSection.locator('.featured-blog-card');
+	await expect(cards).toHaveCount(3);
+
+	// Check cover images and links
+	await blogSection.scrollIntoViewIfNeeded();
+	for (const card of await cards.all()) {
+		await card.scrollIntoViewIfNeeded();
+		const img = card.locator('img');
+		await expect(img).toBeVisible();
+		await expect(img).toHaveAttribute('src', /\/images\//);
+		const naturalWidth = await img.evaluate((el: HTMLImageElement) => {
+			if (el.complete && el.naturalWidth > 0) return el.naturalWidth;
+			return new Promise<number>((resolve) => {
+				el.onload = () => resolve(el.naturalWidth);
+				el.onerror = () => resolve(0);
+			});
+		});
+		expect(naturalWidth).toBeGreaterThan(0);
+
+		const readLink = card.locator('.card-action-link');
+		await expect(readLink).toBeVisible();
+		await expect(readLink).toHaveAttribute('href', /\/blog\//);
+	}
+
+	// Check "More articles" button
+	const moreBtn = blogSection.locator('.blog-showcase-actions a');
+	await expect(moreBtn).toBeVisible();
+	await expect(moreBtn).toHaveAttribute('href', /\/blog\/?$/);
+
+	// Test Russian homepage
+	await page.goto('/ru/', { waitUntil: 'networkidle' });
+	const ruBlogSection = page.locator('.blog-showcase');
+	await expect(ruBlogSection).toBeVisible();
+	await expect(ruBlogSection.locator('h2')).toHaveText('Блог и инженерные заметки');
+	await expect(ruBlogSection.locator('.featured-blog-card')).toHaveCount(3);
+	await expect(ruBlogSection.locator('.blog-showcase-actions a')).toHaveAttribute(
+		'href',
+		/\/ru\/blog\/?$/
+	);
+	await expect(ruBlogSection.locator('.card-action-link').first()).toHaveAttribute(
+		'href',
+		/\/ru\/blog\//
+	);
+});

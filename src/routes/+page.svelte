@@ -2,6 +2,7 @@
 	import { onDestroy } from 'svelte';
 	import { getContent } from '$lib/content';
 	import { getPlaybookItems, getCategories } from '$lib/content/playbook';
+	import { getBlogPosts, getBlogUi } from '$lib/content/blog';
 	import {
 		appDemoUrl,
 		appLoginUrl,
@@ -24,6 +25,8 @@
 			.map((slug) => allPlaybooks.find((p) => p.slug === slug))
 			.filter((p): p is NonNullable<typeof p> => Boolean(p))
 	);
+	const blogUi = $derived(getBlogUi(locale));
+	const latestBlogPosts = $derived(getBlogPosts(locale).slice(0, 3));
 
 	let copied = $state(false);
 	let copyTimeout: ReturnType<typeof setTimeout> | undefined;
@@ -658,6 +661,68 @@
 	</div>
 </section>
 
+<!-- Blog Showcase Section -->
+<section class="section section-alt blog-showcase" id="blog">
+	<div class="section-inner blog-inner">
+		<div class="section-header text-center">
+			<div class="section-badge-wrap">
+				<span class="tag tag-outline blog-pill">
+					<span class="pill-dot" aria-hidden="true"></span>
+					{m.nav_blog()}
+				</span>
+			</div>
+			<h2>{blogUi.blogTitle}</h2>
+			<p class="section-subhead">{blogUi.blogSubtitle}</p>
+		</div>
+
+		<div class="featured-blog-grid">
+			{#each latestBlogPosts as post (post.slug)}
+				<article class="featured-blog-card card elev-sm">
+					<a
+						class="featured-card-cover-link"
+						href={localizeHref(`/blog/${post.slug}/`)}
+						tabindex="-1"
+						aria-hidden="true"
+					>
+						<img
+							class="featured-card-cover-img"
+							src={post.coverImage || '/images/landing/privacy-infrastructure.jpg'}
+							alt={post.title}
+							width="688"
+							height="384"
+							loading="lazy"
+						/>
+					</a>
+					<div class="featured-card-content">
+						<div class="featured-card-meta">
+							<span class="tag tag-outline">{post.category}</span>
+							<span class="read-time text-muted">{post.readTime}</span>
+						</div>
+						<h3 class="featured-card-title">
+							<a href={localizeHref(`/blog/${post.slug}/`)}>
+								{post.title}
+							</a>
+						</h3>
+						<p class="featured-card-subtitle">{post.subtitle}</p>
+						<div class="featured-card-footer blog-card-footer">
+							<span class="post-card-date text-muted">{post.formattedDate}</span>
+							<a class="card-action-link" href={localizeHref(`/blog/${post.slug}/`)}>
+								{blogUi.readArticle} →
+							</a>
+						</div>
+					</div>
+				</article>
+			{/each}
+		</div>
+
+		<div class="blog-showcase-actions">
+			<a class="btn btn-secondary" href={localizeHref('/blog/')}>
+				{blogUi.moreArticles} →
+			</a>
+		</div>
+	</div>
+</section>
+
 <!-- Final Call to Action Section -->
 <section class="section final-cta-section" id="get-started">
 	<div class="section-inner">
@@ -1018,14 +1083,24 @@
 		font-size: 12px;
 	}
 
-	/* Playbooks showcase section */
-	.playbooks-showcase {
+	/* Playbooks & Blog showcase sections */
+	.playbooks-showcase,
+	.blog-showcase {
 		padding: var(--space-8) var(--space-4);
 	}
 
-	.playbooks-inner {
+	.playbooks-inner,
+	.blog-inner {
 		max-width: 1080px;
 		margin: 0 auto;
+	}
+
+	.blog-pill {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		font-size: 12.5px;
+		font-weight: 500;
 	}
 
 	.section-header {
@@ -1043,7 +1118,8 @@
 		color: color-mix(in srgb, var(--color-text) 75%, transparent);
 	}
 
-	.featured-playbooks-grid {
+	.featured-playbooks-grid,
+	.featured-blog-grid {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: var(--space-4);
@@ -1051,12 +1127,14 @@
 	}
 
 	@media (min-width: 768px) {
-		.featured-playbooks-grid {
+		.featured-playbooks-grid,
+		.featured-blog-grid {
 			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 
-	.featured-playbook-card {
+	.featured-playbook-card,
+	.featured-blog-card {
 		display: flex;
 		flex-direction: column;
 		padding: 0;
@@ -1068,7 +1146,8 @@
 		border-radius: var(--radius-md);
 	}
 
-	.featured-playbook-card:hover {
+	.featured-playbook-card:hover,
+	.featured-blog-card:hover {
 		transform: translateY(-2px);
 		box-shadow: var(--shadow-md);
 	}
@@ -1089,7 +1168,8 @@
 		transition: transform 0.3s ease;
 	}
 
-	.featured-playbook-card:hover .featured-card-cover-img {
+	.featured-playbook-card:hover .featured-card-cover-img,
+	.featured-blog-card:hover .featured-card-cover-img {
 		transform: scale(1.03);
 	}
 
@@ -1155,6 +1235,24 @@
 	.card-action-link:hover {
 		text-decoration: underline;
 		transform: translateX(2px);
+	}
+
+	.blog-card-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--space-2);
+		flex-wrap: wrap;
+	}
+
+	.post-card-date {
+		font-size: 12px;
+	}
+
+	.blog-showcase-actions {
+		display: flex;
+		justify-content: center;
+		margin-top: var(--space-2);
 	}
 
 	.question-bank-banner {
