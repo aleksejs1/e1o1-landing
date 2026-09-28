@@ -175,5 +175,218 @@ export const blogPostsEn: BlogPost[] = [
 				]
 			}
 		]
+	},
+	{
+		slug: '1-on-1-question-bank-templates',
+		title: 'Beyond "How’s It Going?": Introducing the 1:1 Question Bank & Templates',
+		subtitle:
+			'A curated collection of catalytic questions across 7 core dimensions — with the rationale behind each one and ready-to-use templates.',
+		description:
+			'Why 1:1 meetings get stuck in tactical status updates, and how our interactive Question Bank helps managers and team members uncover blind spots, prevent burnout, and foster growth.',
+		date: '2026-09-02',
+		formattedDate: 'September 2, 2026',
+		readTime: '4 min read',
+		category: 'Playbook',
+		author: {
+			name: 'Aleksejs',
+			role: 'Founder & Maintainer'
+		},
+		tags: ['1:1 Meetings', 'Question Bank', 'Management', 'Playbook', 'Templates'],
+		coverImage: '/images/playbook/high-leverage-1-on-1.jpg',
+		leadHtml:
+			'The most expensive mistake in engineering management is using a 1:1 meeting as a glorified status update. Today, we are opening up our interactive <a href="/playbook/questions/">1:1 Question Bank</a>: a structured repository of battle-tested prompts designed to break past superficial small talk and address what truly matters.',
+		sections: [
+			{
+				heading: 'The "Status Update" trap',
+				paragraphsHtml: [
+					'We have all been in 1:1s that go nowhere: “How’s project X?” — “Good, almost merged.” — “Any blockers?” — “Nope, all fine.” Within ten minutes, both people run out of things to say and end the meeting early, feeling a vague sense of obligation fulfilled but zero real alignment gained.',
+					'Status updates belong in ticketing systems, async Slack threads, and daily standups. A 1:1 meeting is the highest-leverage investment a manager can make with a team member — but only if you ask questions that pull back the surface layer and uncover systemic blockers, emotional fatigue, or unmet career ambitions.'
+				]
+			},
+			{
+				heading: '7 dimensions of high-leverage conversations',
+				paragraphsHtml: [
+					'Rather than giving managers an unstructured list of random icebreakers, we structured the <a href="/playbook/questions/">Question Bank</a> into seven strategic pillars:',
+					'<ul><li><strong>Rapport & Energy:</strong> Establishing psychological safety and understanding the human context before jumping into technical topics.</li><li><strong>Feedback to Manager:</strong> Surfacing your own blind spots, discovering how your direct report prefers to be coached, and removing leadership friction.</li><li><strong>Team & Culture:</strong> Assessing psychological safety, peer dynamics, and team health.</li><li><strong>Bottlenecks & Process:</strong> Eliminating unnecessary meetings, broken deployment pipelines, and cross-team friction.</li><li><strong>Strategy & Purpose:</strong> Connecting daily pull requests to overall company vision, customer value, and business impact.</li><li><strong>Growth & Ambition:</strong> Long-term career progression, skill acquisition, and finding the next high-impact challenge.</li><li><strong>Capacity & Well-being:</strong> Spotting cognitive overload, hidden stress, and burnout before someone resigns.</li></ul>'
+				]
+			},
+			{
+				heading: 'The "Why ask this?" principle',
+				paragraphsHtml: [
+					'A good question is only as effective as the intent behind it. In our bank, every single prompt is accompanied by a dedicated <strong>“Why ask this?”</strong> breakdown.',
+					'This breakdown explains what psychological dynamic the question touches, what subtle cues to listen for in the reply, and how to follow up constructively without putting the other person on the defensive.'
+				]
+			},
+			{
+				heading: 'Using the Question Bank in encrypted1on1',
+				paragraphsHtml: [
+					'The Question Bank is completely open and free to explore at <a href="/playbook/questions/">/playbook/questions/</a> with instant keyword search, category filters, and random inspiration tools.',
+					'Even better, these questions are designed to be dropped directly into <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">encrypted1on1</a> anketas ahead of your scheduled meeting. Both manager and direct report can take time to reflect asynchronously before the call, while our zero-knowledge encryption ensures every answer remains strictly private between the two participants.'
+				]
+			}
+		]
+	},
+	{
+		slug: '5-essential-books-for-high-leverage-1-on-1s',
+		title: 'The 1:1 Bookshelf: 5 Essential Books Every Engineering Leader Should Read',
+		subtitle:
+			'Distilling decades of management wisdom from Andy Grove, Ben Horowitz, Julie Zhuo, Camille Fournier, and Kim Scott into actionable 1:1 practices.',
+		description:
+			'Explore our curated 1:1 Bookshelf: five foundational books that defined modern management, their core 1:1 philosophies, actionable questions, and matching meeting templates.',
+		date: '2026-09-10',
+		formattedDate: 'September 10, 2026',
+		readTime: '5 min read',
+		category: 'Playbook',
+		author: {
+			name: 'Aleksejs',
+			role: 'Founder & Maintainer'
+		},
+		tags: ['Bookshelf', '1:1 Meetings', 'Management', 'Leadership', 'Books'],
+		coverImage: '/images/playbook/manager-playbook.jpg',
+		leadHtml:
+			'Great management is rarely invented from scratch in a vacuum. The principles that make 1:1 meetings transformative — psychological safety, employee-led agendas, early detection of systemic bottlenecks, and radical candor — have been tested and refined by legendary leaders across decades. Today, we are excited to launch our interactive <a href="/playbook/books/">1:1 Bookshelf</a>.',
+		sections: [
+			{
+				heading: 'Why we built a dedicated 1:1 bookshelf',
+				paragraphsHtml: [
+					'Most leadership books span hundreds of pages covering corporate strategy, hiring funnels, and organizational politics. Yet when experienced managers look back on what created the highest daily leverage, they almost unanimously point to the chapters on one-on-one meetings.',
+					'To help busy engineering leaders tap into these insights without wading through hundreds of pages of theory, we built the interactive <a href="/playbook/books/">1:1 Bookshelf</a>. We distilled five foundational texts down to their core 1:1 philosophy, key operating principles, concrete questions to ask, and direct pairings with practical templates in our Playbook.'
+				]
+			},
+			{
+				heading: 'The 5 foundational works',
+				paragraphsHtml: [
+					'The bookshelf features five seminal titles that shaped modern technical leadership:',
+					'<ul><li><strong>High Output Management by Andy Grove (1983):</strong> The foundational classic of Silicon Valley. Grove introduced the revolutionary idea that a manager’s output equals the output of their team, and that 90 minutes of focused 1:1 time enhances 80 hours of subordinate work — an unparalleled >50x time leverage. Crucially, Grove established that <em>the 1:1 is the employee’s meeting</em>.</li><li><strong>The Hard Thing About Hard Things by Ben Horowitz (2014):</strong> The definitive guide on crisis leadership. Horowitz positions the 1:1 as the essential organizational safety valve. In high-growth companies, good news travels fast while bad news travels slowly; regular 1:1s are where leaders discover small fires before they become catastrophic emergencies.</li><li><strong>The Making of a Manager by Julie Zhuo (2019):</strong> The modern blueprint for empathetic management. Zhuo deconstructs 1:1s into four essential domains: establishing psychological safety, diagnosing real priorities, unblocking difficult challenges, and calibrating long-term ambitions.</li><li><strong>The Manager’s Path by Camille Fournier (2017):</strong> The definitive roadmap for engineering leadership. Fournier explores the technical nuances of 1:1s — mentoring junior developers, supporting Staff+ individual contributors, and balancing technical debt with product velocity. She explicitly warns that an engineer claiming <em>"I have nothing to talk about"</em> is a flashing red signal of disengagement.</li><li><strong>Radical Candor by Kim Scott (2017):</strong> Combining personal care with direct challenge. Scott frames the 1:1 as the private forge where trust is built. Crucially, she emphasizes asking for critical feedback on your own leadership before handing out critique to others.</li></ul>'
+				]
+			},
+			{
+				heading: 'From philosophy to real meeting agendas',
+				paragraphsHtml: [
+					'A leadership book is useless if its lessons stay on paper. For each featured book, the <a href="/playbook/books/">Bookshelf</a> provides battle-tested questions you can immediately use in your next meeting, along with matching Playbook agendas:',
+					'<ul><li>Grove’s leverage methodology pairs directly with our <a href="/playbook/high-leverage-1-on-1/">High-Leverage 1:1 Manifesto</a>.</li><li>Horowitz’s organizational health insights connect to our <a href="/playbook/skip-level/">Skip-Level 1:1 Health Check</a>.</li><li>Zhuo’s trust-building practices power our <a href="/playbook/first-1-on-1/">First 1:1: Expectations & Trust</a> template.</li><li>Fournier’s career ladder framework informs our <a href="/playbook/career-growth/">Quarterly Career & Growth Check-in</a>.</li><li>Scott’s feedback and burnout techniques inspire our <a href="/playbook/burnout-detection/">Overwhelm & Burnout Triage</a> guide.</li></ul>'
+				]
+			},
+			{
+				heading: 'Putting it into practice with encrypted1on1',
+				paragraphsHtml: [
+					'The true barrier to high-leverage 1:1s is rarely a lack of good intentions — it is lack of preparation and mutual psychological safety. When meetings are scheduled without a collaborative, confidential space, conversations inevitably collapse into superficial status recaps.',
+					'With <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">encrypted1on1</a>, managers and team members can choose proven questions from these classic works, prepare reflections asynchronously, and maintain complete confidence that their candid thoughts are shielded by zero-knowledge end-to-end encryption.',
+					'Explore all five books, read the executive summaries, and grab ready-made questions at <a href="/playbook/books/">/playbook/books/</a>.'
+				]
+			}
+		]
+	},
+	{
+		slug: 'meeting-templates-playbook-and-form-templates-preview',
+		title: 'The 1:1 Meeting Playbook: Battle-Tested Agendas (And What’s Next for encrypted1on1)',
+		subtitle:
+			'Explore our comprehensive library of structured 1:1 templates — and a sneak peek at upcoming native form templates in the platform.',
+		description:
+			'From first 1:1s to burnout triage and career growth: explore our interactive Playbook meeting agendas, plus an exclusive preview of native form templates coming soon to encrypted1on1.',
+		date: '2026-09-16',
+		formattedDate: 'September 16, 2026',
+		readTime: '5 min read',
+		category: 'Playbook',
+		author: {
+			name: 'Aleksejs',
+			role: 'Founder & Maintainer'
+		},
+		tags: ['Playbook', 'Templates', '1:1 Meetings', 'Roadmap', 'Product Update'],
+		coverImage: '/images/playbook/bi-weekly-pulse.jpg',
+		leadHtml:
+			'No two 1:1 meetings should look identical. A sync with a newly hired engineer demands completely different questions than a quarterly career conversation with a Staff architect or a crisis triage with an overwhelmed teammate. Today, we are spotlighting our <a href="/playbook/">1:1 Meeting Playbook</a> — and sharing an exciting preview of what is coming next to encrypted1on1.',
+		sections: [
+			{
+				heading: 'Why one-size-fits-all 1:1s fail',
+				paragraphsHtml: [
+					'The most common pitfall in modern engineering management is relying on a single, unstructured conversation format for every meeting. Over time, open-ended chats inevitably deteriorate into superficial status reports: <em>"What are you working on? Any blockers? Okay, see you next week."</em>',
+					'High-impact leaders recognize that team members move through distinct operational seasons. An effective 1:1 adapts its agenda to the context at hand — whether that is building psychological safety during onboarding, unblocking day-to-day execution, charting multi-year career paths, or navigating urgent burnout.'
+				]
+			},
+			{
+				heading: '6 battle-tested Playbook templates',
+				paragraphsHtml: [
+					'Our <a href="/playbook/">Playbook</a> organizes proven meeting agendas across six strategic scenarios:',
+					'<ul><li><strong><a href="/playbook/high-leverage-1-on-1/">The High-Leverage 1:1 Manifesto:</a></strong> The foundational framework rooted in Andy Grove’s management mathematics. A 4-pillar agenda balancing emotional energy, friction removal, strategic alignment, and reciprocal coaching.</li><li><strong><a href="/playbook/first-1-on-1/">The First 1:1: Expectations & Trust:</a></strong> A vital template for new hires and reorganizations. Establishes psychological safety, discovers individual communication preferences, and aligns on operating norms in the first 30 days.</li><li><strong><a href="/playbook/bi-weekly-pulse/">Bi-Weekly Pulse Check:</a></strong> The workhorse cadence for high-performing teams. Maintains momentum, catches emerging blockers before they escalate, and tracks action commitments from cycle to cycle.</li><li><strong><a href="/playbook/career-growth/">Quarterly Career & Growth Check-in:</a></strong> A forward-looking conversation decoupled from tactical sprint pressure. Explores skill acquisition, trajectory along the technical dual ladder, and high-impact stretch assignments.</li><li><strong><a href="/playbook/burnout-detection/">Overwhelm & Burnout Triage:</a></strong> A compassionate framework for detecting cognitive overload and hidden stress before someone reaches a breaking point. Guides immediate workload shedding and sustainable rebalancing.</li><li><strong><a href="/playbook/skip-level/">Skip-Level 1:1: Health Check:</a></strong> For Directors, VPs, and founders seeking an unfiltered pulse on organizational culture, cross-team friction, and strategic clarity from front-line engineers.</li></ul>'
+				]
+			},
+			{
+				heading: 'Built for practical execution',
+				paragraphsHtml: [
+					'Each playbook item is designed to be immediately applicable on your calendar, featuring:',
+					'<ul><li><strong>Timed agenda blocks:</strong> Suggested minute allocations so meetings stay focused without feeling rushed.</li><li><strong>Curated conversation prompts:</strong> Catalytic, non-defensive questions that spark genuine reflection.</li><li><strong>Preparation & anti-patterns:</strong> Concrete advice on how both manager and report should prepare beforehand, alongside classic antipatterns to avoid.</li><li><strong>1-click "Copy Agenda" button:</strong> Seamlessly grab the complete markdown agenda to paste into your calendar invite or personal notes.</li></ul>'
+				]
+			},
+			{
+				heading: 'Sneak peek: Native form templates coming to encrypted1on1',
+				paragraphsHtml: [
+					'While our Playbook provides structured agendas to inspire your calendar, we believe true managerial continuity happens when structure lives directly inside your meeting workflow.',
+					'Today, encrypted1on1 provides a rock-solid, versioned questionnaire with emotional check-ins, priorities, and action agreements. But different conversations require different questions.',
+					'We are thrilled to announce that we are actively developing <strong>native support for form templates</strong> in encrypted1on1! Soon, when creating or scheduling a meeting, you will be able to select from specialized questionnaire templates matching our Playbook scenarios — or build and customize your own team-specific templates — all protected by our zero-knowledge end-to-end encryption.',
+					'Explore all the templates today at <a href="/playbook/">/playbook/</a>, and stay tuned for the upcoming platform release!'
+				]
+			}
+		]
+	},
+	{
+		slug: 'v1-3-0-release',
+		title: 'encrypted1on1 v1.3.0: Built-in Meeting Templates and One-Off Anketas',
+		subtitle:
+			'Introducing specialized 1:1 question templates for onboarding, quarterly career growth, and workload support, paired with non-forking one-off meeting chains.',
+		description:
+			'encrypted1on1 v1.3.0 introduces native meeting templates (onboarding, career growth, support check-in), one-off anketas that preserve recurring chains, and Markdown support in free-text answers.',
+		date: '2026-09-24',
+		formattedDate: 'September 24, 2026',
+		readTime: '4 min read',
+		category: 'Release',
+		author: {
+			name: 'Aleksejs',
+			role: 'Founder & Maintainer'
+		},
+		tags: ['v1.3.0', 'Release', 'Templates', '1:1 Meetings', 'Open Source'],
+		coverImage: '/images/landing/privacy-infrastructure.jpg',
+		leadHtml:
+			'Just a month after introducing form versioning in v1.2.0, we are thrilled to announce <strong>encrypted1on1 v1.3.0</strong>. This milestone release brings one of our most requested capabilities: <strong>native meeting templates</strong> directly within the anketa workflow, alongside architectural support for non-forking <strong>one-off meetings</strong> and Markdown formatting in text answers.',
+		sections: [
+			{
+				heading: '4 specialized meeting templates',
+				paragraphsHtml: [
+					'A single question set cannot serve every managerial moment. In v1.3.0, whenever you create an anketa, you can choose from four purpose-built meeting templates:',
+					'<ul><li><strong>Regular 1:1:</strong> The proven classic format for recurring check-ins — energy & feelings check, achievements, topics for discussion, and shared outcomes.</li><li><strong>Onboarding (First 1:1):</strong> Designed for new hires and team reorganizations. Focuses on establishing psychological safety, mutual working agreements, personal communication preferences, and a "fresh-eyes" audit of company processes.</li><li><strong>Career & Growth:</strong> Tailored for quarterly development conversations. Features an energy retrospective across recent projects, a 3-way trajectory calibration (deepening current mastery, people leadership, or lateral breadth), a concrete 90-day action plan, and explicit manager sponsorship commitments.</li><li><strong>Support & Workload Check-in:</strong> Formatted for moments of high stress or burnout risk. Framed collaboratively rather than clinically, this template guides tactical workload triage, identifies energy drains, clarifies boundaries, and establishes immediate manager support actions.</li></ul>'
+				]
+			},
+			{
+				heading: 'Smart cycle transitions: specialized templates don’t get stuck',
+				paragraphsHtml: [
+					'A common flaw in template systems is that choosing a quarterly review format accidentally turns every future meeting into a quarterly review. To prevent this, v1.3.0 implements automatic cycle transitions.',
+					'When an anketa using a specialized template (such as <code>career_growth</code> or <code>support_checkin</code>) is archived, its auto-scheduled successor automatically transitions back to <code>regular</code>. The specialized review happens when needed, while your regular operational rhythm resumes seamlessly without manual re-configuration.',
+					'In addition, active meetings with non-standard templates are clearly badged in the meeting list so both manager and employee know exactly what type of conversation is scheduled.'
+				]
+			},
+			{
+				heading: 'One-off anketas: ad-hoc meetings without chain forking',
+				paragraphsHtml: [
+					'In previous releases, creating a new anketa when one was already open would create a split in the pair’s meeting history — resulting in diverging goal lists and multiple meetings auto-recreating themselves in parallel.',
+					'v1.3.0 solves this with a new <strong>one-off anketa</strong> architecture (<code>oneOff: true</code>). When you schedule a meeting alongside an existing open anketa, the new meeting is treated as an isolated one-off: it does not fork the carried-forward commitments, and archiving it does not generate an unneeded successor. Your recurring bi-weekly chain remains intact.'
+				]
+			},
+			{
+				heading: 'Markdown support and live updates',
+				paragraphsHtml: [
+					'Between v1.2.0 and v1.3.0, we also rolled out several quality-of-life enhancements now consolidated in this release:',
+					'<ul><li><strong>Markdown in text answers:</strong> Free-text fields now support Markdown rendering for bold text, bulleted lists, and code blocks, making complex technical feedback easy to format.</li><li><strong>Live updates during meetings:</strong> Real-time synchronization ensures that when your counterpart updates their answers or adds an outcome during a call, your view stays up to date without page refreshes.</li><li><strong>Multi-language parity:</strong> All new templates and labels are fully translated across English, Russian, Latvian, German, Spanish, and French.</li></ul>'
+				]
+			},
+			{
+				heading: 'Deploying v1.3.0',
+				paragraphsHtml: [
+					'Version 1.3.0 is a smooth upgrade with automatic database migrations for both SQLite and MySQL. Pull the latest container:',
+					'<pre><code>docker pull ghcr.io/aleksejs1/encrypted1on1:1.3.0</code></pre>',
+					'You can test the new template picker and check-in flows right now in our live demo at <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">demo.private1on1.eu</a>.',
+					'View the complete source code and release notes on <a href="https://github.com/aleksejs1/encrypted1on1/releases/tag/v1.3.0" target="_blank" rel="noopener noreferrer">GitHub</a>.'
+				]
+			}
+		]
 	}
 ];

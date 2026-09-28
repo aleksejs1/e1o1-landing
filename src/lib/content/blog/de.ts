@@ -176,5 +176,218 @@ export const blogPostsDe: BlogPost[] = [
 				]
 			}
 		]
+	},
+	{
+		slug: '1-on-1-question-bank-templates',
+		title: 'Mehr als „Wie läuft’s?“: Der interaktive Fragenkatalog & Vorlagen für 1:1-Gespräche',
+		subtitle:
+			'Eine kuratierte Sammlung tiefgehender Fragen in 7 Dimensionen — inklusive methodischer Hintergründe und einsatzbereiter Vorlagen.',
+		description:
+			'Warum 1:1-Gespräche so oft in reine Status-Updates abdriften und wie unser interaktiver Fragenkatalog Managern hilft, blinde Flecken und Überlastung frühzeitig aufzudecken.',
+		date: '2026-09-02',
+		formattedDate: '2. September 2026',
+		readTime: '4 Min. Lesezeit',
+		category: 'Leitfaden',
+		author: {
+			name: 'Aleksejs',
+			role: 'Gründer & Entwickler'
+		},
+		tags: ['1:1-Gespräche', 'Fragenkatalog', 'Management', 'Leitfaden', 'Vorlagen'],
+		coverImage: '/images/playbook/high-leverage-1-on-1.jpg',
+		leadHtml:
+			'Der teuerste Fehler im Engineering-Management besteht darin, ein 1:1-Gespräch als reines Status-Update zu missbrauchen. Ab heute stellen wir unseren interaktiven <a href="/de/playbook/questions/">1:1-Fragenkatalog</a> bereit: eine praxiserprobte Sammlung gezielter Fragen, die oberflächlichen Smalltalk überwinden und den Fokus auf das Wesentliche lenken.',
+		sections: [
+			{
+				heading: 'Die Falle der Status-Updates',
+				paragraphsHtml: [
+					'Wir alle kennen 1:1-Gespräche, die im Sande verlaufen: „Wie läuft Projekt X?“ — „Gut, fast fertig.“ — „Irgendwelche Blocker?“ — „Nein, alles im Plan.“ Nach zehn Minuten gehen beiden die Themen aus. Das Meeting endet verfrüht mit einem vagen Pflichtgefühl, aber ohne wirklichen Erkenntnisgewinn oder Vertrauensaufbau.',
+					'Reine Statusberichte gehören in Ticketsysteme, asynchrone Chatkanäle und kurze Dailies. Ein 1:1-Gespräch ist das wirksamste Führungsinstrument für Manager und Mitarbeitende — vorausgesetzt, man stellt Fragen, die hinter die Fassade blicken und systemische Hürden, emotionale Erschöpfung oder unausgesprochene Karriereziele sichtbar machen.'
+				]
+			},
+			{
+				heading: '7 Dimensionen wirkungsvoller Gespräche',
+				paragraphsHtml: [
+					'Statt einer unstrukturierten Liste beliebiger Eisbrecher ist unser <a href="/de/playbook/questions/">Fragenkatalog</a> in sieben strategische Kernbereiche unterteilt:',
+					'<ul><li><strong>Beziehung & Energie:</strong> Psychologische Sicherheit aufbauen und den menschlichen Kontext verstehen, bevor technische Themen besprochen werden.</li><li><strong>Feedback an die Führungskraft:</strong> Eigene blinde Flecken erkennen, bevorzugte Coaching-Stile verstehen und Führungsfriktionen abbauen.</li><li><strong>Team & Kultur:</strong> Teamdynamik, Zusammenarbeit und das zwischenmenschliche Arbeitsklima beurteilen.</li><li><strong>Engpässe & Prozesse:</strong> Überflüssige Meetings, instabile Deployment-Pipelines und teamübergreifende Reibungsverluste beseitigen.</li><li><strong>Strategie & Sinn:</strong> Den Bezug zwischen täglichen Pull Requests, der übergeordneten Unternehmensvision und echtem Kundennutzen herstellen.</li><li><strong>Entwicklung & Ambitionen:</strong> Langfristige Karrierepfade, Kompetenzaufbau und nächste wirkungsvolle Herausforderungen planen.</li><li><strong>Kapazität & Wohlbefinden:</strong> Kognitive Überlastung, versteckten Stress und drohendes Burnout frühzeitig erkennen.</li></ul>'
+				]
+			},
+			{
+				heading: 'Das Prinzip „Warum diese Frage?“',
+				paragraphsHtml: [
+					'Eine Frage ist nur so wirkungsvoll wie die Absicht dahinter. In unserem Katalog verfügt jede einzelne Frage über eine präzise Erläuterung unter <strong>„Warum diese Frage?“</strong>.',
+					'Dieser Leitfaden erklärt, welche psychologische Dynamik angesprochen wird, auf welche subtilen Nuancen in der Antwort zu achten ist und wie sich konstruktiv nachhaken lässt, ohne das Gegenüber in eine Rechtfertigungshaltung zu drängen.'
+				]
+			},
+			{
+				heading: 'Nutzung des Fragenkatalogs in encrypted1on1',
+				paragraphsHtml: [
+					'Der Fragenkatalog steht allen Interessierten unter <a href="/de/playbook/questions/">/de/playbook/questions/</a> kostenfrei zur Verfügung — inklusive schneller Volltextsuche, Kategoriefiltern und Zufallsauswahl.',
+					'Zusätzlich lassen sich die Fragen direkt in <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">encrypted1on1</a>-Bögen vor dem nächsten Gesprächstermin übernehmen. Führungskraft und Mitarbeiter können sich asynchron vorbereiten, während unsere Ende-zu-Ende-Verschlüsselung (Zero-Knowledge) garantiert, dass keine Notiz jemals unverschlüsselt den geschützten Kreis verlässt.'
+				]
+			}
+		]
+	},
+	{
+		slug: '5-essential-books-for-high-leverage-1-on-1s',
+		title: 'Das 1:1-Bücherregal: 5 essenzielle Werke für erfolgreiche Führungskräfte',
+		subtitle:
+			'Jahrzehnte an Führungserfahrung von Andy Grove, Ben Horowitz, Julie Zhuo, Camille Fournier und Kim Scott, destilliert in konkrete 1:1-Praxis.',
+		description:
+			'Entdecken Sie unser interaktives 1:1-Bücherregal: fünf wegweisende Managementbücher, deren Kernideen für 1:1-Gespräche, Fragenkataloge und passende Vorlagen.',
+		date: '2026-09-10',
+		formattedDate: '10. September 2026',
+		readTime: '5 Min. Lesezeit',
+		category: 'Leitfaden',
+		author: {
+			name: 'Aleksejs',
+			role: 'Gründer & Entwickler'
+		},
+		tags: ['Bücherregal', '1:1-Gespräche', 'Management', 'Führung', 'Bücher'],
+		coverImage: '/images/playbook/manager-playbook.jpg',
+		leadHtml:
+			'Gute Führung entsteht selten im luftleeren Raum. Die Prinzipien, die 1:1-Gespräche zu wirkungsvollen Führungsinstrumenten machen — psychologische Sicherheit, Mitarbeiter-geführte Agenden, frühes Aufdecken systemischer Reibungsverluste und radikale Offenheit —, wurden über Jahrzehnte hinweg in der Praxis erprobt. Heute präsentieren wir das interaktive <a href="/de/playbook/books/">1:1-Bücherregal</a>.',
+		sections: [
+			{
+				heading: 'Warum ein dediziertes 1:1-Bücherregal?',
+				paragraphsHtml: [
+					'Die meisten Managementbücher umfassen hunderte Seiten zu Konzernstrategie, Recruiting-Funnels und Firmenpolitik. Fragt man erfahrene Führungskräfte jedoch nach der Praxis mit dem höchsten täglichen Hebel (Leverage), verweisen fast alle ausnahmslos auf die Kapitel über 1:1-Gespräche.',
+					'Um vielbeschäftigten Tech-Leadern und Engineering-Managern diesen Wissensschatz ohne Hunderte Seiten theoretischen Ballasts zugänglich zu machen, haben wir das interaktive <a href="/de/playbook/books/">1:1-Bücherregal</a> entwickelt. Wir haben fünf Standardwerke auf ihren Kern reduziert: ihre Leitphilosophie, operative Grundsätze, konkrete Fragen und direkte Verknüpfungen mit den Vorlagen unseres Leitfadens.'
+				]
+			},
+			{
+				heading: '5 Standardwerke der Führungskultur',
+				paragraphsHtml: [
+					'Das Bücherregal vereint fünf wegweisende Werke der modernen Technologiebranche:',
+					'<ul><li><strong>„High Output Management“ von Andy Grove (1983):</strong> Der zeitlose Klassiker des Silicon Valley. Grove begründete die Formel, dass die Leistung einer Führungskraft der Gesamtleistung ihres Teams entspricht und dass 90 Minuten 1:1-Gespräch die Arbeitsqualität eines Mitarbeiters für 80 Stunden steigern (>50-facher Hebel). Sein zentraler Leitsatz: <em>Das 1:1 ist das Meeting des Mitarbeiters</em>.</li><li><strong>„The Hard Thing About Hard Things“ von Ben Horowitz (2014):</strong> Der Maßstab für Krisenmanagement. Horowitz beschreibt das 1:1 als das unverzichtbare Sicherheitsventil der Organisation: Gute Nachrichten verbreiten sich rasant, schlechte Nachrichten versanden; regelmäßige Gespräche decken Schwelbrände auf, bevor sie zu Bränden oder plötzlichen Kündigungen führen.</li><li><strong>„The Making of a Manager“ von Julie Zhuo (2019):</strong> Das moderne Fundament für empathische Führung. Zhuo gliedert das 1:1 in vier Kernbereiche: Aufbau gegenseitigen Vertrauens, Klären echter Prioritäten, Bewältigen komplexer Hürden und Schärfen langfristiger Entwicklungsziele.</li><li><strong>„The Manager’s Path“ von Camille Fournier (2017):</strong> Die Orientierungshilfe für technische Karrierepfade. Fournier behandelt die Besonderheiten im Engineering: Coaching von Juniors, Begleitung von Staff-Engineers und technischer Schuldenabbau. Ihre Warnung: Sagt ein Entwickler <em>„Ich habe nichts zu besprechen“</em>, ist das kein Zeichen von Harmonie, sondern ein Alarmzeichen für innere Kündigung.</li><li><strong>„Radical Candor“ von Kim Scott (2017):</strong> Menschliche Fürsorge kombiniert mit direkter Herausforderung. Scott zeigt, dass Vertrauen im 1:1 geschmiedet wird, und formuliert die goldene Regel: Bevor man Kritik übt, bittet man die Mitarbeitenden stets um schonungsloses Feedback zur eigenen Führungsarbeit.</li></ul>'
+				]
+			},
+			{
+				heading: 'Von der Idee zur einsatzbereiten Agenda',
+				paragraphsHtml: [
+					'Führungstheorie nützt wenig, wenn sie nicht im Alltag ankommt. Für jedes Werk bietet das <a href="/de/playbook/books/">Bücherregal</a> praxiserprobte Fragen und passende Vorlagen aus unserem Leitfaden:',
+					'<ul><li>Groves Hebel-Methodik bildet das Fundament für unser <a href="/de/playbook/high-leverage-1-on-1/">Manifest für wirkungsvolle 1:1-Gespräche</a>.</li><li>Horowitz’ Fokus auf Transparenz spiegelt sich in <a href="/de/playbook/skip-level/">Skip-Level 1:1: Team-Gesundheitscheck</a> wider.</li><li>Zhuos Vertrauensansatz leitet die Vorlage <a href="/de/playbook/first-1-on-1/">Das erste 1:1-Gespräch: Erwartungen & Vertrauen</a>.</li><li>Fourniers Karriere-Modell strukturiert das <a href="/de/playbook/career-growth/">Quartalsgespräch zu Karriere & Weiterentwicklung</a>.</li><li>Scotts Burnout-Früherkennung treibt den Leitfaden <a href="/de/playbook/burnout-detection/">Überlastungs- und Burnout-Triage</a> an.</li></ul>'
+				]
+			},
+			{
+				heading: 'Praktische Umsetzung mit encrypted1on1',
+				paragraphsHtml: [
+					'Die größte Hürde für gewinnbringende 1:1-Gespräche ist selten mangelnder Wille, sondern Zeitnot und das Fehlen eines geschützten, gemeinsamen Vorbereitungsraums. Ohne asynchrone Notizen verflachen Meetings schnell zur reinen Statusabfrage.',
+					'Mit <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">encrypted1on1</a> können Teams die bewährten Fragen dieser Management-Klassiker direkt in ihre Bögen übernehmen, Gedanken vorab in Ruhe formulieren und sich darauf verlassen, dass alle vertraulichen Notizen durch echte Ende-zu-Ende-Verschlüsselung geschützt sind.',
+					'Entdecken Sie alle fünf Bücher und kopieren Sie einsatzbereite Fragen unter <a href="/de/playbook/books/">/de/playbook/books/</a>.'
+				]
+			}
+		]
+	},
+	{
+		slug: 'meeting-templates-playbook-and-form-templates-preview',
+		title: 'Das 1:1-Gesprächs-Playbook: Praxiserprobte Vorlagen & Vorschau auf Formular-Vorlagen',
+		subtitle:
+			'Eine strukturierte Sammlung zielgerichteter Agenden für jede Teamphase — inklusive eines Ausblicks auf die kommende Formular-Vorlagenunterstützung in encrypted1on1.',
+		description:
+			'Vom Onboarding über Burnout-Früherkennung bis zum Karriere-Check: Entdecken Sie unsere interaktiven Playbook-Vorlagen und erfahren Sie mehr über die geplanten Formular-Vorlagen.',
+		date: '2026-09-16',
+		formattedDate: '16. September 2026',
+		readTime: '5 Min. Lesezeit',
+		category: 'Leitfaden',
+		author: {
+			name: 'Aleksejs',
+			role: 'Gründer & Entwickler'
+		},
+		tags: ['Leitfaden', 'Vorlagen', '1:1-Gespräche', 'Roadmap', 'Produktupdate'],
+		coverImage: '/images/playbook/bi-weekly-pulse.jpg',
+		leadHtml:
+			'Kein 1:1-Gespräch gleicht dem anderen. Das Kennenlernen in den ersten Wochen verlangt eine völlig andere Vorbereitung als ein Quartalsdialog über berufliche Perspektiven mit einem Senior Engineer oder die akute Triage bei drohender Überlastung. Heute stellen wir unseren <a href="/de/playbook/">Leitfaden für 1:1-Vorlagen</a> vor — und geben einen spannenden Ausblick auf eine bevorstehende Funktion in encrypted1on1.',
+		sections: [
+			{
+				heading: 'Warum Einheitsformate im 1:1 scheitern',
+				paragraphsHtml: [
+					'Der häufigste Fehler im modernen Tech-Management ist der Rückgriff auf ein immer gleiches, unstrukturiertes Gesprächsmuster. Ohne klaren Fokus verflachen Meetings schnell zur reinen Statusabfrage: <em>„Woran arbeitest du gerade? Gibt es Blocker? Gut, bis nächste Woche.“</em>',
+					'Erfolgreiche Führungskräfte wissen, dass Mitarbeitende unterschiedliche Phasen durchlaufen. Ein wirkungsvolles 1:1 passt seine Agenda flexibel dem aktuellen Kontext an — sei es der Aufbau psychologischer Sicherheit im Onboarding, das Ausräumen von Hindernissen im Alltag, die langfristige Karriereplanung oder die rechtzeitige Entlastung bei Überlastung.'
+				]
+			},
+			{
+				heading: '6 praxiserprobte Vorlagen im Leitfaden',
+				paragraphsHtml: [
+					'Unser <a href="/de/playbook/">Leitfaden</a> bietet durchdachte, einsatzbereite Agenden für sechs zentrale Szenarien:',
+					'<ul><li><strong><a href="/de/playbook/high-leverage-1-on-1/">Manifest für wirkungsvolle 1:1-Gespräche:</a></strong> Das Kernframework nach Andy Groves Führungsmathematik. Eine 4-Säulen-Agenda aus emotionaler Energie, Beseitigung von Friktionen, strategischem Fokus und gegenseitigem Feedback.</li><li><strong><a href="/de/playbook/first-1-on-1/">Das erste 1:1-Gespräch: Erwartungen & Vertrauen:</a></strong> Unverzichtbar bei Neueinstellungen und Umstrukturierungen. Schafft psychologische Sicherheit, klärt Kommunikationspräferenzen und setzt gemeinsame Spielregeln für die ersten 30 Tage.</li><li><strong><a href="/de/playbook/bi-weekly-pulse/">Zweiwöchentlicher Team-Puls:</a></strong> Der bewährte Rhythmus für High-Performance-Teams. Hält das Momentum aufrecht, erkennt Blocker frühzeitig und verfolgt Vereinbarungen verlässlich nach.</li><li><strong><a href="/de/playbook/career-growth/">Quartalsgespräch zu Karriere & Weiterentwicklung:</a></strong> Ein Blick in die Zukunft fernab des täglichen Sprint-Drucks. Beleuchtet Kompetenzaufbau, die technische Fachkarriere und neue Wachstumsherausforderungen.</li><li><strong><a href="/de/playbook/burnout-detection/">Überlastungs- und Burnout-Triage:</a></strong> Ein empathischer Leitfaden, um kognitive Erschöpfung frühzeitig zu erkennen und Aufgaben nachhaltig zu priorisieren, bevor jemand an seine Belastungsgrenze stößt.</li><li><strong><a href="/de/playbook/skip-level/">Skip-Level 1:1: Team-Gesundheitscheck:</a></strong> Für Directors, VPs und Gründer, die ein ungefiltertes Stimmungsbild zu Kultur und Prozessen direkt von den Teams an vorderster Front einholen möchten.</li></ul>'
+				]
+			},
+			{
+				heading: 'Konzipiert für die Praxis: Timing & 1-Klick-Export',
+				paragraphsHtml: [
+					'Jede Vorlage im Playbook ist sofort einsatzbereit:',
+					'<ul><li><strong>Feste Zeitblöcke:</strong> Sinnvolle Minutenempfehlungen, damit alle Kernfragen ohne Hetze Raum finden.</li><li><strong>Präzise Impulsfragen:</strong> Fragen, die ehrliche Reflexion anregen, ohne Rechtfertigungsdruck zu erzeugen.</li><li><strong>Vorbereitung & Antipatterns:</strong> Konkrete Hinweise für Führungskraft und Mitarbeiter sowie typische Fehler, die es zu vermeiden gilt.</li><li><strong>Schaltfläche „Agenda kopieren“:</strong> Mit einem Klick die gesamte Markdown-Agenda in die Kalendereinladung oder private Notizen übernehmen.</li></ul>'
+				]
+			},
+			{
+				heading: 'Vorschau: Demnächst native Formular-Vorlagen in encrypted1on1!',
+				paragraphsHtml: [
+					'Die Agenden unseres <a href="/de/playbook/">Leitfadens</a> lassen sich schon heute in jedem Kalender nutzen. Wir sind jedoch überzeugt, dass maximale Wirkung entsteht, wenn die Methodik nahtlos in die vertrauliche Gesprächsumgebung integriert ist.',
+					'Aktuell nutzt encrypted1on1 einen bewährten, versionierten Fragebogen für Befindlichkeit, Prioritäten und Vereinbarungen. Unterschiedliche Meetings erfordern jedoch unterschiedliche Fragen.',
+					'Wir freuen uns ankündigen zu können, dass wir mit Hochdruck an der <strong>nativen Unterstützung von Formular-Vorlagen</strong> in encrypted1on1 arbeiten! In Kürze können Sie bei der Terminerstellung passende Vorlagen für die Szenarien unseres Leitfadens auswählen (Onboarding, Quartals-Review, Puls-Check) oder eigene Vorlagen für Ihre Organisation anlegen — stets geschützt durch kompromisslose Zero-Knowledge-Ende-zu-Ende-Verschlüsselung.',
+					'Entdecken Sie alle Vorlagen unter <a href="/de/playbook/">/de/playbook/</a> und freuen Sie sich auf die kommenden Releases!'
+				]
+			}
+		]
+	},
+	{
+		slug: 'v1-3-0-release',
+		title: 'encrypted1on1 v1.3.0: Integrierte Formular-Vorlagen und einmalige Gespräche',
+		subtitle:
+			'Spezialisierte Fragebögen für Onboarding, Karriereentwicklung und Belastungs-Check-ins, kombiniert mit verzweigungsfreien Einmal-Gesprächen.',
+		description:
+			'encrypted1on1 v1.3.0 führt native Gesprächsvorlagen (Onboarding, Karriere, Belastung), verzweigungsfreie Einmal-Gespräche und Markdown-Formatierung für Textantworten ein.',
+		date: '2026-09-24',
+		formattedDate: '24. September 2026',
+		readTime: '4 Min. Lesezeit',
+		category: 'Release',
+		author: {
+			name: 'Aleksejs',
+			role: 'Gründer & Entwickler'
+		},
+		tags: ['v1.3.0', 'Release', 'Vorlagen', '1:1-Gespräche', 'Open Source'],
+		coverImage: '/images/landing/privacy-infrastructure.jpg',
+		leadHtml:
+			'Nur einen Monat nach der Einführung der Formular-Versionierung in v1.2.0 veröffentlichen wir <strong>encrypted1on1 v1.3.0</strong>. Dieses wichtige Release liefert eine der am häufigsten nachgefragten Funktionen: <strong>integrierte Vorlagen für Gesprächsbögen</strong>, ergänzt durch die saubere Handhabung von <strong>Einmal-Gesprächen</strong> und Markdown-Unterstützung in Freitextfeldern.',
+		sections: [
+			{
+				heading: '4 spezialisierte Vorlagen für Gesprächsbögen',
+				paragraphsHtml: [
+					'Ein einzelner Fragenkatalog kann unmöglich allen Führungssituationen gerecht werden. In v1.3.0 können Sie beim Erstellen einer Anketa aus vier maßgeschneiderten Gesprächsformaten wählen:',
+					'<ul><li><strong>Reguläres 1:1:</strong> Das bewährte Standardformat für wiederkehrende Abstimmungen — Stimmungs- und Energie-Check, Erfolge, Gesprächsthemen und gemeinsame Vereinbarungen.</li><li><strong>Onboarding (Erstes 1:1):</strong> Entwickelt für neue Mitarbeitende und Teamwechsel. Konzentriert sich auf psychologische Sicherheit, Kommunikationsgewohnheiten, wechselseitige Erwartungen und den unvoreingenommenen Blick auf interne Prozesse.</li><li><strong>Karriere & Entwicklung (Career & Growth):</strong> Für vierteljährliche Orientierungsgespräche. Beinhaltet eine Energie-Retrospektive bisheriger Projekte, eine 3-Wege-Kalibrierung der Zielrichtung (Spezialisierung, Führung oder Rollenverbreiterung), einen 90-Tage-Aktionsplan und klare Förderzusagen der Führungskraft.</li><li><strong>Support & Belastungs-Check-in:</strong> Ausgelegt für Phasen hoher Belastung oder Burnout-Risiko. Als partnerschaftliche Bestandsaufnahme konzipiert, hilft dieser Bogen, Energieverluste aufzudecken, gesunde Grenzen zu setzen und sofortige Entlastungsmaßnahmen zu vereinbaren.</li></ul>'
+				]
+			},
+			{
+				heading: 'Intelligente Zyklus-Übergänge: Vorlagen bleiben nicht hängen',
+				paragraphsHtml: [
+					'Ein verbreitetes Manko vieler Vorlagensysteme ist, dass die einmalige Auswahl eines Karrierebogens versehentlich alle künftigen Meetings in Karrieregespräche verwandelt. In v1.3.0 ist dieses Verhalten architektonisch gelöst.',
+					'Sobald ein Bogen mit Spezialvorlage (wie <code>career_growth</code> oder <code>support_checkin</code>) archiviert wird, wechselt der automatisch neu angelegte Folgetermin verlässlich zurück zum Typ <code>regular</code>. Das Sondergespräch findet genau dann statt, wenn es ansteht, und der zweiwöchentliche Arbeitsrhythmus läuft ohne manuelle Korrekturen weiter.',
+					'Zusätzlich sind offene Termine mit Sonderbögen in der Übersicht mit gut sichtbaren Badges gekennzeichnet, damit beide Seiten sofort wissen, welcher Austausch ansteht.'
+				]
+			},
+			{
+				heading: 'Einmal-Gespräche ohne Verzweigung der Historie',
+				paragraphsHtml: [
+					'Bislang führte das Erstellen eines zweiten Bogens neben einem noch offenen Termin zu einer Verzweigung der Historie — mit duplizierten Vereinbarungsketten und parallelen Terminen.',
+					'v1.3.0 löst dies durch das Konzept der <strong>Einmal-Anketa</strong> (<code>oneOff: true</code>). Wird ein zusätzlicher Bogen manuell neben einem offenen Termin erstellt, gilt er als isoliertes Einzelgespräch: Er übernimmt keine Altdaten und erzeugt beim Archivieren keinen Folgetermin. Die reguläre Gesprächskette bleibt vollkommen unberührt.'
+				]
+			},
+			{
+				heading: 'Markdown-Formatierung und Echtzeit-Synchronisation',
+				paragraphsHtml: [
+					'Dieses Release bündelt weitere spürbare Bedienverbesserungen:',
+					'<ul><li><strong>Markdown in Textfeldern:</strong> Freitextantworten unterstützen nun Markdown — Aufzählungslisten, Fettschrift und Codeblöcke sorgen für übersichtliche Notizen.</li><li><strong>Live-Updates im Meeting:</strong> Ergänzt Ihr Gegenüber während des Gesprächs eine Notiz oder einen Beschluss, aktualisiert sich die Ansicht sofort ohne Neuladen der Seite.</li><li><strong>Vollständige Lokalisierung:</strong> Sämtliche neuen Vorlagen und Hinweistexte stehen auf Deutsch, Englisch, Russisch, Lettisch, Spanisch und Französisch bereit.</li></ul>'
+				]
+			},
+			{
+				heading: 'Upgrade & Docker-Deployment',
+				paragraphsHtml: [
+					'Version v1.3.0 ist vollständig abwärtskompatibel und führt Datenbankmigrationen für SQLite und MySQL automatisch aus. Das Docker-Image steht bereit:',
+					'<pre><code>docker pull ghcr.io/aleksejs1/encrypted1on1:1.3.0</code></pre>',
+					'Die neuen Vorlagen und Live-Ansichten können Sie ohne Anmeldung direkt in unserer Demo unter <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">demo.private1on1.eu</a> testen.',
+					'Der Quellcode und die Release-Details sind auf <a href="https://github.com/aleksejs1/encrypted1on1/releases/tag/v1.3.0" target="_blank" rel="noopener noreferrer">GitHub</a> veröffentlicht.'
+				]
+			}
+		]
 	}
 ];

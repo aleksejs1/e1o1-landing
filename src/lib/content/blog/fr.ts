@@ -177,5 +177,221 @@ export const blogPostsFr: BlogPost[] = [
 				]
 			}
 		]
+	},
+	{
+		slug: '1-on-1-question-bank-templates',
+		title:
+			'Au-delà du simple « Comment ça va ? » : découvrez la Banque de questions et modèles 1:1',
+		subtitle:
+			'Une sélection de questions stimulantes réparties en 7 dimensions clés — avec les explications méthodologiques et des trames prêtes à l’emploi.',
+		description:
+			'Pourquoi les entretiens 1:1 s’enlisent trop souvent dans de simples points d’avancement, et comment notre Banque de questions aide à briser les non-dits et prévenir l’épuisement.',
+		date: '2026-09-02',
+		formattedDate: '2 septembre 2026',
+		readTime: '4 min de lecture',
+		category: 'Guide',
+		author: {
+			name: 'Aleksejs',
+			role: 'Fondateur et mainteneur'
+		},
+		tags: ['Entretiens 1:1', 'Banque de questions', 'Management', 'Guide', 'Modèles'],
+		coverImage: '/images/playbook/high-leverage-1-on-1.jpg',
+		leadHtml:
+			'L’erreur la plus coûteuse en management d’ingénierie consiste à réduire l’entretien 1:1 à un simple point d’avancement de projet. Aujourd’hui, nous ouvrons notre <a href="/fr/playbook/questions/">Banque de questions 1:1</a> interactive : un répertoire structuré de questions éprouvées sur le terrain, conçues pour dépasser les banalités et aborder ce qui compte réellement.',
+		sections: [
+			{
+				heading: 'Le piège du « point d’avancement »',
+				paragraphsHtml: [
+					'Nous avons tous vécu ces 1:1 stériles : « Où en est le projet X ? » — « Ça avance bien, bientôt mergé. » — « Des blocages ? » — « Non, tout roule. » En dix minutes, les sujets s’épuisent. La réunion s’achève prématurément sur un vague sentiment d’obligation remplie, mais sans le moindre progrès d’alignement ou de confiance réciproque.',
+					'Le suivi de tâches a sa place dans les tickets, les discussions asynchrones et les points d’équipe du matin. L’entretien 1:1 est l’investissement au rendement le plus élevé qu’un manager puisse consacrer à ses collaborateurs — à la condition de poser des questions capables de percer la surface pour révéler les blocages systémiques, l’épuisement latent ou les aspirations professionnelles inexploitées.'
+				]
+			},
+			{
+				heading: '7 dimensions pour des conversations à fort impact',
+				paragraphsHtml: [
+					'Plutôt que d’aligner une liste brute d’amorces de conversation, nous avons articulé la <a href="/fr/playbook/questions/">Banque de questions</a> autour de sept piliers stratégiques :',
+					'<ul><li><strong>Relationnel & Énergie :</strong> instaurer la sécurité psychologique et appréhender le contexte humain avant d’aborder les considérations techniques.</li><li><strong>Feedback au manager :</strong> repérer ses propres angles morts, adapter son style d’accompagnement et lever les frictions hiérarchiques.</li><li><strong>Équipe & Culture :</strong> évaluer la cohésion, l’ambiance collective et la dynamique entre pairs.</li><li><strong>Goulots d’étranglement & Processus :</strong> éliminer les réunions superflues, fiabiliser les chaînes de déploiement et fluidifier la collaboration inter-équipes.</li><li><strong>Stratégie & Sens :</strong> relier le travail quotidien des pull requests à la vision d’ensemble de l’entreprise et à l’impact client.</li><li><strong>Évolution & Ambitions :</strong> tracer les perspectives de carrière à long terme, développer les compétences et identifier les prochains défis stimulants.</li><li><strong>Charge & Bien-être :</strong> détecter la surcharge cognitive, le stress dissimulé et le risque de burn-out bien avant une démission.</li></ul>'
+				]
+			},
+			{
+				heading: 'Le principe « Pourquoi poser cette question ? »',
+				paragraphsHtml: [
+					'Une question n’a de valeur que par l’intention qui l’anime. Dans notre banque, chaque formulation est accompagnée d’une section méthodologique <strong>« Pourquoi poser cette question ? »</strong>.',
+					'Cet éclairage détaille les leviers psychologiques en jeu, les signaux faibles à observer dans la réponse et la manière de rebondir constructivement sans placer votre interlocuteur sur la défensive.'
+				]
+			},
+			{
+				heading: 'Utiliser la Banque de questions dans encrypted1on1',
+				paragraphsHtml: [
+					'La Banque de questions est accessible en accès libre sur <a href="/fr/playbook/questions/">/fr/playbook/questions/</a> avec recherche instantanée par mot-clé, filtres par thématique et générateur d’inspiration aléatoire.',
+					'Ces questions peuvent en outre être directement intégrées dans vos trames <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">encrypted1on1</a> en amont de votre entretien. Manager et collaborateur prennent ainsi le temps de mûrir leurs réflexions de manière asynchrone, tandis que notre chiffrement zéro-connaissance garantit la confidentialité absolue de leurs échanges.'
+				]
+			}
+		]
+	},
+	{
+		slug: '5-essential-books-for-high-leverage-1-on-1s',
+		title: 'La bibliothèque 1:1 : 5 livres incontournables pour les managers d’ingénierie',
+		subtitle:
+			'L’essentiel de la sagesse managériale d’Andy Grove, Ben Horowitz, Julie Zhuo, Camille Fournier et Kim Scott adapté à vos entretiens 1:1.',
+		description:
+			'Explorez notre bibliothèque 1:1 interactive : cinq ouvrages fondateurs du management moderne, leurs principes clés, leurs questions catalytiques et les modèles associés.',
+		date: '2026-09-10',
+		formattedDate: '10 septembre 2026',
+		readTime: '5 min de lecture',
+		category: 'Guide',
+		author: {
+			name: 'Aleksejs',
+			role: 'Fondateur et mainteneur'
+		},
+		tags: ['Bibliothèque', 'Entretiens 1:1', 'Management', 'Leadership', 'Livres'],
+		coverImage: '/images/playbook/manager-playbook.jpg',
+		leadHtml:
+			'Le management efficace s’invente rarement en vase clos. Les principes qui font des entretiens 1:1 de formidables leviers de progrès — sécurité psychologique, ordre du jour fixé par le collaborateur, détection précoce des freins organisationnels et franchise bienveillante — ont été forgés et affinés au fil des décennies. Aujourd’hui, nous inaugurons notre <a href="/fr/playbook/books/">Bibliothèque 1:1</a> interactive.',
+		sections: [
+			{
+				heading: 'Pourquoi une bibliothèque dédiée au 1:1 ?',
+				paragraphsHtml: [
+					'La plupart des manuels de leadership s’étendent sur des centaines de pages traitant de vision macroéconomique, de processus de recrutement ou de jeux d’influence. Pourtant, lorsqu’on interroge des managers aguerris sur l’activité qui produit le plus fort levier au quotidien (leverage), ils mentionnent quasi systématiquement les chapitres consacrés aux entretiens en tête-à-tête.',
+					'Afin de rendre ces enseignements directement exploitables sans avoir à parcourir des tomes entiers, nous avons conçu la <a href="/fr/playbook/books/">Bibliothèque 1:1</a>. Nous avons condensé cinq ouvrages de référence pour en extraire l’approche fondamentale, les règles d’or, des questions prêtes à poser et les liens directs avec les trames de notre Guide.'
+				]
+			},
+			{
+				heading: '5 œuvres fondamentales du management',
+				paragraphsHtml: [
+					'Notre sélection rassemble cinq titres incontournables qui ont façonné le leadership technologique moderne :',
+					'<ul><li><strong>« High Output Management » d’Andy Grove (1983) :</strong> Le grand classique de la Silicon Valley. Grove y démontre que le rendement d’un manager équivaut à celui de son équipe et que 90 minutes consacrées à un 1:1 décuplent la qualité du travail d’un collaborateur sur 80 heures (un effet de levier supérieur à 50x). Son principe cardinal : <em>l’entretien 1:1 est la réunion du collaborateur</em>.</li><li><strong>« The Hard Thing About Hard Things » de Ben Horowitz (2014) :</strong> Le guide par excellence de la gestion des temps troubles. Horowitz qualifie le 1:1 de soupape de sécurité vitale pour l’organisation : les bonnes nouvelles circulent vite, mais les mauvaises stagnent ; des échanges réguliers permettent de désamorcer les dérapages avant qu’ils ne causent des démissions surprises ou des échecs critiques.</li><li><strong>« The Making of a Manager » de Julie Zhuo (2019) :</strong> Le modèle du leadership humain et empathique. Julie Zhuo articule le 1:1 autour de quatre priorités : bâtir la confiance mutuelle, clarifier les priorités réelles, débloquer les situations complexes et accompagner la trajectoire professionnelle.</li><li><strong>« The Manager’s Path » de Camille Fournier (2017) :</strong> La référence pour les carrières techniques et d’ingénierie. Fournier aborde la gestion fine : guider les juniors, accompagner les ingénieurs Staff et équilibrer la dette technique. Elle alerte très clairement : un développeur qui répond <em>« Je n’ai rien de particulier à aborder »</em> ne signale pas une mer d’huile, mais un risque imminent de désengagement.</li><li><strong>« Radical Candor » de Kim Scott (2017) :</strong> Bienveillance humaine conjuguée à une franchise directe. Scott démontre que le 1:1 est l’endroit où se forge la confiance authentique et pose la règle d’or : avant de formuler une critique à son collaborateur, le manager doit d’abord solliciter des retours sincères sur son propre management.</li></ul>'
+				]
+			},
+			{
+				heading: 'De la philosophie aux trames d’entretien prêtes à l’emploi',
+				paragraphsHtml: [
+					'Un livre de management n’a d’intérêt que s’il transforme la pratique concrète. Pour chaque ouvrage, la <a href="/fr/playbook/books/">Bibliothèque</a> propose des questions éprouvées sur le terrain et renvoie vers les modèles correspondants du Guide :',
+					'<ul><li>La vision d’effet de levier de Grove s’incarne dans le <a href="/fr/playbook/high-leverage-1-on-1/">Manifeste du 1:1 à fort effet de levier</a>.</li><li>L’approche de transparence d’Horowitz inspire le modèle <a href="/fr/playbook/skip-level/">Skip-Level 1:1 : diagnostic de santé d’équipe</a>.</li><li>La démarche de confiance de Zhuo structure la trame <a href="/fr/playbook/first-1-on-1/">Premier entretien 1:1 : attentes et confiance</a>.</li><li>Le suivi de carrière de Fournier pilote le <a href="/fr/playbook/career-growth/">Bilan trimestriel de carrière et d’évolution</a>.</li><li>La prévention de la surcharge de Scott anime le guide <a href="/fr/playbook/burnout-detection/">Triage de surcharge et détection du burn-out</a>.</li></ul>'
+				]
+			},
+			{
+				heading: 'Mise en pratique confidentielle avec encrypted1on1',
+				paragraphsHtml: [
+					'Le véritable écueil des 1:1 utiles est rarement le manque de bonne volonté, mais la précipitation et l’absence d’un espace de préparation partagé et confidentiel. Sans notes préalables, l’échange retombe vite dans un suivi de tâches anecdotique.',
+					'Grâce à <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">encrypted1on1</a>, managers et collaborateurs peuvent puiser dans les questions de ces grands auteurs, formuler leurs réflexions en amont de façon asynchrone et bénéficier d’un chiffrement client-side de bout en bout qui garantit le secret absolu de leurs notes.',
+					'Découvrez les cinq ouvrages, consultez les fiches de synthèse et intégrez les questions depuis <a href="/fr/playbook/books/">/fr/playbook/books/</a>.'
+				]
+			}
+		]
+	},
+	{
+		slug: 'meeting-templates-playbook-and-form-templates-preview',
+		title:
+			'Le Guide des modèles 1:1 : trames éprouvées et avant-première des modèles de formulaires',
+		subtitle:
+			'Une collection interactive d’ordres du jour adaptés à chaque étape d’équipe — avec un aperçu exclusif de la prise en charge prochaine des modèles de trames dans encrypted1on1.',
+		description:
+			'Du premier entretien au diagnostic de surcharge et à l’évolution de carrière : découvrez les modèles du Guide et les coulisses du futur support de modèles de formulaires.',
+		date: '2026-09-16',
+		formattedDate: '16 septembre 2026',
+		readTime: '5 min de lecture',
+		category: 'Guide',
+		author: {
+			name: 'Aleksejs',
+			role: 'Fondateur et mainteneur'
+		},
+		tags: ['Guide', 'Modèles', 'Entretiens 1:1', 'Feuille de route', 'Nouveauté'],
+		coverImage: '/images/playbook/bi-weekly-pulse.jpg',
+		leadHtml:
+			'Deux entretiens 1:1 ne devraient jamais se ressembler. Le premier rendez-vous avec un nouvel arrivant requiert un cadre radicalement différent d’un point trimestriel de trajectoire de carrière ou du désamorçage urgent d’un début de burn-out. Aujourd’hui, nous mettons en lumière notre <a href="/fr/playbook/">Guide des modèles 1:1</a> — et dévoilons une évolution majeure à venir sur encrypted1on1.',
+		sections: [
+			{
+				heading: 'Pourquoi les trames uniques échouent',
+				paragraphsHtml: [
+					'L’écueil le plus répandu en management technique consiste à réutiliser indéfiniment la même discussion informelle semaine après semaine. Sans structure intentionnelle, ces rendez-vous s’étiolent en un simple relevé de tickets : <em>« Sur quoi avances-tu ? Des blocages ? Très bien, à la semaine prochaine. »</em>',
+					'Les managers performants savent que leurs collaborateurs traversent des cycles opérationnels distincts. Un 1:1 efficace calibre sa trame selon l’objectif du moment : instaurer la sécurité psychologique lors de l’onboarding, dénouer les frictions du quotidien, tracer des perspectives de long terme ou réagir à une surcharge critique.'
+				]
+			},
+			{
+				heading: '6 modèles de référence dans le Guide',
+				paragraphsHtml: [
+					'Notre <a href="/fr/playbook/">Guide</a> propose des ordres du jour minutieusement articulés autour de six cas d’usage :',
+					'<ul><li><strong><a href="/fr/playbook/high-leverage-1-on-1/">Manifeste du 1:1 à fort effet de levier :</a></strong> Le canevas fondateur hérité de la vision d’Andy Grove. Quatre piliers pour équilibrer énergie individuelle, levée des points de blocage, vision stratégique et coaching réciproque.</li><li><strong><a href="/fr/playbook/first-1-on-1/">Premier entretien 1:1 : attentes et confiance :</a></strong> Indispensable pour les nouveaux arrivants. Établit la sécurité psychologique, explicite les modes de communication préférés et clarifie les attentes mutuelles dès le premier mois.</li><li><strong><a href="/fr/playbook/bi-weekly-pulse/">Point d’étape bimensuel :</a></strong> La cadence de croisière des équipes véloces. Entretient le dynamisme, désamorce les freins émergents et assure le suivi rigoureux des actions d’une session à l’autre.</li><li><strong><a href="/fr/playbook/career-growth/">Bilan trimestriel de carrière et d’évolution :</a></strong> Un temps d’échange détaché de l’urgence des sprints. Évalue le développement des compétences, les jalons de la filière technique et les opportunités d’élargissement d’impact.</li><li><strong><a href="/fr/playbook/burnout-detection/">Triage de surcharge et détection du burn-out :</a></strong> Un protocole bienveillant pour repérer la fatigue cognitive dissimulée et redistribuer la charge de travail avant d’atteindre la rupture.</li><li><strong><a href="/fr/playbook/skip-level/">Skip-Level 1:1 : diagnostic de santé d’équipe :</a></strong> Destiné aux directeurs, VP et fondateurs désireux de mesurer la cohérence culturelle et les irritants opérationnels au contact direct des équipes terrain.</li></ul>'
+				]
+			},
+			{
+				heading: 'Conçus pour l’action : minutage, conseils et copie rapide',
+				paragraphsHtml: [
+					'Chaque fiche du Guide est prête à l’emploi pour vos invitations d’agenda :',
+					'<ul><li><strong>Minutage indicatif :</strong> Des durées conseillées par séquence pour couvrir l’essentiel sans précipitation.</li><li><strong>Questions catalytiques :</strong> Des amorces précises qui encouragent une introspection sincère sans provoquer de repli défensif.</li><li><strong>Préparation et antipatterns :</strong> Les étapes clés à anticiper pour les deux participants et les pièges récurrents à éviter.</li><li><strong>Bouton « Copier l’ordre du jour » :</strong> Copiez d’un clic l’intégralité de la trame en Markdown pour la glisser dans votre invitation de calendrier ou vos notes.</li></ul>'
+				]
+			},
+			{
+				heading:
+					'Avant-première : bientôt la prise en charge des modèles de formulaires dans encrypted1on1 !',
+				paragraphsHtml: [
+					'Bien que les trames du <a href="/fr/playbook/">Guide</a> soient utilisables dans n’importe quel outil, nous avons l’intime conviction que la continuité managériale atteint son plein potentiel quand la structure est directement portée par la plateforme d’entretien.',
+					'Aujourd’hui, encrypted1on1 propose une trame unique et versionnée avec météo émotionnelle, priorités et engagements mutuels. Toutefois, des entretiens variés appellent des formulaires spécifiques.',
+					'Nous avons le plaisir de vous annoncer que nous développons activement le <strong>support natif des modèles de questionnaires</strong> directement dans encrypted1on1 ! Très prochainement, lors de la création d’une réunion, vous pourrez choisir une trame adaptée aux scénarios de notre Guide (onboarding, carrière, point bimensuel) ou concevoir des modèles personnalisés pour votre entreprise — avec la garantie absolue de notre chiffrement zéro-connaissance.',
+					'Parcourez dès aujourd’hui l’ensemble des scénarios sur <a href="/fr/playbook/">/fr/playbook/</a> et préparez-vous pour les prochaines nouveautés !'
+				]
+			}
+		]
+	},
+	{
+		slug: 'v1-3-0-release',
+		title: 'encrypted1on1 v1.3.0 : modèles d’anketa intégrés et entretiens ponctuels',
+		subtitle:
+			'Des trames de questions spécialisées pour l’intégration, l’évolution de carrière et le soutien face à la charge, associées à des entretiens ponctuels sans rupture de cycle.',
+		description:
+			'encrypted1on1 v1.3.0 introduit des modèles de questionnaires natifs (onboarding, carrière, soutien), des entretiens ponctuels sans divergence d’historique et le support Markdown.',
+		date: '2026-09-24',
+		formattedDate: '24 septembre 2026',
+		readTime: '4 min de lecture',
+		category: 'Version',
+		author: {
+			name: 'Aleksejs',
+			role: 'Fondateur et mainteneur'
+		},
+		tags: ['v1.3.0', 'Version', 'Modèles', 'Entretiens 1:1', 'Open Source'],
+		coverImage: '/images/landing/privacy-infrastructure.jpg',
+		leadHtml:
+			'Un mois seulement après l’introduction du versionnage de formulaires dans la v1.2.0, nous sommes ravis d’annoncer <strong>encrypted1on1 v1.3.0</strong>. Cette version majeure concrétise l’une des fonctionnalités les plus attendues : les <strong>modèles d’entretien natifs</strong> directement intégrés aux anketas, complétés par la prise en charge des <strong>entretiens ponctuels</strong> et le support du Markdown dans les réponses.',
+		sections: [
+			{
+				heading: '4 modèles spécialisés pour vos anketas',
+				paragraphsHtml: [
+					'Un questionnaire unique ne peut couvrir l’ensemble des situations managériales. Dans la v1.3.0, lors de la création d’une anketa, vous pouvez choisir parmi quatre trames conçues sur mesure :',
+					'<ul><li><strong>1:1 Régulier :</strong> Le format classique et éprouvé pour les échanges récurrents — bilan d’énergie et de ressenti, accomplissements récents, sujets à débattre et accords mutuels.</li><li><strong>Onboarding (Premier 1:1) :</strong> Conçu pour les nouveaux collaborateurs ou les transitions d’équipe. Met l’accent sur la sécurité psychologique, les habitudes de travail, les attentes mutuelles et un regard neuf sur les processus internes.</li><li><strong>Carrière & Évolution (Career & Growth) :</strong> Pensé pour les bilans trimestriels. Comprend une rétrospective d’énergie sur les projets récents, un calibrage de trajectoire à 3 voies (expertise technique, management ou compétences transverses), un plan d’action à 90 jours et des engagements de parrainage de la part du manager.</li><li><strong>Soutien & Gestion de charge (Support Check-in) :</strong> Conçu pour les périodes de stress intense ou de risque d’épuisement. Structuré comme un audit de charge bienveillant pour identifier les sources de fatigue, poser des limites claires et acter des mesures d’allègement immédiates.</li></ul>'
+				]
+			},
+			{
+				heading: 'Transition de cycle intelligente : les modèles ne s’enlisent pas',
+				paragraphsHtml: [
+					'Un piège classique des outils de réunions est qu’en choisissant un questionnaire trimestriel, celui-ci tend à se répéter par erreur toutes les deux semaines. Dans la v1.3.0, ce problème est résolu dès la conception.',
+					'Lorsqu’une anketa utilisant un modèle spécialisé (tel que <code>career_growth</code> ou <code>support_checkin</code>) est archivée, la réunion suivante générée automatiquement rebascule vers le modèle <code>regular</code>. La discussion spécifique a lieu au moment opportun, tandis que la cadence bimensuelle reprend son cours sans configuration manuelle.',
+					'De plus, les entretiens actifs adoptant un modèle spécifique sont clairement identifiés par un badge dans la liste des anketas pour éclairer d’emblée les participants.'
+				]
+			},
+			{
+				heading: 'Entretiens ponctuels : réunions à la volée sans scission d’historique',
+				paragraphsHtml: [
+					'Auparavant, créer une nouvelle anketa alors qu’une autre était déjà en cours provoquait une scission de l’historique du binôme — générant deux chaînes parallèles avec des engagements divergents se renouvelant indéfiniment.',
+					'La version v1.3.0 apporte la solution grâce aux <strong>anketas ponctuelles</strong> (<code>oneOff: true</code>). Si vous planifiez un entretien exceptionnel en parallèle d’une réunion régulière ouverte, la nouvelle anketa est traitée comme un point isolé : elle n’emporte pas les accords en cours et ne génère aucun successeur lors de son archivage. Le fil conducteur principal reste parfaitement préservé.'
+				]
+			},
+			{
+				heading: 'Prise en charge du Markdown et mises à jour en direct',
+				paragraphsHtml: [
+					'Ce jalon regroupe également des améliorations ergonomiques indispensables :',
+					'<ul><li><strong>Markdown dans les champs libres :</strong> Les réponses de texte acceptent le formatage Markdown — listes à puces, caractères gras et blocs de code structurent vos notes techniques avec une parfaite lisibilité.</li><li><strong>Synchronisation en direct :</strong> Dès que votre interlocuteur modifie une note ou ajoute un accord pendant l’entretien, l’affichage se met à jour en temps réel sans rechargement de page.</li><li><strong>Parité multilingue :</strong> L’ensemble des nouvelles trames et des intitulés est traduit en français, anglais, allemand, espagnol, letton et russe.</li></ul>'
+				]
+			},
+			{
+				heading: 'Mise à niveau et image Docker',
+				paragraphsHtml: [
+					'La version v1.3.0 assure une compatibilité totale et applique automatiquement les migrations de schéma pour SQLite et MySQL. L’image Docker officielle est disponible :',
+					'<pre><code>docker pull ghcr.io/aleksejs1/encrypted1on1:1.3.0</code></pre>',
+					'Vous pouvez tester le sélecteur de modèles et les nouvelles fonctionnalités sans création de compte sur notre démo en ligne : <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">demo.private1on1.eu</a>.',
+					'Le code source complet et les notes de publication sont consultables sur <a href="https://github.com/aleksejs1/encrypted1on1/releases/tag/v1.3.0" target="_blank" rel="noopener noreferrer">GitHub</a>.'
+				]
+			}
+		]
 	}
 ];

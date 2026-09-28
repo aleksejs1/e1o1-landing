@@ -32,7 +32,7 @@
 
 	<div class="site-header-controls">
 		<a
-			class="header-login-link"
+			class="header-login-link header-login-btn"
 			href={appLoginUrl(getLocale())}
 			target="_blank"
 			rel="noopener noreferrer"
