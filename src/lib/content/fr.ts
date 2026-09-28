@@ -49,6 +49,14 @@ export const fr: LandingContent = {
 			'Un véritable 1 à 1 encrypted1on1 : humeur et sentiments renseignés, un fil de commentaires ouvert, et une icône de cadenas indiquant que ce côté est chiffré de bout en bout.'
 	},
 
+	videoDemo: {
+		badge: 'Démonstration • 75s',
+		heading: 'Découvrez encrypted1on1 en action',
+		subhead:
+			'De la dérivation des clés dans le navigateur au bilan de 3 minutes, aux notes privées et à la vérification des données chiffrées.',
+		heroWatchCta: 'Voir la démo (75s)'
+	},
+
 	howItWorks: {
 		heading: 'Comment cela fonctionne en pratique',
 		subhead:

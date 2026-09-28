@@ -49,6 +49,14 @@ export const es: LandingContent = {
 			'Una reunión 1 a 1 real de encrypted1on1: estado de ánimo y sensaciones respondidos, un hilo de comentarios abierto, y un icono de candado que marca este lado como cifrado de extremo a extremo.'
 	},
 
+	videoDemo: {
+		badge: 'Demostración • 75s',
+		heading: 'Vea encrypted1on1 en acción',
+		subhead:
+			'Desde la derivación de claves en el navegador hasta el chequeo de 3 minutos, notas privadas y prueba de datos cifrados en red.',
+		heroWatchCta: 'Ver demo (75s)'
+	},
+
 	howItWorks: {
 		heading: 'Cómo funciona en la práctica',
 		subhead:

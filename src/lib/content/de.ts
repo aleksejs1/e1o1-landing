@@ -49,6 +49,14 @@ export const de: LandingContent = {
 			'Ein echtes 1:1-Gespräch in encrypted1on1: Stimmung und Gefühle beantwortet, ein offener Kommentar-Thread, und ein Vorhängeschloss-Symbol, das diese Seite als Ende-zu-Ende-verschlüsselt kennzeichnet.'
 	},
 
+	videoDemo: {
+		badge: 'Produkttour • 75s',
+		heading: 'encrypted1on1 in Aktion erleben',
+		subhead:
+			'Von der browserbasierten Schlüsselerstellung über den 3-Minuten-Check bis hin zu privaten Notizen und Netzwerk-Payload-Beweis.',
+		heroWatchCta: '75s Demo ansehen'
+	},
+
 	howItWorks: {
 		heading: 'So funktioniert es in der Praxis',
 		subhead:

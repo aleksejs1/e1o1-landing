@@ -33,6 +33,13 @@ export interface HowItWorksStep {
 	badge: string;
 }
 
+export interface VideoDemo {
+	badge: string;
+	heading: string;
+	subhead: string;
+	heroWatchCta: string;
+}
+
 export interface ArchitectureStep {
 	stepNumber: string;
 	actor: string;
@@ -101,6 +108,8 @@ export interface LandingContent {
 		highlights: Highlight[];
 		screenshotAlt: string;
 	};
+
+	videoDemo: VideoDemo;
 
 	howItWorks: {
 		heading: string;

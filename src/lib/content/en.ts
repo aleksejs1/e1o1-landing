@@ -49,6 +49,14 @@ export const en: LandingContent = {
 			'A real encrypted1on1 anketa: mood and feelings answered, one comment thread open, and a padlock icon marking this side as end-to-end encrypted.'
 	},
 
+	videoDemo: {
+		badge: 'Walkthrough • 75s',
+		heading: 'See encrypted1on1 in action',
+		subhead:
+			'From browser key derivation to the 3-minute check-in, private scratchpad, and provable zero-knowledge ciphertext.',
+		heroWatchCta: 'Watch 75s demo'
+	},
+
 	howItWorks: {
 		heading: 'How it works in practice',
 		subhead:

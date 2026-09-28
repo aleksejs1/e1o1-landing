@@ -135,6 +135,10 @@
 					{m.hero_already_have_account()} <strong>{m.header_login()} →</strong>
 				</a>
 				<span class="hero-sublinks-sep" aria-hidden="true">•</span>
+				<a class="hero-docs-link hero-video-link" href="{localizeHref('/')}#demo-video">
+					▶ {content.videoDemo.heroWatchCta}
+				</a>
+				<span class="hero-sublinks-sep" aria-hidden="true">•</span>
 				<a class="hero-docs-link" href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
 					GitHub ⭐
 				</a>
@@ -173,6 +177,67 @@
 				<div class="hero-screenshot-tags">
 					<span class="tag tag-outline">🔒 Client-Side Encrypted</span>
 					<span class="tag tag-outline">🎯 Persistent Goals</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Product Walkthrough Video Section -->
+<section class="section section-video" id="demo-video">
+	<div class="section-inner">
+		<div class="section-header text-center">
+			<div class="section-badge-wrap">
+				<span class="tag tag-outline video-pill">
+					<span class="pill-dot" aria-hidden="true"></span>
+					{content.videoDemo.badge}
+				</span>
+			</div>
+			<h2>{content.videoDemo.heading}</h2>
+			<p class="section-subhead">{content.videoDemo.subhead}</p>
+		</div>
+
+		<div class="video-card elev-md">
+			<div class="video-aspect-wrap">
+				<video
+					controls
+					preload="metadata"
+					poster="/videos/demo-poster.png"
+					playsinline
+					class="demo-video-player"
+				>
+					{#if locale === 'ru'}
+						<source src="/videos/encrypted1on1-demo-ru.webm" type="video/webm" />
+						<source src="/videos/encrypted1on1-demo-ru.mp4" type="video/mp4" />
+					{:else}
+						<source src="/videos/encrypted1on1-demo-en.webm" type="video/webm" />
+						<source src="/videos/encrypted1on1-demo-en.mp4" type="video/mp4" />
+					{/if}
+					Your browser does not support the video tag.
+				</video>
+			</div>
+			<div class="video-card-footer">
+				<div class="video-footer-left">
+					<span class="pill-dot" aria-hidden="true"></span>
+					<span class="video-footer-text">
+						{#if locale === 'ru'}
+							Реальная запись интерфейса: браузерная криптография Argon2id + X25519, сетевой
+							инспектор шифротекста и селф-хостинг.
+						{:else}
+							Real interface recording: Argon2id + X25519 client crypto, network ciphertext
+							inspector, and 1-command Docker host.
+						{/if}
+					</span>
+				</div>
+				<div class="video-footer-actions">
+					<a
+						class="btn btn-sm btn-primary"
+						href={appDemoUrl(locale)}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						{content.hero.ctaTryDemo} →
+					</a>
 				</div>
 			</div>
 		</div>
@@ -1580,5 +1645,115 @@
 	.final-btn-main {
 		padding: var(--space-3) var(--space-6);
 		font-size: 15px;
+	}
+
+	/* Product Walkthrough Video Section */
+	.section-video {
+		padding-top: var(--space-4);
+		padding-bottom: var(--space-8);
+	}
+
+	.video-pill {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		margin-bottom: var(--space-2);
+	}
+
+	.video-card {
+		max-width: 960px;
+		margin: 0 auto;
+		background: var(--color-surface);
+		border: 1px solid var(--color-divider);
+		border-radius: var(--radius-lg);
+		overflow: hidden;
+		box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+		transition:
+			border-color 0.2s ease,
+			box-shadow 0.2s ease;
+	}
+
+	:global([data-theme='dark']) .video-card {
+		box-shadow:
+			0 24px 64px rgba(0, 0, 0, 0.55),
+			0 0 0 1px rgba(235, 94, 40, 0.15);
+	}
+
+	.video-aspect-wrap {
+		position: relative;
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		background: #090c13;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.demo-video-player {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
+	.video-card-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--space-4);
+		padding: var(--space-3) var(--space-5);
+		background: color-mix(in srgb, var(--color-surface) 94%, var(--color-bg));
+		border-top: 1px solid var(--color-divider);
+		flex-wrap: wrap;
+	}
+
+	.video-footer-left {
+		display: flex;
+		align-items: flex-start;
+		gap: var(--space-2);
+		font-size: 13.5px;
+		color: color-mix(in srgb, var(--color-text) 80%, transparent);
+		flex: 1 1 280px;
+	}
+
+	.video-footer-left .pill-dot {
+		margin-top: 5px;
+		flex-shrink: 0;
+	}
+
+	.video-footer-text {
+		line-height: 1.4;
+	}
+
+	.video-footer-actions {
+		flex-shrink: 0;
+	}
+
+	@media (max-width: 640px) {
+		.video-card-footer {
+			flex-direction: column;
+			align-items: stretch;
+			gap: var(--space-3);
+			padding: var(--space-4);
+		}
+
+		.video-footer-left {
+			justify-content: flex-start;
+			text-align: left;
+		}
+
+		.video-footer-actions .btn {
+			width: 100%;
+		}
+	}
+
+	.hero-video-link {
+		font-weight: 600;
+		color: var(--color-accent-ink);
+	}
+
+	.btn-sm {
+		padding: 6px 16px;
+		font-size: 13px;
 	}
 </style>

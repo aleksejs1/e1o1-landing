@@ -49,6 +49,14 @@ export const lv: LandingContent = {
 			'Reāla encrypted1on1 anketa: atbildēts uz noskaņojuma un sajūtu jautājumiem, atvērts viens komentāru pavediens, un piekaramās atslēgas ikona atzīmē šo pusi kā šifrētu no gala līdz galam.'
 	},
 
+	videoDemo: {
+		badge: 'Video apskats • 75s',
+		heading: 'Skatiet encrypted1on1 darbībā',
+		subhead:
+			'No šifrēšanas atslēgu izveides pārlūkprogrammā līdz 3 minūšu sagatavošanai, personīgajām piezīmēm un šifrētā tīkla pieprasījuma pārbaudei.',
+		heroWatchCta: 'Skatīties demo (75s)'
+	},
+
 	howItWorks: {
 		heading: 'Kā tas strādā praksē',
 		subhead:
