@@ -40,7 +40,7 @@
 						name: 'encrypted1on1',
 						url: SITE_URL
 					},
-					image: `${SITE_URL}/images/landing/origin-trust.jpg`
+					image: `${SITE_URL}${post.coverImage || '/images/landing/origin-trust.jpg'}`
 				})
 			: ''
 	);
@@ -52,10 +52,16 @@
 		<meta name="description" content={post.description} />
 		<meta property="og:title" content="{post.title} — encrypted1on1 Blog" />
 		<meta property="og:description" content={post.description} />
-		<meta property="og:image" content="{SITE_URL}/images/landing/origin-trust.jpg" />
+		<meta
+			property="og:image"
+			content="{SITE_URL}${post.coverImage || '/images/landing/origin-trust.jpg'}"
+		/>
 		<meta property="og:image:width" content="1376" />
 		<meta property="og:image:height" content="768" />
-		<meta name="twitter:image" content="{SITE_URL}/images/landing/origin-trust.jpg" />
+		<meta
+			name="twitter:image"
+			content="{SITE_URL}${post.coverImage || '/images/landing/origin-trust.jpg'}"
+		/>
 		{@html `<script type="application/ld+json">${articleSchema}</script>`}
 	{/if}
 </svelte:head>
@@ -96,7 +102,7 @@
 		<div class="detail-cover-wrap">
 			<img
 				class="detail-cover-img"
-				src="/images/landing/origin-trust.jpg"
+				src={post.coverImage || '/images/landing/origin-trust.jpg'}
 				alt={post.title}
 				width="1376"
 				height="768"
@@ -343,6 +349,55 @@
 
 	.article-section p:last-child {
 		margin-bottom: 0;
+	}
+
+	.article-section :global(ul),
+	.article-section :global(ol) {
+		margin: 0 0 var(--space-5);
+		padding-left: var(--space-5);
+	}
+
+	.article-section :global(li) {
+		margin-bottom: var(--space-2);
+		line-height: 1.6;
+	}
+
+	.article-section :global(code) {
+		font-family: var(--font-mono, monospace);
+		font-size: 0.9em;
+		padding: 2px 6px;
+		border-radius: var(--radius-sm, 4px);
+		background: color-mix(in srgb, var(--color-surface-dim) 80%, var(--color-border));
+		border: 1px solid var(--color-border);
+		color: var(--color-accent-ink);
+	}
+
+	.article-section :global(pre) {
+		margin: var(--space-4) 0 var(--space-5);
+		padding: var(--space-4);
+		border-radius: var(--radius-md);
+		background: #0e1217;
+		color: #e2e8f0;
+		border: 1px solid var(--color-border);
+		overflow-x: auto;
+	}
+
+	.article-section :global(pre code) {
+		background: transparent;
+		border: none;
+		padding: 0;
+		color: inherit;
+		font-size: 14px;
+	}
+
+	.article-section :global(a) {
+		color: var(--color-accent-ink);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+
+	.article-section :global(a:hover) {
+		opacity: 0.85;
 	}
 
 	.try-demo-card {

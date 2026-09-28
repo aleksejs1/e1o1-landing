@@ -70,5 +70,58 @@ export const blogPostsLv: BlogPost[] = [
 				]
 			}
 		]
+	},
+	{
+		slug: 'v1-0-0-release',
+		title: 'encrypted1on1 v1.0.0: pirmais stabilais laidiens',
+		subtitle:
+			'Pašmitinātas 1:1 sarunas ar pilnīgu šifrēšanu, asinhronu sagatavošanos, mērķu pēctecību un gatavu Docker konteineru.',
+		description:
+			'Paziņojam par encrypted1on1 v1.0.0 — pirmo stabilo versiju strukturētām vadītāja un darbinieka 1 pret 1 sarunām ar pilnīgu datu konfidencialitāti. Docker konteiners, drošības testi un tiešsaistes demo.',
+		date: '2026-08-16',
+		formattedDate: '2026. gada 16. augusts',
+		readTime: '5 min lasījums',
+		category: 'Laidiens',
+		author: {
+			name: 'Aleksejs',
+			role: 'Dibinātājs un izstrādātājs'
+		},
+		tags: ['v1.0.0', 'Laidiens', 'Docker', 'Atvērtais kods', 'Drošība'],
+		coverImage: '/images/landing/privacy-infrastructure.jpg',
+		leadHtml:
+			'Šodien ir nozīmīgs brīdis projekta attīstībā: mēs oficiāli izlaižam <strong>encrypted1on1 v1.0.0</strong> — mūsu pirmo stabilo ražošanas laidienu. Tas nodrošina komandām drošu un strukturētu vidi 1 pret 1 sarunām, kur serveris nekad neredz nešifrētas piezīmes, atgriezenisko saiti vai mērķus.',
+		sections: [
+			{
+				heading: 'Kāpēc 1 pret 1 sarunām nepieciešama Zero-Knowledge arhitektūra',
+				paragraphsHtml: [
+					'Vadītāja un komandas biedra 1 pret 1 sarunas ir vieta, kur notiek uzņēmuma visdelikātākās diskusijas: konfidenciālas atsauksmes, bažas par efektivitāti, algu un karjeras plāni, izdegšanas signāli un personīgi apstākļi.',
+					'Klasiskie mākoņpakalpojumi, iekšējās vikivietnes un koplietojamie dokumenti liek uzticēties: uzticēties datubāzu administratoriem, uzticēties mākoņpakalpojumu darbiniekiem un uzticēties, ka neviens nelūkosies personīgajās sarunās.',
+					'Ar encrypted1on1 mēs aizstājām uzticēšanos ar matemātiku. Viss sarunu saturs tiek šifrēts pārlūkprogrammā pirms nosūtīšanas uz serveri. Pat servera īpašniekam vai datubāzes administratoram nav iespējas piekļūt nešifrētam tekstam.'
+				]
+			},
+			{
+				heading: 'Kas jauns v1.0.0 versijā',
+				paragraphsHtml: [
+					'v1.0.0 ietver vairāku mēnešu arhitektūras pilnveidošanu, drošības pārbaudes un reālu ikdienas lietošanas pieredzi. Galvenās funkcijas:',
+					'<ul><li><strong>Pilnībā šifrētas anketas (End-to-End Encryption):</strong> X25519 atslēgu pāri katram dalībniekam, XChaCha20-Poly1305 simetriskā satura šifrēšana un Argon2id atslēgu atvasināšana no lietotāja paroles.</li><li><strong>Asinhrona sagatavošanās:</strong> vadītājs un darbinieks pirms sarunas formulē darba kārtību, atzīmē šķēršļus un novērtē pašsajūtu un darba slodzi.</li><li><strong>Mērķu pēctecība:</strong> vienošanās un mērķi netiek pazaudēti iepriekšējos pierakstos — tie automātiski pāriet no viena cikla uz nākamo, līdz tiek sasniegti vai arhivēti.</li><li><strong>Privāta analītika un tendences:</strong> perioda pārskats ar noskaņojuma un mērķu progresa diagrammām (sparklines), kas ģenerētas inline-SVG formātā pārlūkā — bez ārējiem izsekošanas skriptiem un bez servera piekļuves datiem.</li><li><strong>Pilnvērtīga kontu pārvaldība:</strong> elastīgi reģistrācijas režīmi (ar ielūgumiem, tikai caur administratoru vai domēnam piesaistīta reģistrācija), ērta paroles maiņa un pilnīgs lokāli atšifrētu datu eksports JSON formātā.</li></ul>'
+				]
+			},
+			{
+				heading: 'Pārbaudīta un droša inženierija',
+				paragraphsHtml: [
+					'encrypted1on1 tika veidots, ievērojot daudzlīmeņu aizsardzības principus visos slāņos:',
+					'<ul><li><strong>«Melnās kastes» privātuma testi:</strong> Playwright e2e testi divās neatkarīgās pārlūkprogrammas sesijās, kas pārbauda reālu šifrēšanu un tieši inspicē datubāzi, matemātiski pierādot, ka nešifrēti dati nenonāk diskā vai API atbildēs.</li><li><strong>Stingras drošības galvenes:</strong> stingra Content Security Policy (CSP), Subresource Integrity (SRI) visiem resursiem un HSTS.</li><li><strong>Drošs Docker konteiners:</strong> darbojas no beztiesību lietotāja profila ar FrankenPHP + Caddy, nodrošinot automātiskus HTTPS sertifikātus un veselības pārbaudes (HEALTHCHECK).</li><li><strong>Augstas veiktspējas datu glabāšana:</strong> SQLite ar noklusējuma Write-Ahead Logging (WAL) režīmu ātrai paralēlai rakstīšanai, kā arī pārbaudīts MySQL migrācijas ceļš lielākām komandām.</li></ul>'
+				]
+			},
+			{
+				heading: 'Darba sākšana un Docker izvietošana',
+				paragraphsHtml: [
+					'Jūs varat palaist encrypted1on1 ar vienu komandu, izmantojot oficiālo Docker konteineru:',
+					'<pre><code>docker pull ghcr.io/aleksejs1/encrypted1on1:1.0.0</code></pre>',
+					'Ja vēlaties izmēģināt sistēmu bez uzstādīšanas, atveriet tiešsaistes demo vietni <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">demo.private1on1.eu</a> — tā darbojas bez reģistrācijas ar sagatavotiem sarunu datiem visās atbalstītajās valodās.',
+					'Pirmkods ir atvērts saskaņā ar <strong>AGPLv3</strong> licenci un pieejams <a href="https://github.com/aleksejs1/encrypted1on1" target="_blank" rel="noopener noreferrer">GitHub</a>.'
+				]
+			}
+		]
 	}
 ];

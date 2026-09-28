@@ -52,7 +52,7 @@
 				>
 					<img
 						class="card-cover-img"
-						src="/images/landing/origin-trust.jpg"
+						src={post.coverImage || '/images/landing/origin-trust.jpg'}
 						alt={post.title}
 						width="688"
 						height="384"

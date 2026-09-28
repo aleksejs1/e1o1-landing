@@ -70,5 +70,58 @@ export const blogPostsEs: BlogPost[] = [
 				]
 			}
 		]
+	},
+	{
+		slug: 'v1-0-0-release',
+		title: 'encrypted1on1 v1.0.0: Primer lanzamiento estable',
+		subtitle:
+			'Reuniones 1:1 autoalojadas y cifradas de extremo a extremo, preparación asíncrona y despliegue en Docker.',
+		description:
+			'Anunciamos encrypted1on1 v1.0.0: el primer lanzamiento estable de nuestra plataforma E2EE para reuniones 1 a 1 entre gerentes y empleados. Imagen Docker, pruebas de privacidad y demo en vivo.',
+		date: '2026-08-16',
+		formattedDate: '16 de agosto de 2026',
+		readTime: '5 min de lectura',
+		category: 'Lanzamiento',
+		author: {
+			name: 'Aleksejs',
+			role: 'Fundador y desarrollador'
+		},
+		tags: ['v1.0.0', 'Lanzamiento', 'Docker', 'Código Abierto', 'Seguridad'],
+		coverImage: '/images/landing/privacy-infrastructure.jpg',
+		leadHtml:
+			'Hoy alcanzamos un hito fundamental: lanzamos oficialmente <strong>encrypted1on1 v1.0.0</strong> — nuestra primera versión estable para entornos de producción. Ofrece a los equipos un espacio estructurado para reuniones 1 a 1 donde el servidor jamás tiene acceso al texto en claro de sus notas, comentarios o metas.',
+		sections: [
+			{
+				heading: 'Por qué las reuniones 1 a 1 exigen una arquitectura Zero-Knowledge',
+				paragraphsHtml: [
+					'En las reuniones 1 a 1 entre gerentes y colaboradores ocurren las conversaciones más delicadas de una organización: retroalimentación confidencial sobre rendimiento, debates salariales, planes de carrera, signos tempranos de agotamiento y circunstancias personales sensibles.',
+					'Las herramientas tradicionales basadas en la nube, las wikis internas y los documentos compartidos exigen confiar ciegamente en administradores de bases de datos, proveedores de nube y personal de soporte.',
+					'Con encrypted1on1 sustituimos la confianza por matemáticas. Todo el contenido se cifra en el navegador del usuario antes de enviarse al servidor. Ni siquiera el administrador con acceso total al servidor o a la base de datos puede acceder al texto sin cifrar.'
+				]
+			},
+			{
+				heading: 'Novedades de la versión 1.0.0',
+				paragraphsHtml: [
+					'El lanzamiento v1.0.0 es el resultado de meses de diseño arquitectónico riguroso, pruebas de seguridad y uso real en equipos. Incluye de fábrica:',
+					'<ul><li><strong>Formularios de reunión («anketas») con cifrado de extremo a extremo:</strong> pares de claves asimétricas X25519 por participante, cifrado simétrico autenticado XChaCha20-Poly1305 para el contenido y derivación de claves mediante Argon2id a partir de la contraseña del usuario.</li><li><strong>Preparación asíncrona:</strong> tanto el mánager como el colaborador completan temas, obstáculos y autoevaluaciones de ánimo y carga de trabajo antes de la videollamada.</li><li><strong>Continuidad de objetivos entre ciclos:</strong> las metas y los acuerdos no quedan olvidados en notas pasadas; se transfieren automáticamente de un ciclo al siguiente hasta que se archiven o completen.</li><li><strong>Informes y métricas que preservan la privacidad:</strong> vista de reporte periódico con gráficos de tendencia (sparklines) generados en SVG directamente en el navegador, sin scripts de seguimiento externos ni procesamiento de texto en claro en el servidor.</li><li><strong>Gestión de cuentas empresarial:</strong> modos de registro configurables (por invitación, solo administradores o autorregistro restringido a dominios de correo corporativo), cambio seguro de contraseñas y exportación completa de datos descifrados en JSON.</li></ul>'
+				]
+			},
+			{
+				heading: 'Ingeniería y seguridad verificable',
+				paragraphsHtml: [
+					'Diseñamos encrypted1on1 con principios de defensa en profundidad en todas las capas del sistema:',
+					'<ul><li><strong>Pruebas de privacidad de caja negra:</strong> suite e2e automatizada con Playwright que ejecuta criptografía real en dos sesiones de navegador independientes e inspecciona la base de datos para garantizar matemáticamente que ningún dato en claro llegue al almacenamiento ni a las respuestas de la API.</li><li><strong>Cabeceras de seguridad estrictas:</strong> política de seguridad de contenido (CSP) estricta, Subresource Integrity (SRI) en todos los recursos frontend y HSTS forzado.</li><li><strong>Contenedor Docker blindado:</strong> se ejecuta como usuario sin privilegios junto a FrankenPHP y Caddy con aprovisionamiento automático de certificados HTTPS y comprobaciones de salud (HEALTHCHECK).</li><li><strong>Almacenamiento de alto rendimiento:</strong> SQLite con modo Write-Ahead Logging (WAL) activo por defecto para escrituras concurrentes rápidas, más una ruta documentada y probada de migración a MySQL.</li></ul>'
+				]
+			},
+			{
+				heading: 'Primeros pasos y despliegue en Docker',
+				paragraphsHtml: [
+					'Desplegar encrypted1on1 requiere un único comando gracias a la imagen oficial disponible en GitHub Container Registry:',
+					'<pre><code>docker pull ghcr.io/aleksejs1/encrypted1on1:1.0.0</code></pre>',
+					'Si desea probar la interfaz antes de instalarla en su infraestructura, pruebe la demo interactiva en <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">demo.private1on1.eu</a> — no requiere registro y cuenta con historiales de ejemplo en todos los idiomas.',
+					'El código fuente completo está licenciado bajo <strong>AGPLv3</strong> y disponible en el repositorio de <a href="https://github.com/aleksejs1/encrypted1on1" target="_blank" rel="noopener noreferrer">GitHub</a>.'
+				]
+			}
+		]
 	}
 ];

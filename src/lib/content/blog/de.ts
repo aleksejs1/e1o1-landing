@@ -70,5 +70,58 @@ export const blogPostsDe: BlogPost[] = [
 				]
 			}
 		]
+	},
+	{
+		slug: 'v1-0-0-release',
+		title: 'encrypted1on1 v1.0.0: Die erste stabile Version',
+		subtitle:
+			'Self-hosted, Ende-zu-Ende-verschlüsselte 1:1-Gespräche mit asynchroner Vorbereitung, Zielverfolgung und Docker-Deployment.',
+		description:
+			'encrypted1on1 v1.0.0 ist da: Die erste stabile Version unserer Zero-Knowledge-Plattform für strukturierte 1:1-Gespräche zwischen Führungskräften und Mitarbeitern. Docker-Image, Verifikation und Live-Demo.',
+		date: '2026-08-16',
+		formattedDate: '16. August 2026',
+		readTime: '5 Min. Lesezeit',
+		category: 'Release',
+		author: {
+			name: 'Aleksejs',
+			role: 'Gründer & Entwickler'
+		},
+		tags: ['v1.0.0', 'Release', 'Docker', 'Open Source', 'Sicherheit'],
+		coverImage: '/images/landing/privacy-infrastructure.jpg',
+		leadHtml:
+			'Heute erreichen wir einen entscheidenden Meilenstein: Wir veröffentlichen offiziell <strong>encrypted1on1 v1.0.0</strong> — unsere erste stabile Produktionsversion. Sie bietet Teams einen dedizierten, strukturierten Rahmen für 1:1-Gespräche, bei dem der Server zu keinem Zeitpunkt Klartextnotizen, Feedback oder Ziele einsehen kann.',
+		sections: [
+			{
+				heading: 'Warum 1:1-Gespräche eine Zero-Knowledge-Architektur verlangen',
+				paragraphsHtml: [
+					'In vertraulichen 1:1-Gesprächen zwischen Teamleitung und Mitarbeitenden finden die sensibelsten Unterhaltungen eines Unternehmens statt: ehrliches Feedback zur Leistung, Gehalts- und Entwicklungsgespräche, Überlastungssignale und private Lebensumstände.',
+					'Herkömmliche SaaS-Cloud-Tools, interne Wikis und geteilte Dokumente verlangen blindes Vertrauen: Vertrauen in Datenbankadministratoren, Hosting-Provider und Support-Teams.',
+					'Mit encrypted1on1 haben wir Vertrauen durch Mathematik ersetzt. Sämtliche Inhalte werden vor der Übertragung direkt im Browser des Nutzers verschlüsselt. Selbst wer uneingeschränkten Server- und Datenbankzugriff hat, sieht ausnahmslos unlesbaren Chiffretext.'
+				]
+			},
+			{
+				heading: 'Neuerungen in Version 1.0.0',
+				paragraphsHtml: [
+					'Version 1.0.0 ist das Resultat monatelanger Architekturarbeit, gründlicher Sicherheitsaudits und praktischer Erprobung. Der Funktionsumfang umfasst:',
+					'<ul><li><strong>Ende-zu-Ende-verschlüsselte Gesprächsbögen („Anketas“):</strong> X25519-Schlüsselpaare pro Teilnehmer, XChaCha20-Poly1305 authentifizierte symmetrische Verschlüsselung für Inhalte und Argon2id-Schlüsselableitung aus dem Nutzerpasswort.</li><li><strong>Asynchrone Vorbereitung:</strong> Führungskraft und Mitarbeiter erfassen Agenda, Blocker sowie Stimmungs- und Workload-Einschätzungen strukturiert vor dem Meeting.</li><li><strong>Zyklusübergreifende Zielverfolgung:</strong> Beschlüsse und Quartalsziele gehen nicht verloren — sie werden automatisch in nachfolgende Zyklen übernommen, bis sie abgeschlossen oder archiviert werden.</li><li><strong>Datenschutzkonforme Trendberichte:</strong> Periodenübersicht mit Mood- und Ziel-Sparklines, die vollständig im Browser via Inline-SVG gerendert werden — ohne externe Tracking-Skripte oder serverseitige Klartextaggregation.</li><li><strong>Vollständige Accountverwaltung:</strong> Konfigurierbare Registrierungsmodi (auf Einladung, nur durch Administratoren oder E-Mail-Domänen-beschränkt mit Double-Opt-in), Passwortänderung ohne Schlüsselverlust und clientseitig entschlüsselter JSON-Datenexport.</li></ul>'
+				]
+			},
+			{
+				heading: 'Kompromisslose und überprüfbare Sicherheit',
+				paragraphsHtml: [
+					'encrypted1on1 folgt dem Prinzip der tiefengestaffelten Verteidigung (Defense-in-Depth):',
+					'<ul><li><strong>Black-Box-Datenschutztests:</strong> Playwright-e2e-Tests mit zwei unabhängigen Browserinstanzen prüfen echte Kryptooperationen und analysieren die Rohdatenbank, um mathematisch zu garantieren, dass kein Klartext im Speicher oder in API-Antworten landet.</li><li><strong>Strikte Sicherheits-Header:</strong> Strenge Content Security Policy (CSP), Subresource Integrity (SRI) für alle Frontend-Assets und erzwungenes HSTS.</li><li><strong>Gehärteter Docker-Container:</strong> Läuft als unprivilegierter Benutzer mit FrankenPHP + Caddy inklusive automatischer HTTPS-Zertifikate und HEALTHCHECK.</li><li><strong>Hochperformante Speicherung:</strong> SQLite mit aktiviertem Write-Ahead-Logging (WAL) für schnelle parallele Schreibzugriffe sowie ein erprobter Migrationspfad auf MySQL für größere Teams.</li></ul>'
+				]
+			},
+			{
+				heading: 'Erste Schritte & Docker-Deployment',
+				paragraphsHtml: [
+					'Das Ausrollen von encrypted1on1 erfordert lediglich einen einzigen Befehl über unser offizielles Image in der GitHub Container Registry:',
+					'<pre><code>docker pull ghcr.io/aleksejs1/encrypted1on1:1.0.0</code></pre>',
+					'Möchten Sie das System vorab testen? Besuchen Sie unsere interaktive Demo unter <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">demo.private1on1.eu</a> — ohne Registrierung und mit vorbereiteten Beispielzyklen in allen Sprachen.',
+					'Der Quellcode ist vollständig unter der <strong>AGPLv3</strong>-Lizenz auf <a href="https://github.com/aleksejs1/encrypted1on1" target="_blank" rel="noopener noreferrer">GitHub</a> veröffentlicht.'
+				]
+			}
+		]
 	}
 ];

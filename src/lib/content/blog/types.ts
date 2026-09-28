@@ -19,6 +19,7 @@ export interface BlogPost {
 	category: string;
 	author: BlogAuthor;
 	tags: string[];
+	coverImage?: string;
 	leadHtml: string;
 	sections: BlogSection[];
 }

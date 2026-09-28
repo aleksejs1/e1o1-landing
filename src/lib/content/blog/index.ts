@@ -28,7 +28,8 @@ const uiByLocale: Record<string, BlogUiStrings> = {
 };
 
 export function getBlogPosts(locale: Locale): BlogPost[] {
-	return postsByLocale[locale] || blogPostsEn;
+	const posts = postsByLocale[locale] || blogPostsEn;
+	return [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export function getBlogPost(slug: string | undefined, locale: Locale): BlogPost | undefined {

@@ -69,5 +69,58 @@ export const blogPostsEn: BlogPost[] = [
 				]
 			}
 		]
+	},
+	{
+		slug: 'v1-0-0-release',
+		title: 'encrypted1on1 v1.0.0: The First Stable Release',
+		subtitle:
+			'End-to-end encrypted 1:1 meetings, asynchronous prep, goal continuity, and production Docker deployment.',
+		description:
+			'Announcing encrypted1on1 v1.0.0: the first stable release of our self-hosted, zero-knowledge 1:1 meeting platform. Docker images, client-side encryption proof, and live demo.',
+		date: '2026-08-16',
+		formattedDate: 'August 16, 2026',
+		readTime: '5 min read',
+		category: 'Release',
+		author: {
+			name: 'Aleksejs',
+			role: 'Founder & Maintainer'
+		},
+		tags: ['v1.0.0', 'Release', 'Docker', 'Open Source', 'Security'],
+		coverImage: '/images/landing/privacy-infrastructure.jpg',
+		leadHtml:
+			'Today marks a major milestone: we are officially releasing <strong>encrypted1on1 v1.0.0</strong> — our first stable production release. It provides teams with a dedicated, structured space for 1:1 meetings where the server never sees your plaintext notes, feedback, or goals.',
+		sections: [
+			{
+				heading: 'Why 1:1 meetings need zero-knowledge architecture',
+				paragraphsHtml: [
+					'1:1 meetings between managers and team members are where a company’s most sensitive conversations happen. Performance concerns shared in confidence, compensation and promotion plans, burnout signals, and deeply personal circumstances.',
+					'Conventional internal wikis, docs, and cloud SaaS tools ask everyone to rely on trust: trust that database backups won’t leak, trust that vendor staff won’t peek, and trust that IT administrators won’t inspect private conversations.',
+					'With encrypted1on1, we replaced trust with mathematics. All meeting content is encrypted client-side in the browser before reaching the server. Even whoever operates the server or owns the database has zero access to the plaintext.'
+				]
+			},
+			{
+				heading: 'What’s new in v1.0.0',
+				paragraphsHtml: [
+					'The v1.0.0 release represents months of architectural iteration, security hardening, and real-world usage. Here is what is included out of the box:',
+					'<ul><li><strong>End-to-end encrypted “anketas” (1:1 meeting forms):</strong> X25519 keypairs per participant, XChaCha20-Poly1305 symmetric authenticated encryption for content, and Argon2id password-based key derivation.</li><li><strong>Asynchronous preparation:</strong> Managers and direct reports fill in feedback, priorities, blockers, and mood/workload self-assessments ahead of the call.</li><li><strong>Goal continuity across cycles:</strong> Goals and checkpoints carry forward automatically into subsequent meeting cycles until archived or completed.</li><li><strong>Privacy-preserving trend reports:</strong> A multi-cycle report view with mood and goal-progress sparklines rendered via inline SVG entirely client-side — no tracking scripts, no charting libraries, no server-side plaintext aggregation.</li><li><strong>Production account controls:</strong> Configurable registration modes (invite-only, admin-only, or domain-restricted self-registration with double opt-in), in-app password changes, and full client-side decrypted JSON data exports.</li></ul>'
+				]
+			},
+			{
+				heading: 'Engineered for verifiable security',
+				paragraphsHtml: [
+					'We designed encrypted1on1 with defense-in-depth principles across the entire stack:',
+					'<ul><li><strong>Black-box privacy test suite:</strong> Dual-actor Playwright end-to-end tests that run real browser cryptography, make live API requests, and inspect raw database records to mathematically assert that no plaintext ever reaches disk or network payloads.</li><li><strong>Strict security headers:</strong> Content Security Policy (CSP) with Subresource Integrity (SRI) on all bundled assets, and enforced HSTS.</li><li><strong>Hardened production container:</strong> Runs as a non-privileged user on FrankenPHP + Caddy with automatic HTTPS and built-in healthchecks.</li><li><strong>High-performance storage:</strong> SQLite with Write-Ahead Logging (WAL) enabled by default for rapid concurrent writes, plus a validated migration path to MySQL for large installations.</li></ul>'
+				]
+			},
+			{
+				heading: 'Getting started & Docker deployment',
+				paragraphsHtml: [
+					'Deploying encrypted1on1 takes just one command using our official production image published to the GitHub Container Registry:',
+					'<pre><code>docker pull ghcr.io/aleksejs1/encrypted1on1:1.0.0</code></pre>',
+					'If you want to experience the workflow before self-hosting, check out the live sandbox at <a href="https://demo.private1on1.eu" target="_blank" rel="noopener noreferrer">demo.private1on1.eu</a> — it requires no registration and includes pre-populated meeting history in all supported languages.',
+					'The complete source code is licensed under <strong>AGPLv3</strong> and available on <a href="https://github.com/aleksejs1/encrypted1on1" target="_blank" rel="noopener noreferrer">GitHub</a>.'
+				]
+			}
+		]
 	}
 ];
