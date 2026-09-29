@@ -322,7 +322,7 @@ export const es: LandingContent = {
 			heading: 'Nube',
 			intro: '¿No quieres operar tu propia infraestructura? Nosotros la alojamos por ti.',
 			table: {
-				columns: ['Free (próximamente)', 'Plus (próximamente)', 'Enterprise'],
+				columns: ['Free', 'Plus (próximamente)', 'Enterprise'],
 				rows: [
 					{ label: 'Precio', values: ['0 €', '20 € / mes', 'Contactar con ventas'] },
 					{ label: 'Usuarios', values: ['Hasta 100', 'Hasta 1000', 'Ilimitados'] },

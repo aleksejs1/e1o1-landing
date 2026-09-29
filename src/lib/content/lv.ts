@@ -322,7 +322,7 @@ export const lv: LandingContent = {
 			heading: 'Mākonis',
 			intro: 'Nevēlaties uzturēt savu infrastruktūru? Mēs to uzturēsim jūsu vietā.',
 			table: {
-				columns: ['Free (drīzumā)', 'Plus (drīzumā)', 'Enterprise'],
+				columns: ['Free', 'Plus (drīzumā)', 'Enterprise'],
 				rows: [
 					{ label: 'Cena', values: ['€0', '€20 / mēnesī', 'Sazināties ar pārdošanas komandu'] },
 					{ label: 'Lietotāji', values: ['Līdz 100', 'Līdz 1000', 'Neierobežots'] },

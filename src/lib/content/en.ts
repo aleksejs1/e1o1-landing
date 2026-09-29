@@ -321,7 +321,7 @@ export const en: LandingContent = {
 			heading: 'Cloud',
 			intro: 'Don’t want to run your own infrastructure? We host it for you.',
 			table: {
-				columns: ['Free (coming soon)', 'Plus (coming soon)', 'Enterprise'],
+				columns: ['Free', 'Plus (coming soon)', 'Enterprise'],
 				rows: [
 					{ label: 'Price', values: ['€0', '€20 / month', 'Contact sales'] },
 					{ label: 'Users', values: ['Up to 100', 'Up to 1,000', 'Unlimited'] },

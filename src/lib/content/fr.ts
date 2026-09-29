@@ -322,7 +322,7 @@ export const fr: LandingContent = {
 			heading: 'Cloud',
 			intro: "Vous ne voulez pas gérer votre propre infrastructure ? Nous l'hébergeons pour vous.",
 			table: {
-				columns: ['Free (bientôt disponible)', 'Plus (bientôt disponible)', 'Enterprise'],
+				columns: ['Free', 'Plus (bientôt disponible)', 'Enterprise'],
 				rows: [
 					{ label: 'Prix', values: ['0 €', '20 € / mois', 'Contacter les ventes'] },
 					{ label: 'Utilisateurs', values: ["Jusqu'à 100", "Jusqu'à 1 000", 'Illimité'] },

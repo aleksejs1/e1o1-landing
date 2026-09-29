@@ -322,7 +322,7 @@ export const ru: LandingContent = {
 			heading: 'Облако',
 			intro: 'Не хотите разворачивать собственную инфраструктуру? Мы разместим её для вас.',
 			table: {
-				columns: ['Free (скоро)', 'Plus (скоро)', 'Enterprise'],
+				columns: ['Free', 'Plus (скоро)', 'Enterprise'],
 				rows: [
 					{ label: 'Цена', values: ['€0', '€20 / месяц', 'Свяжитесь с отделом продаж'] },
 					{ label: 'Пользователи', values: ['До 100', 'До 1 000', 'Без ограничений'] },
