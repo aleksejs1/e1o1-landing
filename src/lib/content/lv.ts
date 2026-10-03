@@ -46,7 +46,7 @@ export const lv: LandingContent = {
 			}
 		],
 		screenshotAlt:
-			'Reāla encrypted1on1 anketa: atbildēts uz noskaņojuma un sajūtu jautājumiem, atvērts viens komentāru pavediens, un piekaramās atslēgas ikona atzīmē šo pusi kā šifrētu no gala līdz galam.'
+			'Reāla 1:1 tikšanās encrypted1on1: atbildēts uz noskaņojuma un sajūtu jautājumiem, atvērts viens komentāru pavediens, un piekaramās atslēgas ikona atzīmē šo pusi kā šifrētu no gala līdz galam.'
 	},
 
 	howItWorks: {

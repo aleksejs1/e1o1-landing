@@ -613,7 +613,7 @@ export const playbookItemsLv: PlaybookItem[] = [
 		whyItMattersHtml:
 			'<p><strong>No uzrauga par multiplikatoru:</strong> Ja nesen kļuvāt par vadītāju, lielākais kārdinājums ir izmantot 1 pret 1 sarunas, lai uzzinātu uzdevumu statusus. Pretojieties šim impulsam. Statusus skatās Jira vai GitHub; 1 pret 1 saruna ir veltīta tikai enerģijai, sistēmiskiem šķēršļiem un attīstības virzienam.</p><p><strong>Endija Grova sviras formula:</strong> Grāmatā <em>High Output Management</em> Endijs Grovs aprēķināja, ka 90 minūtes pārdomātas 1 pret 1 sarunas uzlabo inženiera darba kvalitāti un motivāciju par 80 stundām starp sarunu cikliem (>50x laika atdeve). Vadītāja mērķis nav kontrole, bet gan visu šķēršļu novēršana, kas kavē komandas potenciālu.</p><p><strong>80/20 klausīšanās proporcija:</strong> Ja vadītājs runā 70 % laika, tā ir lekcija, nevis sadarbība. Darbiniekam jārunā aptuveni 80 % sarunas laika. Vadītāja instrumenti ir atvērti jautājumi, apzināta pauze un piezīmju veikšana.</p><p><strong>Pēctecība un uzticība:</strong> Solījumi, kas doti sarunā un aizmirsti līdz pirmdienai, rada cinismu. Uzticība rodas tad, kad vienošanās pāriet no cikla uz ciklu un tiek izsekotas līdz pilnīgai izpildei.</p>',
 		preparationHtml:
-			'<p><strong>1. solis: Konteksta izvērtēšana (10–15 min pirms):</strong> Novērtējiet objektīvos faktorus bez mikromenedžmenta. Vai koda recenzija (PR) stāvēja 5 dienas? Vai bija novērojami nakts komiti (pēc 22:00) vai darbs brīvdienās? Vai bija smagas dežūras? Izmantojiet faktus empātijai, nevis pārmetumiem.</p><p><strong>2. solis: Darbplūsma encrypted1on1 vidē:</strong><br>1. <em>Apskatiet tendences:</em> Atveriet anketu un novērtējiet noskaņojuma un darba slodzes dinamiku.<br>2. <em>Vispirms izlasiet darbinieka atbildes:</em> Pievērsiet uzmanību sajūtu birkām, punktiem sadaļā «Kas ir sarežģītāk, nekā vajadzētu» un pārrunājamajām tēmām.<br>3. <em>Aizpildiet vadītāja pusi:</em> Sniedziet objektīvu atgriezenisko saiti, piedāvājiet skaidru palīdzību un izceliet vismaz vienu sasniegumu, ko pamanījāt personīgi.<br>4. <em>Publicējiet savu pusi:</em> Abas puses kļūst redzamas reizē pirms sarunas sākuma.<br>5. <em>Privātās piezīmes:</em> Izmantojiet šifrēto privāto piezīmju paneli koučinga norādēm, konfidenciālam kontekstam un atalgojuma plāniem, kas citiem nav pieejami.</p>',
+			'<p><strong>1. solis: Konteksta izvērtēšana (10–15 min pirms):</strong> Novērtējiet objektīvos faktorus bez mikromenedžmenta. Vai koda recenzija (PR) stāvēja 5 dienas? Vai bija novērojami nakts komiti (pēc 22:00) vai darbs brīvdienās? Vai bija smagas dežūras? Izmantojiet faktus empātijai, nevis pārmetumiem.</p><p><strong>2. solis: Darbplūsma encrypted1on1 vidē:</strong><br>1. <em>Apskatiet tendences:</em> Atveriet 1:1 tikšanos un novērtējiet noskaņojuma un darba slodzes dinamiku.<br>2. <em>Vispirms izlasiet darbinieka atbildes:</em> Pievērsiet uzmanību sajūtu birkām, punktiem sadaļā «Kas ir sarežģītāk, nekā vajadzētu» un pārrunājamajām tēmām.<br>3. <em>Aizpildiet vadītāja pusi:</em> Sniedziet objektīvu atgriezenisko saiti, piedāvājiet skaidru palīdzību un izceliet vismaz vienu sasniegumu, ko pamanījāt personīgi.<br>4. <em>Publicējiet savu pusi:</em> Abas puses kļūst redzamas reizē pirms sarunas sākuma.<br>5. <em>Privātās piezīmes:</em> Izmantojiet šifrēto privāto piezīmju paneli koučinga norādēm, konfidenciālam kontekstam un atalgojuma plāniem, kas citiem nav pieejami.</p>',
 		agenda: [
 			{
 				title: '1. balsts: Enerģijas pulss un cilvēciskais kontakts (5–7 min)',
@@ -685,7 +685,7 @@ export const playbookItemsLv: PlaybookItem[] = [
 			}
 		],
 		followUpHtml:
-			'<p><strong>1. Piefiksējiet 1–3 Vienošanās:</strong> Ievadiet soļus Vienošanos blokā. Tās ir taktiskas viena cikla apņemšanās ar skaidru atbildīgo.</p><p><strong>2. Atjauniniet Mērķus:</strong> Pievienojiet statusa kontrolpunktu («Pēc plāna», «Apdraudēts», «Bloķēts») vidēja termiņa mērķiem.</p><p><strong>3. Nodrošiniet ātru uzvaru 24 stundās:</strong> Izvēlieties vienu darbinieka minēto šķērsli (piekļuve, licence, atbrīvošana no nevajadzīgas sanāksmes) un atrisiniet to 24 stundu laikā. Tas rada tūlītēju uzticību formātam.</p><p><strong>4. Arhivējiet ciklu:</strong> Nospiediet «Arhivēt», lai izveidotu nākamā cikla anketu un automātiski pārnestu neizpildītās vienošanās un mērķus.</p>',
+			'<p><strong>1. Piefiksējiet 1–3 Vienošanās:</strong> Ievadiet soļus Vienošanos blokā. Tās ir taktiskas viena cikla apņemšanās ar skaidru atbildīgo.</p><p><strong>2. Atjauniniet Mērķus:</strong> Pievienojiet statusa kontrolpunktu («Pēc plāna», «Apdraudēts», «Bloķēts») vidēja termiņa mērķiem.</p><p><strong>3. Nodrošiniet ātru uzvaru 24 stundās:</strong> Izvēlieties vienu darbinieka minēto šķērsli (piekļuve, licence, atbrīvošana no nevajadzīgas sanāksmes) un atrisiniet to 24 stundu laikā. Tas rada tūlītēju uzticību formātam.</p><p><strong>4. Arhivējiet ciklu:</strong> Nospiediet «Arhivēt», lai izveidotu nākamā cikla 1:1 tikšanos un automātiski pārnestu neizpildītās vienošanās un mērķus.</p>',
 		tips: [
 			'Ieturiet 5 līdz 7 sekunžu pauzi: kad sarunu biedrs pabeidz teikumu, nogaidiet pirms atbildat — būtiskākais izskan pauzē.',
 			'80/20 likums: darbinieks runā 80 % laika, vadītājs klausās un precizē 20 % laika.',
@@ -718,7 +718,7 @@ export const playbookItemsLv: PlaybookItem[] = [
 				description: 'Signāls par jūsu kapacitāti, stresa līmeni un emocionālo stāvokli.',
 				questions: [
 					'Mana slodze pašlaik šķiet smaga / sabalansēta / viegla — lūk, kā šis temps ietekmē manu dziļā darba fokusu.',
-					'Es anketā atzīmēju šīs sajūtu birkas: lūk, kāds konteksts ir aiz tām.'
+					'Es savās atbildēs atzīmēju šīs sajūtu birkas: lūk, kāds konteksts ir aiz tām.'
 				]
 			},
 			{
@@ -761,7 +761,7 @@ export const playbookItemsLv: PlaybookItem[] = [
 					'Sakiet atklāti: «Mana slodze šobrīd nav ilgtspējīga. Izlemsim kopā, ko varam atlikt, deleģēt vai atcelt».'
 			},
 			{
-				mistake: 'Anketas aizpildīšana 5 minūtes pirms sarunas',
+				mistake: 'Atbilžu aizpildīšana 5 minūtes pirms sarunas',
 				whyBad: 'Steiga pārvērš tikšanos par virspusēju statusa pārskatu bez reāliem risinājumiem.',
 				betterAlternative:
 					'Fiksējiet sasniegumus un šķēršļus pakāpeniski sprinta laikā encrypted1on1 vidē.'
@@ -782,7 +782,7 @@ export const playbookItemsLv: PlaybookItem[] = [
 			}
 		],
 		followUpHtml:
-			'<p><strong>1. Izpildiet vienošanās sprinta gaitā:</strong> Atzīmējiet pabeigtos uzdevumus tieši atvērtajā anketā. Jūs atbildat par saviem punktiem, vadītājs — par savējiem.</p><p><strong>2. Eksportējiet perioda pārskatu pirms ikgadējā novērtējuma:</strong> Novērtēšanas laikā atveriet sadaļu <strong>Pārskats</strong> encrypted1on1 sistēmā. Atšifrējiet pārbaudītu sasniegumu, atziņu un mērķu žurnālu par pēdējiem 6 mēnešiem sagatavotā Markdown dokumentā. Jums nekad vairs nebūs jāatceras savi nopelni no galvas.</p>',
+			'<p><strong>1. Izpildiet vienošanās sprinta gaitā:</strong> Atzīmējiet pabeigtos uzdevumus tieši atvērtajā 1:1 tikšanās lapā. Jūs atbildat par saviem punktiem, vadītājs — par savējiem.</p><p><strong>2. Eksportējiet perioda pārskatu pirms ikgadējā novērtējuma:</strong> Novērtēšanas laikā atveriet sadaļu <strong>Pārskats</strong> encrypted1on1 sistēmā. Atšifrējiet pārbaudītu sasniegumu, atziņu un mērķu žurnālu par pēdējiem 6 mēnešiem sagatavotā Markdown dokumentā. Jums nekad vairs nebūs jāatceras savi nopelni no galvas.</p>',
 		tips: [
 			'Vienmēr izmantojiet formulu Problēma + Ietekme + Priekšlikums, piesakot rīku vai procesu berzi.',
 			'Atgriezeniskās saites pieņemšanas protokols: elpojiet, klausieties, lai saprastu, pasakiet paldies un vienojieties par soļiem.',

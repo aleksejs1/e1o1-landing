@@ -46,7 +46,7 @@ export const en: LandingContent = {
 			}
 		],
 		screenshotAlt:
-			'A real encrypted1on1 anketa: mood and feelings answered, one comment thread open, and a padlock icon marking this side as end-to-end encrypted.'
+			'A real 1:1 in encrypted1on1: mood and feelings answered, one comment thread open, and a padlock icon marking this side as end-to-end encrypted.'
 	},
 
 	howItWorks: {
