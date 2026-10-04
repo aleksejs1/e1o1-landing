@@ -176,6 +176,37 @@ export const booksEn: PlaybookBook[] = [
 		},
 		relatedTemplateSlug: 'burnout-detection',
 		relatedTemplateTitle: 'Overwhelm & Burnout Triage'
+	},
+	{
+		slug: 'the-fearless-organization',
+		title: 'The Fearless Organization',
+		originalTitle: 'The Fearless Organization',
+		author: 'Amy C. Edmondson',
+		authorRole: 'Professor of Leadership & Management at Harvard Business School',
+		year: 2018,
+		badge: 'Psychological Safety & Trust',
+		coverImage: '/images/playbook/books/the-fearless-organization.jpg',
+		coreThesis:
+			'In knowledge work, fear is the ultimate killer of innovation and operational excellence. Organizations thrive only when employees feel safe to take interpersonal risks: asking questions, admitting mistakes, and voicing early doubts without fear of retribution or humiliation.',
+		oneOnOneFocusHtml:
+			'<p>Edmondson’s empirical research at Harvard and across global industries proves that high-performing teams do not make fewer mistakes — they catch and discuss them far earlier because they are not terrified of admitting failure. The 1:1 is the premier safe harbor where psychological safety is actively built or destroyed. Edmondson argues that managers must intentionally replace instinctive blame with curious inquiry, framing every operational breakdown as an opportunity for joint problem-solving rather than individual culpability.</p>',
+		keyPrinciples: [
+			'Frame work as a learning problem, not an execution-only problem in complex environments.',
+			'Acknowledge your own fallibility: simple statements like "I may miss something here, I need your input" instantly dismantle fear.',
+			'Model proactive inquiry: ask genuinely curious questions rather than performative rhetorical checks.',
+			'Respond productively to bad news: how you react to an admitted mistake determines whether you will ever hear about the next one.'
+		],
+		actionableQuestions: [
+			'What is something concerning in our current roadmap that we aren’t talking about enough?',
+			'If you spotted a critical flaw or risk in our current process, what would make it easier to raise it immediately?',
+			'What was the most difficult mistake or setback you dealt with recently, and what can we learn from it together?'
+		],
+		quote: {
+			text: 'Psychological safety is not about being nice or lowering standards. It is about creating a climate of openness where people can be candid about reality without fear of punishment.',
+			attribution: 'Amy C. Edmondson, The Fearless Organization'
+		},
+		relatedTemplateSlug: 'handling-difficult-situations',
+		relatedTemplateTitle: 'Handling Difficult Situations: Scripts for High-Stakes 1:1s'
 	}
 ];
 
@@ -334,6 +365,37 @@ export const booksRu: PlaybookBook[] = [
 		},
 		relatedTemplateSlug: 'burnout-detection',
 		relatedTemplateTitle: 'Перегруз и выгорание: Восстановление ресурса'
+	},
+	{
+		slug: 'the-fearless-organization',
+		title: 'Работа без страха',
+		originalTitle: 'The Fearless Organization',
+		author: 'Эми Эдмондсон',
+		authorRole: 'Профессор лидерства и менеджмента в Гарвардской школе бизнеса',
+		year: 2018,
+		badge: 'Психологическая безопасность и доверие',
+		coverImage: '/images/playbook/books/the-fearless-organization.jpg',
+		coreThesis:
+			'В интеллектуальной сфере страх — главный убийца инноваций и надежности. Команды достигают выдающихся результатов только тогда, когда сотрудники не боятся межличностных рисков: признавать ошибки, задавать наивные вопросы и вскрывать сомнения без страха насмешек или наказания.',
+		oneOnOneFocusHtml:
+			'<p>Исследования Эдмондсон в Гарварде и Google доказали парадоксальный факт: лучшие команды совершают не меньше ошибок — они просто выявляют и открыто обсуждают их первыми, пока те не превратились в катастрофу. Встреча 1-на-1 — это главный защищенный контур, где психологическая безопасность либо выстраивается, либо окончательно уничтожается. Эдмондсон подчеркивает: реакция лидера на плохие новости на 1-на-1 определяет, узнает ли он о следующей надвигающейся проблеме вовремя или только на стадии пожара.</p>',
+		keyPrinciples: [
+			'Осознавайте и признавайте собственную уязвимость: фраза «Я могу ошибаться или упустить важное, мне нужен твой взгляд» снимает с сотрудника страх критики.',
+			'Позиционируйте работу как процесс постоянного обучения и исследования, а не механического безошибочного исполнения.',
+			'Задавайте искренние открытые вопросы вместо риторических проверок («Что здесь может пойти не так?» вместо «Ты ведь уверен, что успеешь?»).',
+			'Реагируйте конструктивно на плохие новости: благодарность за вовремя поднятую проблему формирует культуру прозрачности.'
+		],
+		actionableQuestions: [
+			'О каких скрытых рисках или сложностях в текущем проекте мы пока недостаточно говорим в команде?',
+			'Если что-то пойдет не так, насколько комфортно и безопасно тебе сразу прийти ко мне с плохими новостями?',
+			'С какой самой неприятной ошибкой или затыком ты столкнулся на этой неделе, и чему мы можем на этом научиться?'
+		],
+		quote: {
+			text: 'Психологическая безопасность — это не вежливость и не снижение планки требований. Это атмосфера, в которой люди могут говорить правду о реальности без страха быть наказанными.',
+			attribution: 'Эми Эдмондсон, The Fearless Organization'
+		},
+		relatedTemplateSlug: 'handling-difficult-situations',
+		relatedTemplateTitle: 'Сложные ситуации и кризисы: Готовые сценарии для 1-на-1'
 	}
 ];
 
@@ -492,6 +554,37 @@ export const booksDe: PlaybookBook[] = [
 		},
 		relatedTemplateSlug: 'burnout-detection',
 		relatedTemplateTitle: 'Überlastung & Burnout: Kraftreserven wiederherstellen'
+	},
+	{
+		slug: 'the-fearless-organization',
+		title: 'Die angstfreie Organisation',
+		originalTitle: 'The Fearless Organization',
+		author: 'Amy C. Edmondson',
+		authorRole: 'Professorin für Führung und Management an der Harvard Business School',
+		year: 2018,
+		badge: 'Psychologische Sicherheit & Vertrauen',
+		coverImage: '/images/playbook/books/the-fearless-organization.jpg',
+		coreThesis:
+			'In der Wissensarbeit ist Angst der größte Feind von Innovation und operativer Exzellenz. Teams florieren nur dort, wo Menschen zwischenmenschliche Risiken eingehen können: Fehler einzugestehen, Fragen zu stellen und Zweifel offen anzusprechen, ohne Bloßstellung oder Bestrafung fürchten zu müssen.',
+		oneOnOneFocusHtml:
+			'<p>Edmondsons Forschungen in Harvard und bei Google (Project Aristotle) belegen: Hochleistungsteams machen nicht weniger Fehler, sondern decken sie dramatisch früher auf, weil keine Kultur der Angst herrscht. Das 1:1-Gespräch ist der vertrauliche Resonanzraum, in dem psychologische Sicherheit entsteht oder zerstört wird. Edmondson fordert Führungskräfte auf, Schuldzuweisungen durch neugierige Erkundung zu ersetzen und Misserfolge als gemeinsamen Lernstoff zu begreifen.</p>',
+		keyPrinciples: [
+			'Eigene Fehlbarkeit offen eingestehen: Aussagen wie „Ich könnte hier etwas übersehen, ich brauche deinen Blick darauf“ bauen Barrieren sofort ab.',
+			'Arbeit als kontinuierlichen Lernprozess begreifen, nicht nur als fehlerfreie Fließband-Ausführung.',
+			'Echte Neugier signalisieren: Offene Erkundungsfragen stellen, anstatt nur Ergebnisse abzuprüfen.',
+			'Konstruktiv auf schlechte Nachrichten reagieren: Die Reaktion auf ein offenes Geständnis entscheidet darüber, ob die nächste Krise rechtzeitig gemeldet wird.'
+		],
+		actionableQuestions: [
+			'Über welche versteckten Risiken oder Bedenken in unserer aktuellen Roadmap sprechen wir noch zu wenig?',
+			'Wenn etwas schiefgeht: Wie leicht fällt es dir, sofort mit schlechten Nachrichten zu mir zu kommen?',
+			'Welcher Fehler oder Rückschlag hat dich diese Woche am meisten beschäftigt, und was lernen wir gemeinsam daraus?'
+		],
+		quote: {
+			text: 'Psychologische Sicherheit bedeutet nicht, nett zueinander zu sein oder Leistungsstandards zu senken. Es bedeutet ein Klima, in dem Menschen schonungslos offen über die Realität sprechen können.',
+			attribution: 'Amy C. Edmondson, The Fearless Organization'
+		},
+		relatedTemplateSlug: 'handling-difficult-situations',
+		relatedTemplateTitle: 'Schwierige Situationen meistern: Leitfaden für heikle 1:1s'
 	}
 ];
 
@@ -650,6 +743,37 @@ export const booksEs: PlaybookBook[] = [
 		},
 		relatedTemplateSlug: 'burnout-detection',
 		relatedTemplateTitle: 'Sobrecarga y agotamiento: Recuperar el equilibrio'
+	},
+	{
+		slug: 'the-fearless-organization',
+		title: 'La organización sin miedo',
+		originalTitle: 'The Fearless Organization',
+		author: 'Amy C. Edmondson',
+		authorRole: 'Profesora de Liderazgo y Gestión en la Harvard Business School',
+		year: 2018,
+		badge: 'Seguridad Psicológica y Confianza',
+		coverImage: '/images/playbook/books/the-fearless-organization.jpg',
+		coreThesis:
+			'En el trabajo del conocimiento, el miedo es el mayor destructor de la innovación y la excelencia operativa. Las organizaciones solo prosperan cuando las personas se sienten seguras para asumir riesgos interpersonales: admitir errores, hacer preguntas incómodas y expresar dudas sin temor a represalias.',
+		oneOnOneFocusHtml:
+			'<p>Las investigaciones de Edmondson demuestran que los equipos de alto rendimiento no cometen menos errores, sino que los detectan y resuelven mucho antes porque nadie teme admitir un fallo. La reunión 1 a 1 es el espacio primordial donde la seguridad psicológica se construye o se destruye. Edmondson sostiene que el líder debe sustituir la búsqueda de culpables por la curiosidad compartida, transformando cualquier tropiezo operativo en aprendizaje mutuo.</p>',
+		keyPrinciples: [
+			'Reconocer la propia falibilidad: frases como «Puedo equivocarme, necesito tu perspectiva» eliminan el miedo a disentir.',
+			'Enmarcar el trabajo como un problema de aprendizaje continuo en entornos de alta complejidad.',
+			'Modelar una indagación activa y genuina: hacer preguntas abiertas en lugar de comprobaciones superficiales.',
+			'Responder de manera constructiva ante las malas noticias: la reacción al primer error determina si el siguiente se ocultará.'
+		],
+		actionableQuestions: [
+			'¿Qué riesgos o inquietudes sobre el proyecto actual todavía no nos hemos atrevido a comentar abiertamente?',
+			'Si algo no marcha como esperabas, ¿con qué facilidad te resulta acudir a mí de inmediato con malas noticias?',
+			'¿Cuál ha sido el tropiezo o error más difícil que has gestionado esta semana y qué podemos aprender juntos de él?'
+		],
+		quote: {
+			text: 'La seguridad psicológica no se trata de ser complaciente ni de bajar la exigencia. Se trata de crear un clima de franqueza donde la gente hable de la realidad sin temor al castigo.',
+			attribution: 'Amy C. Edmondson, The Fearless Organization'
+		},
+		relatedTemplateSlug: 'handling-difficult-situations',
+		relatedTemplateTitle: 'Gestión de Situaciones Difíciles: Guiones para 1 a 1 Críticos'
 	}
 ];
 
@@ -808,6 +932,37 @@ export const booksFr: PlaybookBook[] = [
 		},
 		relatedTemplateSlug: 'burnout-detection',
 		relatedTemplateTitle: 'Surcharge et épuisement : Restaurer l’équilibre'
+	},
+	{
+		slug: 'the-fearless-organization',
+		title: 'The Fearless Organization',
+		originalTitle: 'The Fearless Organization',
+		author: 'Amy C. Edmondson',
+		authorRole: 'Professeure de leadership et management à la Harvard Business School',
+		year: 2018,
+		badge: 'Sécurité psychologique et confiance',
+		coverImage: '/images/playbook/books/the-fearless-organization.jpg',
+		coreThesis:
+			'Dans le travail du savoir, la peur est le premier frein à l’innovation et à la performance. Une organisation ne peut exceller que si chacun se sent en sécurité pour prendre des risques interpersonnels : poser des questions, reconnaître une erreur et partager des doutes sans craindre le jugement ni la sanction.',
+		oneOnOneFocusHtml:
+			'<p>Les recherches d’Edmondson à Harvard et dans le cadre du projet Aristotle de Google démontrent que les équipes d’élite ne commettent pas moins d’erreurs — elles les révèlent et les traitent beaucoup plus vite car la dissimulation y est absente. Le tête-à-tête (1:1) est le sanctuaire où cette sécurité psychologique se forge au quotidien. Edmondson insiste : la réaction du manager face à une mauvaise nouvelle conditionne directement la transparence des échanges futurs.</p>',
+		keyPrinciples: [
+			'Reconnaître sa propre faillibilité : affirmer « Je peux passer à côté d’un élément crucial, j’ai besoin de ton avis » lève immédiatement les défenses.',
+			'Présenter les défis complexes comme des opportunités d’apprentissage plutôt que de simple exécution mécanique.',
+			'Pratiquer un questionnement authentique et bienveillant plutôt que des vérifications rhétoriques.',
+			'Accueillir les mauvaises nouvelles de façon constructive : remercier pour la transparence désamorce la tentation de dissimuler.'
+		],
+		actionableQuestions: [
+			'Quels angles morts ou risques sous-jacents devrions-nous aborder plus franchement dans nos priorités actuelles ?',
+			'Si une difficulté majeure survient, à quel point te sens-tu à l’aise pour venir m’en parler sans attendre ?',
+			'Quelle erreur ou difficulté as-tu rencontrée récemment, et quel enseignement pouvons-nous en tirer ensemble ?'
+		],
+		quote: {
+			text: 'La sécurité psychologique ne consiste pas à être complaisant ni à abaisser le niveau d’exigence. Il s’agit de bâtir un climat où chacun peut affronter la réalité sans redouter d’être puni.',
+			attribution: 'Amy C. Edmondson, The Fearless Organization'
+		},
+		relatedTemplateSlug: 'handling-difficult-situations',
+		relatedTemplateTitle: 'Gérer les Situations Délicates : Scripts pour 1:1 à Enjeux'
 	}
 ];
 
@@ -966,6 +1121,37 @@ export const booksLv: PlaybookBook[] = [
 		},
 		relatedTemplateSlug: 'burnout-detection',
 		relatedTemplateTitle: 'Pārslodze un izdegšana: Enerģijas atjaunošana'
+	},
+	{
+		slug: 'the-fearless-organization',
+		title: 'Organizācija bez bailēm',
+		originalTitle: 'The Fearless Organization',
+		author: 'Eimija Edmonsone (Amy C. Edmondson)',
+		authorRole: 'Hārvarda Biznesa skolas līderības un vadības profesore',
+		year: 2018,
+		badge: 'Psiholoģiskā drošība un uzticēšanās',
+		coverImage: '/images/playbook/books/the-fearless-organization.jpg',
+		coreThesis:
+			'Zināšanu darbā bailes ir galvenais inovāciju un kvalitātes iznīcinātājs. Organizācijas plaukst tikai tad, kad darbinieki jūtas droši uzņemties savstarpējus riskus: atzīt kļūdas, uzdot jautājumus un paust šaubas bez bailēm no nosodījuma vai pazemojuma.',
+		oneOnOneFocusHtml:
+			'<p>Edmonsones pētījumi Hārvardā un Google projektā «Aristotle» pierāda: labākās komandas nepieļauj mazāk kļūdu — tās tās pamana un atklāti apspriež krietni ātrāk, jo nebaidās no soda. 1 pret 1 saruna ir galvenā uzticēšanās laboratorija, kur psiholoģiskā drošība tiek vai nu iedibināta, vai sagrauta. Edmonsone uzsver, ka vadītāja reakcija uz sliktām ziņām nosaka to, vai nākamā problēma tiks risināta laikus vai tikai tad, kad sāksies krīze.</p>',
+		keyPrinciples: [
+			'Atzīstiet savu ievainojamību: frāze «Es varu kaut ko palaist garām, man ir svarīgs tavs redzējums» noņem spriedzi un baiļu barjeru.',
+			'Pozicionējiet darbu kā kopīgu mācīšanās procesu, nevis tikai bezkļūdu izpildi sarežģītā vidē.',
+			'Praktizējiet patiesu zinātkāri: uzdodiet atvērtus jautājumus, nevis veiciet formālas pārbaudes.',
+			'Reaģējiet konstruktīvi uz sliktām ziņām: pateicība par laikus pamanītu kļūdu veicina atklātības kultūru komandā.'
+		],
+		actionableQuestions: [
+			'Par kādiem riskiem vai bažām mūsu pašreizējā projektā mēs komandā joprojām runājam pārāk maz?',
+			'Ja kaut kas noiet greizi, cik ērti un droši tu jūties uzreiz nākt pie manis ar nepatīkamām ziņām?',
+			'Kāda bija nepatīkamākā kļūda vai šķērslis, ar ko saskāries šonedēļ, un ko mēs no tā kopā varam mācīties?'
+		],
+		quote: {
+			text: 'Psiholoģiskā drošība nav pieklājība vai prasību samazināšana. Tā ir atklātības gaisotne, kurā cilvēki var runāt par realitāti bez bailēm tikt sodītiem.',
+			attribution: 'Eimija Edmonsone, The Fearless Organization'
+		},
+		relatedTemplateSlug: 'handling-difficult-situations',
+		relatedTemplateTitle: 'Sarežģītu situāciju risināšana: Scenāriji kritiskiem 1 pret 1 brīžiem'
 	}
 ];
 
