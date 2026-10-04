@@ -410,6 +410,28 @@
 		opacity: 0.85;
 	}
 
+	.article-section :global(figure) {
+		margin: var(--space-6) 0 var(--space-8);
+	}
+
+	.article-section :global(figure img),
+	.article-section :global(img) {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		border-radius: var(--radius-lg, 12px);
+		border: 1px solid var(--color-border);
+		box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.18);
+	}
+
+	.article-section :global(figcaption) {
+		margin-top: var(--space-3, 10px);
+		font-size: 13px;
+		color: color-mix(in srgb, var(--color-text) 70%, transparent);
+		text-align: center;
+		font-style: italic;
+	}
+
 	.try-demo-card {
 		margin: var(--space-10) 0;
 		padding: var(--space-6);

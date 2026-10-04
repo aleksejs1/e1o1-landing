@@ -388,5 +388,74 @@ export const blogPostsEn: BlogPost[] = [
 				]
 			}
 		]
+	},
+	{
+		slug: 'why-1-on-1-notes-should-not-live-in-notion-or-slack',
+		title: 'Why 1:1 Notes Shouldn’t Live in Corporate Notion or Slack: The Cost of Candor',
+		subtitle:
+			'How the illusion of corporate privacy triggers self-censorship, creates legal liabilities, and why leaders need a two-circuit architecture.',
+		description:
+			'Why 1:1 notes in corporate Notion and Slack destroy psychological safety, how admin exports and eDiscovery operate, and why candor requires separation of concerns.',
+		date: '2026-10-04',
+		formattedDate: 'October 4, 2026',
+		readTime: '7 min read',
+		category: 'Leadership & Security',
+		author: {
+			name: 'Aleksejs',
+			role: 'Founder & Maintainer'
+		},
+		tags: ['1:1 Meetings', 'Privacy', 'Psychological Safety', 'Management', 'Zero-Knowledge'],
+		coverImage: '/images/blog/cost-of-candor-cover.jpg',
+		leadHtml:
+			'Every modern management book preaches vulnerability, radical candor, and psychological safety. Engineering leads set up neat 1:1 templates in a "private" Notion folder or a Slack direct message, only to wonder why conversations quickly degenerate into status reports about Jira tickets. The culprit isn’t introversion or reluctance: employees are perceptive enough to know that corporate clouds have zero attorney-client privilege and no real secrecy.',
+		sections: [
+			{
+				heading: 'The Transparency Paradox: how surveillance kills candor',
+				paragraphsHtml: [
+					'In 2012, Harvard Business School professor Ethan Bernstein published groundbreaking research titled <em>“The Transparency Paradox”</em> in Administrative Science Quarterly, followed by his influential Harvard Business Review essay <em>“The Transparency Trap”</em>. Bernstein investigated employee behavior under varying levels of visibility and discovered a counterintuitive truth: <strong>excessive transparency and continuous observability systematically degrade performance and shut down honest dialogue</strong>.',
+					'When employees know their words or notes are observable from above, they stop experimenting and retreat into "performing for observers". In open areas, people stage compliance and recite textbook answers. Only behind curtains — within sheltered spaces — do people take risks, solve thorny problems, and speak plainly. Bernstein concluded that for organizational learning to occur, teams strictly require <strong>"zones of privacy"</strong>.',
+					'A 1:1 meeting was originally conceived as such a zone of privacy. In Amy Edmondson’s research on <em>The Fearless Organization</em>, psychological safety is defined as the belief that one will not be punished or humiliated for speaking up with ideas, questions, concerns, or mistakes. But as soon as meeting notes are committed to corporate SaaS systems, the <strong>chilling effect</strong> takes over. Self-censorship kicks in, and the 1:1 loses the 50x managerial leverage Andy Grove described in <em>High Output Management</em>.'
+				]
+			},
+			{
+				heading: 'The technical illusion: what’s behind the "Private" lock icon',
+				paragraphsHtml: [
+					'Many leaders comfort themselves thinking: "We set page permissions to Only Me and Direct Report — nobody else can see this." In corporate SaaS infrastructure, this is a dangerous misconception.',
+					'<ul><li><strong>Notion Enterprise & Workspace Owners:</strong> Notion’s enterprise documentation is clear: Workspace Owners have complete administrative jurisdiction over all stored data. The Workspace Content Export feature allows administrators to export the entire workspace, <em>including pages created in users’ private sections</em>. Furthermore, when an employee leaves, an admin can transfer their private pages to another teammate with a single click, exposing years of candid reflections to unintended eyes.</li><li><strong>Slack Compliance Exports & Background DLP:</strong> On Slack Plus and Enterprise Grid tiers, administrators have access to Compliance Exports, legally and invisibly archiving private channels and 1:1 Direct Messages. Through the Slack Discovery API, third-party Data Loss Prevention (DLP) engines scan direct chats in real time.</li><li><strong>Corporate AI & RAG Permission Leakage:</strong> With Slack AI, Notion AI, and Microsoft Copilot indexing corporate workspaces, large language models continuously ingest company documents. A subtle misconfiguration in permission inheritance (over-permissioning) or a prompt injection can prompt the AI to quote a confidential 1:1 snippet in response to an unrelated query from a peer.</li></ul>'
+				]
+			},
+			{
+				heading: 'The legal & HR trap: when working drafts become a smoking gun',
+				paragraphsHtml: [
+					'Keeping unvarnished 1:1 notes in corporate repositories is not just a cultural issue; it represents significant legal exposure for HR and the company.',
+					'Under legal discovery rules (such as Federal Rules of Civil Procedure 26 and 34 in US litigation, and common law equivalents worldwide), all corporate records qualify as Electronically Stored Information (ESI). If a former employee files a claim regarding wrongful termination, discrimination, retaliation, or disputed bonuses, a court subpoena compels the company to produce all manager notes.',
+					'During emotional check-ins, well-meaning managers often jot down hurried, subjective thoughts: <em>"Seems unfocused, maybe struggling with family/health issues"</em> or <em>"Frustrated by repeated complaints about overtime"</em>. In the hands of opposing counsel, these informal reflections become a textbook <strong>smoking gun</strong>, transforming ordinary management coaching into evidence of discrimination or hostile workplace conditions.',
+					'In Europe, under <strong>Article 9 of the GDPR</strong>, details regarding physical or mental health (burnout, therapy, chronic illness, bereavement) represent special category data. Storing unencrypted health observations in a company-wide SaaS wiki without explicit consent or auditable controls constitutes a serious regulatory violation.'
+				]
+			},
+			{
+				heading: 'The two-circuit architecture: a practical guide for managers and HR',
+				paragraphsHtml: [
+					'The answer is not to abandon notes entirely. Without continuity, agreements evaporate within weeks, and biannual performance reviews devolve into hazy guesswork. The solution is architectural: <strong>Separation of Concerns</strong>.',
+					'<figure><img src="/images/blog/two-circuits-model-en.svg" alt="The Two-Circuit Architecture: Separating the private trust space (E2EE) from the corporate system of record" width="780" height="1010" loading="lazy" /><figcaption>The Two-Circuit Architecture: an encrypted trust space for candid check-ins and an official company system of record for approved milestones</figcaption></figure>',
+					'<ul><li><strong>Circuit 1: The Trust Space (Zero-Knowledge / E2EE):</strong> A client-side end-to-end encrypted platform where cryptographic keys reside exclusively on the devices of the manager and the direct report. This is where vulnerable discussions happen: real energy levels, interpersonal friction, process doubts, and unvarnished career sketches. Neither HR, nor workspace admins, nor corporate LLMs have mathematical access to this plaintext.</li><li><strong>Circuit 2: The System of Record:</strong> The formal corporate HRIS, BambooHR, Lattice, or company wiki. Here, the manager and employee <em>collaboratively crystallize</em> only official, agreed-upon artifacts: quarterly OKRs, structured personal development plans (PDP), and formal review summaries.</li></ul>',
+					'HR leadership does not need — and should not legally want — to read raw personal confessions. To monitor management health, HR needs <strong>metadata</strong>: Are 1:1 cadences maintained bi-weekly? Are cancellations flagged? What is the completion rate of agreed developmental milestones? This guarantees process governance without surveillance.'
+				]
+			},
+			{
+				heading: 'The bottom line',
+				paragraphsHtml: [
+					'A culture of candor cannot be mandated through HR handbooks. It requires concrete boundaries. When organizations ask employees to pour their vulnerabilities into tools equipped with an admin export button, the inevitable outcome is silence, performative conformity, and sudden turnover of key talent.',
+					'True candor thrives only when psychological safety is reinforced by mathematical guarantees — where trust is backed by cryptography, not empty promises.'
+				]
+			},
+			{
+				heading: 'References and further reading',
+				paragraphsHtml: [
+					'<ol><li><strong>Bernstein, Ethan S.</strong> (2012). <em>“The Transparency Paradox: A Role for Privacy in Organizational Learning and Operational Control”</em>. Administrative Science Quarterly, 57(2), 181–216.</li><li><strong>Bernstein, Ethan S.</strong> (2014). <a href="https://hbr.org/2014/10/the-transparency-trap" target="_blank" rel="noopener noreferrer"><em>“The Transparency Trap”</em></a>. Harvard Business Review, October 2014.</li><li><strong>Edmondson, Amy C.</strong> (2018). <a href="https://amycedmondson.com/books/" target="_blank" rel="noopener noreferrer"><em>“The Fearless Organization: Creating Psychological Safety in the Workplace for Learning, Innovation, and Growth”</em></a>. John Wiley & Sons.</li><li><strong>Grove, Andrew S.</strong> (1983). <em>“High Output Management”</em>. Random House (Managerial leverage in 1:1 meetings).</li><li><strong>Google re:Work</strong>. <a href="https://rework.withgoogle.com/intl/en/guides/understand-team-effectiveness/" target="_blank" rel="noopener noreferrer"><em>“Project Aristotle (Psychological Safety in Teams) & Project Oxygen (Key Attributes of Effective Managers)”</em></a>.</li><li><strong>Notion Help Center</strong>. <a href="https://www.notion.so/help/export-your-content" target="_blank" rel="noopener noreferrer"><em>“Export your content & Workspace-wide export in Enterprise Plan”</em></a>.</li><li><strong>Slack Help Center & Discovery API</strong>. <a href="https://slack.com/help/articles/201658943-Export-your-workspace-data" target="_blank" rel="noopener noreferrer"><em>“Export your workspace data”</em></a> and <a href="https://slack.com/help/articles/360002079527-A-guide-to-Slacks-Discovery-APIs" target="_blank" rel="noopener noreferrer"><em>“A guide to Slack’s Discovery APIs for DLP / eDiscovery”</em></a>.</li><li><strong>The Sedona Conference</strong>. <a href="https://thesedonaconference.org/" target="_blank" rel="noopener noreferrer"><em>“Commentary on Legal Holds and ESI in Employment Disputes”</em></a> / <a href="https://www.law.cornell.edu/rules/frcp/rule_34" target="_blank" rel="noopener noreferrer"><em>Federal Rules of Civil Procedure (FRCP Rules 26 & 34)</em></a>.</li><li><strong>European Union (GDPR)</strong>. <a href="https://gdpr-info.eu/art-9-gdpr/" target="_blank" rel="noopener noreferrer"><em>“General Data Protection Regulation — Article 9 (Special categories of data)”</em></a>.</li></ol>'
+				]
+			}
+		]
 	}
 ];
+

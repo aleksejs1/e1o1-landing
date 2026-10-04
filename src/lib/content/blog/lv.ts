@@ -389,5 +389,74 @@ export const blogPostsLv: BlogPost[] = [
 				]
 			}
 		]
+	},
+	{
+		slug: 'why-1-on-1-notes-should-not-live-in-notion-or-slack',
+		title: 'Kāpēc 1 pret 1 piezīmēm nav vietas korporatīvajā Notion vai Slack: atklātības cena',
+		subtitle:
+			'Kā ilūzija par korporatīvo privātumu rada pašcenzūru, pakļauj uzņēmumu juridiskiem riskiem un kāpēc vadītājiem nepieciešama divu loku arhitektūra.',
+		description:
+			'Kāpēc 1 pret 1 sarunu piezīmes korporatīvajos Notion un Slack iznīcina psiholoģisko drošību, kā darbojas administratoru eksporti un eDiscovery, un kāpēc uzticībai nepieciešama loku nodalīšana.',
+		date: '2026-10-04',
+		formattedDate: '2026. gada 4. oktobris',
+		readTime: '7 min lasīšana',
+		category: 'Vadība un drošība',
+		author: {
+			name: 'Aleksejs',
+			role: 'Dibinātājs un uzturētājs'
+		},
+		tags: ['1 pret 1 sarunas', 'Privātums', 'Psiholoģiskā drošība', 'Vadība', 'Zero-Knowledge'],
+		coverImage: '/images/blog/cost-of-candor-cover.jpg',
+		leadHtml:
+			'Katra mūsdienu vadības grāmata aicina veicināt ievainojamību, radikālu atklātību un psiholoģisko drošību. Vadītāji izveido glītas veidnes korporatīvā Notion privātajā sadaļā vai Slack tiešajās ziņās, bet pēc tam brīnās, kāpēc sarunas ātri pārtop formālās atskaitēs par Jira uzdevumiem. Iemesls nav cilvēku noslēgtība: darbinieki skaidri apzinās, ka korporatīvajos mākoņos nepastāv sarakstes noslēpums.',
+		sections: [
+			{
+				heading: 'Caurspīdīguma paradokss: kā novērošana iznīcina atklātību',
+				paragraphsHtml: [
+					'2012. gadā Hārvarda Biznesa skolas profesors Ītans Bernstīns (Ethan Bernstein) publicēja fundamentālu pētījumu <em>«The Transparency Paradox»</em> žurnālā Administrative Science Quarterly, vēlāk to padziļinot Harvard Business Review rakstā <em>«The Transparency Trap»</em>. Bernstīns pētīja darbinieku uzvedību dažādos caurspīdīguma apstākļos un pierādīja paradoksālu patiesību: <strong>pārmērīga caurspīdība un pastāvīga novērojamība degradē reālo produktivitāti un bloķē atklātu dialogu</strong>.',
+					'Tiklīdz darbinieki zina, ka viņu rīcību vai pierakstus var kontrolēt no augšas, viņi pārstāj eksperimentēt un sāk demonstrēt „parauguzvedību” (<em>performing for observers</em>). Atvērtā vidē cilvēki izliekas par ideāliem izpildītājiem. Tikai aiz aizslietņa — drošās zonās — viņi uzņemas riskus, risina patiesās problēmas un runā tiešu valodu. Bernstīns secināja: organizācijas attīstībai un mācīšanās procesam komandām ir kritiski nepieciešamas <strong>„privātuma zonas” (zones of privacy)</strong>.',
+					'1 pret 1 saruna pēc savas būtības ir iecerēta kā šāda uzticības zona. Eimijas Edmondsones (Amy Edmondson, <em>«The Fearless Organization»</em>) pētījumos psiholoģiskā drošība tiek definēta kā pārliecība, ka atklāta kļūdu, noguruma vai šaubu atzīšana netiks vērsta pret cilvēku. Taču, tiklīdz piezīmes nonāk korporatīvajā SaaS rīkā, iestājas <strong>atturošais efekts (chilling effect)</strong>: darbinieks ieslēdz iekšējo pašcenzūru, un saruna zaudē to 50-kārtīgo vadības sviru, par kuru rakstīja Endijs Grovs grāmatā <em>High Output Management</em>.'
+				]
+			},
+			{
+				heading: 'Tehniskā ilūzija: kas slēpjas aiz „Privāts” slēdzenes ikonas',
+				paragraphsHtml: [
+					'Daudzi komandu vadītāji maldīgi uzskata: „Mēs taču iestatījām piekļuvi tikai sev un padotajam — neviens cits to neredz”. Korporatīvajā SaaS arhitektūrā tas ir bīstams pašapmāns.',
+					'<ul><li><strong>Notion Enterprise un Workspace Owner tiesības:</strong> Saskaņā ar Notion oficiālo dokumentāciju darba telpas īpašniekiem ir pilnīga administratīva piekļuve saturam. Funkcija Workspace Content Export ļauj administratoram lejupielādēt visu darba telpu, <em>ieskaitot lapas, kas atrodas darbinieku personīgajā privātajā sadaļā (Private Pages)</em>. Turklāt, darbiniekam aizejot no uzņēmuma, administrators ar vienu klikšķi var nodot viņa privātās lapas citam kolēģim (Transfer private pages), padarot gadiem krātās personiskās piezīmes pieejamas citiem.</li><li><strong>Slack atbilstības eksporti un fona DLP:</strong> Slack Plus un Enterprise Grid tarifu plānos ir pieejama korporatīvā eksportēšana, kas ļauj administratoriem likumīgi un dalībniekiem neredzot lejupielādēt visu slēgto kanālu un tiešo ziņu (Direct Messages) vēsturi. Ar Slack Discovery API starpniecību tiek pieslēgtas DLP sistēmas, kas analizē sarakstes reāllaikā.</li><li><strong>Korporatīvais AI un datu noplūdes caur RAG:</strong> Līdz ar Slack AI, Notion AI un Microsoft Copilot ienākšanu iekšējās bāzes nepārtraukti indeksē valodu modeļi. Pietiek ar nelielu kļūdu mantoto piekļuves tiesību konfigurācijā (over-permissioning), lai MI asistents citētu konfidenciālas 1 pret 1 piezīmes, atbildot uz cita kolēģa vispārīgu meklēšanas vaicājumu.</li></ul>'
+				]
+			},
+			{
+				heading: 'Juridiskie un personālvadības riski: kad darba melnraksti kļūst par pierādījumiem',
+				paragraphsHtml: [
+					'Nefiltrētu 1 pret 1 piezīmju glabāšana uzņēmuma koplietošanas sistēmās rada tiešus juridiskus draudus pašai organizācijai.',
+					'Tiesvedības praksē saskaņā ar <strong>eDiscovery</strong> noteikumiem (piemēram, FRCP 26. un 34. noteikumi ASV un līdzīgi principi citur) visi korporatīvie ieraksti tiek kvalificēti kā elektroniski glabāta informācija (ESI). Ja bijušais darbinieks iesniedz prasību par nelikumīgu atlaišanu, diskrimināciju vai neizmaksātām prēmijām, tiesas rīkojums (subpoena) uzliek uzņēmumam par pienākumu uzrādīt visas vadītāju piezīmes.',
+					'Uzticības sarunā vadītājs nereti piefiksē subjektīvus un emocionālus vērojumus: <em>„Šķiet izklaidīgs, iespējams, netiek galā ģimenes vai veselības problēmu dēļ”</em> vai <em>„Apnikuši nemitīgie strīdi par virsstundām”</em>. Tiesas zālē šie neapstrādātie ieraksti pārtop par neapgāžamu pierādījumu (<em>smoking gun</em>) par aizspriedumiem vai naidīgu darba vidi, radot miljoniem eiro lielus zaudējumus.',
+					'Eiropas Savienībā saskaņā ar <strong>VDAR (GDPR) 9. pantu</strong> informācija par fizisko vai garīgo veselību (izdegšana, depresija, terapija, ģimenes krīzes) ir īpašu kategoriju personas dati. Šādu ziņu glabāšana nešifrētā korporatīvajā mākonī bez stingras piekrišanas procedūras un audita ir tiešs regulas pārkāpums.'
+				]
+			},
+			{
+				heading: 'Divu loku arhitektūra: praktisks risinājums vadītājiem un personāla vadībai',
+				paragraphsHtml: [
+					'Pavisam atteikties no piezīmēm nedrīkst: bez pēctecības (continuity) vienošanās aizmirstas dažu nedēļu laikā, un pusgada novērtēšanas saruna pārvēršas par minēšanas spēli. Risinājums ir strukturāla <strong>atbildības loku nodalīšana (Separation of Concerns)</strong>.',
+					'<figure><img src="/images/blog/two-circuits-model-lv.svg" alt="Divu loku arhitektūra: privātās uzticības telpas (E2EE) un uzņēmuma oficiālās uzskaites nodalīšana" width="780" height="1010" loading="lazy" /><figcaption>Divu loku arhitektūra: ar klienta puses E2EE aizsargāta uzticības telpa un uzņēmuma oficiālā sistēma apstiprinātiem mērķiem</figcaption></figure>',
+					'<ul><li><strong>1. loks: Uzticības telpa (Zero-Knowledge / E2EE):</strong> Rīks ar klienta puses pilnīgu šifrēšanu (End-to-End Encryption), kur kriptogrāfiskās atslēgas glabājas tikai vadītāja un darbinieka ierīcēs. Šeit notiek atklātās sarunas: reālais enerģijas līmenis, personiskie šķēršļi, šaubas par procesiem un neapstrādāti karjeras plāni. Ne personāla daļai, ne administratoriem, ne korporatīvajiem neironu tīkliem nav matemātiskas iespējas atšifrēt šos datus.</li><li><strong>2. loks: Oficiālā uzņēmuma uzskaites sistēma (System of Record):</strong> Uzņēmuma personāla sistēma (HRIS), BambooHR, Lattice vai iekšējā zināšanu bāze. Šeit vadītājs un darbinieks <em>kopīgi fiksē tikai oficiāli saskaņotus rezultātus</em>: apstiprinātos ceturkšņa mērķus (OKR), individuālās attīstības plānu (IDP) un oficiālos novērtējuma kopsavilkumus.</li></ul>',
+					'Personāla vadībai nav vajadzības — un juridiski nav vēlams — lasīt personiskus pārdzīvojumus. Lai pārraudzītu vadības kvalitāti, pilnīgi pietiek ar <strong>metadatiem</strong>: vai 1 pret 1 sarunas notiek regulāri reizi divās nedēļās? Vai nav sistemātisku atcelšanu? Kāds ir saskaņoto attīstības mērķu izpildes temps? Process tiek pārvaldīts nevainojami, neaskarot cilvēka privātumu.'
+				]
+			},
+			{
+				heading: 'Kopsavilkums',
+				paragraphsHtml: [
+					'Patiesa uzticēšanās komandā nerodas no iekšējās kārtības lozungiem; tā balstās personīgo robežu cienīšanā. Kad organizācija liek darbiniekiem uzticēt savas sensitīvākās domas sistēmām, kurās pieejama administratora eksporta poga, tā neizbēgami saņem klusēšanu, pasīvu konformismu un negaidītu talantu aiziešanu.',
+					'Īsta atklātība ir iespējama tikai tur, kur privātumu garantē matemātika un skaidri nodalīti atbildības loki, nevis tukšs solījums „mēs neskatīsimies”.'
+				]
+			},
+			{
+				heading: 'Avoti un ieteicamā literatūra',
+				paragraphsHtml: [
+					'<ol><li><strong>Bernstein, Ethan S.</strong> (2012). <em>«The Transparency Paradox: A Role for Privacy in Organizational Learning and Operational Control»</em>. Administrative Science Quarterly, 57(2), 181–216.</li><li><strong>Bernstein, Ethan S.</strong> (2014). <a href="https://hbr.org/2014/10/the-transparency-trap" target="_blank" rel="noopener noreferrer"><em>«The Transparency Trap»</em></a>. Harvard Business Review, oktobris 2014.</li><li><strong>Edmondson, Amy C.</strong> (2018). <a href="https://amycedmondson.com/books/" target="_blank" rel="noopener noreferrer"><em>«The Fearless Organization: Creating Psychological Safety in the Workplace for Learning, Innovation, and Growth»</em></a>. John Wiley & Sons.</li><li><strong>Grove, Andrew S.</strong> (1983). <em>«High Output Management»</em>. Random House (Vadītāja sviras princips 1 pret 1 sarunās).</li><li><strong>Google re:Work</strong>. <a href="https://rework.withgoogle.com/intl/en/guides/understand-team-effectiveness/" target="_blank" rel="noopener noreferrer"><em>«Project Aristotle (psiholoģiskā drošība) un Project Oxygen (efektīva vadītāja īpašības)»</em></a>.</li><li><strong>Notion palīdzības centrs</strong>. <a href="https://www.notion.so/help/export-your-content" target="_blank" rel="noopener noreferrer"><em>«Export your content & Workspace-wide export Enterprise plānā»</em></a>.</li><li><strong>Slack palīdzības centrs & Discovery API</strong>. <a href="https://slack.com/help/articles/201658943-Export-your-workspace-data" target="_blank" rel="noopener noreferrer"><em>«Datu eksports no darba vietas»</em></a> un <a href="https://slack.com/help/articles/360002079527-A-guide-to-Slacks-Discovery-APIs" target="_blank" rel="noopener noreferrer"><em>«A guide to Slack’s Discovery APIs atbilstībai un DLP»</em></a>.</li><li><strong>The Sedona Conference</strong>. <a href="https://thesedonaconference.org/" target="_blank" rel="noopener noreferrer"><em>«Commentary on Legal Holds and ESI in Employment Disputes»</em></a> / <a href="https://www.law.cornell.edu/rules/frcp/rule_34" target="_blank" rel="noopener noreferrer"><em>Federal Rules of Civil Procedure (FRCP 26. un 34. noteikums)</em></a>.</li><li><strong>Eiropas Savienība (VDAR)</strong>. <a href="https://gdpr-info.eu/art-9-gdpr/" target="_blank" rel="noopener noreferrer"><em>«Vispārīgā datu aizsardzības regula — 9. pants (Īpašu kategoriju personas datu apstrāde)»</em></a>.</li></ol>'
+				]
+			}
+		]
 	}
 ];
+
