@@ -336,7 +336,8 @@ async function smoothType(page, selector, text, delayMs = 24) {
 	console.log(`[${getElapsed()}s] [Scene 2] 3-Minute Async Prep`);
 	// Click on active meeting ("In 6 days")
 	await smoothClick(page, 'text=In 6 days');
-	await page.waitForSelector('text=Meeting: 03.10.2026');
+	await page.waitForSelector('.meta span:has-text("Meeting:")');
+	await page.waitForSelector('h1:has-text("Jordan")');
 	await injectUIHelpers(page);
 
 	// Voice 2 starts at 20.5s, finishes at ~28.9s RU / ~28.9s EN
@@ -431,7 +432,8 @@ async function smoothType(page, selector, text, delayMs = 24) {
 	console.log(`[${getElapsed()}s] [Scene 5] Goals Rollover & Inline Feedback`);
 	await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
 	await smoothClick(page, 'a[href="/"]');
-	await page.waitForSelector('text=09.09.2026');
+	const archivedRow = page.locator('a.anketa-row:has(.tag:has-text("archived"))').first();
+	await archivedRow.waitFor({ state: 'visible' });
 	await injectUIHelpers(page);
 
 	// Voice 5 starts at 49.8s, finishes at ~54.7s RU / ~55.1s EN
@@ -444,8 +446,9 @@ async function smoothType(page, selector, text, delayMs = 24) {
 	});
 
 	// Open completed meeting
-	await smoothClick(page, 'text=09.09.2026');
-	await page.waitForSelector('text=Meeting: 09.09.2026');
+	await smoothClick(page, archivedRow);
+	await page.waitForSelector('.meta span:has-text("Meeting:")');
+	await page.waitForSelector('.tag:has-text("archived")');
 	await injectUIHelpers(page);
 	await page.evaluate(() => window.scrollBy({ top: 380, behavior: 'smooth' }));
 
