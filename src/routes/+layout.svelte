@@ -9,7 +9,7 @@
 	import { getContent } from '$lib/content';
 	import { detectAndRedirectOnFirstVisit } from '$lib/i18n/detect';
 	import { SITE_URL } from '$lib/links';
-	import { locales, baseLocale, localizeHref, type Locale } from '$lib/paraglide/runtime';
+	import { locales, baseLocale, localizeHref, getLocale, type Locale } from '$lib/paraglide/runtime';
 
 	let { children } = $props();
 
@@ -37,6 +37,30 @@
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 	<meta name="theme-color" content="#f5ead8" />
+	{#if getLocale() === 'ru'}
+		<link
+			rel="preload"
+			href="/fonts/unbounded-cyrillic.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin="anonymous"
+		/>
+	{:else}
+		<link
+			rel="preload"
+			href="/fonts/unbounded-latin.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="preload"
+			href="/fonts/figtree-400-latin.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin="anonymous"
+		/>
+	{/if}
 	<meta
 		name="robots"
 		content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"

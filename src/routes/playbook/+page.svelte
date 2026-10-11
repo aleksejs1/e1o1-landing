@@ -96,11 +96,12 @@
 				>
 					<img
 						class="card-cover-img"
-						src="/images/playbook/{item.slug}.jpg"
+						src="/images/playbook/{item.slug}.webp"
 						alt=""
 						width="600"
 						height="338"
 						loading="lazy"
+						decoding="async"
 					/>
 				</a>
 

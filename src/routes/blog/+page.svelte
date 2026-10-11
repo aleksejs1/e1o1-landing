@@ -52,11 +52,15 @@
 				>
 					<img
 						class="card-cover-img"
-						src={post.coverImage || '/images/landing/origin-trust.jpg'}
+						src={(post.coverImage || '/images/landing/origin-trust.jpg').replace(
+							/\.jpg$/,
+							'.webp'
+						)}
 						alt={post.title}
 						width="688"
 						height="384"
 						loading="lazy"
+						decoding="async"
 					/>
 				</a>
 

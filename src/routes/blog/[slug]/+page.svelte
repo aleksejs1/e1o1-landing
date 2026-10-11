@@ -102,10 +102,15 @@
 		<div class="detail-cover-wrap">
 			<img
 				class="detail-cover-img"
-				src={post.coverImage || '/images/landing/origin-trust.jpg'}
+				src={(post.coverImage || '/images/landing/origin-trust.jpg').replace(
+					/\.jpg$/,
+					'.webp'
+				)}
 				alt={post.title}
 				width="1376"
 				height="768"
+				fetchpriority="high"
+				decoding="async"
 			/>
 		</div>
 

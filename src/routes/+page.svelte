@@ -203,20 +203,22 @@
 			<div class="hero-screenshot-card">
 				<img
 					class="hero-screenshot hero-screenshot-light"
-					src="/screenshots/anketa-preview-{getLocale()}-light.png"
+					src="/screenshots/anketa-preview-{getLocale()}-light.webp"
 					alt={content.hero.screenshotAlt}
 					width="688"
 					height="560"
 					fetchpriority="high"
+					decoding="async"
 				/>
 				<img
 					class="hero-screenshot hero-screenshot-dark"
-					src="/screenshots/anketa-preview-{getLocale()}-dark.png"
+					src="/screenshots/anketa-preview-{getLocale()}-dark.webp"
 					alt=""
 					aria-hidden="true"
 					width="688"
 					height="560"
 					loading="lazy"
+					decoding="async"
 				/>
 				<div class="hero-screenshot-tags">
 					<span class="tag tag-outline">🔒 Client-Side Encrypted</span>
@@ -245,8 +247,8 @@
 			<div class="video-aspect-wrap">
 				<video
 					controls
-					preload="metadata"
-					poster="/videos/demo-poster.png"
+					preload="none"
+					poster="/videos/demo-poster.webp"
 					playsinline
 					class="demo-video-player"
 				>
@@ -589,10 +591,12 @@
 					>
 						<img
 							class="featured-card-cover-img"
-							src="/images/playbook/{item.slug}.jpg"
+							src="/images/playbook/{item.slug}.webp"
 							alt=""
 							width="720"
 							height="405"
+							loading="lazy"
+							decoding="async"
 						/>
 					</a>
 					<div class="featured-card-content">
@@ -650,11 +654,12 @@
 		<figure class="editorial-figure">
 			<img
 				class="editorial-img"
-				src="/images/landing/origin-trust.jpg"
+				src="/images/landing/origin-trust.webp"
 				alt={content.origin.illustrationAlt ?? ''}
 				width="1376"
 				height="768"
 				loading="lazy"
+				decoding="async"
 			/>
 		</figure>
 
@@ -687,11 +692,12 @@
 		<figure class="editorial-figure">
 			<img
 				class="editorial-img"
-				src="/images/landing/methodology-leverage.jpg"
+				src="/images/landing/methodology-leverage.webp"
 				alt={content.methodology.illustrationAlt ?? ''}
 				width="1376"
 				height="768"
 				loading="lazy"
+				decoding="async"
 			/>
 		</figure>
 
@@ -809,11 +815,15 @@
 					>
 						<img
 							class="featured-card-cover-img"
-							src={post.coverImage || '/images/landing/privacy-infrastructure.jpg'}
+							src={(post.coverImage || '/images/landing/privacy-infrastructure.jpg').replace(
+								/\.jpg$/,
+								'.webp'
+							)}
 							alt={post.title}
 							width="688"
 							height="384"
 							loading="lazy"
+							decoding="async"
 						/>
 					</a>
 					<div class="featured-card-content">

@@ -108,10 +108,12 @@
 		<div class="detail-cover-wrap">
 			<img
 				class="detail-cover-img"
-				src="/images/playbook/{item.slug}.jpg"
+				src="/images/playbook/{item.slug}.webp"
 				alt={item.title}
 				width="1200"
 				height="675"
+				fetchpriority="high"
+				decoding="async"
 			/>
 		</div>
 
