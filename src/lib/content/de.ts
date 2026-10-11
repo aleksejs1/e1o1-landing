@@ -2,9 +2,9 @@ import type { LandingContent } from './types';
 
 export const de: LandingContent = {
 	meta: {
-		title: 'encrypted1on1 — Private 1:1-Gespräche. Nachweisbar privat.',
+		title: 'encrypted1on1 — Open Source & Private 1:1-Mitarbeitergespräche',
 		description:
-			'Eine quelloffene, selbstgehostete, Ende-zu-Ende-verschlüsselte Plattform für strukturierte 1:1-Gespräche zwischen Manager und Mitarbeiter. Nicht einmal die Betreiber des Servers können lesen, was dort geschrieben steht.'
+			'Quelloffene, selbstgehostete & Ende-zu-Ende verschlüsselte Software für strukturierte 1:1-Gespräche. Zero-Knowledge-Datenschutz ohne Vendor-Lock-in.'
 	},
 
 	skipToContent: 'Zum Inhalt springen',

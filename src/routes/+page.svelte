@@ -60,11 +60,29 @@
 	<meta property="og:description" content={content.meta.description} />
 	{@html `<script type="application/ld+json">${JSON.stringify({
 		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: 'encrypted1on1',
+		alternateName: ['private1on1', 'private 1 on 1', 'encrypted 1 on 1'],
+		url: 'https://private1on1.eu'
+	})}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		'@context': 'https://schema.org',
 		'@type': 'SoftwareApplication',
 		name: 'encrypted1on1',
+		alternateName: ['private1on1', 'Private 1 on 1'],
 		applicationCategory: 'BusinessApplication',
-		operatingSystem: 'Web',
+		applicationSubCategory: 'TeamManagementApplication',
+		operatingSystem: 'Web, Docker, Linux, macOS, Windows',
+		softwareVersion: '1.0',
+		license: 'https://www.gnu.org/licenses/agpl-3.0.html',
 		description: content.meta.description,
+		featureList: [
+			'Zero-knowledge end-to-end encryption in browser',
+			'Self-hosted single Docker container deployment',
+			'Carry-forward goal tracking between 1:1 cycles',
+			'One-click client-side performance review reports',
+			'Structured 1:1 meeting agendas & playbook'
+		],
 		offers: {
 			'@type': 'Offer',
 			price: '0',

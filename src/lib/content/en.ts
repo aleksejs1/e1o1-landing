@@ -2,9 +2,9 @@ import type { LandingContent } from './types';
 
 export const en: LandingContent = {
 	meta: {
-		title: 'encrypted1on1 — Private 1:1s. Provably private.',
+		title: 'encrypted1on1 — Open Source & Private 1-on-1 Meeting Software',
 		description:
-			'An open-source, self-hosted, end-to-end encrypted platform for structured manager–employee 1:1 meetings. Not even the people running the server can read what’s written.'
+			'Open-source, self-hosted, end-to-end encrypted platform for manager–employee 1:1 meetings. Zero-knowledge privacy: not even server admins can read your notes.'
 	},
 
 	skipToContent: 'Skip to content',

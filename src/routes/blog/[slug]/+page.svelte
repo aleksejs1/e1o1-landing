@@ -54,13 +54,13 @@
 		<meta property="og:description" content={post.description} />
 		<meta
 			property="og:image"
-			content="{SITE_URL}${post.coverImage || '/images/landing/origin-trust.jpg'}"
+			content="{SITE_URL}{post.coverImage || '/images/landing/origin-trust.jpg'}"
 		/>
 		<meta property="og:image:width" content="1376" />
 		<meta property="og:image:height" content="768" />
 		<meta
 			name="twitter:image"
-			content="{SITE_URL}${post.coverImage || '/images/landing/origin-trust.jpg'}"
+			content="{SITE_URL}{post.coverImage || '/images/landing/origin-trust.jpg'}"
 		/>
 		{@html `<script type="application/ld+json">${articleSchema}</script>`}
 	{/if}

@@ -2,9 +2,9 @@ import type { LandingContent } from './types';
 
 export const lv: LandingContent = {
 	meta: {
-		title: 'encrypted1on1 — Privātas 1:1 tikšanās. Pierādāmi privātas.',
+		title: 'encrypted1on1 — Atvērtā koda platforma privātām 1:1 tikšanām',
 		description:
-			'Atvērtā koda, pašu uzturēta, no gala līdz galam šifrēta platforma strukturētām vadītāja un darbinieka 1:1 tikšanām. Pat tie, kas uztur serveri, nevar izlasīt uzrakstīto.'
+			'Atvērtā koda, pašu uzturēta un šifrēta platforma vadītāja un darbinieka 1:1 tikšanām. Matemātiski pierādāms privātums un pilnīga datu kontrole.'
 	},
 
 	skipToContent: 'Pāriet uz saturu',

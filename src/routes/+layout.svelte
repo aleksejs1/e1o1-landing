@@ -37,6 +37,10 @@
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 	<meta name="theme-color" content="#f5ead8" />
+	<meta
+		name="robots"
+		content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+	/>
 
 	<!-- Canonical & Multilingual Hreflang Tags -->
 	<link rel="canonical" href={canonicalUrl} />

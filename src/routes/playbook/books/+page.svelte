@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getLocale, localizeHref } from '$lib/paraglide/runtime';
 	import { getBooks, getPlaybookUi, type PlaybookBook } from '$lib/content/playbook';
-	import { appDemoUrl } from '$lib/links';
+	import { appDemoUrl, SITE_URL } from '$lib/links';
 
 	const locale = $derived(getLocale());
 	const books = $derived<PlaybookBook[]>(getBooks(locale));
@@ -20,7 +20,7 @@
 					'@type': 'Book',
 					name: b.title,
 					alternateName: b.originalTitle !== b.title ? b.originalTitle : undefined,
-					image: `https://encrypted1on1.com${b.coverImage}`,
+					image: `${SITE_URL}${b.coverImage}`,
 					author: {
 						'@type': 'Person',
 						name: b.author,

@@ -1,6 +1,14 @@
 # encrypted1on1 — landing page
 
-The marketing/docs website for [encrypted1on1](https://github.com/aleksejs1/encrypted1on1), a self-hosted, end-to-end encrypted platform for 1:1 meetings. This is a separate, standalone repo from the product itself — a fully static site (SvelteKit + `adapter-static`, every route prerendered at build time), not a copy of the app.
+The official marketing, playbook, and documentation website for [encrypted1on1](https://github.com/aleksejs1/encrypted1on1), deployed live at **[private1on1.eu](https://private1on1.eu)**.
+
+- 🌐 **Live Website:** [https://private1on1.eu](https://private1on1.eu)
+- 🚀 **Interactive Demo:** [https://demo.private1on1.eu](https://demo.private1on1.eu)
+- 📦 **Main Product Repository:** [github.com/aleksejs1/encrypted1on1](https://github.com/aleksejs1/encrypted1on1)
+
+---
+
+This is a separate, standalone repo from the product itself — a fully static site (SvelteKit + `adapter-static`, every route prerendered at build time), not a copy of the app.
 
 Content and structure follow `private/landing-page.md` in the main repo (not tracked here — a working brief, not part of this codebase).
 

@@ -2,9 +2,9 @@ import type { LandingContent } from './types';
 
 export const es: LandingContent = {
 	meta: {
-		title: 'encrypted1on1 — Reuniones 1 a 1 privadas. Demostrablemente privadas.',
+		title: 'encrypted1on1 — Software Open Source para Reuniones 1 a 1',
 		description:
-			'Una plataforma de código abierto, autoalojada y cifrada de extremo a extremo para reuniones estructuradas 1 a 1 entre responsable y empleado. Ni siquiera quienes administran el servidor pueden leer lo que se escribe.'
+			'Plataforma autoalojada de código abierto con cifrado de extremo a extremo para reuniones 1 a 1 entre managers y empleados. Privacidad zero-knowledge.'
 	},
 
 	skipToContent: 'Saltar al contenido',
