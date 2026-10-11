@@ -19,37 +19,39 @@ CONFIG = {
     "en": {
         "voice": "en-US-AndrewNeural",
         "rate": "+10%",
+        "input_video": VIDEOS_DIR / "encrypted1on1-demo-en-master.webm",
         "mp4": VIDEOS_DIR / "encrypted1on1-demo-en.mp4",
         "webm": VIDEOS_DIR / "encrypted1on1-demo-en.webm",
         "temp_dir": REPO_ROOT / ".temp-audio-en",
         "combined_audio": REPO_ROOT / ".temp-combined-en.wav",
         "scripts": [
-            (1000, "encrypted1on1 is a self-hosted platform for private one-on-ones. Encryption keys are derived in your browser and never leave your device."),
-            (12000, "Your cadence is organized into clear cycles, keeping upcoming syncs and complete past history in one place."),
+            (1000, "encrypted1on1 is a dedicated workspace for meaningful one-on-ones. A safe psychological space where employees speak openly and managers coach with clarity."),
+            (12000, "Your cadence is organized into clear cycles, keeping upcoming check-ins and complete past history in one place."),
             (20500, "Three minutes of async prep ahead of time: log mood, pulse, and blockers. No blank sheets, no surprise status interrogations."),
-            (31000, "Private scratchpad notes are encrypted only for you. Even your manager cannot read them."),
-            (40000, "The server and database only ever receive opaque ciphertext. Provable zero-knowledge security."),
-            (49800, "Agreed goals, feedback, and action items automatically roll over into the next cycle."),
-            (57800, "When review season arrives, months of accomplishments compile into a report in one click."),
-            (66200, "Open source, free forever, and self-hosted with a single Docker command. Total privacy, guaranteed.")
+            (31000, "Private scratchpad notes are encrypted only for you. Safe drafts that even your manager cannot read."),
+            (40000, "Bank-grade privacy keeps your conversations strictly between the two of you, completely hidden from HR or server admins."),
+            (49800, "Agreed goals, feedback, and action items automatically roll over into the next cycle so nothing gets lost."),
+            (57800, "When review season arrives, months of accomplishments compile into a structured report in one click."),
+            (66200, "Meaningful one-on-ones that employees and managers actually love. Try the free live demo today.")
         ]
     },
     "ru": {
         "voice": "ru-RU-DmitryNeural",
         "rate": "+10%",
+        "input_video": VIDEOS_DIR / "encrypted1on1-demo-ru-master.webm",
         "mp4": VIDEOS_DIR / "encrypted1on1-demo-ru.mp4",
         "webm": VIDEOS_DIR / "encrypted1on1-demo-ru.webm",
         "temp_dir": REPO_ROOT / ".temp-audio-ru",
         "combined_audio": REPO_ROOT / ".temp-combined-ru.wav",
         "scripts": [
-            (1000, "encrypted1on1 — платформа для конфиденциальных один на один встреч. Ключи создаются в браузере и никогда не покидают устройство."),
-            (12000, "Встречи разбиты на четкие циклы: активные обсуждения и полный архив прошлых разговоров."),
-            (20500, "Асинхронная подготовка за три минуты: настроение, пульс и блокеры. Никаких пустых листов и неловких допросов."),
-            (31000, "Личные заметки шифруются только для вас. Их не увидит даже ваш руководитель."),
-            (40000, "Сервер и база данных видят только зашифрованные данные. Настоящий Zero-Knowledge."),
-            (49800, "Согласованные цели и контекст автоматически переходят в следующий период."),
-            (57800, "Отчет для performance review формируется в один клик прямо в памяти браузера."),
-            (66200, "Open-source, без оплаты за пользователей и селф-хостинг в один Docker-контейнер. Попробуйте прямо сейчас.")
+            (1000, "encrypted1on1 — сервис для честных и полезных встреч один на один. Безопасное пространство, где сотрудники говорят открыто, а руководители помогают расти."),
+            (12000, "Встречи разбиты на четкие циклы: активные обсуждения, задачи и полный архив прошлых договоренностей."),
+            (20500, "Быстрая подготовка за три минуты: настроение, пульс и блокеры. Никаких пустых листов и неловких пауз в начале созвона."),
+            (31000, "Личные заметки шифруются только для ваших глаз. Черновики, которые не увидит даже ваш руководитель."),
+            (40000, "Банковский уровень защиты гарантирует: ваши личные разговоры надежно скрыты от отдела кадров и системных администраторов."),
+            (50000, "Согласованные цели и договоренности автоматически переходят в следующий период, сохраняя контекст."),
+            (57800, "А к моменту аттестации или пересмотра зарплаты все достижения за полгода собираются в готовый отчет в один клик."),
+            (66200, "Встречи один на один, которые действительно ценят и сотрудники, и руководители. Попробуйте бесплатное демо прямо сейчас.")
         ]
     }
 }
@@ -94,11 +96,14 @@ def mix_audio_and_video(cfg):
     combined_audio = cfg["combined_audio"]
     out_mp4 = cfg["mp4"]
     out_webm = cfg["webm"]
+    input_video = cfg.get("input_video", INPUT_VIDEO)
+    if not input_video.exists():
+        input_video = INPUT_VIDEO
     
     # 1. Get input video duration
-    res = subprocess.run([FFPROBE, "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", str(INPUT_VIDEO)], capture_output=True, text=True)
+    res = subprocess.run([FFPROBE, "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", str(input_video)], capture_output=True, text=True)
     video_duration = float(res.stdout.strip())
-    print(f"Master video duration: {video_duration:.2f}s")
+    print(f"Master video ({input_video.name}) duration: {video_duration:.2f}s")
 
     print("Mixing audio segments onto timeline...")
     inputs = []
@@ -126,12 +131,13 @@ def mix_audio_and_video(cfg):
     ]
     subprocess.run(cmd_audio, check=True)
 
-    # 2. Output MP4 (H.264 + AAC)
+    # 2. Output MP4 (H.264 + AAC, 1920x1080)
     print(f"Muxing MP4 -> {out_mp4.name}...")
     cmd_mp4 = [
         FFMPEG, "-y",
-        "-i", str(INPUT_VIDEO),
+        "-i", str(input_video),
         "-i", str(combined_audio),
+        "-vf", "scale=1920:1080:flags=lanczos",
         "-c:v", "libx264",
         "-crf", "20",
         "-preset", "fast",
@@ -142,13 +148,16 @@ def mix_audio_and_video(cfg):
     ]
     subprocess.run(cmd_mp4, check=True)
 
-    # 3. Output WebM (VP8/copy + Opus)
+    # 3. Output WebM (VP8 + Opus, 1920x1080)
     print(f"Muxing WebM -> {out_webm.name}...")
     cmd_webm = [
         FFMPEG, "-y",
-        "-i", str(INPUT_VIDEO),
+        "-i", str(input_video),
         "-i", str(combined_audio),
-        "-c:v", "copy",
+        "-vf", "scale=1920:1080:flags=lanczos",
+        "-c:v", "libvpx",
+        "-crf", "16",
+        "-b:v", "2.5M",
         "-c:a", "libopus",
         "-b:a", "128k",
         "-t", f"{video_duration:.2f}",
@@ -184,16 +193,16 @@ async def main():
     parser.add_argument("--lang", choices=["all", "en", "ru"], default="all", help="Language to dub (default: all)")
     args = parser.parse_args()
 
-    if not INPUT_VIDEO.exists():
-        print(f"Error: Master video not found at {INPUT_VIDEO}")
-        print("Run 'npm run make:video' first to generate the silent video.")
-        sys.exit(1)
+    langs = ["en", "ru"] if args.lang == "all" else [args.lang]
+    for lang in langs:
+        vid = CONFIG[lang].get("input_video", INPUT_VIDEO)
+        if not vid.exists() and not INPUT_VIDEO.exists():
+            print(f"Error: Master video not found for {lang} (checked {vid} and {INPUT_VIDEO})")
+            print("Run 'npm run make:video' first to generate the silent video.")
+            sys.exit(1)
 
-    if args.lang == "all":
-        await process_language("en")
-        await process_language("ru")
-    else:
-        await process_language(args.lang)
+    for lang in langs:
+        await process_language(lang)
 
     print("\n🎉 Promo video dubbing complete!")
 

@@ -394,7 +394,8 @@ export const blogPostsEs: BlogPost[] = [
 	},
 	{
 		slug: 'why-1-on-1-notes-should-not-live-in-notion-or-slack',
-		title: 'Por qué las notas de 1 a 1 no deben estar en Notion o Slack corporativos: el precio de la franqueza',
+		title:
+			'Por qué las notas de 1 a 1 no deben estar en Notion o Slack corporativos: el precio de la franqueza',
 		subtitle:
 			'Cómo la ilusión de privacidad corporativa provoca autocensura, crea riesgos legales y por qué los líderes necesitan una arquitectura de dos circuitos.',
 		description:
@@ -428,7 +429,8 @@ export const blogPostsEs: BlogPost[] = [
 				]
 			},
 			{
-				heading: 'Riesgos jurídicos y para RR. HH.: cuando los borradores se vuelven pruebas incriminatorias',
+				heading:
+					'Riesgos jurídicos y para RR. HH.: cuando los borradores se vuelven pruebas incriminatorias',
 				paragraphsHtml: [
 					'Conservar notas de 1 a 1 sin procesar en sistemas de la empresa no solo deteriora la cultura, sino que plantea contingencias legales críticas.',
 					'En los litigios laborales bajo regímenes como <strong>eDiscovery</strong> (reglas FRCP 26 y 34 en EE. UU. y equivalentes internacionales), todos los registros corporativos constituyen información electrónicamente almacenada (ESI). Ante una demanda por despido injustificado, discriminación o represalias, una orden judicial obliga a la compañía a exhibir todas las notas de los mandos.',
@@ -461,4 +463,3 @@ export const blogPostsEs: BlogPost[] = [
 		]
 	}
 ];
-

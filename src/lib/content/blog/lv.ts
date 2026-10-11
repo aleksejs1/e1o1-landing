@@ -426,7 +426,8 @@ export const blogPostsLv: BlogPost[] = [
 				]
 			},
 			{
-				heading: 'Juridiskie un personālvadības riski: kad darba melnraksti kļūst par pierādījumiem',
+				heading:
+					'Juridiskie un personālvadības riski: kad darba melnraksti kļūst par pierādījumiem',
 				paragraphsHtml: [
 					'Nefiltrētu 1 pret 1 piezīmju glabāšana uzņēmuma koplietošanas sistēmās rada tiešus juridiskus draudus pašai organizācijai.',
 					'Tiesvedības praksē saskaņā ar <strong>eDiscovery</strong> noteikumiem (piemēram, FRCP 26. un 34. noteikumi ASV un līdzīgi principi citur) visi korporatīvie ieraksti tiek kvalificēti kā elektroniski glabāta informācija (ESI). Ja bijušais darbinieks iesniedz prasību par nelikumīgu atlaišanu, diskrimināciju vai neizmaksātām prēmijām, tiesas rīkojums (subpoena) uzliek uzņēmumam par pienākumu uzrādīt visas vadītāju piezīmes.',
@@ -459,4 +460,3 @@ export const blogPostsLv: BlogPost[] = [
 		]
 	}
 ];
-

@@ -12,6 +12,12 @@
 	<div class="site-footer-columns">
 		<div class="footer-col">
 			<h6>{content.footer.productHeading}</h6>
+			<a href={localizeHref('/about/')}
+				>{getLocale() === 'ru' ? 'О проекте и манифест' : 'About & Manifesto'}</a
+			>
+			<a href={localizeHref('/security/')}
+				>{getLocale() === 'ru' ? 'Безопасность и архитектура' : 'Security & Architecture'}</a
+			>
 			<a href={appLoginUrl(getLocale())} target="_blank" rel="noopener noreferrer"
 				>{m.header_login()}</a
 			>

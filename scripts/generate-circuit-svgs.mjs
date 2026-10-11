@@ -108,7 +108,8 @@ const data = {
 	},
 	es: {
 		headerTitle: 'ARQUITECTURA DE DOS CIRCUITOS PARA 1 A 1',
-		headerSubtitle: 'Separación del espacio privado de confianza y el registro oficial de la empresa',
+		headerSubtitle:
+			'Separación del espacio privado de confianza y el registro oficial de la empresa',
 		c1Badge: 'Zero-Knowledge / E2EE',
 		c1Title: 'CIRCUITO 1: EL ESPACIO DE CONFIANZA',
 		c1Sub: 'Cifrado de extremo a extremo • Claves solo en dispositivos de los usuarios',
@@ -141,7 +142,8 @@ const data = {
 	},
 	fr: {
 		headerTitle: 'ARCHITECTURE À DOUBLE CIRCUIT DES 1 À 1',
-		headerSubtitle: 'Séparation de l’espace intime de confiance et du registre officiel d’entreprise',
+		headerSubtitle:
+			'Séparation de l’espace intime de confiance et du registre officiel d’entreprise',
 		c1Badge: 'Zero-Knowledge / E2EE',
 		c1Title: 'CIRCUIT 1 : L’ESPACE DE CONFIANCE',
 		c1Sub: 'Chiffrement de bout en bout • Clés stockées uniquement sur les terminaux',

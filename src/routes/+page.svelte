@@ -31,6 +31,10 @@
 	let copied = $state(false);
 	let copyTimeout: ReturnType<typeof setTimeout> | undefined;
 
+	let activeRole = $state<'employee' | 'manager'>('employee');
+	let pitchCopied = $state(false);
+	let pitchTimeout: ReturnType<typeof setTimeout> | undefined;
+
 	async function copyCommand(cmd: string) {
 		if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
 			try {
@@ -46,9 +50,25 @@
 		}
 	}
 
+	async function copyPitch(text: string) {
+		if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
+			try {
+				await navigator.clipboard.writeText(text);
+				pitchCopied = true;
+				clearTimeout(pitchTimeout);
+				pitchTimeout = setTimeout(() => {
+					pitchCopied = false;
+				}, 2500);
+			} catch {}
+		}
+	}
+
 	onDestroy(() => {
 		if (copyTimeout) {
 			clearTimeout(copyTimeout);
+		}
+		if (pitchTimeout) {
+			clearTimeout(pitchTimeout);
 		}
 	});
 </script>
@@ -118,7 +138,8 @@
 		<div class="hero-content">
 			<div class="hero-badge-wrap">
 				<span class="tag tag-outline hero-pill">
-					<span class="pill-dot" aria-hidden="true"></span> AGPLv3 Open Source • End-to-End Encrypted
+					<span class="pill-dot" aria-hidden="true"></span>
+					{content.hero.trustBadges[0]}
 				</span>
 			</div>
 			<h1>{content.hero.headline}</h1>
@@ -133,9 +154,6 @@
 				>
 					{content.hero.ctaTryDemo} →
 				</a>
-				<a class="btn btn-secondary" href="{localizeHref('/')}#quickstart">
-					⚡ Docker Quickstart
-				</a>
 				<a
 					class="btn btn-secondary"
 					href={CLOUD_SIGNUP_URL}
@@ -144,6 +162,11 @@
 				>
 					{content.hero.ctaGetStarted}
 				</a>
+				{#if content.pitchManager}
+					<a class="btn btn-secondary" href="{localizeHref('/')}#pitch-manager">
+						💬 {content.pitchManager.badge}
+					</a>
+				{/if}
 			</div>
 
 			<div class="hero-sublinks">
@@ -160,12 +183,12 @@
 					▶ {content.videoDemo.heroWatchCta}
 				</a>
 				<span class="hero-sublinks-sep" aria-hidden="true">•</span>
-				<a class="hero-docs-link" href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
-					GitHub ⭐
+				<a class="hero-docs-link" href={localizeHref('/security/')}>
+					🔒 {locale === 'ru' ? 'Безопасность' : 'Security'}
 				</a>
 				<span class="hero-sublinks-sep" aria-hidden="true">•</span>
-				<a class="hero-docs-link" href={DOCS_URL} target="_blank" rel="noopener noreferrer">
-					{content.hero.ctaDocs}
+				<a class="hero-docs-link" href={localizeHref('/about/')}>
+					📖 {locale === 'ru' ? 'О проекте' : 'About'}
 				</a>
 			</div>
 
@@ -242,11 +265,11 @@
 					<span class="pill-dot" aria-hidden="true"></span>
 					<span class="video-footer-text">
 						{#if locale === 'ru'}
-							Реальная запись интерфейса: браузерная криптография Argon2id + X25519, сетевой
-							инспектор шифротекста и селф-хостинг.
+							Реальная запись интерфейса: 3-минутная подготовка, личные заметки, перенос целей и
+							готовый отчёт для ревью в один клик.
 						{:else}
-							Real interface recording: Argon2id + X25519 client crypto, network ciphertext
-							inspector, and 1-command Docker host.
+							Real interface recording: 3-minute async prep, private scratchpad, persistent goals,
+							and 1-click review report.
 						{/if}
 					</span>
 				</div>
@@ -278,6 +301,72 @@
 		</div>
 	</div>
 </section>
+
+{#if content.roleSwitch}
+	<section class="section section-roles" id="for-teams">
+		<div class="section-inner">
+			<div class="section-header text-center">
+				<div class="section-badge-wrap">
+					<span class="tag tag-outline">
+						<span class="pill-dot" aria-hidden="true"></span>
+						{content.roleSwitch.badge}
+					</span>
+				</div>
+				<h2>{content.roleSwitch.heading}</h2>
+				<p class="section-subhead">{content.roleSwitch.subhead}</p>
+
+				<div class="role-tabs-wrap">
+					<button
+						type="button"
+						class="btn role-tab"
+						class:btn-primary={activeRole === 'employee'}
+						class:btn-secondary={activeRole !== 'employee'}
+						onclick={() => (activeRole = 'employee')}
+					>
+						👤 {content.roleSwitch.employeeTab}
+					</button>
+					<button
+						type="button"
+						class="btn role-tab"
+						class:btn-primary={activeRole === 'manager'}
+						class:btn-secondary={activeRole !== 'manager'}
+						onclick={() => (activeRole = 'manager')}
+					>
+						👔 {content.roleSwitch.managerTab}
+					</button>
+				</div>
+			</div>
+
+			{#if activeRole === 'employee'}
+				<div class="role-panel">
+					<h3 class="role-panel-title text-center">{content.roleSwitch.employeeTitle}</h3>
+					<div class="highlight-grid">
+						{#each content.roleSwitch.employeePoints as point (point.title)}
+							<div class="card elev-sm highlight-card">
+								<span class="highlight-icon" aria-hidden="true">{point.icon}</span>
+								<h3 class="card-title">{point.title}</h3>
+								<p class="card-body">{point.body}</p>
+							</div>
+						{/each}
+					</div>
+				</div>
+			{:else}
+				<div class="role-panel">
+					<h3 class="role-panel-title text-center">{content.roleSwitch.managerTitle}</h3>
+					<div class="highlight-grid">
+						{#each content.roleSwitch.managerPoints as point (point.title)}
+							<div class="card elev-sm highlight-card">
+								<span class="highlight-icon" aria-hidden="true">{point.icon}</span>
+								<h3 class="card-title">{point.title}</h3>
+								<p class="card-body">{point.body}</p>
+							</div>
+						{/each}
+					</div>
+				</div>
+			{/if}
+		</div>
+	</section>
+{/if}
 
 <!-- How It Works Section -->
 <section class="section section-alt" id="how-it-works">
@@ -390,6 +479,14 @@
 				<h3 class="card-title">{content.architecture.guaranteeTitle}</h3>
 				<p class="card-body">{@html content.architecture.guaranteeTextHtml}</p>
 			</div>
+		</div>
+
+		<div class="text-center" style="margin-top: var(--space-6);">
+			<a href={localizeHref('/security/')} class="btn btn-secondary">
+				🔒 {locale === 'ru'
+					? 'Полная спецификация безопасности и Zero-Knowledge архитектуры →'
+					: 'Full Zero-Knowledge Security & Architecture Spec →'}
+			</a>
 		</div>
 	</div>
 </section>
@@ -564,6 +661,14 @@
 		{#each content.origin.paragraphsHtml.slice(3) as html, i (i + 3)}
 			<p>{@html html}</p>
 		{/each}
+
+		<div class="text-center" style="margin-top: var(--space-6);">
+			<a href={localizeHref('/about/')} class="btn btn-secondary">
+				📖 {locale === 'ru'
+					? 'Читать полную историю создания и манифест проекта →'
+					: 'Read Full Origin Story & Manifesto →'}
+			</a>
+		</div>
 	</div>
 </section>
 
@@ -740,6 +845,40 @@
 		</div>
 	</div>
 </section>
+
+{#if content.pitchManager}
+	<!-- Pitch Manager Toolkit Section -->
+	<section class="section section-pitch" id="pitch-manager">
+		<div class="section-inner">
+			<div class="card elev-md pitch-card">
+				<div class="section-badge-wrap text-center">
+					<span class="tag tag-outline">
+						<span class="pill-dot" aria-hidden="true"></span>
+						{content.pitchManager.badge}
+					</span>
+				</div>
+				<h2 class="text-center">{content.pitchManager.heading}</h2>
+				<p class="pitch-subhead text-center">{content.pitchManager.subhead}</p>
+
+				<div class="pitch-box">
+					<div class="pitch-text">{content.pitchManager.messageTemplate}</div>
+					<button
+						type="button"
+						class="btn btn-primary pitch-copy-btn"
+						onclick={() => copyPitch(content.pitchManager?.messageTemplate ?? '')}
+					>
+						{#if pitchCopied}
+							✓ {content.pitchManager.copiedNotice}
+						{:else}
+							📋 {content.pitchManager.copyButtonText}
+						{/if}
+					</button>
+				</div>
+				<p class="pitch-hint text-center text-muted">{content.pitchManager.hintText}</p>
+			</div>
+		</div>
+	</section>
+{/if}
 
 <!-- Final Call to Action Section -->
 <section class="section final-cta-section" id="get-started">
@@ -1000,6 +1139,81 @@
 
 	.section-alt {
 		background: var(--color-surface);
+	}
+
+	.role-tabs-wrap {
+		display: inline-flex;
+		gap: var(--space-2);
+		background: color-mix(in srgb, var(--color-surface) 90%, var(--color-border));
+		padding: 4px;
+		border-radius: var(--radius-md, 8px);
+		margin: var(--space-4) auto var(--space-2);
+	}
+
+	.role-tab {
+		font-size: 14px;
+		padding: var(--space-2) var(--space-4);
+		border-radius: var(--radius-sm, 6px);
+		cursor: pointer;
+		transition: all 0.15s ease;
+	}
+
+	.role-panel {
+		margin-top: var(--space-4);
+	}
+
+	.role-panel-title {
+		font-size: 18px;
+		font-weight: 700;
+		margin-bottom: var(--space-5);
+		color: var(--color-accent-ink);
+	}
+
+	.section-pitch {
+		background: color-mix(in srgb, var(--color-accent) 6%, var(--color-bg));
+	}
+
+	.pitch-card {
+		padding: var(--space-8) var(--space-6);
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg, 12px);
+	}
+
+	.pitch-subhead {
+		font-size: 16px;
+		max-width: 600px;
+		margin: 0 auto var(--space-5);
+		color: color-mix(in srgb, var(--color-text) 80%, transparent);
+	}
+
+	.pitch-box {
+		background: var(--color-bg);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-md, 8px);
+		padding: var(--space-5);
+		max-width: 680px;
+		margin: 0 auto var(--space-4);
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-4);
+	}
+
+	.pitch-text {
+		font-size: 14.5px;
+		line-height: 1.55;
+		color: var(--color-text);
+		white-space: pre-wrap;
+	}
+
+	.pitch-copy-btn {
+		align-self: flex-start;
+	}
+
+	.pitch-hint {
+		font-size: 13.5px;
+		max-width: 600px;
+		margin: 0 auto;
 	}
 
 	.section-inner {

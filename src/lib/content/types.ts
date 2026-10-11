@@ -196,6 +196,28 @@ export interface LandingContent {
 		contactSales: string;
 	};
 
+	roleSwitch?: {
+		badge: string;
+		heading: string;
+		subhead: string;
+		employeeTab: string;
+		managerTab: string;
+		employeeTitle: string;
+		employeePoints: Highlight[];
+		managerTitle: string;
+		managerPoints: Highlight[];
+	};
+
+	pitchManager?: {
+		badge: string;
+		heading: string;
+		subhead: string;
+		messageTemplate: string;
+		copyButtonText: string;
+		copiedNotice: string;
+		hintText: string;
+	};
+
 	footer: {
 		productHeading: string;
 		demoLabel: string;

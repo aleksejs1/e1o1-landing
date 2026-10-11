@@ -2,58 +2,58 @@ import type { LandingContent } from './types';
 
 export const en: LandingContent = {
 	meta: {
-		title: 'encrypted1on1 — Open Source & Private 1-on-1 Meeting Software',
+		title: 'encrypted1on1 — Honest, High-Impact 1-on-1 Meeting Software',
 		description:
-			'Open-source, self-hosted, end-to-end encrypted platform for manager–employee 1:1 meetings. Zero-knowledge privacy: not even server admins can read your notes.'
+			'A dedicated platform for manager–employee 1:1 meetings. 3-minute prep, rollover goals, instant performance review reports, and banking-grade privacy.'
 	},
 
 	skipToContent: 'Skip to content',
 
 	hero: {
-		headline: 'Private 1:1s. Provably private.',
+		headline: '1:1 meetings that build teams instead of wasting time',
 		subhead:
-			'encrypted1on1 is an open-source, self-hosted platform for structured manager–employee 1:1 meetings — end-to-end encrypted, so not even the people running the server can read what’s written. Not a policy promise. A mathematical one.',
-		ctaTryDemo: 'Try the live demo',
-		ctaGetStarted: 'Get started',
+			'encrypted1on1 is a thoughtful workspace for meaningful conversations between managers and direct reports. Prepare in 3 minutes, carry goals forward across cycles, and compile your accomplishments for promotion in one click. Protected by end-to-end encryption so private notes stay strictly between the two of you.',
+		ctaTryDemo: 'Try the live demo (no signup)',
+		ctaGetStarted: 'Create a workspace',
 		ctaGithub: 'View on GitHub',
 		ctaDocs: 'Read the docs',
 		trustBadges: [
-			'Open Source (AGPLv3)',
-			'Self-Hosted',
-			'End-to-End Encrypted',
-			'No Vendor Lock-in'
+			'3-Minute Async Prep',
+			'Carry-Forward Goals',
+			'1-Click Review Reports',
+			'Banking-Grade Privacy'
 		],
 		highlights: [
 			{
 				icon: '🔒',
-				title: 'Zero-knowledge encryption',
-				body: 'Content is encrypted in your browser. Not even an admin with full server access can read it.'
+				title: 'Safe psychological space',
+				body: 'Private notes and honest pulse responses are encrypted for your eyes only. Never visible to HR or server administrators.'
 			},
 			{
 				icon: '🎯',
-				title: 'Goals that carry forward',
-				body: 'Set once, tracked automatically across every future cycle — nothing gets lost between meetings.'
+				title: 'Never lose a commitment',
+				body: 'Agreed action items and goals roll over from cycle to cycle with full history. No forgotten promises.'
 			},
 			{
 				icon: '📊',
 				title: 'Review-ready in one click',
-				body: 'A performance-review report over any date range, generated client-side from months of 1:1s.'
+				body: 'Compile months of achievements, feedback, and milestones into a structured report for performance reviews and promotions.'
 			},
 			{
-				icon: '🚀',
-				title: 'Self-hosted, free forever',
-				body: 'One Docker container. No per-seat pricing, no vendor lock-in, running in minutes.'
+				icon: '⚡',
+				title: 'Instant start',
+				body: 'Run in seconds in your browser, or self-host in your own company perimeter with zero hassle.'
 			}
 		],
 		screenshotAlt:
-			'A real 1:1 in encrypted1on1: mood and feelings answered, one comment thread open, and a padlock icon marking this side as end-to-end encrypted.'
+			'A 1:1 meeting in encrypted1on1: pulse checks, feelings, goals progress, and protected private notes.'
 	},
 
 	videoDemo: {
-		badge: 'Walkthrough • 75s',
-		heading: 'See encrypted1on1 in action',
+		badge: 'Video Walkthrough • 75s',
+		heading: 'See what meaningful 1:1s look like',
 		subhead:
-			'From browser key derivation to the 3-minute check-in, private scratchpad, and provable zero-knowledge ciphertext.',
+			'From a 3-minute async check-in and private scratchpad to automatic goal rollover and instant review reports.',
 		heroWatchCta: 'Watch 75s demo'
 	},
 
@@ -337,6 +337,74 @@ export const en: LandingContent = {
 			'*Priority support means paid users’ emails and issues get looked at first, not that a fix is instant or guaranteed by any SLA — this is a small, honest open-source project, not a call center. A paid bug might still take weeks. It’ll just get fixed before the free-tier queue, not instead of it.',
 		contactUs: 'Contact us',
 		contactSales: 'Contact sales'
+	},
+
+	roleSwitch: {
+		badge: 'For the Whole Team',
+		heading: 'Software both employees and managers actually love using',
+		subhead:
+			'Direct reports and managers have different priorities on 1:1s. encrypted1on1 makes the conversation safe, easy, and high-impact for both sides.',
+		employeeTab: 'I’m an Employee',
+		managerTab: 'I’m a Manager',
+		employeeTitle: 'Your dedicated space for psychological safety and career growth',
+		employeePoints: [
+			{
+				icon: '🛡️',
+				title: 'Candor without career anxiety',
+				body: 'Your answers about burnout, blockers, or workload stay between you and your manager. Never exposed to HR, skip-levels, or IT.'
+			},
+			{
+				icon: '⏱️',
+				title: 'No surprise status interrogations',
+				body: 'Log your pulse and discussion items in 3 minutes before the sync. Never deal with blank sheets or awkward silences.'
+			},
+			{
+				icon: '📝',
+				title: 'Personal scratchpad for your eyes only',
+				body: 'Keep private drafts encrypted with your own key. Your manager cannot read them until you choose to bring them up.'
+			},
+			{
+				icon: '🚀',
+				title: 'Never lose track of your wins',
+				body: 'Every delivered milestone and goal stays recorded. When compensation review comes, you have an undeniable portfolio of impact ready in one click.'
+			}
+		],
+		managerTitle: 'Coach and retain high-performing teams without bureaucracy',
+		managerPoints: [
+			{
+				icon: '💡',
+				title: 'Meetings become actionable coaching',
+				body: 'The employee owns the agenda. You see blockers and mood before the call starts, so discussions focus on solutions, not status.'
+			},
+			{
+				icon: '🎯',
+				title: 'Context that never fades',
+				body: 'Action items agreed months ago roll over into future syncs automatically. No commitments forgotten in scattered notebooks.'
+			},
+			{
+				icon: '📉',
+				title: 'Early burnout detection radar',
+				body: 'Watch mood and energy trajectories over time. Catch disengagement weeks before someone hands in their resignation.'
+			},
+			{
+				icon: '📋',
+				title: 'One-click performance review reports',
+				body: 'Never dread review season again. Compile months of feedback, accomplishments, and goals into a clean summary in seconds.'
+			}
+		]
+	},
+
+	pitchManager: {
+		badge: 'Share with Your Team',
+		heading: 'Want to run 1:1s like this with your manager?',
+		subhead:
+			'Share encrypted1on1 with your team lead or manager. Here is a ready-to-send message for Slack, Teams, or email:',
+		messageTemplate:
+			'Hey! Found this great tool for private 1:1s — encrypted1on1.eu. It has 3-minute prep check-ins, goals automatically roll over between syncs, and it generates a clean accomplishments report for reviews in one click. Plus everything is end-to-end encrypted so nothing leaks outside the two of us. Want to try it for our next 1:1? Here is the live demo: https://demo.private1on1.eu/',
+		copyButtonText: 'Copy message text',
+		copiedNotice: 'Message copied! Share it with your manager in Slack or email.',
+		hintText:
+			'💡 Managers appreciate when team members take initiative to improve communication and meeting effectiveness.'
 	},
 
 	footer: {

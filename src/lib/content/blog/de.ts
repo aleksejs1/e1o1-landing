@@ -405,7 +405,13 @@ export const blogPostsDe: BlogPost[] = [
 			name: 'Aleksejs',
 			role: 'Gründer & Entwickler'
 		},
-		tags: ['1:1-Meetings', 'Datenschutz', 'Psychologische Sicherheit', 'Management', 'Zero-Knowledge'],
+		tags: [
+			'1:1-Meetings',
+			'Datenschutz',
+			'Psychologische Sicherheit',
+			'Management',
+			'Zero-Knowledge'
+		],
 		coverImage: '/images/blog/cost-of-candor-cover.jpg',
 		leadHtml:
 			'Jedes moderne Managementbuch beschwört Verwundbarkeit, radikale Offenheit und psychologische Sicherheit. Führungskräfte richten hübsche Vorlagen in einem vermeintlich privaten Notion-Ordner oder Slack-Chat ein und wundern sich anschließend, warum Gespräche zu monotonen Jira-Statusberichten verkommen. Der Grund liegt nicht in mangelnder Kommunikationsbereitschaft: Mitarbeiter wissen genau, dass Unternehmens-Clouds kein Beichtgeheimnis kennen.',
@@ -459,4 +465,3 @@ export const blogPostsDe: BlogPost[] = [
 		]
 	}
 ];
-

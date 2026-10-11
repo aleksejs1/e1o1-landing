@@ -396,7 +396,8 @@ export const blogPostsFr: BlogPost[] = [
 	},
 	{
 		slug: 'why-1-on-1-notes-should-not-live-in-notion-or-slack',
-		title: 'Pourquoi les notes de 1 à 1 ne doivent pas rester dans Notion ou Slack : le prix de la franchise',
+		title:
+			'Pourquoi les notes de 1 à 1 ne doivent pas rester dans Notion ou Slack : le prix de la franchise',
 		subtitle:
 			'Comment l’illusion de confidentialité d’entreprise engendre l’autocensure, crée des risques juridiques et pourquoi les leaders ont besoin de deux circuits.',
 		description:
@@ -409,7 +410,13 @@ export const blogPostsFr: BlogPost[] = [
 			name: 'Aleksejs',
 			role: 'Fondateur et développeur'
 		},
-		tags: ['Entretiens 1 à 1', 'Confidentialité', 'Sécurité psychologique', 'Management', 'Zero-Knowledge'],
+		tags: [
+			'Entretiens 1 à 1',
+			'Confidentialité',
+			'Sécurité psychologique',
+			'Management',
+			'Zero-Knowledge'
+		],
 		coverImage: '/images/blog/cost-of-candor-cover.jpg',
 		leadHtml:
 			'Tous les manuels de management moderne célèbrent la vulnérabilité, la franchise radicale et la sécurité psychologique. Les managers créent de jolis modèles dans une section privée de Notion ou échangent par messages directs dans Slack, avant de s’étonner que leurs échanges se réduisent à des bilans mécaniques de tickets Jira. La cause n’est pas un manque d’ouverture : les collaborateurs savent pertinemment que les clouds d’entreprise ignorent le secret professionnel.',
@@ -463,4 +470,3 @@ export const blogPostsFr: BlogPost[] = [
 		]
 	}
 ];
-
