@@ -583,7 +583,7 @@ async function recordPromoForLocale(localeKey) {
 
 	await waitUntilElapsed(66.2);
 
-	if (localeKey === 'ru') {
+	if (localeKey === 'en') {
 		await page.screenshot({ path: POSTER_IMAGE_PATH });
 		console.log('Saved poster frame to:', POSTER_IMAGE_PATH);
 	}
