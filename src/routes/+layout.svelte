@@ -9,7 +9,13 @@
 	import { getContent } from '$lib/content';
 	import { detectAndRedirectOnFirstVisit } from '$lib/i18n/detect';
 	import { SITE_URL } from '$lib/links';
-	import { locales, baseLocale, localizeHref, getLocale, type Locale } from '$lib/paraglide/runtime';
+	import {
+		locales,
+		baseLocale,
+		localizeHref,
+		getLocale,
+		type Locale
+	} from '$lib/paraglide/runtime';
 
 	let { children } = $props();
 

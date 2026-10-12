@@ -20,7 +20,9 @@
 </script>
 
 <svelte:head>
-	<title>{content.architecture.heading} — encrypted1on1</title>
+	<title
+		>{content.architecture.metaTitle ?? `${content.architecture.heading} — encrypted1on1`}</title
+	>
 	<meta name="description" content={content.architecture.subhead} />
 </svelte:head>
 

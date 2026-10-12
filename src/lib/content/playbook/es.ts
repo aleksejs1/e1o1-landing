@@ -37,6 +37,7 @@ export const playbookItemsEs: PlaybookItem[] = [
 	{
 		slug: 'high-leverage-1-on-1',
 		title: 'El 1 a 1 de alto impacto: El manifiesto para reuniones con sentido',
+		metaTitle: 'El 1 a 1 de alto impacto Playbook — encrypted1on1',
 		subtitle:
 			'Por qué el 90 % de los 1 a 1 terminan en reportes de estado aburridos y cómo convertirlos en la palanca más potente de tu equipo.',
 		category: 'foundations',
@@ -98,6 +99,7 @@ export const playbookItemsEs: PlaybookItem[] = [
 	{
 		slug: 'first-1-on-1',
 		title: 'El primer 1 a 1: Alineación de expectativas y seguridad psicológica',
+		metaTitle: 'El primer 1 a 1 Playbook — encrypted1on1',
 		subtitle:
 			'Construir confianza mutua, calibrar estilos de trabajo individuales («manual de usuario personal») y acordar reglas de juego claras para futuros encuentros.',
 		category: 'onboarding',
@@ -191,6 +193,7 @@ export const playbookItemsEs: PlaybookItem[] = [
 	{
 		slug: 'bi-weekly-pulse',
 		title: 'Sincronización quincenal: El 1 a 1 periódico de alto impacto',
+		metaTitle: 'Sincronización quincenal 1 a 1 — encrypted1on1',
 		subtitle:
 			'Un marco repetible de 30–45 minutos para líderes técnicos: diagnosticar carga cognitiva, eliminar bloqueos sistémicos y mantener una alineación continua.',
 		category: 'regular',
@@ -292,6 +295,7 @@ export const playbookItemsEs: PlaybookItem[] = [
 	{
 		slug: 'career-growth',
 		title: 'Desarrollo y carrera: La revisión trimestral',
+		metaTitle: 'Desarrollo y carrera 1 a 1 — encrypted1on1',
 		subtitle:
 			'Una sesión estratégica de alto impacto para alinear aspiraciones personales, proyectos formativos y trayectoria técnica a largo plazo.',
 		category: 'growth',
@@ -397,6 +401,7 @@ export const playbookItemsEs: PlaybookItem[] = [
 	{
 		slug: 'burnout-detection',
 		title: 'Sobrecarga y agotamiento: Recuperar el equilibrio',
+		metaTitle: 'Sobrecarga y agotamiento 1 a 1 — encrypted1on1',
 		subtitle:
 			'Un marco de intervención crítica para líderes técnicos: diagnóstico temprano del agotamiento, triaje radical de tareas y eliminación de la culpa.',
 		category: 'difficult',
@@ -501,6 +506,7 @@ export const playbookItemsEs: PlaybookItem[] = [
 	{
 		slug: 'skip-level',
 		title: '1 a 1 Skip-Level: Diagnóstico de salud organizacional sin filtros',
+		metaTitle: '1 a 1 Skip-Level Playbook — encrypted1on1',
 		subtitle:
 			'Un diálogo estratégico de alto impacto entre la alta dirección técnica (VP/CTO/Director) y los ingenieros de primera línea: validar la señal estratégica, erradicar la fricción sistémica y calibrar la cultura.',
 		category: 'leadership',
@@ -609,6 +615,7 @@ export const playbookItemsEs: PlaybookItem[] = [
 	{
 		slug: 'manager-playbook',
 		title: 'El Playbook del Manager: Liderando 1 a 1 de Alto Impacto',
+		metaTitle: 'Playbook del Manager 1 a 1 — encrypted1on1',
 		subtitle:
 			'Cambio de mentalidad, lista de preparación de 15 minutos, escucha activa, modelo de feedback SBI y patrocinio genuino.',
 		category: 'leadership',
@@ -707,6 +714,7 @@ export const playbookItemsEs: PlaybookItem[] = [
 	{
 		slug: 'employee-playbook',
 		title: 'El Playbook del Colaborador: Dueño de tu 1 a 1',
+		metaTitle: 'Playbook del Colaborador 1 a 1 — encrypted1on1',
 		subtitle:
 			'Cómo ingenieros, diseñadores y miembros del equipo pueden vencer la ansiedad, dirigir la agenda e impulsar su carrera.',
 		category: 'foundations',
@@ -805,6 +813,7 @@ export const playbookItemsEs: PlaybookItem[] = [
 	{
 		slug: 'handling-difficult-situations',
 		title: 'Gestión de Situaciones Difíciles: Guiones para 1 a 1 Críticos',
+		metaTitle: 'Situaciones Difíciles en 1 a 1 — encrypted1on1',
 		subtitle:
 			'Guiones conversacionales exactos y marcos psicológicos para desescalar tensiones, lágrimas, feedback crítico y ultimátums.',
 		category: 'difficult',

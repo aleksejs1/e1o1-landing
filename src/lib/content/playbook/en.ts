@@ -37,6 +37,7 @@ export const playbookItemsEn: PlaybookItem[] = [
 	{
 		slug: 'high-leverage-1-on-1',
 		title: 'The High-Leverage 1:1: The Manifesto for Meaningful Meetings',
+		metaTitle: 'The High-Leverage 1:1 Playbook — encrypted1on1',
 		subtitle:
 			'Why 90% of one-on-ones devolve into boring status reports, and how to turn them into your team’s highest-impact managerial lever.',
 		category: 'foundations',
@@ -98,6 +99,7 @@ export const playbookItemsEn: PlaybookItem[] = [
 	{
 		slug: 'first-1-on-1',
 		title: 'The First 1:1: Setting Expectations & Psychological Safety',
+		metaTitle: 'The First 1:1 Meeting Playbook — encrypted1on1',
 		subtitle:
 			'Establish mutual trust, calibrate individual work styles (the "Personal User Manual"), and align on transparent ground rules for all future syncs.',
 		category: 'onboarding',
@@ -191,6 +193,7 @@ export const playbookItemsEn: PlaybookItem[] = [
 	{
 		slug: 'bi-weekly-pulse',
 		title: 'Bi-Weekly Check-in: The High-Leverage Sync',
+		metaTitle: 'Bi-Weekly Check-in 1:1 Playbook — encrypted1on1',
 		subtitle:
 			'A repeatable 30–45 minute framework for engineering leaders: diagnosing cognitive load, eliminating systemic bottlenecks, and maintaining continuous alignment.',
 		category: 'regular',
@@ -292,6 +295,7 @@ export const playbookItemsEn: PlaybookItem[] = [
 	{
 		slug: 'career-growth',
 		title: 'Quarterly Career & Growth Check-in',
+		metaTitle: 'Quarterly Career & Growth 1:1 — encrypted1on1',
 		subtitle:
 			'A high-leverage strategic session to align personal ambitions, stretch assignments, and long-term technical trajectory.',
 		category: 'growth',
@@ -394,6 +398,7 @@ export const playbookItemsEn: PlaybookItem[] = [
 	{
 		slug: 'burnout-detection',
 		title: 'Overwhelm & Burnout: Restoring Equilibrium',
+		metaTitle: 'Overwhelm & Burnout 1:1 Playbook — encrypted1on1',
 		subtitle:
 			'A high-stakes intervention framework for engineering leads: early exhaustion triage, radical backlog shedding, and psychological de-stigmatization.',
 		category: 'difficult',
@@ -497,6 +502,7 @@ export const playbookItemsEn: PlaybookItem[] = [
 	{
 		slug: 'skip-level',
 		title: 'Skip-Level 1:1: Unfiltered Organizational Diagnostics',
+		metaTitle: 'Skip-Level 1:1 Meeting Playbook — encrypted1on1',
 		subtitle:
 			'A high-leverage strategic dialogue between executive leadership (VP/CTO/Director) and frontline engineers: validating strategic signal, removing systemic friction, and calibrating culture.',
 		category: 'leadership',
@@ -601,6 +607,7 @@ export const playbookItemsEn: PlaybookItem[] = [
 	{
 		slug: 'manager-playbook',
 		title: 'The Manager’s Playbook: Leading High-Impact 1:1s',
+		metaTitle: "The Manager's 1:1 Playbook — encrypted1on1",
 		subtitle:
 			'Mindset, 15-minute preparation checklist, active listening, the SBI feedback model, and building real sponsorship.',
 		category: 'leadership',
@@ -699,6 +706,7 @@ export const playbookItemsEn: PlaybookItem[] = [
 	{
 		slug: 'employee-playbook',
 		title: 'The Direct Report’s Playbook: Owning Your 1:1',
+		metaTitle: "The Direct Report's 1:1 Playbook — encrypted1on1",
 		subtitle:
 			'How engineers, designers, and team members can overcome meeting anxiety, drive the agenda, and accelerate their career.',
 		category: 'foundations',
@@ -797,6 +805,7 @@ export const playbookItemsEn: PlaybookItem[] = [
 	{
 		slug: 'handling-difficult-situations',
 		title: 'Handling Difficult Situations: Scripts for High-Stakes 1:1s',
+		metaTitle: 'Difficult Situations 1:1 Scripts — encrypted1on1',
 		subtitle:
 			'Exact conversational scripts and psychological frameworks for de-escalating tension, tears, critical feedback, and ultimatums.',
 		category: 'difficult',

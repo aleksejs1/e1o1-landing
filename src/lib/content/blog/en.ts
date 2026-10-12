@@ -22,6 +22,7 @@ export const blogPostsEn: BlogPost[] = [
 	{
 		slug: 'why-we-built-encrypted1on1',
 		title: 'Why we built encrypted1on1',
+		metaTitle: 'Why We Built encrypted1on1 — encrypted1on1 Blog',
 		subtitle: 'The realization that 1:1 meeting notes need mathematics, not privacy policies.',
 		description:
 			'Why 1:1 meeting notes contain a company’s most sensitive conversations, and why “we promise not to look” isn’t a strong enough guarantee.',
@@ -73,6 +74,7 @@ export const blogPostsEn: BlogPost[] = [
 	{
 		slug: 'v1-0-0-release',
 		title: 'encrypted1on1 v1.0.0: The First Stable Release',
+		metaTitle: 'encrypted1on1 v1.0.0 Stable Release — Blog',
 		subtitle:
 			'End-to-end encrypted 1:1 meetings, asynchronous prep, goal continuity, and production Docker deployment.',
 		description:
@@ -126,6 +128,7 @@ export const blogPostsEn: BlogPost[] = [
 	{
 		slug: 'v1-2-0-release',
 		title: 'encrypted1on1 v1.2.0: Form Versioning, Self-Edit, and Human UX',
+		metaTitle: 'encrypted1on1 v1.2.0: Form Versioning & UX — Blog',
 		subtitle:
 			'How to evolve 1:1 question templates over time without breaking historical meeting records, plus author-scoped editing and date rescheduling.',
 		description:
@@ -179,6 +182,7 @@ export const blogPostsEn: BlogPost[] = [
 	{
 		slug: '1-on-1-question-bank-templates',
 		title: 'Beyond "How’s It Going?": Introducing the 1:1 Question Bank & Templates',
+		metaTitle: '1:1 Question Bank & Meeting Templates — Blog',
 		subtitle:
 			'A curated collection of catalytic questions across 7 core dimensions — with the rationale behind each one and ready-to-use templates.',
 		description:
@@ -229,6 +233,7 @@ export const blogPostsEn: BlogPost[] = [
 	{
 		slug: '5-essential-books-for-high-leverage-1-on-1s',
 		title: 'The 1:1 Bookshelf: 5 Essential Books Every Engineering Leader Should Read',
+		metaTitle: '5 Essential Books for High-Leverage 1:1s — e1o1 Blog',
 		subtitle:
 			'Distilling decades of management wisdom from Andy Grove, Ben Horowitz, Julie Zhuo, Camille Fournier, and Kim Scott into actionable 1:1 practices.',
 		description:
@@ -280,6 +285,7 @@ export const blogPostsEn: BlogPost[] = [
 	{
 		slug: 'meeting-templates-playbook-and-form-templates-preview',
 		title: 'The 1:1 Meeting Playbook: Battle-Tested Agendas (And What’s Next for encrypted1on1)',
+		metaTitle: '1:1 Meeting Playbook & Agendas — encrypted1on1 Blog',
 		subtitle:
 			'Explore our comprehensive library of structured 1:1 templates — and a sneak peek at upcoming native form templates in the platform.',
 		description:
@@ -332,6 +338,7 @@ export const blogPostsEn: BlogPost[] = [
 	{
 		slug: 'v1-3-0-release',
 		title: 'encrypted1on1 v1.3.0: Built-in Meeting Templates and One-Off Anketas',
+		metaTitle: 'encrypted1on1 v1.3.0: Built-in Templates — Blog',
 		subtitle:
 			'Introducing specialized 1:1 question templates for onboarding, quarterly career growth, and workload support, paired with non-forking one-off meeting chains.',
 		description:
@@ -392,6 +399,7 @@ export const blogPostsEn: BlogPost[] = [
 	{
 		slug: 'why-1-on-1-notes-should-not-live-in-notion-or-slack',
 		title: 'Why 1:1 Notes Shouldn’t Live in Corporate Notion or Slack: The Cost of Candor',
+		metaTitle: "Why 1:1 Notes Don't Belong in Notion or Slack — e1o1",
 		subtitle:
 			'How the illusion of corporate privacy triggers self-censorship, creates legal liabilities, and why leaders need a two-circuit architecture.',
 		description:

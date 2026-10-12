@@ -11,6 +11,7 @@ export interface BlogSection {
 export interface BlogPost {
 	slug: string;
 	title: string;
+	metaTitle?: string;
 	subtitle: string;
 	description: string;
 	date: string; // ISO 8601: "2026-08-09"

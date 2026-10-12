@@ -38,6 +38,7 @@ export const playbookItemsLv: PlaybookItem[] = [
 	{
 		slug: 'high-leverage-1-on-1',
 		title: 'Augstas ietekmes 1 pret 1: Jēgpilnu tikšanos manifests',
+		metaTitle: 'Augstas ietekmes 1 pret 1 rokasgrāmata — encrypted1on1',
 		subtitle:
 			'Kāpēc 90 % individuālo tikšanos pārtop par garlaicīgām statusa atskaitēm un kā tās padarīt par komandas spēcīgāko vadības sviru.',
 		category: 'foundations',
@@ -98,6 +99,7 @@ export const playbookItemsLv: PlaybookItem[] = [
 	{
 		slug: 'first-1-on-1',
 		title: 'Pirmā 1 pret 1 tikšanās: Gaidu salāgošana un psiholoģiskā drošība',
+		metaTitle: 'Pirmā 1 pret 1 tikšanās — encrypted1on1',
 		subtitle:
 			'Savstarpējas uzticības veidošana, individuālā darba stila kalibrēšana („lietotāja rokasgrāmata par sevi”) un skaidru sadarbības noteikumu saskaņošana.',
 		category: 'onboarding',
@@ -191,6 +193,7 @@ export const playbookItemsLv: PlaybookItem[] = [
 	{
 		slug: 'bi-weekly-pulse',
 		title: 'Regulārā tikšanās: Divu nedēļu sinhronizācija',
+		metaTitle: 'Regulārā 1 pret 1 tikšanās — encrypted1on1',
 		subtitle:
 			'Atkārtojams 30–45 minūšu ietvars tehniskajiem vadītājiem: kognitīvās slodzes diagnostika, sistēmisko šķēršļu novēršana un nepārtraukta gaidu salāgošana.',
 		category: 'regular',
@@ -291,6 +294,7 @@ export const playbookItemsLv: PlaybookItem[] = [
 	{
 		slug: 'career-growth',
 		title: 'Karjeras un izaugsmes saruna: Ceturkšņa stratēģiskais pārskats',
+		metaTitle: 'Karjeras un izaugsmes saruna — encrypted1on1',
 		subtitle:
 			'Augstas ietekmes stratēģiskā sesija personīgo ambīciju, izaicinājumu un ilgtermiņa tehniskās trajektorijas salāgošanai.',
 		category: 'growth',
@@ -393,6 +397,7 @@ export const playbookItemsLv: PlaybookItem[] = [
 	{
 		slug: 'burnout-detection',
 		title: 'Pārslodze un izdegšana: Enerģijas atjaunošana',
+		metaTitle: 'Pārslodze un izdegšana 1 pret 1 — encrypted1on1',
 		subtitle:
 			'Krīzes rīcības ietvars inženieru komandu vadītājiem: spēku izsīkuma agrīna diagnostika, radikāls uzdevumu triāžs un vainas apziņas noņemšana.',
 		category: 'difficult',
@@ -496,6 +501,7 @@ export const playbookItemsLv: PlaybookItem[] = [
 	{
 		slug: 'skip-level',
 		title: 'Skip-Level 1 pret 1: Organizācijas veselības diagnostika bez filtriem',
+		metaTitle: 'Skip-Level 1 pret 1 rokasgrāmata — encrypted1on1',
 		subtitle:
 			'Augstas atdeves stratēģisks dialogs starp augstākā līmeņa inženierijas vadību (VP/CTO/direktors) un vadošajiem inženieriem: stratēģijas validācija, sistēmisko šķēršļu novēršana un kultūras kalibrēšana.',
 		category: 'leadership',
@@ -601,6 +607,7 @@ export const playbookItemsLv: PlaybookItem[] = [
 	{
 		slug: 'manager-playbook',
 		title: 'Vadītāja rokasgrāmata: Augstas ietekmes 1 pret 1 sarunas',
+		metaTitle: 'Vadītāja 1 pret 1 rokasgrāmata — encrypted1on1',
 		subtitle:
 			'Domāšanas maiņa, 15 minūšu sagatavošanās kontrolsaraksts, aktīvā klausīšanās, SBI modelis un patiess atbalsts.',
 		category: 'leadership',
@@ -698,6 +705,7 @@ export const playbookItemsLv: PlaybookItem[] = [
 	{
 		slug: 'employee-playbook',
 		title: 'Darbinieka rokasgrāmata: Pārņemiet iniciatīvu 1 pret 1 sarunās',
+		metaTitle: 'Darbinieka 1 pret 1 rokasgrāmata — encrypted1on1',
 		subtitle:
 			'Kā inženieriem, dizaineriem un komandas dalībniekiem pārvarēt uztraukumu, vadīt darba kārtību un virzīt savu karjeru.',
 		category: 'foundations',
@@ -795,6 +803,7 @@ export const playbookItemsLv: PlaybookItem[] = [
 	{
 		slug: 'handling-difficult-situations',
 		title: 'Sarežģītu situāciju risināšana: Scenāriji kritiskiem 1 pret 1 brīžiem',
+		metaTitle: 'Sarežģītas situācijas 1 pret 1 — encrypted1on1',
 		subtitle:
 			'Pārbaudīti sarunu scenāriji un psiholoģiskie ietvari spriedzes, asaru, kritiskas atgriezeniskās saites un ultimātu risināšanai.',
 		category: 'difficult',

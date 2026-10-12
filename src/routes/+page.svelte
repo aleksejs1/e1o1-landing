@@ -213,8 +213,7 @@
 				<img
 					class="hero-screenshot hero-screenshot-dark"
 					src="/screenshots/anketa-preview-{getLocale()}-dark.webp"
-					alt=""
-					aria-hidden="true"
+					alt="{content.hero.screenshotAlt} ({locale === 'ru' ? 'тёмная тема' : 'dark mode'})"
 					width="688"
 					height="560"
 					loading="lazy"
@@ -592,7 +591,7 @@
 						<img
 							class="featured-card-cover-img"
 							src="/images/playbook/{item.slug}.webp"
-							alt=""
+							alt={item.title}
 							width="720"
 							height="405"
 							loading="lazy"

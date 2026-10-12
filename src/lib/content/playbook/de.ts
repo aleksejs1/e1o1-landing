@@ -38,6 +38,7 @@ export const playbookItemsDe: PlaybookItem[] = [
 	{
 		slug: 'high-leverage-1-on-1',
 		title: 'Das wirksame 1:1: Das Manifest für wertvolle Gespräche',
+		metaTitle: 'Das wirksame 1:1 Playbook — encrypted1on1',
 		subtitle:
 			'Warum 90 % aller Einzelgespräche zu langweiligen Statusberichten verkommen – und wie Sie daraus den stärksten Hebel für Ihr Team machen.',
 		category: 'foundations',
@@ -99,6 +100,7 @@ export const playbookItemsDe: PlaybookItem[] = [
 	{
 		slug: 'first-1-on-1',
 		title: 'Das erste 1:1: Erwartungsmanagement & psychologische Sicherheit',
+		metaTitle: 'Das erste 1:1 Playbook — encrypted1on1',
 		subtitle:
 			'Gegenseitiges Vertrauen aufbauen, individuelle Arbeitsstile kalibrieren („Benutzerhandbuch zu mir selbst“) und klare Spielregeln für zukünftige Treffen vereinbaren.',
 		category: 'onboarding',
@@ -193,6 +195,7 @@ export const playbookItemsDe: PlaybookItem[] = [
 	{
 		slug: 'bi-weekly-pulse',
 		title: 'Regelmäßiges 1:1: Der zweiwöchentliche Takt',
+		metaTitle: 'Zweiwöchentlicher Puls 1:1 — encrypted1on1',
 		subtitle:
 			'Ein wiederholbares 30–45-Minuten-Framework für Tech-Leads: Kognitive Belastung diagnostizieren, systemische Blockaden beseitigen und Erwartungen kontinuierlich abgleichen.',
 		category: 'regular',
@@ -294,6 +297,7 @@ export const playbookItemsDe: PlaybookItem[] = [
 	{
 		slug: 'career-growth',
 		title: 'Karriere & Wachstum: Das Quartalsgespräch',
+		metaTitle: 'Karriere & Entwicklung 1:1 Playbook — encrypted1on1',
 		subtitle:
 			'Eine strategische Session zur Abstimmung persönlicher Ambitionen, herausfordernder Aufgaben und langfristiger Entwicklungsrichtung.',
 		category: 'growth',
@@ -398,6 +402,7 @@ export const playbookItemsDe: PlaybookItem[] = [
 	{
 		slug: 'burnout-detection',
 		title: 'Überlastung & Burnout: Kraftreserven wiederherstellen',
+		metaTitle: 'Überlastung & Burnout 1:1 Playbook — encrypted1on1',
 		subtitle:
 			'Krisen-Leitfaden für Engineering Leads: Früherkennung von Erschöpfung, radikales Ausmisten des Backlogs und Abbau von Schuldgefühlen.',
 		category: 'difficult',
@@ -502,6 +507,7 @@ export const playbookItemsDe: PlaybookItem[] = [
 	{
 		slug: 'skip-level',
 		title: 'Skip-Level-1:1: Ungefilterte Organisationsdiagnose',
+		metaTitle: 'Skip-Level-1:1 Playbook — encrypted1on1',
 		subtitle:
 			'Strategischer Dialog zwischen oberster Führung (VP/CTO/Director) und Software-Entwicklern an der Basis: Strategie-Signale prüfen, systemische Hürden abbauen und Kultur eichen.',
 		category: 'leadership',
@@ -606,6 +612,7 @@ export const playbookItemsDe: PlaybookItem[] = [
 	{
 		slug: 'manager-playbook',
 		title: 'Das Manager-Playbook: Wirksame 1:1-Gespräche führen',
+		metaTitle: 'Das Manager-Playbook 1:1 — encrypted1on1',
 		subtitle:
 			'Mindset, 15-Minuten-Vorbereitungs-Checkliste, aktives Zuhören, das SBI-Feedbackmodell und echtes Sponsoring.',
 		category: 'leadership',
@@ -706,6 +713,7 @@ export const playbookItemsDe: PlaybookItem[] = [
 	{
 		slug: 'employee-playbook',
 		title: 'Das Mitarbeiter-Playbook: Das eigene 1:1 steuern',
+		metaTitle: 'Das Mitarbeiter-Playbook 1:1 — encrypted1on1',
 		subtitle:
 			'Wie Software-Entwickler, Designer und Teammitglieder Gesprächsängste abbauen, die Agenda bestimmen und die eigene Karriere voranbringen.',
 		category: 'foundations',
@@ -804,6 +812,7 @@ export const playbookItemsDe: PlaybookItem[] = [
 	{
 		slug: 'handling-difficult-situations',
 		title: 'Schwierige Situationen meistern: Leitfaden für heikle 1:1s',
+		metaTitle: 'Schwierige Situationen 1:1 Playbook — encrypted1on1',
 		subtitle:
 			'Konkrete Gesprächsleitfäden und psychologische Modelle für den Umgang mit Spannungen, Tränen, kritischem Feedback und Gehaltsultimaten.',
 		category: 'difficult',

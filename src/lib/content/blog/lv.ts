@@ -22,6 +22,7 @@ export const blogPostsLv: BlogPost[] = [
 	{
 		slug: 'why-we-built-encrypted1on1',
 		title: 'Kāpēc mēs izveidojām encrypted1on1',
+		metaTitle: 'Kāpēc mēs izveidojām encrypted1on1 — Blog',
 		subtitle:
 			'Atziņa, ka 1 pret 1 sarunu piezīmēm ir vajadzīga matemātika, nevis privātuma politikas solījumi.',
 		description:
@@ -74,6 +75,7 @@ export const blogPostsLv: BlogPost[] = [
 	{
 		slug: 'v1-0-0-release',
 		title: 'encrypted1on1 v1.0.0: pirmais stabilais laidiens',
+		metaTitle: 'encrypted1on1 v1.0.0: pirmais stabilais laidiens — Blog',
 		subtitle:
 			'Pašmitinātas 1:1 sarunas ar pilnīgu šifrēšanu, asinhronu sagatavošanos, mērķu pēctecību un gatavu Docker konteineru.',
 		description:
@@ -127,6 +129,7 @@ export const blogPostsLv: BlogPost[] = [
 	{
 		slug: 'v1-2-0-release',
 		title: 'encrypted1on1 v1.2.0: anketu versiju pārvaldība, labojumi un ērta saskarne',
+		metaTitle: 'encrypted1on1 v1.2.0: versiju pārvaldība un UX — Blog',
 		subtitle:
 			'Kā attīstīt 1:1 jautājumu kopas, neizkropļojot vēsturisko sarunu saturu, plus iespēja rediģēt savus ierakstus un elastīgi pārcelt datumus.',
 		description:
@@ -180,6 +183,7 @@ export const blogPostsLv: BlogPost[] = [
 	{
 		slug: '1-on-1-question-bank-templates',
 		title: 'Vairāk nekā «Kā klājas?»: iepazīstinām ar 1:1 jautājumu banku un veidnēm',
+		metaTitle: '1:1 Jautājumu banka un veidnes — encrypted1on1 Blog',
 		subtitle:
 			'Atlasīti jautājumi 7 galvenajās dimensijās ar skaidrojumu «kāpēc jautāt» un gatavām sarunu veidnēm.',
 		description:
@@ -230,6 +234,7 @@ export const blogPostsLv: BlogPost[] = [
 	{
 		slug: '5-essential-books-for-high-leverage-1-on-1s',
 		title: '1:1 Grāmatu plaukts: 5 būtiskākās grāmatas komandu vadītājiem',
+		metaTitle: '5 būtiskākās grāmatas 1 pret 1 vadītājiem — e1o1',
 		subtitle:
 			'Vadības meistarklase no Endija Grova, Bena Horovica, Džūlijas Džo, Kamillas Furnjē un Kimas Skotas pielietojamās 1:1 sarunās.',
 		description:
@@ -281,6 +286,7 @@ export const blogPostsLv: BlogPost[] = [
 	{
 		slug: 'meeting-templates-playbook-and-form-templates-preview',
 		title: '1:1 Sarunu rokasgrāmata: pārbaudītas veidnes un drīzs veidlapu atbalsts platformā',
+		metaTitle: '1:1 Sarunu veidnes un rokasgrāmata — Blog e1o1',
 		subtitle:
 			'Interaktīva scenāriju bibliotēka dažādiem komandas posmiem — un ieskats gaidāmajā anketu veidņu atbalstā encrypted1on1 platformā.',
 		description:
@@ -333,6 +339,7 @@ export const blogPostsLv: BlogPost[] = [
 	{
 		slug: 'v1-3-0-release',
 		title: 'encrypted1on1 v1.3.0: iebūvētās anketu veidnes un vienreizējās sarunas',
+		metaTitle: 'encrypted1on1 v1.3.0: iebūvētās anketu veidnes — Blog',
 		subtitle:
 			'Specializētas anketas jaunpienācēju ievadīšanai, karjeras sarunām un slodzes pārbaudei, kā arī vienreizējas anketas bez regulāro sarunu ķēdes sadalīšanas.',
 		description:
@@ -393,6 +400,7 @@ export const blogPostsLv: BlogPost[] = [
 	{
 		slug: 'why-1-on-1-notes-should-not-live-in-notion-or-slack',
 		title: 'Kāpēc 1 pret 1 piezīmēm nav vietas korporatīvajā Notion vai Slack: atklātības cena',
+		metaTitle: 'Kāpēc 1 pret 1 piezīmēm nav vietas Notion — e1o1',
 		subtitle:
 			'Kā ilūzija par korporatīvo privātumu rada pašcenzūru, pakļauj uzņēmumu juridiskiem riskiem un kāpēc vadītājiem nepieciešama divu loku arhitektūra.',
 		description:

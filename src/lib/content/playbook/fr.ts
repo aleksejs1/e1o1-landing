@@ -38,6 +38,7 @@ export const playbookItemsFr: PlaybookItem[] = [
 	{
 		slug: 'high-leverage-1-on-1',
 		title: 'Le 1:1 à fort impact : Le manifeste pour des réunions constructives',
+		metaTitle: 'Le 1:1 à fort impact Playbook — encrypted1on1',
 		subtitle:
 			'Pourquoi 90 % des entretiens individuels finissent en rapports d’avancement stériles — et comment en faire le levier le plus puissant de votre équipe.',
 		category: 'foundations',
@@ -98,6 +99,7 @@ export const playbookItemsFr: PlaybookItem[] = [
 	{
 		slug: 'first-1-on-1',
 		title: 'Le premier 1:1 : Clarifier les attentes et instaurer la confiance',
+		metaTitle: 'Le premier 1:1 Playbook — encrypted1on1',
 		subtitle:
 			'Bâtir une confiance mutuelle, calibrer les modes de travail individuels (« mode d’emploi personnel ») et sceller les règles du jeu pour les futurs échanges.',
 		category: 'onboarding',
@@ -192,6 +194,7 @@ export const playbookItemsFr: PlaybookItem[] = [
 	{
 		slug: 'bi-weekly-pulse',
 		title: 'Point bimensuel : Le rythme de croisière à fort impact',
+		metaTitle: 'Point bimensuel 1:1 Playbook — encrypted1on1',
 		subtitle:
 			'Un cadre reproductible de 30 à 45 minutes pour managers techniques : diagnostiquer la charge cognitive, lever les blocages systémiques et maintenir l’alignement.',
 		category: 'regular',
@@ -293,6 +296,7 @@ export const playbookItemsFr: PlaybookItem[] = [
 	{
 		slug: 'career-growth',
 		title: 'Évolution professionnelle : Le point stratégique trimestriel',
+		metaTitle: 'Évolution professionnelle 1:1 — encrypted1on1',
 		subtitle:
 			'Une session stratégique à fort impact pour aligner ambitions personnelles, projets d’apprentissage et trajectoire technique à long terme.',
 		category: 'growth',
@@ -398,6 +402,7 @@ export const playbookItemsFr: PlaybookItem[] = [
 	{
 		slug: 'burnout-detection',
 		title: 'Surcharge et épuisement : Restaurer l’équilibre',
+		metaTitle: 'Surcharge et épuisement 1:1 — encrypted1on1',
 		subtitle:
 			'Un cadre d’intervention critique pour les engineering leads : détection précoce de l’épuisement, délestage radical du backlog et levée de la culpabilité.',
 		category: 'difficult',
@@ -503,6 +508,7 @@ export const playbookItemsFr: PlaybookItem[] = [
 	{
 		slug: 'skip-level',
 		title: 'Skip-Level 1:1 : Diagnostic organisationnel sans filtre',
+		metaTitle: 'Skip-Level 1:1 Playbook — encrypted1on1',
 		subtitle:
 			'Un dialogue stratégique à fort effet de levier entre la direction technique (VP/CTO/Directeur) et les ingénieurs de terrain : valider le signal stratégique, éliminer les frictions systémiques et calibrer la culture.',
 		category: 'leadership',
@@ -609,6 +615,7 @@ export const playbookItemsFr: PlaybookItem[] = [
 	{
 		slug: 'manager-playbook',
 		title: 'Le Playbook du Manager : Mener des 1:1 à Fort Impact',
+		metaTitle: 'Playbook du Manager 1:1 — encrypted1on1',
 		subtitle:
 			'Changement de posture, checklist de préparation en 15 minutes, écoute active, modèle de feedback SBI et vrai rôle de sponsor.',
 		category: 'leadership',
@@ -708,6 +715,7 @@ export const playbookItemsFr: PlaybookItem[] = [
 	{
 		slug: 'employee-playbook',
 		title: 'Le Playbook du Collaborateur : Prendre la Main sur son 1:1',
+		metaTitle: 'Playbook du Collaborateur 1:1 — encrypted1on1',
 		subtitle:
 			"Comment développeurs, designers et équipiers peuvent surmonter l'anxiété des réunions, piloter l'ordre du jour et accélérer leur carrière.",
 		category: 'foundations',
@@ -808,6 +816,7 @@ export const playbookItemsFr: PlaybookItem[] = [
 	{
 		slug: 'handling-difficult-situations',
 		title: 'Gérer les Situations Délicates : Scripts pour 1:1 à Enjeux',
+		metaTitle: 'Situations Délicates en 1:1 — encrypted1on1',
 		subtitle:
 			'Scripts conversationnels précis et repères psychologiques pour désamorcer les tensions, larmes, retours critiques et ultimatums.',
 		category: 'difficult',

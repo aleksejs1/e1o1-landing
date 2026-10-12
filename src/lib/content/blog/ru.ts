@@ -22,6 +22,7 @@ export const blogPostsRu: BlogPost[] = [
 	{
 		slug: 'why-we-built-encrypted1on1',
 		title: 'Почему мы создали encrypted1on1',
+		metaTitle: 'Почему мы создали encrypted1on1 — Blog',
 		subtitle:
 			'Осознание того, что заметки 1-на-1 требуют математики, а не обещаний в политиках конфиденциальности.',
 		description:
@@ -74,6 +75,7 @@ export const blogPostsRu: BlogPost[] = [
 	{
 		slug: 'v1-0-0-release',
 		title: 'encrypted1on1 v1.0.0: первый стабильный релиз',
+		metaTitle: 'encrypted1on1 v1.0.0: первый стабильный релиз — Blog',
 		subtitle:
 			'Сквозное шифрование встреч 1-на-1, асинхронная подготовка анкет, сквозные цели и готовый Docker-образ.',
 		description:
@@ -127,6 +129,7 @@ export const blogPostsRu: BlogPost[] = [
 	{
 		slug: 'v1-2-0-release',
 		title: 'encrypted1on1 v1.2.0: версионирование анкет, редактирование и удобство встреч',
+		metaTitle: 'encrypted1on1 v1.2.0: версионирование и UX — Blog',
 		subtitle:
 			'Как развивать шаблоны 1-на-1 без искажения истории прошлых встреч, возможность редактировать свои договорённости и переносить даты.',
 		description:
@@ -180,6 +183,7 @@ export const blogPostsRu: BlogPost[] = [
 	{
 		slug: '1-on-1-question-bank-templates',
 		title: 'Больше, чем «Как дела?»: представляем банк вопросов и шаблоны 1-на-1',
+		metaTitle: 'Банк вопросов и шаблоны 1-на-1 — encrypted1on1 Blog',
 		subtitle:
 			'Курированная подборка глубоких вопросов по 7 ключевым направлениям — с объяснением «зачем спрашивать» и готовыми шаблонами.',
 		description:
@@ -230,6 +234,7 @@ export const blogPostsRu: BlogPost[] = [
 	{
 		slug: '5-essential-books-for-high-leverage-1-on-1s',
 		title: 'Книжная полка 1-на-1: 5 главных книг для лидеров и инженеров',
+		metaTitle: '5 главных книг для встреч 1-на-1 — encrypted1on1',
 		subtitle:
 			'Квинтэссенция управленческой мудрости от Энди Гроува, Бена Хоровица, Джули Чжо, Камиллы Фурнье и Ким Скотт в прикладных практиках 1-на-1.',
 		description:
@@ -281,6 +286,7 @@ export const blogPostsRu: BlogPost[] = [
 	{
 		slug: 'meeting-templates-playbook-and-form-templates-preview',
 		title: 'Плейбук шаблонов 1-на-1: проверенные сценарии и анонс шаблонов форм в encrypted1on1',
+		metaTitle: 'Шаблоны встреч 1-на-1 и плейбук — encrypted1on1 Blog',
 		subtitle:
 			'Интерактивная коллекция готовых повесток для разных ситуаций — и первый взгляд на скорое появление поддержки шаблонов анкет в платформе.',
 		description:
@@ -333,6 +339,7 @@ export const blogPostsRu: BlogPost[] = [
 	{
 		slug: 'v1-3-0-release',
 		title: 'encrypted1on1 v1.3.0: встроенные шаблоны анкет и разовые встречи',
+		metaTitle: 'encrypted1on1 v1.3.0: встроенные шаблоны анкет — Blog',
 		subtitle:
 			'Специализированные опросники для онбординга, карьерного диалога и разбора нагрузки, а также разовые встречи без нарушения цепочки регулярных 1-на-1.',
 		description:
@@ -393,6 +400,7 @@ export const blogPostsRu: BlogPost[] = [
 	{
 		slug: 'why-1-on-1-notes-should-not-live-in-notion-or-slack',
 		title: 'Почему 1-на-1 не должны лежать в корпоративном Notion или Slack: цена откровенности',
+		metaTitle: 'Почему 1-на-1 не место в Notion и Slack — e1o1',
 		subtitle:
 			'Как иллюзия корпоративной приватности порождает самоцензуру, создает юридические риски и почему доверие требует разделения контуров.',
 		description:

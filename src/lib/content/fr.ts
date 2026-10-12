@@ -211,6 +211,7 @@ export const fr: LandingContent = {
 	},
 
 	architecture: {
+		metaTitle: 'Architecture cryptographique Zero-Knowledge — encrypted1on1',
 		heading: 'Architecture cryptographique : pourquoi espionner est impossible',
 		subhead:
 			'La sécurité repose sur des preuves mathématiques et la cryptographie, non sur des promesses rédigées dans une politique de confidentialité.',

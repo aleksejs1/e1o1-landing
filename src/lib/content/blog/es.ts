@@ -22,6 +22,7 @@ export const blogPostsEs: BlogPost[] = [
 	{
 		slug: 'why-we-built-encrypted1on1',
 		title: 'Por qué creamos encrypted1on1',
+		metaTitle: 'Por qué creamos encrypted1on1 — Blog',
 		subtitle:
 			'La revelación de que las notas de un 1 a 1 necesitan matemáticas, no políticas de privacidad.',
 		description:
@@ -74,6 +75,7 @@ export const blogPostsEs: BlogPost[] = [
 	{
 		slug: 'v1-0-0-release',
 		title: 'encrypted1on1 v1.0.0: Primer lanzamiento estable',
+		metaTitle: 'encrypted1on1 v1.0.0: Lanzamiento estable — Blog',
 		subtitle:
 			'Reuniones 1:1 autoalojadas y cifradas de extremo a extremo, preparación asíncrona y despliegue en Docker.',
 		description:
@@ -127,6 +129,7 @@ export const blogPostsEs: BlogPost[] = [
 	{
 		slug: 'v1-2-0-release',
 		title: 'encrypted1on1 v1.2.0: versionado de formularios, edición propia y mejor experiencia',
+		metaTitle: 'encrypted1on1 v1.2.0: Versionado y UX — Blog',
 		subtitle:
 			'Cómo evolucionar los cuestionarios 1 a 1 sin distorsionar el historial de reuniones pasadas, edición propia de acuerdos y reprogramación de fechas.',
 		description:
@@ -180,6 +183,7 @@ export const blogPostsEs: BlogPost[] = [
 	{
 		slug: '1-on-1-question-bank-templates',
 		title: 'Más allá del «¿Cómo va todo?»: presentamos el Banco de Preguntas y Plantillas 1 a 1',
+		metaTitle: 'Banco de preguntas y plantillas 1 a 1 — Blog e1o1',
 		subtitle:
 			'Una selección de preguntas catalizadoras en 7 dimensiones esenciales — con el motivo detrás de cada una y plantillas listas para usar.',
 		description:
@@ -230,6 +234,7 @@ export const blogPostsEs: BlogPost[] = [
 	{
 		slug: '5-essential-books-for-high-leverage-1-on-1s',
 		title: 'La biblioteca 1:1: 5 libros esenciales para líderes de ingeniería',
+		metaTitle: '5 libros esenciales para líderes 1 a 1 — e1o1',
 		subtitle:
 			'Destilando décadas de sabiduría de Andy Grove, Ben Horowitz, Julie Zhuo, Camille Fournier y Kim Scott en prácticas directas para tus reuniones 1:1.',
 		description:
@@ -282,6 +287,7 @@ export const blogPostsEs: BlogPost[] = [
 		slug: 'meeting-templates-playbook-and-form-templates-preview',
 		title:
 			'Playbook de plantillas 1:1: formatos probados y adelanto de plantillas de formularios en encrypted1on1',
+		metaTitle: 'Plantillas 1 a 1 y formatos — encrypted1on1 Blog',
 		subtitle:
 			'Una colección interactiva de agendas adaptadas a cada momento del equipo, con un adelanto exclusivo del próximo soporte nativo de formularios.',
 		description:
@@ -335,6 +341,7 @@ export const blogPostsEs: BlogPost[] = [
 	{
 		slug: 'v1-3-0-release',
 		title: 'encrypted1on1 v1.3.0: plantillas integradas de anketas y reuniones puntuales',
+		metaTitle: 'encrypted1on1 v1.3.0: Plantillas de reunión — Blog',
 		subtitle:
 			'Plantillas de preguntas para incorporación, desarrollo profesional y apoyo ante sobrecarga, junto con reuniones puntuales que respetan la continuidad del ciclo.',
 		description:
@@ -396,6 +403,7 @@ export const blogPostsEs: BlogPost[] = [
 		slug: 'why-1-on-1-notes-should-not-live-in-notion-or-slack',
 		title:
 			'Por qué las notas de 1 a 1 no deben estar en Notion o Slack corporativos: el precio de la franqueza',
+		metaTitle: 'Por qué las notas 1 a 1 no van en Notion — e1o1',
 		subtitle:
 			'Cómo la ilusión de privacidad corporativa provoca autocensura, crea riesgos legales y por qué los líderes necesitan una arquitectura de dos circuitos.',
 		description:

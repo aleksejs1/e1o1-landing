@@ -37,6 +37,7 @@ export const playbookItemsRu: PlaybookItem[] = [
 	{
 		slug: 'high-leverage-1-on-1',
 		title: 'Анатомия эффективного 1-на-1: Манифест осознанных встреч',
+		metaTitle: 'Анатомия эффективного 1-на-1 — encrypted1on1',
 		subtitle:
 			'Почему 90% встреч один-на-один превращаются в скучный статус-апдейт, и как сделать их главным управленческим рычагом команды.',
 		category: 'foundations',
@@ -98,6 +99,7 @@ export const playbookItemsRu: PlaybookItem[] = [
 	{
 		slug: 'first-1-on-1',
 		title: 'Первый 1-на-1: Установка ожиданий и психологическая безопасность',
+		metaTitle: 'Первый 1-на-1: цели и ожидания — encrypted1on1',
 		subtitle:
 			'Построение взаимного доверия, калибровка стиля коммуникации («инструкция к себе») и согласование прозрачных правил будущих встреч.',
 		category: 'onboarding',
@@ -191,6 +193,7 @@ export const playbookItemsRu: PlaybookItem[] = [
 	{
 		slug: 'bi-weekly-pulse',
 		title: 'Регулярный 1-на-1: Высокоэффективный двухнедельный синк',
+		metaTitle: 'Регулярный 1-на-1: двухнедельный синк — encrypted1on1',
 		subtitle:
 			'Повторяемый 30–45 минутный фреймворк для инженерных лидеров: диагностика когнитивной нагрузки, устранение системных блокеров и непрерывное выравнивание ожиданий.',
 		category: 'regular',
@@ -292,6 +295,7 @@ export const playbookItemsRu: PlaybookItem[] = [
 	{
 		slug: 'career-growth',
 		title: 'Квартальный диалог о развитии и карьере',
+		metaTitle: 'Диалог о развитии и карьере 1-на-1 — encrypted1on1',
 		subtitle:
 			'Стратегический 60-минутный фреймворк для инженеров и менеджеров: аудит профессиональной энергии, развивающие проекты (stretch goals) и построение траектории на 1–2 года.',
 		category: 'growth',
@@ -396,6 +400,7 @@ export const playbookItemsRu: PlaybookItem[] = [
 	{
 		slug: 'burnout-detection',
 		title: 'Перегруз и выгорание: Восстановление ресурса',
+		metaTitle: 'Перегруз и выгорание на 1-на-1 — encrypted1on1',
 		subtitle:
 			'Кризисный фреймворк для инженеров и тимлидов: ранняя диагностика истощения, радикальный триаж задач и снятие чувства вины.',
 		category: 'difficult',
@@ -500,6 +505,7 @@ export const playbookItemsRu: PlaybookItem[] = [
 	{
 		slug: 'skip-level',
 		title: 'Skip-Level 1-на-1: Нефильтрованная диагностика организации',
+		metaTitle: 'Skip-Level 1-на-1 встречи — encrypted1on1',
 		subtitle:
 			'Стратегический диалог между топ-менеджером (VP/CTO/Director) и инженером на передовой: проверка сигналов стратегии, устранение системных трений и калибровка культуры.',
 		category: 'leadership',
@@ -603,6 +609,7 @@ export const playbookItemsRu: PlaybookItem[] = [
 	{
 		slug: 'manager-playbook',
 		title: 'Плейбук руководителя: Проведение эффективных встреч 1-на-1',
+		metaTitle: 'Плейбук руководителя 1-на-1 — encrypted1on1',
 		subtitle:
 			'Смена мышления, подготовка за 15 минут, активное слушание, модель SBI и настоящая поддержка.',
 		category: 'leadership',
@@ -700,6 +707,7 @@ export const playbookItemsRu: PlaybookItem[] = [
 	{
 		slug: 'employee-playbook',
 		title: 'Плейбук сотрудника: Как извлечь максимум из 1-на-1',
+		metaTitle: 'Плейбук сотрудника: встречи 1-на-1 — encrypted1on1',
 		subtitle:
 			'Как инженерам и специалистам избавиться от тревоги перед встречами, управлять повесткой и развивать карьеру.',
 		category: 'foundations',
@@ -797,6 +805,7 @@ export const playbookItemsRu: PlaybookItem[] = [
 	{
 		slug: 'handling-difficult-situations',
 		title: 'Сложные ситуации и кризисы: Готовые сценарии для 1-на-1',
+		metaTitle: 'Сложные ситуации и кризисы на 1-на-1 — encrypted1on1',
 		subtitle:
 			'Проверенные речевые сценарии и психологические фреймворки для работы со слезами, глухой обороной, критическим фидбеком и ультиматумами.',
 		category: 'difficult',

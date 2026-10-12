@@ -22,6 +22,7 @@ export const blogPostsFr: BlogPost[] = [
 	{
 		slug: 'why-we-built-encrypted1on1',
 		title: 'Pourquoi nous avons créé encrypted1on1',
+		metaTitle: 'Pourquoi nous avons créé encrypted1on1 — Blog',
 		subtitle:
 			'La prise de conscience que les notes de 1:1 exigent des mathématiques, pas de simples politiques de confidentialité.',
 		description:
@@ -74,6 +75,7 @@ export const blogPostsFr: BlogPost[] = [
 	{
 		slug: 'v1-0-0-release',
 		title: 'encrypted1on1 v1.0.0 : Première version stable',
+		metaTitle: 'encrypted1on1 v1.0.0 : Première version stable — Blog',
 		subtitle:
 			'Entretiens 1:1 auto-hébergés et chiffrés de bout en bout, préparation asynchrone, suivi des objectifs et déploiement Docker.',
 		description:
@@ -127,6 +129,7 @@ export const blogPostsFr: BlogPost[] = [
 	{
 		slug: 'v1-2-0-release',
 		title: 'encrypted1on1 v1.2.0 : versionnage des formulaires, édition autonome et UX affinée',
+		metaTitle: 'encrypted1on1 v1.2.0 : Versionnage et UX — Blog',
 		subtitle:
 			'Comment faire évoluer les trames d’entretiens 1:1 sans altérer l’historique passé, édition de ses propres accords et report de date.',
 		description:
@@ -182,6 +185,7 @@ export const blogPostsFr: BlogPost[] = [
 		slug: '1-on-1-question-bank-templates',
 		title:
 			'Au-delà du simple « Comment ça va ? » : découvrez la Banque de questions et modèles 1:1',
+		metaTitle: 'Banque de questions et modèles 1:1 — Blog e1o1',
 		subtitle:
 			'Une sélection de questions stimulantes réparties en 7 dimensions clés — avec les explications méthodologiques et des trames prêtes à l’emploi.',
 		description:
@@ -232,6 +236,7 @@ export const blogPostsFr: BlogPost[] = [
 	{
 		slug: '5-essential-books-for-high-leverage-1-on-1s',
 		title: 'La bibliothèque 1:1 : 5 livres incontournables pour les managers d’ingénierie',
+		metaTitle: '5 livres incontournables pour les 1:1 — e1o1',
 		subtitle:
 			'L’essentiel de la sagesse managériale d’Andy Grove, Ben Horowitz, Julie Zhuo, Camille Fournier et Kim Scott adapté à vos entretiens 1:1.',
 		description:
@@ -284,6 +289,7 @@ export const blogPostsFr: BlogPost[] = [
 		slug: 'meeting-templates-playbook-and-form-templates-preview',
 		title:
 			'Le Guide des modèles 1:1 : trames éprouvées et avant-première des modèles de formulaires',
+		metaTitle: 'Modèles et trames de réunion 1:1 — Blog e1o1',
 		subtitle:
 			'Une collection interactive d’ordres du jour adaptés à chaque étape d’équipe — avec un aperçu exclusif de la prise en charge prochaine des modèles de trames dans encrypted1on1.',
 		description:
@@ -337,6 +343,7 @@ export const blogPostsFr: BlogPost[] = [
 	{
 		slug: 'v1-3-0-release',
 		title: 'encrypted1on1 v1.3.0 : modèles d’anketa intégrés et entretiens ponctuels',
+		metaTitle: 'encrypted1on1 v1.3.0 : Modèles de réunion — Blog',
 		subtitle:
 			'Des trames de questions spécialisées pour l’intégration, l’évolution de carrière et le soutien face à la charge, associées à des entretiens ponctuels sans rupture de cycle.',
 		description:
@@ -398,6 +405,7 @@ export const blogPostsFr: BlogPost[] = [
 		slug: 'why-1-on-1-notes-should-not-live-in-notion-or-slack',
 		title:
 			'Pourquoi les notes de 1 à 1 ne doivent pas rester dans Notion ou Slack : le prix de la franchise',
+		metaTitle: 'Pourquoi les notes 1:1 ne vont pas dans Slack — e1o1',
 		subtitle:
 			'Comment l’illusion de confidentialité d’entreprise engendre l’autocensure, crée des risques juridiques et pourquoi les leaders ont besoin de deux circuits.',
 		description:

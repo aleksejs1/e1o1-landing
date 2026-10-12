@@ -152,6 +152,7 @@ export interface LandingContent {
 	};
 
 	architecture: {
+		metaTitle?: string;
 		heading: string;
 		subhead: string;
 		steps: ArchitectureStep[];

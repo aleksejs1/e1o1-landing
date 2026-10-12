@@ -97,7 +97,7 @@
 					<img
 						class="card-cover-img"
 						src="/images/playbook/{item.slug}.webp"
-						alt=""
+						alt={item.title}
 						width="600"
 						height="338"
 						loading="lazy"

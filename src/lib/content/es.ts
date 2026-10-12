@@ -211,6 +211,7 @@ export const es: LandingContent = {
 	},
 
 	architecture: {
+		metaTitle: 'Arquitectura criptográfica y seguridad — encrypted1on1',
 		heading: 'Arquitectura criptográfica: por qué mirar es imposible',
 		subhead:
 			'La seguridad se basa en garantías criptográficas y pruebas matemáticas, no en promesas redactadas en una política de privacidad.',

@@ -210,6 +210,7 @@ export const de: LandingContent = {
 	},
 
 	architecture: {
+		metaTitle: 'Kryptografische Architektur & Sicherheit — encrypted1on1',
 		heading: 'Kryptografische Architektur: Warum Mitlesen unmöglich ist',
 		subhead:
 			'Sicherheit basiert auf mathematischen Garantien und kryptografischen Beweisen, nicht auf Zusicherungen in einer Datenschutzerklärung.',

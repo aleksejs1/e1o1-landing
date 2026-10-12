@@ -22,6 +22,7 @@ export const blogPostsDe: BlogPost[] = [
 	{
 		slug: 'why-we-built-encrypted1on1',
 		title: 'Warum wir encrypted1on1 gebaut haben',
+		metaTitle: 'Warum wir encrypted1on1 gebaut haben — Blog',
 		subtitle:
 			'Die Erkenntnis, dass 1:1-Gesprächsnotizen Mathematik erfordern und keine Versprechen in Datenschutzerklärungen.',
 		description:
@@ -74,6 +75,7 @@ export const blogPostsDe: BlogPost[] = [
 	{
 		slug: 'v1-0-0-release',
 		title: 'encrypted1on1 v1.0.0: Die erste stabile Version',
+		metaTitle: 'encrypted1on1 v1.0.0: Erste stabile Version — Blog',
 		subtitle:
 			'Self-hosted, Ende-zu-Ende-verschlüsselte 1:1-Gespräche mit asynchroner Vorbereitung, Zielverfolgung und Docker-Deployment.',
 		description:
@@ -127,6 +129,7 @@ export const blogPostsDe: BlogPost[] = [
 	{
 		slug: 'v1-2-0-release',
 		title: 'encrypted1on1 v1.2.0: Fragebogen-Versionierung, eigene Korrekturen und verbesserte UX',
+		metaTitle: 'encrypted1on1 v1.2.0: Versionierung & UX — Blog',
 		subtitle:
 			'Wie Fragebögen für 1:1-Gespräche ohne Bedeutungsverlust vergangener Notizen weiterentwickelt werden, eigene Korrekturen und Terminverschiebungen.',
 		description:
@@ -180,6 +183,7 @@ export const blogPostsDe: BlogPost[] = [
 	{
 		slug: '1-on-1-question-bank-templates',
 		title: 'Mehr als „Wie läuft’s?“: Der interaktive Fragenkatalog & Vorlagen für 1:1-Gespräche',
+		metaTitle: 'Fragenkatalog & Vorlagen für 1:1 — encrypted1on1 Blog',
 		subtitle:
 			'Eine kuratierte Sammlung tiefgehender Fragen in 7 Dimensionen — inklusive methodischer Hintergründe und einsatzbereiter Vorlagen.',
 		description:
@@ -230,6 +234,7 @@ export const blogPostsDe: BlogPost[] = [
 	{
 		slug: '5-essential-books-for-high-leverage-1-on-1s',
 		title: 'Das 1:1-Bücherregal: 5 essenzielle Werke für erfolgreiche Führungskräfte',
+		metaTitle: '5 Bücher für erfolgreiche 1:1-Führung — encrypted1on1',
 		subtitle:
 			'Jahrzehnte an Führungserfahrung von Andy Grove, Ben Horowitz, Julie Zhuo, Camille Fournier und Kim Scott, destilliert in konkrete 1:1-Praxis.',
 		description:
@@ -281,6 +286,7 @@ export const blogPostsDe: BlogPost[] = [
 	{
 		slug: 'meeting-templates-playbook-and-form-templates-preview',
 		title: 'Das 1:1-Gesprächs-Playbook: Praxiserprobte Vorlagen & Vorschau auf Formular-Vorlagen',
+		metaTitle: '1:1-Gesprächs-Playbook & Vorlagen — encrypted1on1 Blog',
 		subtitle:
 			'Eine strukturierte Sammlung zielgerichteter Agenden für jede Teamphase — inklusive eines Ausblicks auf die kommende Formular-Vorlagenunterstützung in encrypted1on1.',
 		description:
@@ -333,6 +339,7 @@ export const blogPostsDe: BlogPost[] = [
 	{
 		slug: 'v1-3-0-release',
 		title: 'encrypted1on1 v1.3.0: Integrierte Formular-Vorlagen und einmalige Gespräche',
+		metaTitle: 'encrypted1on1 v1.3.0: Formular-Vorlagen — Blog',
 		subtitle:
 			'Spezialisierte Fragebögen für Onboarding, Karriereentwicklung und Belastungs-Check-ins, kombiniert mit verzweigungsfreien Einmal-Gesprächen.',
 		description:
@@ -393,6 +400,7 @@ export const blogPostsDe: BlogPost[] = [
 	{
 		slug: 'why-1-on-1-notes-should-not-live-in-notion-or-slack',
 		title: 'Warum 1:1-Notizen nicht in Notion oder Slack gehören: Der Preis der Offenheit',
+		metaTitle: 'Warum 1:1-Notizen nicht in Slack gehören — encrypted1on1',
 		subtitle:
 			'Wie die Illusion betrieblicher Privatsphäre Selbstzensur erzeugt, rechtliche Risiken birgt und warum Führungskräfte eine Zwei-Kreise-Architektur brauchen.',
 		description:

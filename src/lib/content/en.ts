@@ -211,6 +211,7 @@ export const en: LandingContent = {
 	},
 
 	architecture: {
+		metaTitle: 'Zero-Knowledge Security Architecture — encrypted1on1',
 		heading: 'Cryptographic Architecture: Why Looking Is Impossible',
 		subhead:
 			'Security is rooted in cryptographic guarantees and mathematical proof, not vague promises in a privacy policy.',

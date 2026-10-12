@@ -17,6 +17,7 @@ export interface PlaybookAntiPattern {
 export interface PlaybookItem {
 	slug: string;
 	title: string;
+	metaTitle?: string;
 	subtitle: string;
 	category: PlaybookCategory;
 	readTime: string;

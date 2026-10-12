@@ -78,13 +78,23 @@
 				})
 			: ''
 	);
+	const metaTitle = $derived(
+		item
+			? (item.metaTitle ??
+					(`${item.title} — encrypted1on1 Playbook`.length <= 65
+						? `${item.title} — encrypted1on1 Playbook`
+						: `${item.title} — encrypted1on1`.length <= 65
+							? `${item.title} — encrypted1on1`
+							: `${item.title.split(/\s*[:–—]\s*/)[0].trim()} — encrypted1on1`))
+			: ''
+	);
 </script>
 
 <svelte:head>
 	{#if item}
-		<title>{item.title} — encrypted1on1 Playbook</title>
+		<title>{metaTitle}</title>
 		<meta name="description" content={item.subtitle} />
-		<meta property="og:title" content="{item.title} — encrypted1on1 Playbook" />
+		<meta property="og:title" content={metaTitle} />
 		<meta property="og:description" content={item.subtitle} />
 		<meta property="og:image" content="{SITE_URL}/images/playbook/{item.slug}.jpg" />
 		<meta property="og:image:width" content="1200" />

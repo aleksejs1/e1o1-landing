@@ -211,6 +211,7 @@ export const lv: LandingContent = {
 	},
 
 	architecture: {
+		metaTitle: 'Kriptogrāfiskā arhitektūra un drošība — encrypted1on1',
 		heading: 'Kriptogrāfiskā arhitektūra: kāpēc piekļuve nav iespējama',
 		subhead:
 			'Drošība balstās uz kriptogrāfiskām garantijām un matemātisku pierādījumu, nevis solījumiem privātuma politikā.',

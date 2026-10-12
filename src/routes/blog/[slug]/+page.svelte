@@ -44,13 +44,23 @@
 				})
 			: ''
 	);
+	const metaTitle = $derived(
+		post
+			? (post.metaTitle ??
+					(`${post.title} — encrypted1on1 Blog`.length <= 65
+						? `${post.title} — encrypted1on1 Blog`
+						: `${post.title} — encrypted1on1`.length <= 65
+							? `${post.title} — encrypted1on1`
+							: `${post.title.slice(0, 48)}… — encrypted1on1`))
+			: ''
+	);
 </script>
 
 <svelte:head>
 	{#if post}
-		<title>{post.title} — encrypted1on1 Blog</title>
+		<title>{metaTitle}</title>
 		<meta name="description" content={post.description} />
-		<meta property="og:title" content="{post.title} — encrypted1on1 Blog" />
+		<meta property="og:title" content={metaTitle} />
 		<meta property="og:description" content={post.description} />
 		<meta
 			property="og:image"
@@ -102,10 +112,7 @@
 		<div class="detail-cover-wrap">
 			<img
 				class="detail-cover-img"
-				src={(post.coverImage || '/images/landing/origin-trust.jpg').replace(
-					/\.jpg$/,
-					'.webp'
-				)}
+				src={(post.coverImage || '/images/landing/origin-trust.jpg').replace(/\.jpg$/, '.webp')}
 				alt={post.title}
 				width="1376"
 				height="768"
