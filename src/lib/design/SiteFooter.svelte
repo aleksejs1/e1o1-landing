@@ -11,7 +11,7 @@
 <footer class="site-footer">
 	<div class="site-footer-columns">
 		<div class="footer-col">
-			<h6>{content.footer.productHeading}</h6>
+			<h4 class="footer-title">{content.footer.productHeading}</h4>
 			<a href={localizeHref('/about/')}
 				>{getLocale() === 'ru' ? 'О проекте и манифест' : 'About & Manifesto'}</a
 			>
@@ -35,7 +35,7 @@
 		</div>
 
 		<div class="footer-col">
-			<h6>Playbook</h6>
+			<h4 class="footer-title">Playbook</h4>
 			<a href={localizeHref('/playbook/')}>1:1 Playbook</a>
 			<a href={localizeHref('/playbook/questions/')}>Question Bank</a>
 			<a href={localizeHref('/playbook/books/')}>Bookshelf</a>
@@ -51,13 +51,13 @@
 		</div>
 
 		<div class="footer-col">
-			<h6>{content.footer.legalHeading}</h6>
+			<h4 class="footer-title">{content.footer.legalHeading}</h4>
 			<a href={localizeHref('/terms/')}>{content.footer.termsLabel}</a>
 			<a href={localizeHref('/privacy/')}>{content.footer.privacyLabel}</a>
 		</div>
 
 		<div class="footer-col">
-			<h6>{content.footer.languageHeading}</h6>
+			<h4 class="footer-title">{content.footer.languageHeading}</h4>
 			<LanguageSwitcher variant="footer" />
 		</div>
 	</div>
@@ -86,6 +86,15 @@
 		flex-direction: column;
 		gap: var(--space-2);
 		min-width: 140px;
+	}
+
+	.footer-title {
+		font-size: 12px;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		margin: 0;
+		color: color-mix(in srgb, var(--color-text) 72%, transparent);
+		font-weight: 600;
 	}
 
 	.footer-col a {

@@ -446,16 +446,16 @@
 					<thead>
 						<tr>
 							{#each content.comparison.tableColumns as col, i (col)}
-								<th class={i === 1 ? 'col-highlight' : ''}>{col}</th>
+								<th scope="col" class={i === 1 ? 'col-highlight' : ''}>{col}</th>
 							{/each}
 						</tr>
 					</thead>
 					<tbody>
 						{#each content.comparison.tableRows as row (row.feature)}
 							<tr>
-								<td class="feature-col">
+								<th scope="row" class="feature-col">
 									<strong>{row.feature}</strong>
-								</td>
+								</th>
 								<td class="col-highlight">
 									<div class="status-cell">
 										<span class="status-check" aria-hidden="true">✓</span>
@@ -758,16 +758,16 @@
 					<table class="table">
 						<thead>
 							<tr>
-								<th></th>
+								<th scope="col"><span class="sr-only">Feature</span></th>
 								{#each content.pricing.selfHosted.table.columns as col (col)}
-									<th>{col}</th>
+									<th scope="col">{col}</th>
 								{/each}
 							</tr>
 						</thead>
 						<tbody>
 							{#each content.pricing.selfHosted.table.rows as row, rowIndex (row.label)}
 								<tr>
-									<td>{row.label}</td>
+									<th scope="row">{row.label}</th>
 									{#each row.values as value, i (i)}
 										<td>
 											{#if rowIndex === 0 && value === content.pricing.contactUs}
@@ -792,16 +792,16 @@
 					<table class="table">
 						<thead>
 							<tr>
-								<th></th>
+								<th scope="col"><span class="sr-only">Feature</span></th>
 								{#each content.pricing.cloud.table.columns as col (col)}
-									<th>{col}</th>
+									<th scope="col">{col}</th>
 								{/each}
 							</tr>
 						</thead>
 						<tbody>
 							{#each content.pricing.cloud.table.rows as row, rowIndex (row.label)}
 								<tr>
-									<td>{row.label}</td>
+									<th scope="row">{row.label}</th>
 									{#each row.values as value, i (i)}
 										<td>
 											{#if rowIndex === 0 && value === content.pricing.contactSales}
@@ -1727,9 +1727,14 @@
 		border-bottom: 1px solid var(--color-divider);
 		vertical-align: middle;
 	}
-	.comparison-table th {
+	.comparison-table thead th {
 		background: color-mix(in srgb, var(--color-text) 5%, transparent);
 		font-weight: 600;
+		text-align: left;
+	}
+	.comparison-table tbody th {
+		background: transparent;
+		font-weight: normal;
 		text-align: left;
 	}
 	.col-highlight {
