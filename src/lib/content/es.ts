@@ -2,92 +2,92 @@ import type { LandingContent } from './types';
 
 export const es: LandingContent = {
 	meta: {
-		title: 'encrypted1on1 — Software Open Source para Reuniones 1 a 1',
+		title: 'encrypted1on1 — Software para 1 a 1 honestos y de alto impacto',
 		description:
-			'Plataforma autoalojada de código abierto con cifrado de extremo a extremo para reuniones 1 a 1 entre managers y empleados. Privacidad zero-knowledge.'
+			'Plataforma para reuniones 1 a 1 entre manager y colaborador. Prep en 3 minutos, objetivos continuos, reportes para revisiones y privacidad de grado bancario.'
 	},
 
 	skipToContent: 'Saltar al contenido',
 
 	hero: {
-		headline: 'Reuniones 1 a 1 privadas. Demostrablemente privadas.',
+		headline: 'Reuniones 1 a 1 que construyen equipo en vez de perder el tiempo',
 		subhead:
-			'encrypted1on1 es una plataforma de código abierto y autoalojada para reuniones estructuradas 1 a 1 entre responsable y empleado, cifrada de extremo a extremo, de modo que ni siquiera quienes administran el servidor pueden leer lo que se escribe. No es una promesa de política de privacidad. Es un hecho matemático.',
-		ctaTryDemo: 'Probar la demo en vivo',
-		ctaGetStarted: 'Comenzar',
+			'encrypted1on1 es un espacio pensado para conversaciones significativas entre managers y colaboradores. Prepárate en 3 minutos, mantén la continuidad de los objetivos y recopila tus logros para ascensos en un solo clic. Protegido con cifrado de extremo a extremo: tus notas privadas quedan estrictamente entre vosotros dos.',
+		ctaTryDemo: 'Probar demo en vivo (sin registro)',
+		ctaGetStarted: 'Crear un espacio de trabajo',
 		ctaGithub: 'Ver en GitHub',
 		ctaDocs: 'Leer la documentación',
 		trustBadges: [
-			'Código abierto (AGPLv3)',
-			'Autoalojado',
-			'Cifrado de extremo a extremo',
-			'Sin dependencia de proveedor'
+			'Preparación asíncrona en 3 min',
+			'Objetivos sin pérdidas',
+			'Reporte para ascensos en 1 clic',
+			'Privacidad de grado bancario'
 		],
 		highlights: [
 			{
 				icon: '🔒',
-				title: 'Cifrado de conocimiento cero',
-				body: 'El contenido se cifra directamente en tu navegador. Ni siquiera un administrador con acceso total al servidor puede leerlo.'
+				title: 'Espacio psicológico seguro',
+				body: 'Las notas privadas y las respuestas sinceras están cifradas solo para tus ojos. Nunca visibles para RRHH ni para los administradores del servidor.'
 			},
 			{
 				icon: '🎯',
-				title: 'Objetivos que se trasladan entre ciclos',
-				body: 'Se fijan una vez y se siguen automáticamente en cada ciclo siguiente: nada se pierde entre reuniones.'
+				title: 'Ningún compromiso se pierde',
+				body: 'Las acciones acordadas y los objetivos se trasladan de ciclo en ciclo con historial completo. Sin promesas olvidadas.'
 			},
 			{
 				icon: '📊',
-				title: 'Informe de evaluación en un clic',
-				body: 'Un informe para cualquier rango de fechas, generado del lado del cliente a partir de meses de reuniones 1 a 1.'
+				title: 'Listo para evaluación en un clic',
+				body: 'Reúne meses de logros, feedback e hitos en un informe estructurado para evaluaciones de desempeño y aumentos de sueldo.'
 			},
 			{
-				icon: '🚀',
-				title: 'Autoalojado, gratis para siempre',
-				body: 'Un solo contenedor Docker. Sin coste por usuario, sin dependencia de proveedor, en marcha en minutos.'
+				icon: '⚡',
+				title: 'Inicio instantáneo',
+				body: 'Úsalo en segundos en tu navegador o autoalójalo dentro del perímetro de tu empresa sin complicaciones.'
 			}
 		],
 		screenshotAlt:
-			'Una reunión 1 a 1 real de encrypted1on1: estado de ánimo y sensaciones respondidos, un hilo de comentarios abierto, y un icono de candado que marca este lado como cifrado de extremo a extremo.'
+			'Reunión 1 a 1 en encrypted1on1: pulso de ánimo, sensaciones, progreso de objetivos y notas privadas protegidas.'
 	},
 
 	videoDemo: {
-		badge: 'Demostración • 75s',
-		heading: 'Vea encrypted1on1 en acción',
+		badge: 'Demostración en vídeo • 75s',
+		heading: 'Descubre cómo son las reuniones 1 a 1 de alto valor',
 		subhead:
-			'Desde la derivación de claves en el navegador hasta el chequeo de 3 minutos, notas privadas y prueba de datos cifrados en red.',
-		heroWatchCta: 'Ver demo (75s)'
+			'Desde el check-in asíncrono de 3 minutos y notas privadas hasta el traslado automático de objetivos y reportes de evaluación instantáneos.',
+		heroWatchCta: 'Ver demo de 75s'
 	},
 
 	howItWorks: {
 		heading: 'Cómo funciona en la práctica',
 		subhead:
-			'Un proceso rítmico y estructurado que transforma reuniones incómodas en palancas de alto impacto para el equipo.',
+			'Un ritmo sencillo y respetuoso que transforma incómodos interrogatorios de estatus en la herramienta principal de crecimiento y confianza.',
 		steps: [
 			{
 				step: '01',
-				title: 'Preparación asíncrona en 3 minutos',
+				title: '3 minutos de preparación previa',
 				description:
-					'Colaborador y responsable registran pulso, objetivos y bloqueos antes de la reunión. Sin hojas en blanco.',
+					'Colaborador y manager registran estado de ánimo, pulso y bloqueos con antelación. Sin hojas en blanco ni silencios incómodos.',
 				badge: 'Asíncrono'
 			},
 			{
 				step: '02',
-				title: 'Cifrado de conocimiento cero en el navegador',
+				title: 'Diálogo sincero y notas privadas',
 				description:
-					'Todas las respuestas se cifran localmente en tu dispositivo antes de viajar por la red. El servidor solo ve texto cifrado.',
-				badge: 'Zero-Knowledge'
+					'Anota ideas en tus borradores personales. El cifrado de extremo a extremo garantiza que tus notas sigan siendo estrictamente tuyas.',
+				badge: 'Confidencial'
 			},
 			{
 				step: '03',
-				title: 'Foco en la conversación y continuidad',
+				title: 'Foco en soluciones y continuidad',
 				description:
-					'La reunión se centra en el crecimiento real. Los objetivos acordados pasan automáticamente al siguiente ciclo.',
+					'La reunión se dedica al apoyo y desarrollo. Todos los objetivos y acuerdos pasan automáticamente al siguiente ciclo.',
 				badge: 'Continuidad'
 			},
 			{
 				step: '04',
-				title: 'Informe de evaluación de desempeño en 1 clic',
+				title: 'Reporte listo para Performance Review',
 				description:
-					'Al llegar el periodo de revisión, todos los logros y el progreso se consolidan en un informe con un solo clic.',
+					'Cuando llega el momento de revisión salarial o evaluación, los logros de varios meses se compilan en un informe en 1 clic.',
 				badge: '1 Clic'
 			}
 		]
@@ -339,6 +339,74 @@ export const es: LandingContent = {
 			'*Soporte prioritario significa que los correos y solicitudes de los usuarios de pago se atienden primero, no que una solución sea instantánea ni esté garantizada por ningún SLA; este es un proyecto de código abierto pequeño y honesto, no un centro de atención telefónica. Un error de pago aún puede tardar semanas. Simplemente se resolverá antes que la cola del nivel gratuito, no en su lugar.',
 		contactUs: 'Contáctanos',
 		contactSales: 'Contactar con ventas'
+	},
+
+	roleSwitch: {
+		badge: 'Para todo el equipo',
+		heading: 'El software que tanto colaboradores como managers adoran usar',
+		subhead:
+			'Colaboradores y responsables tienen diferentes prioridades en los 1 a 1. encrypted1on1 hace que la conversación sea segura, fácil y de alto impacto para ambas partes.',
+		employeeTab: 'Soy colaborador',
+		managerTab: 'Soy manager',
+		employeeTitle: 'Tu espacio seguro para la tranquilidad psicológica y el crecimiento profesional',
+		employeePoints: [
+			{
+				icon: '🛡️',
+				title: 'Sinceridad sin miedo a consecuencias',
+				body: 'Tus respuestas sobre agotamiento, bloqueos o sobrecarga quedan entre tu manager y tú. Nunca expuestas a RRHH, mandos superiores o TI.'
+			},
+			{
+				icon: '⏱️',
+				title: 'Sin interrogatorios de estatus inesperados',
+				body: 'Registra tu pulso y temas en 3 minutos antes de la reunión. Olvídate del síndrome de la hoja en blanco y de las pausas incómodas.'
+			},
+			{
+				icon: '📝',
+				title: 'Borrador personal solo para ti',
+				body: 'Tus notas privadas están cifradas con tu propia clave. Tu manager no puede verlas hasta que decidas tratarlas en la reunión.'
+			},
+			{
+				icon: '🚀',
+				title: 'Tus logros y victorias nunca se olvidan',
+				body: 'Cada proyecto e hito cumplido queda registrado. Cuando llegue la revisión de compensación, tendrás una cartera irrefutable de impacto lista en un clic.'
+			}
+		],
+		managerTitle: 'Lidera y fideliza a tu equipo sin burocracia',
+		managerPoints: [
+			{
+				icon: '💡',
+				title: 'Las reuniones se convierten en coaching activo',
+				body: 'El colaborador define la agenda. Ves los bloqueos y el ánimo antes de la llamada: la conversación se enfoca en soluciones, no en estatus.'
+			},
+			{
+				icon: '🎯',
+				title: 'Un contexto que nunca se desvanece',
+				body: 'Los compromisos fijados meses atrás se trasladan automáticamente a las siguientes reuniones. Ninguna promesa olvidada en un cuaderno.'
+			},
+			{
+				icon: '📉',
+				title: 'Radar temprano de agotamiento',
+				body: 'Sigue las tendencias de ánimo y energía a lo largo del tiempo. Detecta la desmotivación semanas antes de que un miembro clave renuncie.'
+			},
+			{
+				icon: '📋',
+				title: 'Informes de Performance Review en 1 clic',
+				body: 'Di adiós al estrés en época de evaluaciones. Reúne meses de retroalimentación, logros y metas en un resumen impecable en segundos.'
+			}
+		]
+	},
+
+	pitchManager: {
+		badge: 'Compártelo con tu equipo',
+		heading: '¿Quieres tener reuniones 1 a 1 como esta con tu manager?',
+		subhead:
+			'Comparte encrypted1on1 con tu líder de equipo o manager. Aquí tienes un mensaje listo para enviar por Slack, Teams o email:',
+		messageTemplate:
+			'¡Hola! Encontré una herramienta excelente para reuniones 1 a 1 privadas: encrypted1on1.eu. Permite prepararse en solo 3 minutos, traslada automáticamente los objetivos entre reuniones y genera un informe limpio de logros para las evaluaciones en un clic. Además, todo está cifrado de extremo a extremo, por lo que nada sale de nosotros dos. ¿Te gustaría probarlo en nuestro próximo 1 a 1? Aquí está la demo en vivo sin registro: https://demo.private1on1.eu/',
+		copyButtonText: 'Copiar texto del mensaje',
+		copiedNotice: '¡Mensaje copiado! Compártelo con tu manager en Slack o por email.',
+		hintText:
+			'💡 Los managers aprecian mucho cuando los miembros del equipo toman la iniciativa para mejorar la comunicación y la efectividad de las reuniones.'
 	},
 
 	footer: {

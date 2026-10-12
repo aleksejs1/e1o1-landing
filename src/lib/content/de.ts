@@ -2,92 +2,92 @@ import type { LandingContent } from './types';
 
 export const de: LandingContent = {
 	meta: {
-		title: 'encrypted1on1 — Open Source & Private 1:1-Mitarbeitergespräche',
+		title: 'encrypted1on1 — Ehrliche & wirksame 1:1-Mitarbeitergespräche',
 		description:
-			'Quelloffene, selbstgehostete & Ende-zu-Ende verschlüsselte Software für strukturierte 1:1-Gespräche. Zero-Knowledge-Datenschutz ohne Vendor-Lock-in.'
+			'Die Plattform für 1:1-Gespräche zwischen Führungskraft und Mitarbeiter. 3-Minuten-Vorbereitung, fortlaufende Ziele, Review-Berichte und Datenschutz auf Bankenniveau.'
 	},
 
 	skipToContent: 'Zum Inhalt springen',
 
 	hero: {
-		headline: 'Private 1:1-Gespräche. Nachweisbar privat.',
+		headline: '1:1-Gespräche, die Teams weiterbringen statt Zeit zu verschwenden',
 		subhead:
-			'encrypted1on1 ist eine quelloffene, selbstgehostete Plattform für strukturierte 1:1-Gespräche zwischen Manager und Mitarbeiter — Ende-zu-Ende-verschlüsselt, sodass nicht einmal die Betreiber des Servers lesen können, was dort geschrieben steht. Kein Versprechen in einer Datenschutzrichtlinie. Eine mathematische Tatsache.',
-		ctaTryDemo: 'Live-Demo ausprobieren',
-		ctaGetStarted: 'Loslegen',
+			'encrypted1on1 ist ein durchdachter Arbeitsbereich für wirksame Gespräche zwischen Führungskräften und Teammitgliedern. In 3 Minuten vorbereitet, Ziele zyklusübergreifend mitgenommen und Erfolge für Beurteilungen mit einem Klick zusammengestellt. Geschützt durch Ende-zu-Ende-Verschlüsselung, damit vertrauliche Notizen strikt unter vier Augen bleiben.',
+		ctaTryDemo: 'Live-Demo ausprobieren (ohne Registrierung)',
+		ctaGetStarted: 'Arbeitsbereich erstellen',
 		ctaGithub: 'Auf GitHub ansehen',
 		ctaDocs: 'Dokumentation lesen',
 		trustBadges: [
-			'Open Source (AGPLv3)',
-			'Selbstgehostet',
-			'Ende-zu-Ende-verschlüsselt',
-			'Kein Vendor-Lock-in'
+			'3-Minuten asynchrone Vorbereitung',
+			'Fortlaufende Ziele',
+			'Review-Bericht mit 1 Klick',
+			'Datenschutz auf Bankenniveau'
 		],
 		highlights: [
 			{
 				icon: '🔒',
-				title: 'Zero-Knowledge-Verschlüsselung',
-				body: 'Inhalte werden direkt in Ihrem Browser verschlüsselt. Nicht einmal ein Administrator mit vollem Serverzugriff kann sie lesen.'
+				title: 'Sicherer psychologischer Raum',
+				body: 'Private Notizen und ehrliche Antworten zum Befinden sind nur für Ihre Augen verschlüsselt. Niemals sichtbar für HR oder Server-Administratoren.'
 			},
 			{
 				icon: '🎯',
-				title: 'Ziele, die weitergetragen werden',
-				body: 'Einmal festgelegt, automatisch über jeden folgenden Zyklus verfolgt — zwischen den Terminen geht nichts verloren.'
+				title: 'Keine Vereinbarung geht verloren',
+				body: 'Vereinbarte Maßnahmen und Ziele werden automatisch mit vollständiger Historie von Zyklus zu Zyklus übernommen. Keine vergessenen Zusagen.'
 			},
 			{
 				icon: '📊',
 				title: 'Beurteilungsbereit mit einem Klick',
-				body: 'Ein Beurteilungsbericht für jeden beliebigen Zeitraum, clientseitig erstellt aus Monaten von 1:1-Gesprächen.'
+				body: 'Fassen Sie Monate an Erfolgen, Feedback und Meilensteinen in einem strukturierten Bericht für Leistungsbeurteilungen und Beförderungen zusammen.'
 			},
 			{
-				icon: '🚀',
-				title: 'Selbstgehostet, für immer kostenlos',
-				body: 'Ein einziger Docker-Container. Keine Kosten pro Nutzer, kein Vendor-Lock-in, in Minuten einsatzbereit.'
+				icon: '⚡',
+				title: 'Sofort einsatzbereit',
+				body: 'In Sekundenschnelle im Browser starten oder ohne Aufwand im unternehmenseigenen Netzwerk selbst hosten.'
 			}
 		],
 		screenshotAlt:
-			'Ein echtes 1:1-Gespräch in encrypted1on1: Stimmung und Gefühle beantwortet, ein offener Kommentar-Thread, und ein Vorhängeschloss-Symbol, das diese Seite als Ende-zu-Ende-verschlüsselt kennzeichnet.'
+			'Ein 1:1-Gespräch in encrypted1on1: Stimmungsabfrage, Befinden, Zielerreichung und geschützte private Notizen.'
 	},
 
 	videoDemo: {
-		badge: 'Produkttour • 75s',
-		heading: 'encrypted1on1 in Aktion erleben',
+		badge: 'Video-Tour • 75s',
+		heading: 'So sehen wirksame 1:1-Gespräche aus',
 		subhead:
-			'Von der browserbasierten Schlüsselerstellung über den 3-Minuten-Check bis hin zu privaten Notizen und Netzwerk-Payload-Beweis.',
+			'Vom 3-minütigen asynchronen Check-in und privaten Notizblock bis zum automatischen Zielübertrag und sofortigen Beurteilungsbericht.',
 		heroWatchCta: '75s Demo ansehen'
 	},
 
 	howItWorks: {
 		heading: 'So funktioniert es in der Praxis',
 		subhead:
-			'Ein strukturierter, rhythmischer Workflow, der unangenehme Status-Meetings in wirksame Führungsgespräche verwandelt.',
+			'Ein klarer, respektvoller Rhythmus, der unangenehme Status-Verhöre in das wirksamste Werkzeug für Wachstum und Vertrauen verwandelt.',
 		steps: [
 			{
 				step: '01',
-				title: '3-Minuten asynchrone Vorbereitung',
+				title: '3 Minuten asynchrone Vorbereitung',
 				description:
-					'Mitarbeiter und Führungskraft erfassen Stimmung, Zielerreichung und Blocker vorab. Keine leeren Seiten mehr.',
+					'Mitarbeiter und Führungskraft erfassen Stimmung, Puls und Blocker vorab. Keine leeren Seiten und keine peinlichen Pausen zu Gesprächsbeginn.',
 				badge: 'Asynchron'
 			},
 			{
 				step: '02',
-				title: 'Client-seitige Zero-Knowledge-Verschlüsselung',
+				title: 'Ehrlicher Dialog & privater Notizblock',
 				description:
-					'Alle Einträge werden lokal im Browser verschlüsselt, bevor sie übertragen werden. Der Server sieht nur Chiffretext.',
-				badge: 'Zero-Knowledge'
+					'Halten Sie Gedanken in persönlichen Notizen fest. Ende-zu-Ende-Verschlüsselung garantiert, dass private Entwürfe ausschließlich Ihnen gehören.',
+				badge: 'Vertraulich'
 			},
 			{
 				step: '03',
-				title: 'Fokus auf Dialog und Kontinuität',
+				title: 'Fokus auf Lösungen & Zielübernahme',
 				description:
-					'Die Gesprächszeit gehört echtem Coaching und Weiterentwicklung. Vereinbarte Ziele fließen automatisch in den nächsten Zyklus.',
+					'Das Treffen widmet sich Unterstützung und Entwicklung. Alle vereinbarten Ziele und Schritte fließen automatisch in den nächsten Zyklus.',
 				badge: 'Kontinuität'
 			},
 			{
 				step: '04',
-				title: 'Performance-Review-Bericht mit 1 Klick',
+				title: 'Fertiger Performance-Review-Bericht',
 				description:
-					'Zum Beurteilungszeitpunkt werden monatelange Erfolge und Zielmeilensteine mit einem Klick aggregiert.',
+					'Wenn Gehaltsgespräche oder Beurteilungen anstehen, werden monatelange Erfolge mit einem Klick in einem fertigen Bericht gebündelt.',
 				badge: '1 Klick'
 			}
 		]
@@ -338,6 +338,74 @@ export const de: LandingContent = {
 			'*Priorisierter Support bedeutet, dass E-Mails und Anfragen zahlender Nutzer zuerst angesehen werden, nicht, dass eine Lösung sofort erfolgt oder durch ein SLA garantiert ist — das ist ein kleines, ehrliches Open-Source-Projekt, kein Callcenter. Ein bezahlter Fehler kann trotzdem Wochen dauern. Er wird nur vor der Warteschlange der kostenlosen Stufe bearbeitet, nicht anstelle davon.',
 		contactUs: 'Kontaktieren Sie uns',
 		contactSales: 'Vertrieb kontaktieren'
+	},
+
+	roleSwitch: {
+		badge: 'Für das gesamte Team',
+		heading: 'Software, die Mitarbeiter und Führungskräfte gleichermaßen begeistert',
+		subhead:
+			'Mitarbeiter und Führungskräfte haben in 1:1-Gesprächen unterschiedliche Prioritäten. encrypted1on1 macht den Austausch für beide Seiten sicher, einfach und wirksam.',
+		employeeTab: 'Ich bin Mitarbeiter',
+		managerTab: 'Ich bin Führungskraft',
+		employeeTitle: 'Ihr geschützter Raum für psychologische Sicherheit und berufliche Entwicklung',
+		employeePoints: [
+			{
+				icon: '🛡️',
+				title: 'Offenheit ohne Angst vor Konsequenzen',
+				body: 'Ihre Antworten zu Überlastung, Blockern oder Arbeitsdruck bleiben strikt zwischen Ihnen und Ihrer Führungskraft. Niemals für HR, übergeordnete Manager oder IT einsehbar.'
+			},
+			{
+				icon: '⏱️',
+				title: 'Keine überraschenden Status-Verhöre',
+				body: 'Tragen Sie Ihr Befinden und Themen in 3 Minuten vor dem Gespräch ein. Kein „weißes Blatt Papier“ mehr und keine peinlichen Pausen zu Beginn.'
+			},
+			{
+				icon: '📝',
+				title: 'Persönlicher Notizblock nur für Sie',
+				body: 'Führen Sie private Notizen, verschlüsselt mit Ihrem eigenen Schlüssel. Ihre Führungskraft sieht sie erst, wenn Sie das Thema selbst im Meeting ansprechen.'
+			},
+			{
+				icon: '🚀',
+				title: 'Ihre Erfolge geraten nie in Vergessenheit',
+				body: 'Jeder Meilenstein und jedes erreichte Ziel bleibt dokumentiert. Bei Gehaltsverhandlungen haben Sie eine überzeugende Leistungsübersicht mit einem Klick parat.'
+			}
+		],
+		managerTitle: 'Leistungsstarke Teams coachen und binden — ohne Bürokratie',
+		managerPoints: [
+			{
+				icon: '💡',
+				title: 'Gespräche werden zu echtem Coaching',
+				body: 'Das Teammitglied bestimmt die Agenda. Sie sehen Blocker und Stimmung vorab — das Gespräch dreht sich sofort um Lösungen statt um reinen Aufgabenstatus.'
+			},
+			{
+				icon: '🎯',
+				title: 'Kontext, der niemals verblasst',
+				body: 'Vor Monaten vereinbarte Maßnahmen werden automatisch in künftige Zyklen übernommen. Keine Zusagen, die in Notizbüchern verloren gehen.'
+			},
+			{
+				icon: '📉',
+				title: 'Frühwarnsystem gegen Burnout',
+				body: 'Verfolgen Sie Energie- und Stimmungstrends im Zeitverlauf. Erkennen Sie Unzufriedenheit Wochen bevor jemand überraschend die Kündigung einreicht.'
+			},
+			{
+				icon: '📋',
+				title: 'Performance-Review-Berichte mit 1 Klick',
+				body: 'Nie wieder mühsame Vorbereitung auf Beurteilungsrunden. Fassen Sie monatelanges Feedback, Erfolge und Ziele sekundenschnell in einer sauberen Übersicht zusammen.'
+			}
+		]
+	},
+
+	pitchManager: {
+		badge: 'Mit dem Team teilen',
+		heading: 'Möchten Sie solche 1:1-Gespräche mit Ihrer Führungskraft führen?',
+		subhead:
+			'Schlagen Sie encrypted1on1 Ihrer Führungskraft oder Ihrem Teamlead vor. Hier ist ein fertiger Text für Slack, Teams oder E-Mail:',
+		messageTemplate:
+			'Hallo! Ich habe ein hervorragendes Tool für private 1:1-Gespräche entdeckt — encrypted1on1.eu. Man bereitet sich in nur 3 Minuten vor, Ziele werden automatisch zwischen Terminen übertragen und zur Beurteilung gibt es mit einem Klick einen fertigen Erfolgsbericht. Zudem ist alles Ende-zu-Ende verschlüsselt, sodass nichts nach außen dringt. Wollen wir das für unser nächstes 1:1 ausprobieren? Hier ist die Live-Demo ohne Anmeldung: https://demo.private1on1.eu/',
+		copyButtonText: 'Nachrichtentext kopieren',
+		copiedNotice: 'Nachricht kopiert! Senden Sie sie an Ihre Führungskraft in Slack oder per E-Mail.',
+		hintText:
+			'💡 Führungskräfte schätzen es sehr, wenn Teammitglieder die Initiative ergreifen, um die Kommunikation und Meeting-Effizienz zu verbessern.'
 	},
 
 	footer: {

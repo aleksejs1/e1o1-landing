@@ -1,10 +1,29 @@
 <script lang="ts">
 	import { getContent } from '$lib/content';
 	import { GITHUB_URL, DOCS_URL, ENCRYPTION_DOCS_URL, DEPLOYMENT_DOCS_URL } from '$lib/links';
-	import { localizeHref } from '$lib/paraglide/runtime';
+	import { getLocale, localizeHref, type Locale } from '$lib/paraglide/runtime';
 
 	const content = $derived(getContent());
+	const locale = $derived(getLocale());
 	let copied = $state(false);
+
+	const backLinkText: Record<Locale, string> = {
+		en: 'Back to Overview',
+		ru: 'Назад на главную',
+		de: 'Zurück zur Übersicht',
+		es: 'Volver al inicio',
+		fr: 'Retour à l’accueil',
+		lv: 'Atpakaļ uz sākumu'
+	};
+
+	const cryptoSpecText: Record<Locale, string> = {
+		en: 'Read Cryptographic Spec on GitHub →',
+		ru: 'Спецификация криптографии на GitHub →',
+		de: 'Kryptografische Spezifikation auf GitHub lesen →',
+		es: 'Leer especificación criptográfica en GitHub →',
+		fr: 'Lire la spécification cryptographique sur GitHub →',
+		lv: 'Lasīt kriptogrāfisko specifikāciju GitHub →'
+	};
 
 	async function copyCommand(cmd: string) {
 		if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
@@ -28,9 +47,7 @@
 
 <article class="doc-page">
 	<div class="doc-header">
-		<a href={localizeHref('/')} class="back-link"
-			>← {content.skipToContent === 'Skip to content' ? 'Back to Overview' : 'Назад на главную'}</a
-		>
+		<a href={localizeHref('/')} class="back-link">← {backLinkText[locale] ?? backLinkText.en}</a>
 		<div class="badge-pill">Zero-Knowledge Architecture</div>
 		<h1>{content.architecture.heading}</h1>
 		<p class="lead">{content.architecture.subhead}</p>
@@ -96,9 +113,7 @@
 		<p class="quickstart-note">{content.quickstart.note}</p>
 		<div class="doc-links">
 			<a href={ENCRYPTION_DOCS_URL} target="_blank" rel="noopener noreferrer">
-				{content.skipToContent === 'Skip to content'
-					? 'Read Cryptographic Spec on GitHub →'
-					: 'Спецификация криптографии на GitHub →'}
+				{cryptoSpecText[locale] ?? cryptoSpecText.en}
 			</a>
 			<a href={DEPLOYMENT_DOCS_URL} target="_blank" rel="noopener noreferrer">
 				{content.quickstart.docsLinkText}

@@ -28,6 +28,51 @@
 	const blogUi = $derived(getBlogUi(locale));
 	const latestBlogPosts = $derived(getBlogPosts(locale).slice(0, 3));
 
+	const aboutLabels: Record<string, string> = {
+		en: 'About',
+		ru: 'О проекте',
+		de: 'Über uns',
+		es: 'Acerca de',
+		fr: 'À propos',
+		lv: 'Par projektu'
+	};
+
+	const darkModeLabels: Record<string, string> = {
+		en: 'dark mode',
+		ru: 'тёмная тема',
+		de: 'Dunkelmodus',
+		es: 'modo oscuro',
+		fr: 'mode sombre',
+		lv: 'tumšais motīvs'
+	};
+
+	const videoFooterTexts: Record<string, string> = {
+		en: 'Real interface recording: 3-minute async prep, private scratchpad, persistent goals, and 1-click review report.',
+		ru: 'Реальная запись интерфейса: 3-минутная подготовка, личные заметки, перенос целей и готовый отчёт для ревью в один клик.',
+		de: 'Echte Benutzeroberfläche: 3-Minuten-Vorbereitung, private Notizen, Zielübertrag und 1-Klick-Review-Bericht.',
+		es: 'Grabación real de la interfaz: preparación en 3 minutos, notas privadas, objetivos continuos y reporte de evaluación en 1 clic.',
+		fr: 'Véritable enregistrement de l’interface : préparation en 3 minutes, bloc-notes privé, reconduction des objectifs et rapport d’évaluation en 1 clic.',
+		lv: 'Reāls saskarnes ieraksts: 3 minūšu sagatavošanās, privātas piezīmes, mērķu pēctecība un pārskata atskaite vienā klikšķī.'
+	};
+
+	const securitySpecLabels: Record<string, string> = {
+		en: 'Full Zero-Knowledge Security & Architecture Spec →',
+		ru: 'Полная спецификация безопасности и Zero-Knowledge архитектуры →',
+		de: 'Vollständige Sicherheits- & Zero-Knowledge-Architekturspezifikation →',
+		es: 'Especificación completa de seguridad y arquitectura Zero-Knowledge →',
+		fr: 'Spécification complète de sécurité et d’architecture Zero-Knowledge →',
+		lv: 'Pilna drošības un Zero-Knowledge arhitektūras specifikācija →'
+	};
+
+	const originStoryLabels: Record<string, string> = {
+		en: 'Read Full Origin Story & Manifesto →',
+		ru: 'Читать полную историю создания и манифест проекта →',
+		de: 'Die Entstehungsgeschichte und das Manifest lesen →',
+		es: 'Leer la historia de creación y el manifiesto completo →',
+		fr: 'Lire l’histoire complète de la création et le manifeste →',
+		lv: 'Lasīt pilno izveides stāstu un projekta manifestu →'
+	};
+
 	let copied = $state(false);
 	let copyTimeout: ReturnType<typeof setTimeout> | undefined;
 
@@ -184,11 +229,11 @@
 				</a>
 				<span class="hero-sublinks-sep" aria-hidden="true">•</span>
 				<a class="hero-docs-link" href={localizeHref('/security/')}>
-					🔒 {locale === 'ru' ? 'Безопасность' : 'Security'}
+					🔒 {m.nav_security()}
 				</a>
 				<span class="hero-sublinks-sep" aria-hidden="true">•</span>
 				<a class="hero-docs-link" href={localizeHref('/about/')}>
-					📖 {locale === 'ru' ? 'О проекте' : 'About'}
+					📖 {aboutLabels[locale] ?? 'About'}
 				</a>
 			</div>
 
@@ -213,7 +258,7 @@
 				<img
 					class="hero-screenshot hero-screenshot-dark"
 					src="/screenshots/anketa-preview-{getLocale()}-dark.webp"
-					alt="{content.hero.screenshotAlt} ({locale === 'ru' ? 'тёмная тема' : 'dark mode'})"
+					alt="{content.hero.screenshotAlt} ({darkModeLabels[locale] ?? 'dark mode'})"
 					width="688"
 					height="560"
 					loading="lazy"
@@ -265,13 +310,7 @@
 				<div class="video-footer-left">
 					<span class="pill-dot" aria-hidden="true"></span>
 					<span class="video-footer-text">
-						{#if locale === 'ru'}
-							Реальная запись интерфейса: 3-минутная подготовка, личные заметки, перенос целей и
-							готовый отчёт для ревью в один клик.
-						{:else}
-							Real interface recording: 3-minute async prep, private scratchpad, persistent goals,
-							and 1-click review report.
-						{/if}
+						{videoFooterTexts[locale] ?? videoFooterTexts.en}
 					</span>
 				</div>
 				<div class="video-footer-actions">
@@ -484,9 +523,7 @@
 
 		<div class="text-center" style="margin-top: var(--space-6);">
 			<a href={localizeHref('/security/')} class="btn btn-secondary">
-				🔒 {locale === 'ru'
-					? 'Полная спецификация безопасности и Zero-Knowledge архитектуры →'
-					: 'Full Zero-Knowledge Security & Architecture Spec →'}
+				🔒 {securitySpecLabels[locale] ?? securitySpecLabels.en}
 			</a>
 		</div>
 	</div>
@@ -668,9 +705,7 @@
 
 		<div class="text-center" style="margin-top: var(--space-6);">
 			<a href={localizeHref('/about/')} class="btn btn-secondary">
-				📖 {locale === 'ru'
-					? 'Читать полную историю создания и манифест проекта →'
-					: 'Read Full Origin Story & Manifesto →'}
+				📖 {originStoryLabels[locale] ?? originStoryLabels.en}
 			</a>
 		</div>
 	</div>

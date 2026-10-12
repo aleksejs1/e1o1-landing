@@ -1,27 +1,61 @@
 <script lang="ts">
 	import { getContent } from '$lib/content';
 	import { appDemoUrl } from '$lib/links';
-	import { getLocale, localizeHref } from '$lib/paraglide/runtime';
+	import { getLocale, localizeHref, type Locale } from '$lib/paraglide/runtime';
 
 	const content = $derived(getContent());
 	const locale = $derived(getLocale());
+
+	const backLinkText: Record<Locale, string> = {
+		en: 'Back to Overview',
+		ru: 'Назад на главную',
+		de: 'Zurück zur Übersicht',
+		es: 'Volver al inicio',
+		fr: 'Retour à l’accueil',
+		lv: 'Atpakaļ uz sākumu'
+	};
+
+	const badgeText: Record<Locale, string> = {
+		en: 'Manifesto & Story',
+		ru: 'Манифест и история',
+		de: 'Manifest & Geschichte',
+		es: 'Manifiesto e historia',
+		fr: 'Manifeste & histoire',
+		lv: 'Manifests un stāsts'
+	};
+
+	const ctaTitleText: Record<Locale, string> = {
+		en: 'Experience private 1:1s today',
+		ru: 'Попробуйте честные 1:1 прямо сейчас',
+		de: 'Erleben Sie private 1:1-Gespräche noch heute',
+		es: 'Prueba reuniones 1 a 1 privadas hoy mismo',
+		fr: 'Découvrez des 1:1 privés dès aujourd’hui',
+		lv: 'Izmēģiniet privātas 1 pret 1 sarunas jau šodien'
+	};
+
+	const ctaSubText: Record<Locale, string> = {
+		en: 'Interactive sandbox with demo accounts, no signup required.',
+		ru: 'Полнофункциональное интерактивное демо без регистрации.',
+		de: 'Interaktive Sandbox mit Demo-Konten, keine Registrierung erforderlich.',
+		es: 'Sandbox interactivo con cuentas de prueba, sin registro requerido.',
+		fr: 'Bac à sable interactif avec comptes de démonstration, sans inscription.',
+		lv: 'Interaktīva smilškaste ar demo kontiem bez reģistrācijas.'
+	};
 </script>
 
 <svelte:head>
 	<title>{content.origin.heading} — encrypted1on1</title>
 	<meta
 		name="description"
-		content={content.origin.paragraphsHtml[0]?.replace(/<[^>]*>/g, '') || 'О проекте encrypted1on1'}
+		content={content.origin.paragraphsHtml[0]?.replace(/<[^>]*>/g, '') || 'encrypted1on1'}
 	/>
 </svelte:head>
 
 <article class="about-page">
 	<div class="about-header">
-		<a href={localizeHref('/')} class="back-link"
-			>← {content.skipToContent === 'Skip to content' ? 'Back to Overview' : 'Назад на главную'}</a
-		>
+		<a href={localizeHref('/')} class="back-link">← {backLinkText[locale] ?? backLinkText.en}</a>
 		<div class="badge-pill">
-			{content.skipToContent === 'Skip to content' ? 'Manifesto & Story' : 'Манифест и история'}
+			{badgeText[locale] ?? badgeText.en}
 		</div>
 		<h1>{content.origin.heading}</h1>
 	</div>
@@ -51,14 +85,10 @@
 
 	<div class="cta-box">
 		<h2>
-			{content.skipToContent === 'Skip to content'
-				? 'Experience private 1:1s today'
-				: 'Попробуйте честные 1:1 прямо сейчас'}
+			{ctaTitleText[locale] ?? ctaTitleText.en}
 		</h2>
 		<p>
-			{content.skipToContent === 'Skip to content'
-				? 'Interactive sandbox with demo accounts, no signup required.'
-				: 'Полнофункциональное интерактивное демо без регистрации.'}
+			{ctaSubText[locale] ?? ctaSubText.en}
 		</p>
 		<a class="btn btn-primary" href={appDemoUrl(locale)} target="_blank" rel="noopener noreferrer">
 			{content.hero.ctaTryDemo} →

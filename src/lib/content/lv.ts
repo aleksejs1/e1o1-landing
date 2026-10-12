@@ -2,92 +2,92 @@ import type { LandingContent } from './types';
 
 export const lv: LandingContent = {
 	meta: {
-		title: 'encrypted1on1 — Atvērtā koda platforma privātām 1:1 tikšanām',
+		title: 'encrypted1on1 — Jēgpilnas un atklātas 1 pret 1 sarunas',
 		description:
-			'Atvērtā koda, pašu uzturēta un šifrēta platforma vadītāja un darbinieka 1:1 tikšanām. Matemātiski pierādāms privātums un pilnīga datu kontrole.'
+			'Platforma vadītāja un darbinieka 1 pret 1 sarunām. 3 minūšu sagatavošanās, mērķu pēctecība, atskaite novērtējumam ar 1 klikšķi un banku līmeņa privātums.'
 	},
 
 	skipToContent: 'Pāriet uz saturu',
 
 	hero: {
-		headline: 'Privātas 1:1 tikšanās. Pierādāmi privātas.',
+		headline: '1 pret 1 sarunas, kas attīsta komandu, nevis tērē laiku',
 		subhead:
-			'encrypted1on1 ir atvērtā koda, pašu uzturēta platforma strukturētām vadītāja un darbinieka 1:1 tikšanām — šifrēta no gala līdz galam, tāpēc pat tie, kas uztur serveri, nevar izlasīt uzrakstīto. Tas nav solījums privātuma politikā. Tas ir matemātisks fakts.',
-		ctaTryDemo: 'Izmēģināt tiešraides demo',
-		ctaGetStarted: 'Sākt',
+			'encrypted1on1 ir pārdomāta darba vide jēgpilnam dialogam starp vadītājiem un darbiniekiem. Sagatavojieties 3 minūtēs, pārnesiet mērķus starp cikliem un sagatavojiet savu sasniegumu pārskatu paaugstinājumam ar vienu klikšķi. Pilnīgs šifrējums no gala līdz galam nodrošina, ka personīgās piezīmes paliek tikai starp jums abiem.',
+		ctaTryDemo: 'Izmēģināt demo bez reģistrācijas',
+		ctaGetStarted: 'Izveidot darba vidi',
 		ctaGithub: 'Skatīt GitHub',
 		ctaDocs: 'Lasīt dokumentāciju',
 		trustBadges: [
-			'Atvērtā koda (AGPLv3)',
-			'Pašu uzturēta',
-			'Šifrēta no gala līdz galam',
-			'Bez piesaistes piegādātājam'
+			'3 minūšu asinhrona sagatavošanās',
+			'Mērķi bez zudumiem',
+			'Atskaite paaugstinājumam ar 1 klikšķi',
+			'Banku līmeņa privātums'
 		],
 		highlights: [
 			{
 				icon: '🔒',
-				title: 'Nulles zināšanas šifrējums',
-				body: 'Saturs tiek šifrēts tieši jūsu pārlūkprogrammā. Pat administrators ar pilnu piekļuvi serverim to nevar izlasīt.'
+				title: 'Droša psiholoģiskā vide',
+				body: 'Personīgās piezīmes un atklātās noskaņojuma atbildes ir nošifrētas tikai jūsu acīm. Tās nekad nav redzamas personāla daļai vai sistēmas administratoriem.'
 			},
 			{
 				icon: '🎯',
-				title: 'Mērķi, kas pāriet uz nākamo ciklu',
-				body: 'Izvirzīti vienreiz un automātiski izsekoti katrā nākamajā ciklā — nekas nepazūd starp tikšanām.'
+				title: 'Neviena vienošanās nepazūd',
+				body: 'Nolemti rīcības soļi un mērķi automātiski pāriet no cikla uz ciklu ar pilnu vēsturi. Aizmirstiem solījumiem vietas nav.'
 			},
 			{
 				icon: '📊',
-				title: 'Izvērtēšanas atskaite vienā klikšķī',
-				body: 'Atskaite par jebkuru laika periodu, izveidota klienta pusē no vairāku mēnešu 1:1 tikšanu datiem.'
+				title: 'Gatavs novērtējumam ar 1 klikšķi',
+				body: 'Apkopojiet mēnešiem ilgus sasniegumus, atgriezenisko saiti un mērķus strukturētā atskaitē gada sarunām un amata paaugstinājumam.'
 			},
 			{
-				icon: '🚀',
-				title: 'Pašu uzturēta, mūžīgi bez maksas',
-				body: 'Viens Docker konteiners. Bez maksas par lietotāju, bez piesaistes piegādātājam, darbojas dažu minūšu laikā.'
+				icon: '⚡',
+				title: 'Tūlītējs sākums',
+				body: 'Palaidiet dažu sekunžu laikā savā pārlūkā vai bez sarežģījumiem izvietojiet savas kompānijas iekšējā infrastruktūrā.'
 			}
 		],
 		screenshotAlt:
-			'Reāla 1:1 tikšanās encrypted1on1: atbildēts uz noskaņojuma un sajūtu jautājumiem, atvērts viens komentāru pavediens, un piekaramās atslēgas ikona atzīmē šo pusi kā šifrētu no gala līdz galam.'
+			'1 pret 1 saruna encrypted1on1: pulss, noskaņojums, mērķu virzība un aizsargātas personīgās piezīmes.'
 	},
 
 	videoDemo: {
 		badge: 'Video apskats • 75s',
-		heading: 'Skatiet encrypted1on1 darbībā',
+		heading: 'Paskatieties, kā norit jēgpilnas 1 pret 1 sarunas',
 		subhead:
-			'No šifrēšanas atslēgu izveides pārlūkprogrammā līdz 3 minūšu sagatavošanai, personīgajām piezīmēm un šifrētā tīkla pieprasījuma pārbaudei.',
+			'No 3 minūšu sagatavošanās un personīgā melnraksta līdz automātiskai mērķu pēctecībai un tūlītējai novērtējuma atskaitei.',
 		heroWatchCta: 'Skatīties demo (75s)'
 	},
 
 	howItWorks: {
 		heading: 'Kā tas strādā praksē',
 		subhead:
-			'Vienkāršs, ritmisks process, kas pārvērš neērtas statusa sapulces par jaudīgu komandas izaugsmes rīku.',
+			'Vienkāršs un cieņpilns ritms, kas neērtas statusa atskaites pārvērš galvenajā komandas izaugsmes un uzticēšanās rīkā.',
 		steps: [
 			{
 				step: '01',
-				title: '3 minūšu asinhrona sagatavošanās',
+				title: '3 minūšu sagatavošanās pirms sarunas',
 				description:
-					'Darbinieks un vadītājs pirms tikšanās atzīmē noskaņojumu, mērķu progresu un šķēršļus. Bez tukšām lapām un negaidītiem jautājumiem.',
+					'Darbinieks un vadītājs iepriekš atzīmē noskaņojumu, pulsu un šķēršļus. Bez tukšām lapām un neērtām klusuma pauzēm sarunas sākumā.',
 				badge: 'Asinhroni'
 			},
 			{
 				step: '02',
-				title: 'Pilnīga šifrēšana pārlūkprogrammā',
+				title: 'Atklāts dialogs un personīgās piezīmes',
 				description:
-					'Visi dati tiek nošifrēti jūsu ierīcē pirms nosūtīšanas tīklā. Serveris redz tikai neizlasāmu šifrotekstu.',
-				badge: 'Zero-Knowledge'
+					'Fiksējiet domas personīgajās piezīmēs. Pilnīgs šifrējums garantē, ka personīgie melnraksti paliek pieejami tikai jums.',
+				badge: 'Konfidenciāli'
 			},
 			{
 				step: '03',
-				title: 'Fokuss uz sarunu un mērķiem',
+				title: 'Fokuss uz risinājumiem un mērķu pēctecību',
 				description:
-					'Tikšanās veltīta reālām problēmām un attīstībai. Vienotie mērķi automātiski pāriet uz nākamo ciklu.',
+					'Saruna veltīta atbalstam un izaugsmei. Visi saskaņotie mērķi un soļi automātiski pāriet uz nākamo ciklu ar pilnu vēsturi.',
 				badge: 'Pēctecība'
 			},
 			{
 				step: '04',
-				title: 'Pārskats darba novērtējumam ar 1 klikšķi',
+				title: 'Gatavs pārskats darba novērtējumam ar 1 klikšķi',
 				description:
-					'Pārskata perioda beigās visi sasniegumi un mērķu vēsture tiek apkopoti strukturētā ziņojumā.',
+					'Tuvojoties algas pārskatīšanai vai ikgadējai novērtēšanai, visi sasniegumi tiek apkopoti gatavā atskaitē ar vienu klikšķi.',
 				badge: '1 klikšķis'
 			}
 		]
@@ -339,6 +339,74 @@ export const lv: LandingContent = {
 			'*Prioritārs atbalsts nozīmē, ka maksājošu lietotāju e-pasti un pieteikumi tiek izskatīti pirmie, nevis to, ka labojums ir tūlītējs vai garantēts ar kādu SLA — šis ir neliels, godīgs atvērtā koda projekts, nevis zvanu centrs. Apmaksāta kļūda joprojām var aizņemt nedēļas. Tā vienkārši tiks izlabota pirms bezmaksas līmeņa rindas, nevis tās vietā.',
 		contactUs: 'Sazināties ar mums',
 		contactSales: 'Sazināties ar pārdošanas komandu'
+	},
+
+	roleSwitch: {
+		badge: 'Visai komandai',
+		heading: 'Rīks, ko patiešām novērtē gan darbinieki, gan vadītāji',
+		subhead:
+			'Darbiniekiem un vadītājiem 1 pret 1 sarunās ir dažādas prioritātes. encrypted1on1 padara šo sarunu drošu, ērtu un vērtīgu abām pusēm.',
+		employeeTab: 'Esmu darbinieks',
+		managerTab: 'Esmu vadītājs',
+		employeeTitle: 'Jūsu personīgā telpa psiholoģiskai drošībai un profesionālai izaugsmei',
+		employeePoints: [
+			{
+				icon: '🛡️',
+				title: 'Atklātība bez bailēm par sekām',
+				body: 'Jūsu atbildes par izdegšanu, stresu vai grūtībām nenonāks HR nodaļā vai pie uzņēmuma vadības. Šis dialogs ir tikai starp jums un jūsu vadītāju.'
+			},
+			{
+				icon: '⏱️',
+				title: 'Bez negaidītām statusa pratināšanām',
+				body: '3 minūtēs pirms tikšanās atzīmējiet pašsajūtu, noskaņojumu un tematus. Nekādu „baltās lapas sindromu” un neērtu paužu sarunas sākumā.'
+			},
+			{
+				icon: '📝',
+				title: 'Personīgās piezīmes tikai sev',
+				body: 'Jūsu personīgais melnraksts ir nošifrēts ar jūsu atslēgu — vadītājs to neredzēs, kamēr jūs pats nenolemsiet to pārrunāt sarunā.'
+			},
+			{
+				icon: '🚀',
+				title: 'Jūsu sasniegumi un uzvaras nekur nepazūd',
+				body: 'Visi paveiktie projekti un mērķi rūpīgi saglabājas vēsturē. Kad pienāks laiks runāt par paaugstinājumu — jums būs gatavi konkrēti fakti ar 1 klikšķi.'
+			}
+		],
+		managerTitle: 'Attīstiet un noturiet komandu bez liekas birokrātijas',
+		managerPoints: [
+			{
+				icon: '💡',
+				title: 'Sarunas kļūst par reālu koučingu',
+				body: 'Dienas kārtību veido darbinieks. Jūs redzat šķēršļus un noskaņojumu jau pirms zvana — saruna uzreiz koncentrējas uz risinājumiem, nevis uzdevumu statusu.'
+			},
+			{
+				icon: '🎯',
+				title: 'Konteksts, kas nekad nepazūd',
+				body: 'Pirms vairākiem mēnešiem noteiktās vienošanās un mērķi nepazūd piezīmju grāmatiņās — sistēma automātiski atgādina par tiem katrā ciklā.'
+			},
+			{
+				icon: '📉',
+				title: 'Agrīns izdegšanas radars',
+				body: 'Sekojiet enerģijas un noskaņojuma dinamikai laika gaitā. Pamaniet motivācijas kritumu nedēļām pirms tam, kad vērtīgs darbinieks negaidīti iesniedz atlūgumu.'
+			},
+			{
+				icon: '📋',
+				title: 'Performance Review atskaite ar 1 klikšķi',
+				body: 'Vairs nekādu bezmiega nakšu pirms darbinieku novērtēšanas. Viss kopsavilkums par darbinieka sasniegumiem tiek izveidots dažu sekunžu laikā.'
+			}
+		]
+	},
+
+	pitchManager: {
+		badge: 'Piedāvājiet savai komandai',
+		heading: 'Vēlaties aizvadīt šādas 1 pret 1 sarunas ar savu vadītāju?',
+		subhead:
+			'Parādiet vadītājam, kā padarīt jūsu sarunas lietderīgākas un ērtākas. Esam sagatavojuši gatavu ziņu nosūtīšanai Slack, Teams vai e-pastā:',
+		messageTemplate:
+			'Sveiks! Atradu lielisku rīku privātām 1 pret 1 sarunām — encrypted1on1.eu. Tur ir ļoti ērta 3 minūšu sagatavošanās, mērķi paši pārnesas starp tikšanām, un pirms gada sarunas sistēma ar vienu klikšķi apkopo visus sasniegumus atskaitē. Turklāt viss ir šifrēts no gala līdz galam un pieejams tikai mums abiem. Vai vēlies pamēģināt mūsu nākamo 1 pret 1 aizvadīt tur? Šeit ir tiešsaistes demo bez reģistrācijas: https://demo.private1on1.eu/',
+		copyButtonText: 'Kopēt ziņas tekstu',
+		copiedNotice: 'Ziņa nokopēta starpliktuvē! Nosūtiet to savam vadītājam Slack vai e-pastā.',
+		hintText:
+			'💡 Vadītāji vienmēr novērtē, ja darbinieki paši izrāda iniciatīvu un piedāvā pārdomātus risinājumus komunikācijas uzlabošanai.'
 	},
 
 	footer: {
